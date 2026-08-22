@@ -1,0 +1,51 @@
+{
+  "schema_version": "body-invention.runtime-submission-prompts.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "source_plan": "plans/generation-units-v6.json",
+  "source_plan_sha256": "90cdab1f499af31c36991434b2aa01a127eca5e97c5c18da5e75871ebe60bd2a",
+  "purpose": "Short exact server-submission strings derived from the locked generation plan. This file does not alter sentence ownership, story action, camera axis, continuity anchors, or harvest rules.",
+  "input_contract": {
+    "entry_method": "physical_key_events_only",
+    "pre_submit_exact_match_required": true,
+    "post_submit_server_card_exact_match_required": true,
+    "single_click_only": true,
+    "forbidden": [
+      "clipboard_paste",
+      "fill",
+      "dom_injection"
+    ]
+  },
+  "units": [
+    {
+      "unit_id": "vit-v6-u07",
+      "status": "blocked_until_2026-08-22T18:38:38.041+09:00",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. One unlabeled amber bottle rides a brass rail to adult son Min Kang; father and son open a Korean wooden pharmacy together. The same bottle passes through a small filling machine and becomes many bottles moving right, then match-cuts onto a public pharmacy shelf as many Korean hands collect them. Native rail, bottle, machine, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    },
+    {
+      "unit_id": "vit-v6-u08",
+      "status": "pending",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. Korean customers line up as one unlabeled amber bottle stays centered and a blank brass gauge rises. Many differently shaped unlabeled copy bottles multiply around it, then slide away while the original remains still. The back wall begins one smooth rotation for the next scene. Native bottle, rail, gauge, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    },
+    {
+      "unit_id": "vit-v6-u09",
+      "status": "pending",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth orbit camera, never photorealistic. A rotating wall smoothly reveals a mid-1960s Korean pharmaceutical workshop while the same unlabeled amber bottle remains in the same screen position. Camera orbits from the successful bottle to a closed brass carbonation valve; a Korean worker hand approaches but pauses before touching it. Native wall, bottle, valve, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    },
+    {
+      "unit_id": "vit-v6-u11",
+      "status": "pending",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, walnut, brass, enamel and amber glass, warm amber and cool teal light, smooth macro camera, never photorealistic. Inside one unlabeled amber bottle, dissolved bubbles gather under the cap and fine vapor rises when it opens. One bubble touches an enamel tongue model and pops during one short camera push. The same upward bubble path reaches a thin brass ear diaphragm so taste and sound become visible. Native bubble, cap, vapor, pop, diaphragm and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    },
+    {
+      "unit_id": "vit-v6-u12",
+      "status": "pending",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy where the same hand twists the cap once. Hiss vapor becomes a curved brass time rail joining the old apothecary and 1960s factory in one miniature view. Native bottle, machine, cap, hiss and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    },
+    {
+      "unit_id": "vit-v6-u13",
+      "status": "pending",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber shifting to cool teal light, smooth upward camera, never photorealistic. Amber liquid moves from cauldron through cloth strainer and bottle into a patient's hand. Bubbles enter the same bottle as history becomes modern. One rising bubble reflects the cauldron, strainer, bottle and valve, then pops into the opening giant-bottle composition for a warm final hold. Native cauldron, cloth, liquid, bottle, bubble and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+    }
+  ]
+}
