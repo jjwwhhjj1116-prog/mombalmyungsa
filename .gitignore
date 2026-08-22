@@ -30,4 +30,4 @@ Thumbs.db
 episodes/**/generated/
 episodes/**/renders/
 episodes/**/downloads/
-
+episodes/**/qa/*-frames/

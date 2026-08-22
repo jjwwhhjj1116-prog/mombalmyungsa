@@ -169,6 +169,6 @@
   ],
   "resume": {
     "first_non_completed_stage": "08_pilot_generation",
-    "instruction": "The approved full-script Generation 2 TTS measures 152.189375 seconds, so the 9:16 Shorts route is locked. Verify the Flow account, re-check thumbnail and opening-image hashes, then submit vit-v6-u01 exactly once as I2V using assets/frame-zero-bg-v18-no-product.png. Keep every later unit as T2V."
+    "instruction": "vit-v6-u01 was submitted exactly once and passed visual QA. Its native audio remains review-required at harvest. Do not regenerate u01. Submit vit-v6-u10 exactly once as Omni Flash 9:16 8-second T2V after the cooldown, then complete the two-pilot gate."
   }
 }
