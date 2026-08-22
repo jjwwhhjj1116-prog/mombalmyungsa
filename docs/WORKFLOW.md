@@ -1,5 +1,18 @@
 # 몸의 발명사 전체 워크플로
 
+## GitHub 지침 변경 게이트
+
+사용자의 영구 수정 지시는 대화 메모가 아니라 이 저장소가 단일 원본이다. 다음 순서를 한 덩어리로 실행한다.
+
+1. 수정 지시를 `episode_specific` 또는 `series_rule`로 분류한다.
+2. `series_rule`은 `.codex/skills/timemedic/SKILL.md`와 직접 관련된 reference·validator에 반영한다.
+3. 기존 규칙과 충돌하면 최신 명시 지시를 남기고 폐기된 규칙을 제거한다.
+4. `python scripts/pipeline.py validate --all`로 저장소와 lock을 검증한다.
+5. 변경 파일만 커밋하고 원격 `main`으로 푸시한다.
+6. 원격 커밋 해시가 확인되어야 새 규칙이 `active`다. 푸시 실패 상태는 `rule_change_unpushed`이며 다음 유료 생성·게시보다 먼저 해결한다.
+
+대용량 생성 파일은 Git에 넣지 않는다. 대신 정확한 로컬 상대 경로, 바이트 수, 길이, SHA-256, 생성 공급자·모델·계정 라우팅·시간을 receipt와 stage lock에 기록해 커밋한다.
+
 ## 주인장 확정 8단계 계약
 
 | 큰 단계 | 해야 할 일 | 기계 단계 | 하드 게이트 |
