@@ -1,0 +1,27 @@
+{
+  "schema_version": "body-invention.visual-continuity-audit.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "audited_units": [
+    "vit-v6-u01",
+    "vit-v6-u02",
+    "vit-v6-u03",
+    "vit-v6-u10"
+  ],
+  "contact_sheet": "qa/batch-style-continuity-u01-u03-u10.jpg",
+  "contact_sheet_sha256": "8cc7561a52fed0b757da671d9cf1b70dde135182891a1fc140bade45107d1cbf",
+  "status": "PASS",
+  "checks": {
+    "handcrafted_museum_diorama_identity_consistent": true,
+    "korean_setting_consistent": true,
+    "amber_bottle_object_anchor_consistent": true,
+    "walnut_brass_amber_material_palette_consistent": true,
+    "warm_amber_and_cool_teal_light_consistent": true,
+    "random_shake_visible": false,
+    "readable_generated_text_visible": false,
+    "brand_or_product_label_visible": false,
+    "photoreal_style_break_visible": false
+  },
+  "editorial_note": "U03 contains small unreadable apothecary drawer-label textures. They are not used as evidence text and should remain outside any final close crop.",
+  "next_safe_action": "after the configured ten-minute generation rest, continue with vit-v6-u04 using steam as the transition carrier"
+}
