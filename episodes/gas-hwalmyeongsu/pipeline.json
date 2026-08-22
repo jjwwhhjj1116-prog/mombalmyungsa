@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 6,
+  "revision": 17,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -35,12 +35,18 @@
     "thumbnail_is_frame_zero": true,
     "frame_zero_duration_seconds": 0.7,
     "thumbnail_font": "Gmarket Sans Bold",
-    "thumbnail_layout": "split_spatial_three_blocks",
+    "thumbnail_layout": "reference_spatial_three_blocks",
     "thumbnail_copy_max_visible_characters": 10,
-    "thumbnail_stroke_px": 60,
+    "thumbnail_stroke_px": 0,
     "thumbnail_fill_color": "#000000",
-    "thumbnail_stroke_color": "#D4AF37",
-    "thumbnail_shadow": true
+    "thumbnail_stroke_color": "#000000",
+    "thumbnail_shadow": "subtle_black_offset",
+    "thumbnail_subject_is_primary": true,
+    "thumbnail_gold_cloud_forbidden": true,
+    "thumbnail_emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_for_amber_bottle",
+    "thumbnail_official_product_packshot_required": true,
+    "thumbnail_product_label_must_remain_visible": true,
+    "thumbnail_product_source": "https://www.dong-wha.co.kr/product/pimage/20250227040816_2502_whalmyungsu01.jpg"
   },
   "release_contract": {
     "platform": "YouTube",
@@ -98,11 +104,15 @@
       "id": "06_storyboard",
       "status": "completed",
       "lock_path": "locks/06-storyboard.lock.json",
-      "lock_sha256": "9228d9cee269432f6bc4dc360629c904c1d456dc022cab8f380aa30704410ace",
+      "lock_sha256": "a4a27179357809bfc7ef01d60768d2396826c525bd255c0398d47ac0f682dba4",
       "sidecar_locks": [
         {
           "path": "locks/06-thumbnail.lock.json",
-          "sha256": "f2938cf369889e153eb2b3f7ed690dc461df1d4f33d9f5bd75ca76de571f4ab9"
+          "sha256": "d8e76fcd3db284cbd9dc21beee9e0ed0c5283992bec63feefd3b5d1b6a8da0f4"
+        },
+        {
+          "path": "locks/06-thumbnail-visual-identity.lock.json",
+          "sha256": "cfbd138af6478794d3fa45724b8240cc3f14586446317677725e13556596c9fe"
         }
       ]
     },
@@ -110,7 +120,7 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "45726760cae18a09096eaf7964487dbcdce7910e8bb6937e49874a358d4e5fb3"
+      "lock_sha256": "ae7b1ed40bc80aefa8825dd24f44eb237e270213485cbeea921f7ff4bdfd7337"
     },
     {
       "id": "08_pilot_generation",

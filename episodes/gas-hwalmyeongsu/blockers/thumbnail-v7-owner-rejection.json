@@ -1,0 +1,14 @@
+{
+  "schema_version": "body-invention.asset-rejection.v1",
+  "asset": "assets/frame-zero-v7-owner-layout.png",
+  "status": "rejected",
+  "rejected_by": "owner_visual_feedback",
+  "reasons": [
+    "gold_60px_outline_joined_korean_glyphs_into_cloud_shapes",
+    "typography_became_primary_and_obscured_the_diorama_subject",
+    "calm_character_expression_failed_the_hook",
+    "layout_did_not_match_the_reference_subject_first_hierarchy"
+  ],
+  "replacement": "assets/frame-zero-v12-reference-final.png",
+  "reusable": false
+}

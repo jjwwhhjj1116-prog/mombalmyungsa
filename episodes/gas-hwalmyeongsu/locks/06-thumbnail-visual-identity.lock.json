@@ -1,0 +1,20 @@
+{
+  "schema_version": "body-invention.thumbnail-visual-identity-lock.v1",
+  "asset_path": "episodes/gas-hwalmyeongsu/assets/frame-zero-bg-v14-official-product.png",
+  "asset_sha256": "78b278d9f1a0e2f66fedb3035298afc2b7f0285de502d28fc6f0ed97d5d66bf8",
+  "verdict": "PASS",
+  "manual_visual_review_completed": true,
+  "checks": {
+    "matte_handcrafted_resin": true,
+    "adult_miniature_ratio_1_4_5_to_1_6": true,
+    "sculpted_solid_hair": true,
+    "simplified_painted_face": true
+  },
+  "visible_scale_clues": [
+    "display_plinth",
+    "brass_rail",
+    "oversized_screw",
+    "museum_glass_reflection"
+  ],
+  "forbidden_detected": []
+}

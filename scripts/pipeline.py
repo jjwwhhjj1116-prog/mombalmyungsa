@@ -87,11 +87,15 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "caption_vertical_slot_of_16": 10,
         "thumbnail_is_frame_zero": True,
         "thumbnail_font": "Gmarket Sans Bold",
-        "thumbnail_layout": "split_spatial_three_blocks",
+        "thumbnail_layout": "reference_spatial_three_blocks",
         "thumbnail_copy_max_visible_characters": 10,
         "thumbnail_fill_color": "#000000",
-        "thumbnail_stroke_color": "#D4AF37",
-        "thumbnail_stroke_px": 60,
+        "thumbnail_stroke_color": "#000000",
+        "thumbnail_stroke_px": 0,
+        "thumbnail_subject_is_primary": True,
+        "thumbnail_gold_cloud_forbidden": True,
+        "thumbnail_official_product_packshot_required": True,
+        "thumbnail_product_label_must_remain_visible": True,
     }
     for field, expected in expected_production.items():
         if production.get(field) != expected:
@@ -185,12 +189,22 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             errors.append("thumbnail font must be Gmarket Sans Bold")
         copy_blocks = thumbnail.get("copy_blocks", [])
         visible_count = len(re.sub(r"[\s\W_]", "", "".join(copy_blocks), flags=re.UNICODE))
-        if thumbnail.get("layout") != "split_spatial_three_blocks" or len(copy_blocks) != 3:
-            errors.append("thumbnail must use three split spatial blocks")
+        if thumbnail.get("layout") != "reference_spatial_three_blocks" or len(copy_blocks) != 3:
+            errors.append("thumbnail must use three reference-spatial blocks")
         if visible_count > 10:
             errors.append("thumbnail copy must contain at most 10 visible characters")
-        if thumbnail.get("fill_color") != "#000000" or thumbnail.get("stroke_color") != "#D4AF37" or thumbnail.get("stroke_width_px") != 60:
-            errors.append("thumbnail typography must use black fill and 60px #D4AF37 stroke")
+        if thumbnail.get("fill_color") != "#000000" or thumbnail.get("stroke_width_px") != 0:
+            errors.append("thumbnail typography must use solid black Gmarket Sans Bold with no outline")
+        if thumbnail.get("gold_outline_cloud_forbidden") is not True:
+            errors.append("thumbnail must explicitly forbid the rejected gold outline cloud")
+        if thumbnail.get("subject_is_primary") is not True:
+            errors.append("thumbnail subject must remain the primary visual anchor")
+        if thumbnail.get("official_product_label_visible") is not True:
+            errors.append("official product packshot label must remain visible")
+        if thumbnail.get("duplicate_unlabeled_bottle_detected") is not False:
+            errors.append("duplicate unlabeled bottle must not remain behind the official packshot")
+        if not thumbnail.get("official_product_source_id"):
+            errors.append("official product source_id is required")
         if thumbnail.get("frame_zero_hold_seconds") != 0.7:
             errors.append("thumbnail frame-zero hold must be 0.7 seconds")
 

@@ -1,0 +1,14 @@
+{
+  "schema_version": "body-invention.asset-source.v1",
+  "source_id": "dongwha-official-hwalmyeongsu-product-image-20250227",
+  "publisher": "동화약품",
+  "page_url": "https://m.dong-wha.co.kr/product/content.asp?t_idx=415",
+  "asset_url": "https://www.dong-wha.co.kr/product/pimage/20250227040816_2502_whalmyungsu01.jpg",
+  "retrieved_at": "2026-08-22T00:00:00+09:00",
+  "local_asset": "assets/official-whalmyungsu-product-group.jpg",
+  "local_asset_sha256": "e2dac65cb4fe356ca729fa4831123de4f67d8ea3ade23a2c97f6ebe4a1769d12",
+  "use": "editorial identification of the product discussed in the video",
+  "transforms": ["crop", "white_background_removal", "scale", "drop_shadow", "composite"],
+  "medical_claim_added": false,
+  "sales_claim_added": false
+}
