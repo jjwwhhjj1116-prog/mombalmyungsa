@@ -3,7 +3,7 @@
   "episode_id": "gas-hwalmyeongsu",
   "stage_id": "09_batch_generation",
   "unit_id": "vit-v6-u06",
-  "status": "retry_pending_after_cooldown",
+  "status": "resolved_with_valid_retry",
   "blocker_code": "invalid_prompt_persistence",
   "candidate_id": "de4b6457-2459-40c2-b1b7-854a1d6f633a",
   "submitted_at": "2026-08-22T17:48:32.414+09:00",
@@ -17,5 +17,12 @@
   "candidate_disposition": "discard_regardless_of_visual_quality",
   "retry_rule": "Do not resubmit until the current candidate is terminal, the three-job ten-minute generation rest is complete, and at least fifteen minutes have elapsed from the failed submission. Re-enter the whole prompt with pressSequentially-style real keystrokes, then verify the post-click server card before accepting the retry.",
   "workflow_rule_updated": true,
-  "user_action_required": false
+  "user_action_required": false,
+  "resolved_at": "2026-08-22T18:07:00+09:00",
+  "resolved_by_candidate_id": "c829f4a4-1338-4e42-b73d-0de7d7403410",
+  "valid_retry_submitted_at": "2026-08-22T18:03:45.189+09:00",
+  "valid_retry_pre_submit_prompt_exact_match": true,
+  "valid_retry_server_card_prompt_exact_match": true,
+  "valid_retry_receipt": "receipts/vit-v6-u06.flow-receipt.json",
+  "audit_note": "The invalid candidate remains permanently discarded. Only the later physical-key-entry candidate may be harvested."
 }
