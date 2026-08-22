@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 17,
+  "revision": 18,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -35,18 +35,30 @@
     "thumbnail_is_frame_zero": true,
     "frame_zero_duration_seconds": 0.7,
     "thumbnail_font": "Gmarket Sans Bold",
-    "thumbnail_layout": "reference_spatial_three_blocks",
+    "thumbnail_layout": "deep_hook_two_tier",
     "thumbnail_copy_max_visible_characters": 10,
-    "thumbnail_stroke_px": 0,
-    "thumbnail_fill_color": "#000000",
-    "thumbnail_stroke_color": "#000000",
-    "thumbnail_shadow": "subtle_black_offset",
+    "thumbnail_outer_stroke_px": 30,
+    "thumbnail_outer_stroke_color": "#FFFFFF",
+    "thumbnail_inner_stroke_px": 14,
+    "thumbnail_inner_stroke_color": "#111111",
+    "thumbnail_setup_fill_color": "#FFFFFF",
+    "thumbnail_keyword_fill_color": "#FFD21F",
+    "thumbnail_shadow": "deep_black_offset",
     "thumbnail_subject_is_primary": true,
     "thumbnail_gold_cloud_forbidden": true,
-    "thumbnail_emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_for_amber_bottle",
-    "thumbnail_official_product_packshot_required": true,
-    "thumbnail_product_label_must_remain_visible": true,
-    "thumbnail_product_source": "https://www.dong-wha.co.kr/product/pimage/20250227040816_2502_whalmyungsu01.jpg"
+    "thumbnail_emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_into_empty_frame",
+    "thumbnail_product_packshot_present": false,
+    "thumbnail_product_omission_reason": "avoid_product_shorts_ad_read"
+  },
+  "duration_routing_contract": {
+    "threshold_seconds": 180.0,
+    "boundary_rule": "duration_lte_180_is_shorts_duration_gt_180_is_longform",
+    "measurement_source": "final_approved_full_script_tts",
+    "lock_path": "locks/05-duration-route.lock.json",
+    "status": "pending_measurement",
+    "provisional_content_format": "shorts",
+    "provisional_aspect_ratio": "9:16",
+    "flow_generation_blocked_until_locked": true
   },
   "release_contract": {
     "platform": "YouTube",
@@ -104,15 +116,15 @@
       "id": "06_storyboard",
       "status": "completed",
       "lock_path": "locks/06-storyboard.lock.json",
-      "lock_sha256": "a4a27179357809bfc7ef01d60768d2396826c525bd255c0398d47ac0f682dba4",
+      "lock_sha256": "09e019a38fbadb6645812a78c3c883f9a95dd5ff44ed33095b0db3cef5364bf8",
       "sidecar_locks": [
         {
           "path": "locks/06-thumbnail.lock.json",
-          "sha256": "d8e76fcd3db284cbd9dc21beee9e0ed0c5283992bec63feefd3b5d1b6a8da0f4"
+          "sha256": "8ffd79973f72a12c076129f9b539a75588a075caf35972b5f41614e07b5c5087"
         },
         {
           "path": "locks/06-thumbnail-visual-identity.lock.json",
-          "sha256": "cfbd138af6478794d3fa45724b8240cc3f14586446317677725e13556596c9fe"
+          "sha256": "b0ef87e3b38e2af53e46686e7cfe09e8a6824ed599d55abed206a32e0c8d8b0a"
         }
       ]
     },
@@ -120,7 +132,7 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "ae7b1ed40bc80aefa8825dd24f44eb237e270213485cbeea921f7ff4bdfd7337"
+      "lock_sha256": "f4ff5d92947cec923c66beaf6f2875f08718a187ba037cfe3d47af0680cbcf1f"
     },
     {
       "id": "08_pilot_generation",
@@ -137,6 +149,6 @@
   ],
   "resume": {
     "first_non_completed_stage": "08_pilot_generation",
-    "instruction": "Read this file, validate all completed locks, then resume only 08_pilot_generation. Never skip directly to TTS, edit, or upload."
+    "instruction": "Before any paid Flow generation, synthesize the approved full-script TTS and lock 05-duration-route. If duration exceeds 180.000 seconds, rebuild 06 and 07 for 16:9 longform; otherwise confirm 9:16 and resume 08_pilot_generation."
   }
 }

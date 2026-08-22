@@ -71,7 +71,6 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "visual_identity": "continuous_living_miniature_diorama",
         "video_model": "Omni Flash",
         "video_mode": "text_to_video",
-        "aspect_ratio": "9:16",
         "seconds_per_generation_unit": 8,
         "candidates_per_unit": 1,
         "voice_provider": "ElevenLabs",
@@ -87,19 +86,44 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "caption_vertical_slot_of_16": 10,
         "thumbnail_is_frame_zero": True,
         "thumbnail_font": "Gmarket Sans Bold",
-        "thumbnail_layout": "reference_spatial_three_blocks",
+        "thumbnail_layout": "deep_hook_two_tier",
         "thumbnail_copy_max_visible_characters": 10,
-        "thumbnail_fill_color": "#000000",
-        "thumbnail_stroke_color": "#000000",
-        "thumbnail_stroke_px": 0,
+        "thumbnail_outer_stroke_px": 30,
+        "thumbnail_outer_stroke_color": "#FFFFFF",
+        "thumbnail_inner_stroke_px": 14,
+        "thumbnail_inner_stroke_color": "#111111",
+        "thumbnail_setup_fill_color": "#FFFFFF",
+        "thumbnail_keyword_fill_color": "#FFD21F",
         "thumbnail_subject_is_primary": True,
         "thumbnail_gold_cloud_forbidden": True,
-        "thumbnail_official_product_packshot_required": True,
-        "thumbnail_product_label_must_remain_visible": True,
+        "thumbnail_product_packshot_present": False,
     }
     for field, expected in expected_production.items():
         if production.get(field) != expected:
             errors.append(f"production_contract.{field} must be {expected!r}")
+
+    duration_route = pipeline.get("duration_routing_contract", {})
+    if duration_route.get("threshold_seconds") != 180.0:
+        errors.append("duration_routing_contract.threshold_seconds must be 180.0")
+    route_status = duration_route.get("status")
+    if route_status not in {"pending_measurement", "locked"}:
+        errors.append("duration_routing_contract.status must be pending_measurement or locked")
+    if duration_route.get("measurement_source") != "final_approved_full_script_tts":
+        errors.append("duration route must use final approved full-script TTS")
+    routed_aspect = production.get("aspect_ratio")
+    if route_status == "locked":
+        measured = duration_route.get("duration_seconds")
+        if not isinstance(measured, (int, float)) or measured <= 0:
+            errors.append("locked duration route requires a positive duration_seconds")
+        else:
+            expected_aspect = "16:9" if measured > 180.0 else "9:16"
+            expected_format = "longform" if measured > 180.0 else "shorts"
+            if duration_route.get("content_format") != expected_format:
+                errors.append(f"duration route content_format must be {expected_format}")
+            if routed_aspect != expected_aspect:
+                errors.append(f"production aspect_ratio must be {expected_aspect} for measured TTS")
+    elif routed_aspect not in {"9:16", "16:9"}:
+        errors.append("provisional production aspect_ratio must be 9:16 or 16:9")
 
     release = pipeline.get("release_contract", {})
     if release.get("channel_id") != "UCYqdIlpFlB6uh_cpIYgo85g":
@@ -176,8 +200,8 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             errors.append("generation plan script_sha256 does not match source_of_truth")
         if generation.get("model") != "Omni Flash" or generation.get("mode") != "text_to_video":
             errors.append("generation plan must use Omni Flash text_to_video")
-        if generation.get("aspect_ratio") != "9:16" or generation.get("seconds_per_unit") != 8:
-            errors.append("generation plan must use 9:16 eight-second units")
+        if generation.get("aspect_ratio") != routed_aspect or generation.get("seconds_per_unit") != 8:
+            errors.append("generation plan must match routed aspect ratio and use eight-second units")
         for unit in generation.get("units", []):
             if unit.get("candidate_count") != 1:
                 errors.append(f"{unit.get('unit_id', 'unknown unit')}: candidate_count must be 1")
@@ -189,22 +213,24 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             errors.append("thumbnail font must be Gmarket Sans Bold")
         copy_blocks = thumbnail.get("copy_blocks", [])
         visible_count = len(re.sub(r"[\s\W_]", "", "".join(copy_blocks), flags=re.UNICODE))
-        if thumbnail.get("layout") != "reference_spatial_three_blocks" or len(copy_blocks) != 3:
-            errors.append("thumbnail must use three reference-spatial blocks")
+        if thumbnail.get("layout") != "deep_hook_two_tier" or len(copy_blocks) != 2:
+            errors.append("thumbnail must use two-tier deep-hook blocks")
         if visible_count > 10:
             errors.append("thumbnail copy must contain at most 10 visible characters")
-        if thumbnail.get("fill_color") != "#000000" or thumbnail.get("stroke_width_px") != 0:
-            errors.append("thumbnail typography must use solid black Gmarket Sans Bold with no outline")
+        if thumbnail.get("fill_colors") != ["#FFFFFF", "#FFD21F"]:
+            errors.append("thumbnail fills must use white setup and yellow keyword")
+        if thumbnail.get("outer_stroke_color") != "#FFFFFF" or thumbnail.get("outer_stroke_width_px") != 30:
+            errors.append("thumbnail must use the locked 30px white outer stroke")
+        if thumbnail.get("inner_stroke_color") != "#111111" or thumbnail.get("inner_stroke_width_px") != 14:
+            errors.append("thumbnail must use the locked charcoal inner stroke")
         if thumbnail.get("gold_outline_cloud_forbidden") is not True:
             errors.append("thumbnail must explicitly forbid the rejected gold outline cloud")
         if thumbnail.get("subject_is_primary") is not True:
             errors.append("thumbnail subject must remain the primary visual anchor")
-        if thumbnail.get("official_product_label_visible") is not True:
-            errors.append("official product packshot label must remain visible")
+        if thumbnail.get("product_packshot_present") is not False:
+            errors.append("thumbnail product packshot must be absent")
         if thumbnail.get("duplicate_unlabeled_bottle_detected") is not False:
             errors.append("duplicate unlabeled bottle must not remain behind the official packshot")
-        if not thumbnail.get("official_product_source_id"):
-            errors.append("official product source_id is required")
         if thumbnail.get("frame_zero_hold_seconds") != 0.7:
             errors.append("thumbnail frame-zero hold must be 0.7 seconds")
 

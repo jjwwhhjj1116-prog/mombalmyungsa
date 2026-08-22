@@ -2,10 +2,10 @@
   "schema_version": "body-invention.stage-blocker.v1",
   "stage_id": "08_pilot_generation",
   "status": "blocked",
-  "reason_code": "external_flow_editor_unresponsive",
+  "reason_code": "duration_route_pending_before_flow",
   "generation_submitted": false,
   "last_confirmed_state": "prompt_not_submitted",
-  "safe_resume": "Verify the private runtime account and Omni Flash 9:16 8-second x1 settings, then submit vit-v6-u01 exactly once. After terminal QA and the configured cooldown, submit vit-v6-u10 exactly once.",
+  "safe_resume": "First synthesize the approved full-script TTS and create locks/05-duration-route.lock.json. If the measured duration exceeds 180.000 seconds, invalidate and rebuild storyboard and Flow units for 16:9 longform. If it is 180.000 seconds or less, confirm 9:16, then verify the private runtime account and submit vit-v6-u01 exactly once.",
   "forbidden": [
     "reuse rejected V3 clips",
     "submit duplicate jobs after an unknown browser result",
@@ -13,4 +13,3 @@
     "start batch generation before both pilots pass"
   ]
 }
-

@@ -1,9 +1,9 @@
 {
   "schema_version": "timemedic.flow-generation-plan.v2",
   "topic_id": "topic-002",
-  "revision": 17,
+  "revision": 18,
   "script_sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
-  "storyboard_sha256": "79d8ab2d79faab0b18c9082fec24ee4cb80e0629351e67216de4513dd29b9ecc",
+  "storyboard_sha256": "2c9a599f59285d9efa5222e5e5147beac277160bc8dff876f38aed67a993c827",
   "engine": "Google Flow",
   "model": "Omni Flash",
   "mode": "text_to_video",
@@ -19,17 +19,17 @@
   "style_prefix": "Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic.",
   "thumbnail_opening_contract": {
     "lock_path": "locks/06-thumbnail.lock.json",
-    "copy_blocks": ["까스", "없는", "활명수"],
-    "layout": "reference_spatial_three_blocks",
-    "background_asset": "assets/frame-zero-bg-v14-official-product.png",
-    "final_pixel_asset": "assets/frame-zero-v17-official-product-final.png",
+    "copy_blocks": ["까스 없는", "활명수"],
+    "layout": "deep_hook_two_tier",
+    "background_asset": "assets/frame-zero-bg-v18-no-product.png",
+    "final_pixel_asset": "assets/frame-zero-v18-deep-hook-final.png",
     "font": "Gmarket Sans Bold",
-    "fill_color": "#000000",
-    "stroke_width_px": 0,
+    "fill_colors": ["#FFFFFF", "#FFD21F"],
+    "outer_stroke_width_px": 30,
+    "inner_stroke_width_px": 14,
     "subject_is_primary": true,
-    "emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_for_amber_bottle",
-    "official_product_source_id": "dongwha-official-hwalmyeongsu-product-image-20250227",
-    "product_label_unobscured": true,
+    "emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_into_empty_frame",
+    "product_packshot_present": false,
     "flow_hook_starts_from_same_background_without_generated_text": true,
     "final_typography_is_inserted_after_stage_14_visual_qa": true
   },
@@ -47,7 +47,7 @@
       "risk": "modern_korea_hook",
       "motion_carrier": "right_hand_to_bottle",
       "continuity_anchors": [
-        "bottle_center",
+        "empty_right_edge_then_bottle_reveal",
         "rightward_hand",
         "camera_axis"
       ],
@@ -55,7 +55,7 @@
       "mode": "text_to_video",
       "aspect_ratio": "9:16",
       "seconds": 8,
-      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: exact approved thumbnail composition without text, Korean adult puppet suffers severe stomach pain, teeth clenched, tears and sweat visible, one hand clamps the abdomen while the other trembling hand reaches toward a closed giant amber bottle just beyond the fingertips. SHOT B: fingertips advance toward the bottle as the camera tracks the hand, bottle stays fixed and Korean pharmacy drawers open behind it. SHOT C: camera and puppet gaze push toward the untouched cap and stop before opening. Native audio: only visible cloth strain, hand scrape, bottle-table vibration and room tone synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: exact approved no-product thumbnail composition without text, Korean adult puppet suffers severe stomach pain, teeth clenched, tears and sweat visible, one hand clamps the abdomen while the other trembling hand reaches toward the empty right edge; no bottle or package is visible yet. SHOT B: fingertips advance beyond the right edge as the camera tracks the hand and reveals one closed unlabeled giant amber bottle for the first time while Korean pharmacy drawers open behind it. SHOT C: camera and puppet gaze push toward the untouched cap and stop before opening. Native audio: only visible cloth strain, hand scrape, subtle bottle-table contact and room tone synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
       "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
     },
     {

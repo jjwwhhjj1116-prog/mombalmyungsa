@@ -1,7 +1,7 @@
 {
   "schema_version": "body-invention.thumbnail-visual-identity-lock.v1",
-  "asset_path": "episodes/gas-hwalmyeongsu/assets/frame-zero-bg-v14-official-product.png",
-  "asset_sha256": "78b278d9f1a0e2f66fedb3035298afc2b7f0285de502d28fc6f0ed97d5d66bf8",
+  "asset_path": "episodes/gas-hwalmyeongsu/assets/frame-zero-bg-v18-no-product.png",
+  "asset_sha256": "f8c41726909a069bc50990cdd72b27a7d26570b0eaddd00b530463ba71737b0a",
   "verdict": "PASS",
   "manual_visual_review_completed": true,
   "checks": {

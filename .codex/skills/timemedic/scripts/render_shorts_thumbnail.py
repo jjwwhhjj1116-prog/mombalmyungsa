@@ -20,7 +20,7 @@ def main():
     parser.add_argument("output", type=Path)
     parser.add_argument("--text", required=True)
     parser.add_argument("--font", type=Path, required=True)
-    parser.add_argument("--layout", choices=("centered", "split-spatial", "reference-spatial"), default="centered")
+    parser.add_argument("--layout", choices=("centered", "split-spatial", "reference-spatial", "deep-hook"), default="centered")
     parser.add_argument("--font-size", type=int, default=175)
     parser.add_argument("--stroke", type=int, default=30)
     parser.add_argument("--fill", default="#FFFF00")
@@ -35,6 +35,8 @@ def main():
     parser.add_argument("--top-font-size", type=int, default=245)
     parser.add_argument("--center-font-size", type=int, default=300)
     parser.add_argument("--stroke-color", default="#000000")
+    parser.add_argument("--inner-stroke", type=int, default=14)
+    parser.add_argument("--accent-fill", default="#FFD21F")
     parser.add_argument(
         "--foreground-polygon",
         default=None,
@@ -50,7 +52,14 @@ def main():
     normalized_text = args.text.replace("\\n", "\n")
     lines = normalized_text.splitlines()
     line_counts = [visible_character_count(line) for line in lines]
-    if args.layout in {"split-spatial", "reference-spatial"}:
+    if args.layout == "deep-hook":
+        if len(lines) != 2:
+            raise SystemExit("deep-hook thumbnail copy must contain exactly two lines")
+        if visible_character_count(normalized_text) > 10:
+            raise SystemExit("deep-hook thumbnail copy exceeds 10 visible characters total")
+        if args.stroke < 24 or args.stroke_color.upper() != "#FFFFFF":
+            raise SystemExit("deep-hook requires a thick white outer stroke of at least 24px")
+    elif args.layout in {"split-spatial", "reference-spatial"}:
         if len(lines) != 3:
             raise SystemExit("spatial thumbnail copy must contain exactly three blocks")
         if visible_character_count(normalized_text) > 10:
@@ -82,6 +91,61 @@ def main():
         raise SystemExit("legacy centered thumbnail fill uses the legacy SULL palette")
     if args.layout in {"split-spatial", "reference-spatial"}:
         line_fills = [SERIES_FILL] * 3
+
+    if args.layout == "deep-hook":
+        fonts = [
+            ImageFont.truetype(str(args.font), args.top_font_size),
+            ImageFont.truetype(str(args.font), args.center_font_size),
+        ]
+        placements = [(args.center_x, args.top_y), (args.center_x, args.center_y)]
+        fills = ["#FFFFFF", args.accent_fill.upper()]
+        draw_probe = ImageDraw.Draw(image)
+        block_boxes = []
+        for line, block_font, (x, y) in zip(lines, fonts, placements):
+            box = draw_probe.textbbox((x, y), line, font=block_font, anchor="ma", stroke_width=args.stroke)
+            if box[0] < 28 or box[2] > 1052 or box[1] < 28 or box[3] > 1892:
+                raise SystemExit(f"deep-hook block outside safe area: {line} {box}")
+            block_boxes.append(box)
+
+        shadow = Image.new("RGBA", image.size, (0, 0, 0, 0))
+        shadow_draw = ImageDraw.Draw(shadow)
+        for line, block_font, (x, y) in zip(lines, fonts, placements):
+            shadow_draw.text(
+                (x + 18, y + 24), line, font=block_font, anchor="ma",
+                fill=(0, 0, 0, 235), stroke_width=args.stroke + 4, stroke_fill=(0, 0, 0, 225)
+            )
+        shadow = shadow.filter(ImageFilter.GaussianBlur(10))
+        image = Image.alpha_composite(image.convert("RGBA"), shadow)
+
+        draw = ImageDraw.Draw(image)
+        for line, block_font, (x, y), fill in zip(lines, fonts, placements, fills):
+            draw.text(
+                (x, y), line, font=block_font, anchor="ma",
+                fill="#FFFFFF", stroke_width=args.stroke, stroke_fill="#FFFFFF"
+            )
+            draw.text(
+                (x, y), line, font=block_font, anchor="ma",
+                fill=fill, stroke_width=args.inner_stroke, stroke_fill="#111111"
+            )
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        image.convert("RGB").save(args.output, quality=95)
+        print(json.dumps({
+            "valid": True,
+            "output": str(args.output),
+            "size": [1080, 1920],
+            "layout": "deep-hook",
+            "copy_blocks": lines,
+            "visible_characters": visible_character_count(normalized_text),
+            "line_fills": fills,
+            "outer_stroke_color": "#FFFFFF",
+            "outer_stroke_width_px": args.stroke,
+            "inner_stroke_color": "#111111",
+            "inner_stroke_width_px": args.inner_stroke,
+            "positions": placements,
+            "font_sizes": [args.top_font_size, args.center_font_size],
+            "block_boxes": block_boxes,
+        }, ensure_ascii=False))
+        return
 
     if args.layout in {"split-spatial", "reference-spatial"}:
         fonts = [
