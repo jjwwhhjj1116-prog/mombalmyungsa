@@ -1,0 +1,32 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "10_clip_harvest",
+  "status": "completed",
+  "revision": 21,
+  "approved_by": "internal_visual_harvest_review_and_validator",
+  "input_hashes": {
+    "locks/09-batch-generation.lock.json": "39d86b3d3b3bbe0c146a8428296ef62453aa8825e35386f49af02b667ed3e98b",
+    "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3"
+  },
+  "output_hashes": {
+    "plans/clip-harvest-v6.json": "aee495085a9d3ea16c067acfa46bc33ae58b5da34efeb346cf8b75f6917975f0"
+  },
+  "sentence_count": 37,
+  "unique_source_count": 13,
+  "speed_policy": "normal_speed_no_optical_flow_at_harvest",
+  "native_audio_policy": "replace_all_unverified_native_audio_with_frame_aligned_edit_sfx",
+  "failed_units": [],
+  "conditional_pass_units": [],
+  "mandatory_edit_repairs": [
+    {
+      "unit_id": "vit-v6-u12",
+      "sentence_ids": ["s31", "s32", "s33"],
+      "action": "apply_tracked_opaque_museum_panels_to_both_pharmacy_shelf_label_bands_before_any_selected_frame_enters_the_final_edit",
+      "protected_subjects": ["amber_bottle", "wooden_mannequin_hand"],
+      "acceptance": "zero_readable_or_pseudo_readable_generated_source_writing",
+      "release_blocked_if_unrepaired": true
+    }
+  ],
+  "completed_at": "2026-08-23T02:18:44.6334779+09:00",
+  "next_stage": "11_voice_alignment"
+}

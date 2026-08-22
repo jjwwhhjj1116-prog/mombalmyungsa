@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 21,
+  "revision": 22,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -170,7 +170,12 @@
       "lock_path": "locks/09-batch-generation.lock.json",
       "lock_sha256": "39d86b3d3b3bbe0c146a8428296ef62453aa8825e35386f49af02b667ed3e98b"
     },
-    { "id": "10_clip_harvest", "status": "pending" },
+    {
+      "id": "10_clip_harvest",
+      "status": "completed",
+      "lock_path": "locks/10-clip-harvest.lock.json",
+      "lock_sha256": "875b190fe65e0dc4c1e7f898b90069621316beae81719cb0d82cfd19f1c767a9"
+    },
     { "id": "11_voice_alignment", "status": "pending" },
     { "id": "12_tts_owned_edit", "status": "pending" },
     { "id": "13_semantic_motion_sound", "status": "pending" },
@@ -178,7 +183,7 @@
     { "id": "15_packaging_release", "status": "pending" }
   ],
   "resume": {
-    "first_non_completed_stage": "10_clip_harvest",
-    "instruction": "All Flow units are generated and locked. Select sentence-owned harvest windows, audit native audio, and apply the mandatory tracked opaque mask to every pseudo-readable shelf label in vit-v6-u12 before any frame can enter the final edit."
+    "first_non_completed_stage": "11_voice_alignment",
+    "instruction": "The 37 sentence-owned source windows are selected at normal speed with no optical flow. Use the already approved full-script ElevenLabs Generation 2 audio from the duration-route lock, create word and sentence forced alignment, and keep the vit-v6-u12 tracked opaque shelf-label repair mandatory before stage 12 can admit those frames."
   }
 }
