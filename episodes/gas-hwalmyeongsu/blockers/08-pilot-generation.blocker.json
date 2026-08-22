@@ -8,9 +8,9 @@
   "measured_duration_seconds": 152.189375,
   "selected_route": "shorts_9_16",
   "resolved_at": "2026-08-22T16:04:24+09:00",
-  "last_confirmed_state": "vit-v6-u01_completed_visual_pass",
+  "last_confirmed_state": "two_pilots_completed_visual_pass_and_stage_locked",
   "thumbnail_gate_state": "V20 final pixels, mobile QA, visual identity and textless opening image are locked",
-  "safe_resume": "vit-v6-u01 is complete and visually passed under receipts/vit-v6-u01.flow-receipt.json. Do not regenerate it. After the cooldown, submit vit-v6-u10 exactly once as Omni Flash T2V, then finish the two-pilot gate.",
+  "safe_resume": "Stage 08 is complete under locks/08-pilot-generation.lock.json. Do not regenerate either pilot. Resume at stage 09 with the remaining T2V generation units in serial order.",
   "forbidden": [
     "reuse rejected V3 clips",
     "submit duplicate jobs after an unknown browser result",

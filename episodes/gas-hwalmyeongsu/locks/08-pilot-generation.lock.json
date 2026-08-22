@@ -1,0 +1,44 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "08_pilot_generation",
+  "status": "completed",
+  "revision": 21,
+  "approved_by": "internal_visual_qa_and_validator",
+  "input_hashes": {
+    "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
+    "locks/07-generation-plan.lock.json": "68777907e90bb1722ee937ca49dc2c1197ab2ba7c424ff610ebee18c0798a511",
+    "plans/generation-units-v6.json": "90cdab1f499af31c36991434b2aa01a127eca5e97c5c18da5e75871ebe60bd2a",
+    "assets/frame-zero-bg-v18-no-product.png": "f8c41726909a069bc50990cdd72b27a7d26570b0eaddd00b530463ba71737b0a"
+  },
+  "output_hashes": {
+    "receipts/vit-v6-u01.flow-receipt.json": "0b3e19d93a463c659acf69bd1cfc7efd65784730a3d677d46d81f050dab5872b",
+    "receipts/vit-v6-u10.flow-receipt.json": "4022f8e7d11e520136b457826db6aaf73f21addd42a9eb3d633000b5af6c443d",
+    "qa/pilot-u01-contact-sheet-24.jpg": "94a57d18d69594e82c6c7bfed6f4514a337462751533c94fc1b63d5de506c3ba",
+    "qa/pilot-u10-contact-sheet-24.jpg": "75bc6f80c89358a90be17062ba6cecc3dd9949895e7c29749c5de228f9184dfb"
+  },
+  "pilot_unit_ids": [
+    "vit-v6-u01",
+    "vit-v6-u10"
+  ],
+  "generation_clicks": {
+    "vit-v6-u01": 1,
+    "vit-v6-u10": 1
+  },
+  "visual_qa": {
+    "vit-v6-u01": "PASS",
+    "vit-v6-u10": "PASS"
+  },
+  "continuity_contract": {
+    "opening_emotion_action_arc": "PASS",
+    "valve_bubble_merge_mechanism": "PASS",
+    "living_diorama_identity": "PASS",
+    "random_shake": "NONE_VISIBLE",
+    "generated_readable_text": "NONE_VISIBLE"
+  },
+  "native_audio_route": {
+    "status": "deferred_to_clip_harvest_audit",
+    "rule": "keep only if visible events align within two frames; otherwise mute and replace with aligned edit SFX"
+  },
+  "batch_generation_allowed": true,
+  "next_stage": "09_batch_generation"
+}

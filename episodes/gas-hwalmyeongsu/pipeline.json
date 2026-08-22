@@ -156,7 +156,9 @@
     },
     {
       "id": "08_pilot_generation",
-      "status": "pending",
+      "status": "completed",
+      "lock_path": "locks/08-pilot-generation.lock.json",
+      "lock_sha256": "8c43827182cf40e6611a858ca82f4891c41be2b5ca962900b9399275f33d29ee",
       "resolved_blocker_audit_path": "blockers/08-pilot-generation.blocker.json"
     },
     { "id": "09_batch_generation", "status": "pending" },
@@ -168,7 +170,7 @@
     { "id": "15_packaging_release", "status": "pending" }
   ],
   "resume": {
-    "first_non_completed_stage": "08_pilot_generation",
-    "instruction": "vit-v6-u01 was submitted exactly once and passed visual QA. Its native audio remains review-required at harvest. Do not regenerate u01. Submit vit-v6-u10 exactly once as Omni Flash 9:16 8-second T2V after the cooldown, then complete the two-pilot gate."
+    "first_non_completed_stage": "09_batch_generation",
+    "instruction": "Both pilots passed visual QA and are locked. Do not regenerate vit-v6-u01 or vit-v6-u10. Continue the remaining generation units serially under stage 09, preserving the same living diorama, smooth camera, native-audio fallback and one-active-request limit."
   }
 }
