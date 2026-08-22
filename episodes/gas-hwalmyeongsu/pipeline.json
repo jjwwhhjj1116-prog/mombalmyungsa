@@ -73,10 +73,12 @@
     "boundary_rule": "duration_lte_180_is_shorts_duration_gt_180_is_longform",
     "measurement_source": "final_approved_full_script_tts",
     "lock_path": "locks/05-duration-route.lock.json",
-    "status": "pending_measurement",
-    "provisional_content_format": "shorts",
-    "provisional_aspect_ratio": "9:16",
-    "flow_generation_blocked_until_locked": true
+    "status": "locked",
+    "duration_seconds": 152.189375,
+    "audio_sha256": "5451912e7204008a09a0c75bafb6f06712e544f32f2e19cb2c4796e56faada1a",
+    "content_format": "shorts",
+    "aspect_ratio": "9:16",
+    "flow_generation_blocked_until_locked": false
   },
   "release_contract": {
     "platform": "YouTube",
@@ -154,8 +156,8 @@
     },
     {
       "id": "08_pilot_generation",
-      "status": "blocked",
-      "blocker_path": "blockers/08-pilot-generation.blocker.json"
+      "status": "pending",
+      "resolved_blocker_audit_path": "blockers/08-pilot-generation.blocker.json"
     },
     { "id": "09_batch_generation", "status": "pending" },
     { "id": "10_clip_harvest", "status": "pending" },
@@ -167,6 +169,6 @@
   ],
   "resume": {
     "first_non_completed_stage": "08_pilot_generation",
-    "instruction": "Thumbnail V20, its mobile QA, and the textless opening image are locked. Before any paid Flow generation, synthesize the approved full-script TTS and lock 05-duration-route. If duration exceeds 180.000 seconds, rebuild 06 and 07 for 16:9 longform; otherwise confirm 9:16 and submit the first hook as I2V from the approved textless opening image, with all remaining units kept as T2V."
+    "instruction": "The approved full-script Generation 2 TTS measures 152.189375 seconds, so the 9:16 Shorts route is locked. Verify the Flow account, re-check thumbnail and opening-image hashes, then submit vit-v6-u01 exactly once as I2V using assets/frame-zero-bg-v18-no-product.png. Keep every later unit as T2V."
   }
 }

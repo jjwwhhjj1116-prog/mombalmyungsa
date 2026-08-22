@@ -1,0 +1,20 @@
+{
+  "schema_version": "body-invention.duration-route-lock.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "status": "locked",
+  "measurement_source": "final_approved_full_script_tts",
+  "input_hashes": {
+    "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
+    "tts/gas-hwalmyeongsu-v6-elevenlabs-take2.mp3": "5451912e7204008a09a0c75bafb6f06712e544f32f2e19cb2c4796e56faada1a"
+  },
+  "voice_provider": "ElevenLabs",
+  "voice_take": "Generation 2",
+  "voice_model": "Eleven v3",
+  "duration_seconds": 152.189375,
+  "threshold_seconds": 180.0,
+  "boundary_rule": "duration_lte_180_is_shorts_duration_gt_180_is_longform",
+  "content_format": "shorts",
+  "aspect_ratio": "9:16",
+  "flow_generation_allowed": true,
+  "locked_at": "2026-08-22T16:04:24+09:00"
+}

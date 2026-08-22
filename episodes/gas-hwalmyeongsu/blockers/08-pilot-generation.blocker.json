@@ -1,12 +1,16 @@
 {
   "schema_version": "body-invention.stage-blocker.v1",
   "stage_id": "08_pilot_generation",
-  "status": "blocked",
+  "status": "resolved",
   "reason_code": "duration_route_pending_before_flow",
   "generation_submitted": false,
+  "resolved_by_lock": "locks/05-duration-route.lock.json",
+  "measured_duration_seconds": 152.189375,
+  "selected_route": "shorts_9_16",
+  "resolved_at": "2026-08-22T16:04:24+09:00",
   "last_confirmed_state": "prompt_not_submitted",
   "thumbnail_gate_state": "V20 final pixels, mobile QA, visual identity and textless opening image are locked",
-  "safe_resume": "First synthesize the approved full-script TTS and create locks/05-duration-route.lock.json. If the measured duration exceeds 180.000 seconds, invalidate and rebuild storyboard and Flow units for 16:9 longform. If it is 180.000 seconds or less, confirm 9:16, verify the private runtime account, verify all thumbnail hashes, then submit vit-v6-u01 exactly once as I2V using assets/frame-zero-bg-v18-no-product.png. Keep every later unit as T2V.",
+  "safe_resume": "The duration gate is resolved at 152.189375 seconds. Verify the private Flow runtime account and all thumbnail hashes, then submit vit-v6-u01 exactly once as I2V using assets/frame-zero-bg-v18-no-product.png. Keep every later unit as T2V.",
   "forbidden": [
     "reuse rejected V3 clips",
     "submit duplicate jobs after an unknown browser result",
