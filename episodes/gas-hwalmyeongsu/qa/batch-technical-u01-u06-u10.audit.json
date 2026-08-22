@@ -1,0 +1,39 @@
+{
+  "schema_version": "body-invention.batch-technical-audit.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "audited_at": "2026-08-22T18:28:30+09:00",
+  "status": "PASS",
+  "scope": [
+    "vit-v6-u01",
+    "vit-v6-u02",
+    "vit-v6-u03",
+    "vit-v6-u04",
+    "vit-v6-u05",
+    "vit-v6-u06",
+    "vit-v6-u10"
+  ],
+  "uniform_media_contract": {
+    "duration_seconds": 8.0,
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "video_stream_present": true,
+    "audio_stream_present": true
+  },
+  "automated_checks": {
+    "blackdetect": {
+      "threshold": "d=0.10:pix_th=0.10",
+      "detected_segments": 0
+    },
+    "freezedetect": {
+      "threshold": "n=0.003:d=0.70",
+      "detected_segments": 0
+    },
+    "duration_mismatch_count": 0,
+    "aspect_or_resolution_mismatch_count": 0,
+    "missing_audio_stream_count": 0
+  },
+  "limits": "This audit checks source-media integrity only. Sentence harvest timing, native-audio two-frame alignment, TTS ownership, captions, and semantic VOK remain pending in stages 10-14.",
+  "next_safe_action": "resolve vit-v6-u07 after its platform cooldown, then continue the remaining serial Flow units"
+}
