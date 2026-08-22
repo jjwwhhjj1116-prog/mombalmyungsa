@@ -58,14 +58,17 @@ def main() -> int:
     if manifest.get("failed_units") or manifest.get("conditional_pass_units"):
         errors.append("failed or conditional units cannot pass harvest")
     u12 = [r for r in rows if r.get("unit_id") == "vit-v6-u12"]
-    if len(u12) != 3:
-        errors.append("u12 must own exactly s31-s33")
+    if [r.get("sentence_id") for r in u12] != ["s31", "s32"]:
+        errors.append("u12 must own exactly s31-s32 after the s33 visual-QA substitution")
     for row in u12:
         repair = row.get("visual_repair", {})
         if repair.get("severity") != "release_blocking" or not repair.get("required"):
             errors.append(f"{row.get('sentence_id')}: u12 repair must be release blocking")
         if len(repair.get("source_masks", [])) < 2:
             errors.append(f"{row.get('sentence_id')}: u12 requires both shelf-label masks")
+    s33 = next((r for r in rows if r.get("sentence_id") == "s33"), {})
+    if s33.get("unit_id") != "vit-v6-u13" or s33.get("source_in") != 5.2 or s33.get("source_out") != 7.4:
+        errors.append("s33 must use the approved u13 bubble-reflection replacement window")
     status = "PASS" if not errors else "FAIL"
     print(json.dumps({"status": status, "errors": errors, "manifest": str(manifest_path)}, ensure_ascii=False, indent=2))
     return 0 if not errors else 1

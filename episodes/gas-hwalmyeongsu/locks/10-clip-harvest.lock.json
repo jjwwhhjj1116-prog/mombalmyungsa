@@ -2,14 +2,14 @@
   "schema_version": "body-invention.stage-lock.v1",
   "stage_id": "10_clip_harvest",
   "status": "completed",
-  "revision": 21,
-  "approved_by": "internal_visual_harvest_review_and_validator",
+  "revision": 22,
+  "approved_by": "internal_visual_harvest_review_stage12_repair_and_validator",
   "input_hashes": {
     "locks/09-batch-generation.lock.json": "39d86b3d3b3bbe0c146a8428296ef62453aa8825e35386f49af02b667ed3e98b",
     "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3"
   },
   "output_hashes": {
-    "plans/clip-harvest-v6.json": "aee495085a9d3ea16c067acfa46bc33ae58b5da34efeb346cf8b75f6917975f0"
+    "plans/clip-harvest-v6.json": "3eee0a55f8b971b7d5b07fff69ed651831d8b094b6f7f4e11d1dcd3a67183c2b"
   },
   "sentence_count": 37,
   "unique_source_count": 13,
@@ -20,13 +20,20 @@
   "mandatory_edit_repairs": [
     {
       "unit_id": "vit-v6-u12",
-      "sentence_ids": ["s31", "s32", "s33"],
-      "action": "apply_tracked_opaque_museum_panels_to_both_pharmacy_shelf_label_bands_before_any_selected_frame_enters_the_final_edit",
+      "sentence_ids": ["s32"],
+      "action": "replace_generated_label text with three tracked blank pharmacy shelf signs before any selected frame enters the final edit",
       "protected_subjects": ["amber_bottle", "wooden_mannequin_hand"],
       "acceptance": "zero_readable_or_pseudo_readable_generated_source_writing",
       "release_blocked_if_unrepaired": true
+    },
+    {
+      "unit_id": "vit-v6-u13",
+      "sentence_ids": ["s33"],
+      "action": "use the 5.2-7.4 second bubble-reflection window after stage12 visual QA rejected the u12 factory-label transition",
+      "acceptance": "clean amber-bottle bubble image with no generated writing",
+      "release_blocked_if_unrepaired": true
     }
   ],
-  "completed_at": "2026-08-23T02:18:44.6334779+09:00",
+  "completed_at": "2026-08-23T02:59:50.5817161+09:00",
   "next_stage": "11_voice_alignment"
 }

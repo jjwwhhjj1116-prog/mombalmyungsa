@@ -1,0 +1,39 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "12_tts_owned_edit",
+  "status": "completed",
+  "revision": 24,
+  "approved_by": "tts_owned_edit_validator_and_visual_boundary_review",
+  "input_hashes": {
+    "locks/11-voice-alignment.lock.json": "d59bc79092e1d75f03a52469a17d96369c3d58b2dfd7740f424de703c0f42790",
+    "plans/clip-harvest-v6.json": "3eee0a55f8b971b7d5b07fff69ed651831d8b094b6f7f4e11d1dcd3a67183c2b",
+    "tts/gas-hwalmyeongsu-v6-elevenlabs-take2.mp3": "5451912e7204008a09a0c75bafb6f06712e544f32f2e19cb2c4796e56faada1a",
+    "tts/gas-hwalmyeongsu-v6-alignment.json": "b281ff41fa6859ee9f0a7eeec266372d1e58326942d3f936903ff7416c2b84ce"
+  },
+  "output_hashes": {
+    "plans/tts-owned-edit-v6.json": "0d482baed7b1e372bee8f4d4d8518496ccb3b1a1bbba84aa2bdedf8c22178216",
+    "renders/gas-hwalmyeongsu-v6-rough.mp4": "213999571f7d15a653f45627bd17070c6a9f4c71505ad8cc5f5dcc4688e22af6",
+    "qa/stage12/contact-boundaries-fixed.png": "a78e388328a73e9d0b367b3b737daa30ca23870992b2850539b09c3e60d5c829",
+    "qa/stage12/contact-stage12-fixed.png": "56f0e43113a7a1b84eeb8a68d985c6ef0acabc17f388718e12569c7560a9c6d2",
+    "../../video/src/GasHwalmyeongsuRoughCut.tsx": "5c5bc73d6e8aa19e110316cb3a916d7060abb42d0e7e4439452ef80e16396cba",
+    "../../video/src/data/gas-hwalmyeongsu-v6-timeline.json": "0d482baed7b1e372bee8f4d4d8518496ccb3b1a1bbba84aa2bdedf8c22178216"
+  },
+  "video_contract": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 152.256,
+    "frame_count": 4566,
+    "sentence_count": 37,
+    "premature_scene_cuts": 0,
+    "frame_zero_frames": 21,
+    "camera_policy": "preserve_flow_native_camera_no_per_sentence_reset"
+  },
+  "repairs": [
+    "vit-v6-u12 pseudo-writing was replaced with neutral blank shelf signs",
+    "sentence 33 harvest was replaced by the clean vit-v6-u13 carbonation-bubble shot",
+    "alternating edit-layer zoom directions were removed to eliminate per-cut shaking"
+  ],
+  "completed_at": "2026-08-23T03:19:26.5003166+09:00",
+  "next_stage": "13_semantic_motion_sound"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "mombalmyungsa-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "remotion:studio": "remotion studio video/src/index.ts --public-dir video/public",
+    "render:gas:rough": "remotion render video/src/index.ts GasHwalmyeongsuRough episodes/gas-hwalmyeongsu/renders/gas-hwalmyeongsu-v6-rough.mp4 --public-dir video/public --codec h264 --crf 16 --overwrite",
+    "render:gas:final": "remotion render video/src/index.ts GasHwalmyeongsuFinal episodes/gas-hwalmyeongsu/renders/gas-hwalmyeongsu-v6-final.mp4 --public-dir video/public --codec h264 --crf 16 --overwrite"
+  },
+  "dependencies": {
+    "@remotion/cli": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remotion": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}

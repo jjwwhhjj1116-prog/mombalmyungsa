@@ -27,9 +27,7 @@
     {
       "unit_id": "vit-v6-u12",
       "sentences": [
-        "s31",
-        "s32",
-        "s33"
+        "s32"
       ],
       "problem": "pseudo_Korean_modern_pharmacy_shelf_labels",
       "action": "apply_tracked_opaque_masks_before_any_selected_frame_enters_the_final_edit",
@@ -916,14 +914,14 @@
       "sentence_id": "s33",
       "narration": "이제 이 소리가, 조금 다르게 들리지 않나요?",
       "meaning_target": "sound_reframed",
-      "motion_carrier": "vapor_timeline",
-      "unit_id": "vit-v6-u12",
-      "candidate_id": "8a5aeb59-729f-4cf3-8bcc-b81bd1fb94f5",
-      "source_path": "generated/batch/vit-v6-u12.mp4",
-      "source_sha256": "1f7ae5fa1f16e5a232dd03720c6b62f854f7b480b971d109748dca692323fee5",
+      "motion_carrier": "bubble_reflection",
+      "unit_id": "vit-v6-u13",
+      "candidate_id": "1ffac7ec-242e-4f7c-856a-e1594a46a35c",
+      "source_path": "generated/batch/vit-v6-u13.mp4",
+      "source_sha256": "b2d4aca5e9b6493591db56e61307f3be654bf956ef35a95107ac343f51d43d8a",
       "source_in": 5.2,
-      "source_out": 8.0,
-      "source_duration": 2.8,
+      "source_out": 7.4,
+      "source_duration": 2.2,
       "speed_ratio": 1.0,
       "optical_flow": false,
       "reject_reason": null,
@@ -934,35 +932,9 @@
       "sync_error_frames": null,
       "visual_repair": {
         "required": true,
-        "severity": "release_blocking",
-        "method": "tracked_opaque_museum_panels_plus_subject_safe_crop",
-        "tracked_anchors": [
-          "amber_bottle_neck",
-          "wooden_mannequin_hand",
-          "pharmacy_shelf_plane"
-        ],
-        "protected_subjects": [
-          "amber_bottle",
-          "wooden_mannequin_hand"
-        ],
-        "source_masks": [
-          {
-            "region": "left_shelf_label_band",
-            "x": 0,
-            "y": 540,
-            "width": 230,
-            "height": 390
-          },
-          {
-            "region": "right_shelf_label_band",
-            "x": 500,
-            "y": 540,
-            "width": 220,
-            "height": 390
-          }
-        ],
-        "acceptance": "zero_readable_or_pseudo_readable_generated_writing_in_every_rendered_frame",
-        "final_qa_gate": "FAIL_if_any_source_label_remains_visible"
+        "severity": "precautionary",
+        "method": "subject_safe_reframe_around_amber_bottle_and_visible_bubbles",
+        "acceptance": "zero_readable_or_pseudo_readable_generated_writing_in_every_rendered_frame"
       }
     },
     {

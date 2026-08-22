@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 23,
+  "revision": 24,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -174,21 +174,26 @@
       "id": "10_clip_harvest",
       "status": "completed",
       "lock_path": "locks/10-clip-harvest.lock.json",
-      "lock_sha256": "875b190fe65e0dc4c1e7f898b90069621316beae81719cb0d82cfd19f1c767a9"
+      "lock_sha256": "500bba4ffdd8516bac5ef9c1c99d5e0fd0eaaf292731bcbb158c7a3905886f18"
     },
     {
       "id": "11_voice_alignment",
       "status": "completed",
       "lock_path": "locks/11-voice-alignment.lock.json",
-      "lock_sha256": "13f77ebabb976529402597eba0e21ff93c2f7185c9a4a5fd454601bc8bda89b1"
+      "lock_sha256": "d59bc79092e1d75f03a52469a17d96369c3d58b2dfd7740f424de703c0f42790"
     },
-    { "id": "12_tts_owned_edit", "status": "pending" },
+    {
+      "id": "12_tts_owned_edit",
+      "status": "completed",
+      "lock_path": "locks/12-tts-owned-edit.lock.json",
+      "lock_sha256": "a9b08d710abff2c16df17411df88314bfacfe77b70d4c110373fb8662c43c26e"
+    },
     { "id": "13_semantic_motion_sound", "status": "pending" },
     { "id": "14_final_qa", "status": "pending" },
     { "id": "15_packaging_release", "status": "pending" }
   ],
   "resume": {
-    "first_non_completed_stage": "12_tts_owned_edit",
-    "instruction": "The approved 152.189375-second ElevenLabs Generation 2 full-script audio is aligned to 351 script tokens and 37 sentence boundaries. Build the 1080x1920 TTS-owned rough cut so every sentence owns its complete alignment interval, apply the release-blocking vit-v6-u12 shelf-label masks before admitting those frames, and do not reveal the next sentence early."
+    "first_non_completed_stage": "13_semantic_motion_sound",
+    "instruction": "Use the locked 152.256-second TTS-owned rough cut as the immutable edit base. Add only meaning-triggered motion graphics, word-aligned 100px Gmarket Sans Bold captions at vertical slot 10 of 16, and restrained event-matched sound effects. Do not reintroduce edit-layer camera shaking or alter sentence ownership."
   }
 }
