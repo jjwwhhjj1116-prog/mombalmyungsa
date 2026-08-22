@@ -38,7 +38,7 @@
   },
   "visual_qa": {
     "status": "FAIL",
-    "contact_sheet_24": "qa/batch-u12-contact-sheet-24.jpg",
+    "contact_sheet_24": "qa/batch-u12-attempt-2-contact-sheet-24.jpg",
     "contact_sheet_24_sha256": "5066de94758187b2017fd30f23baa861f6f96de38727e197a057de52f0c741e2",
     "failed_checks": [
       "both_old_and_modern_hands_remain_photorealistic_instead_of_jointed_matte_resin",

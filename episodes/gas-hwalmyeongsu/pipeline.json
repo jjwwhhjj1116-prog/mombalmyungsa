@@ -164,7 +164,12 @@
       "lock_sha256": "8c43827182cf40e6611a858ca82f4891c41be2b5ca962900b9399275f33d29ee",
       "resolved_blocker_audit_path": "blockers/08-pilot-generation.blocker.json"
     },
-    { "id": "09_batch_generation", "status": "pending" },
+    {
+      "id": "09_batch_generation",
+      "status": "completed",
+      "lock_path": "locks/09-batch-generation.lock.json",
+      "lock_sha256": "39d86b3d3b3bbe0c146a8428296ef62453aa8825e35386f49af02b667ed3e98b"
+    },
     { "id": "10_clip_harvest", "status": "pending" },
     { "id": "11_voice_alignment", "status": "pending" },
     { "id": "12_tts_owned_edit", "status": "pending" },
@@ -173,7 +178,7 @@
     { "id": "15_packaging_release", "status": "pending" }
   ],
   "resume": {
-    "first_non_completed_stage": "09_batch_generation",
-    "instruction": "Both pilots passed visual QA and are locked. Do not regenerate vit-v6-u01 or vit-v6-u10. Continue the remaining generation units serially under stage 09, preserving the same living diorama, smooth camera, native-audio fallback and one-active-request limit."
+    "first_non_completed_stage": "10_clip_harvest",
+    "instruction": "All Flow units are generated and locked. Select sentence-owned harvest windows, audit native audio, and apply the mandatory tracked opaque mask to every pseudo-readable shelf label in vit-v6-u12 before any frame can enter the final edit."
   }
 }

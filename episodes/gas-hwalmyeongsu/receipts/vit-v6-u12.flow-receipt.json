@@ -1,0 +1,69 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "unit_id": "vit-v6-u12",
+  "attempt": 3,
+  "status": "completed_visual_pass_with_mandatory_repair",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "project_id": "f98e16bc-b689-4da5-809f-39a0e2be8682",
+  "media_id": "8a5aeb59-729f-4cf3-8bcc-b81bd1fb94f5",
+  "media_url": "https://labs.google/fx/ko/tools/flow/project/f98e16bc-b689-4da5-809f-39a0e2be8682/edit/8a5aeb59-729f-4cf3-8bcc-b81bd1fb94f5",
+  "submitted_at": "2026-08-23T01:26:26.409+09:00",
+  "terminal_confirmed_at": "2026-08-23T01:27:37+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "9:16",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "prompt_entry_method": "pressSequentially_physical_key_events_only",
+  "pre_submit_prompt_exact_match": true,
+  "post_submit_server_card_prompt_exact_match": true,
+  "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin objects, walnut, brass and amber glass, blank white geometric pharmacy boxes, warm amber and cool teal light, smooth camera, never photorealistic. No human appears. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy miniature where one clearly nonhuman articulated wooden mannequin hand with exposed ball joints twists the cap once. Hiss vapor becomes a curved brass time rail joining blank silhouettes of the old apothecary and 1960s factory. Native bottle, machine, cap, hiss and room sounds only. No skin, faces, people, speech, music, text, letters, numbers, symbols, plaques, papers, gauges, signs, labels, logos, shake, morphing or chibi.",
+  "local_media": {
+    "path": "generated/batch/vit-v6-u12.mp4",
+    "sha256": "1f7ae5fa1f16e5a232dd03720c6b62f854f7b480b971d109748dca692323fee5",
+    "bytes": 2233518,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS_WITH_MANDATORY_REPAIR",
+    "contact_sheet_24": "qa/batch-u12-contact-sheet-24.jpg",
+    "contact_sheet_24_sha256": "eec5ccd68c560880e9cc35ec13c41503fa7ba068975223057a57d93fcbb307a5",
+    "passed_checks": [
+      "completed_bubbling_amber_bottle_and_machine_action",
+      "bottle_neck_match_cut_to_modern_pharmacy",
+      "nonhuman_articulated_wooden_mannequin_hand_twists_cap_once",
+      "no_skin_faces_or_real_people",
+      "hiss_vapor_becomes_curved_brass_time_rail",
+      "old_apothecary_and_factory_are_blank_silhouettes",
+      "random_shake_visible_in_24_frame_sheet_is_false",
+      "brand_or_product_label_is_false"
+    ],
+    "mandatory_repair": {
+      "problem": "Flow generated small pseudo-Korean shelf labels in the modern-pharmacy background despite the no-text prompt.",
+      "stage": "10_candidate_selection",
+      "method": "cover every readable shelf-label band with the opaque subtitle/VOK evidence panel or a tracked geometric mask while keeping the bottle and wooden hand unobstructed",
+      "acceptance": "zero readable or pseudo-readable generated writing in every harvested frame",
+      "final_qa_gate": "fail release if any source label remains visible"
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "measurement_status": "local_decoder_filter_unavailable",
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute_and_replace_with_aligned_bottle_machine_cap_hiss_and_room_sfx_if visible events do not match within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt and QA hashes are committed",
+  "next_safe_action": "advance to stage 10 candidate selection only after the mandatory generated-text mask is included in the selection plan"
+}

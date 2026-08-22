@@ -1,0 +1,74 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "09_batch_generation",
+  "status": "completed",
+  "revision": 21,
+  "approved_by": "internal_visual_qa_and_validator",
+  "input_hashes": {
+    "locks/08-pilot-generation.lock.json": "8c43827182cf40e6611a858ca82f4891c41be2b5ca962900b9399275f33d29ee",
+    "plans/generation-units-v6.json": "90cdab1f499af31c36991434b2aa01a127eca5e97c5c18da5e75871ebe60bd2a",
+    "plans/runtime-submission-prompts-v6.json": "463d2eb9cd8febf169a09a569632960ce0516a504e3ca84b05bb1007726f4927"
+  },
+  "output_hashes": {
+    "receipts/vit-v6-u02.flow-receipt.json": "f241f5a48f1e53de1c85bc5ac421aaa7b5ebd4929b440f83b7ea960e63ff3bd3",
+    "receipts/vit-v6-u03.flow-receipt.json": "84611289aeb287a8476f8040c8d89cf807ffe4c3df4f0fed34b8f30c32f13142",
+    "receipts/vit-v6-u04.flow-receipt.json": "3067a6719368783c11218147346f42c29e933ea7bfaf277b6ef3674686ca99c2",
+    "receipts/vit-v6-u05.flow-receipt.json": "676963992bc2c4f4d5f1981ef0cd80b5ba633a1b8fc9bf353d5a8cee6c3a99ec",
+    "receipts/vit-v6-u06.flow-receipt.json": "294e29840ac555fec009de42ac9c4c71ae11dcadcfed0aba6b80732f6681a28c",
+    "receipts/vit-v6-u07.flow-receipt.json": "32a5d23966ab8739632b834dbd63ac45f9a6b69374983dd4aae5314327ef0ee4",
+    "receipts/vit-v6-u08.flow-receipt.json": "215e0c937fd8fd4199794507097dfe48e6d91fcc933d81acd24ecebd356bb542",
+    "receipts/vit-v6-u09.flow-receipt.json": "9f004874913a7a91ed67da093168217415413ed6d9a0efa9ce30e49a69545155",
+    "receipts/vit-v6-u11.flow-receipt.json": "010b20dbf79881b319c0c4bb596cf32013c45946bd2feaefdf6bd919437f88cc",
+    "receipts/vit-v6-u12.flow-receipt.json": "9f1f74ab32c72c16cd99055f4b54de38641f7947fb541814f8af4858d266fdf2",
+    "receipts/vit-v6-u13.flow-receipt.json": "db84253332e6b8e2fdc14b0787824395a1a34a3493ee8c468d7276267bffa664",
+    "qa/batch-u02-contact-sheet-24.jpg": "57c4f73b1a2c3cc07f33fcc09d34094de5c711917d1944dcc4ae575f0fb381ac",
+    "qa/batch-u03-contact-sheet-24.jpg": "735407d1f2f87f35f8b346a4762a0e621d3413f4a5d02e35fc488d1e5c4c6247",
+    "qa/batch-u04-contact-sheet-24.jpg": "be314caad658d47aa4c2bd024051b4501e3858eea079af1c5b2e822d1fa69e74",
+    "qa/batch-u05-contact-sheet-24.jpg": "ecc314015fd55d6e29ae53b1312c5e68542dc63d16693207d7fe6e9039022044",
+    "qa/batch-u06-contact-sheet-24.jpg": "1cf01d7499f1955cdc1f35a3304b7cad596c5e8420395ab896204dc376f3fd7a",
+    "qa/batch-u07-contact-sheet-24.jpg": "42393f373b678182ba845b2c3466990e335ef73482b797c5bddb59bb2e435356",
+    "qa/batch-u08-contact-sheet-24.jpg": "6d18be0ea98aabbd4b8c46a76bfa2b18c2f37d011eff024fb15a28782ad403f9",
+    "qa/batch-u09-contact-sheet-24.jpg": "367ca1229e684714c349fb9a376c10257591e9c4792dedc37c3fbdc7a200de79",
+    "qa/batch-u11-contact-sheet-24.jpg": "ec8ae4238ef082a7f24ff45ec95c3cf4121484d5513b6e28fb7bf200be74c760",
+    "qa/batch-u12-contact-sheet-24.jpg": "eec5ccd68c560880e9cc35ec13c41503fa7ba068975223057a57d93fcbb307a5",
+    "qa/batch-u13-contact-sheet-24.jpg": "daa56b79fce0dab3e1c6c9240d9bf705d0e5076ecec0af4269cc41c34fe310d2"
+  },
+  "batch_unit_ids": [
+    "vit-v6-u02",
+    "vit-v6-u03",
+    "vit-v6-u04",
+    "vit-v6-u05",
+    "vit-v6-u06",
+    "vit-v6-u07",
+    "vit-v6-u08",
+    "vit-v6-u09",
+    "vit-v6-u11",
+    "vit-v6-u12",
+    "vit-v6-u13"
+  ],
+  "visual_qa": {
+    "vit-v6-u02": "PASS",
+    "vit-v6-u03": "PASS",
+    "vit-v6-u04": "PASS",
+    "vit-v6-u05": "PASS",
+    "vit-v6-u06": "PASS",
+    "vit-v6-u07": "PASS",
+    "vit-v6-u08": "PASS",
+    "vit-v6-u09": "PASS",
+    "vit-v6-u11": "PASS",
+    "vit-v6-u12": "PASS_WITH_MANDATORY_GENERATED_TEXT_MASK",
+    "vit-v6-u13": "PASS"
+  },
+  "mandatory_stage_10_repair": {
+    "unit_id": "vit-v6-u12",
+    "problem": "pseudo-Korean shelf labels remain behind the bottle and articulated wooden hand",
+    "required_action": "tracked opaque subtitle or VOK evidence panel must cover every generated shelf label without covering the bottle or hand",
+    "acceptance": "zero readable or pseudo-readable source writing in every selected frame",
+    "release_blocked_if_unrepaired": true
+  },
+  "native_audio_route": {
+    "status": "deferred_to_clip_harvest_audit",
+    "rule": "keep only when visible events align within two frames and no speech or music exists; otherwise mute and replace with aligned edit SFX"
+  },
+  "next_stage": "10_clip_harvest"
+}
