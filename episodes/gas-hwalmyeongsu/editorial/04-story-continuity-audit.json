@@ -1,0 +1,37 @@
+{
+  "schema_version": "body-invention.story-continuity-audit.v2",
+  "topic_id": "topic-002",
+  "script": "editorial/04-script-clean-v6-locked.txt",
+  "reviewed_at": "2026-08-22T02:54:06+09:00",
+  "status": "PASS",
+  "release_blocked": false,
+  "failures": [],
+  "chapter_gate": {
+    "who": "PASS",
+    "why": "PASS",
+    "how": "PASS",
+    "plain_analogy": "PASS",
+    "accurate_explanation": "PASS",
+    "bridge_to_next": "PASS"
+  },
+  "large_transition_bridges": [
+    {
+      "transition": "대한제국에서 민병호",
+      "bridge": "바로 이 불편을 그냥 지나치지 않은 사람이 있었어요.",
+      "status": "PASS"
+    },
+    {
+      "transition": "민병호에서 민강과 대량생산",
+      "bridge": "이 환상적인 약을 가지고, 아들 민강은 동화약방을 세웠습니다.",
+      "status": "PASS"
+    },
+    {
+      "transition": "1910년대 유사품에서 1960년대 탄산",
+      "bridge": "이쯤이면, 이제 더 손댈 필요가 없어 보이잖아요?",
+      "status": "PASS"
+    }
+  ],
+  "next_safe_stage": "06_storyboard",
+  "paid_generation_allowed": true,
+  "publishable": false
+}

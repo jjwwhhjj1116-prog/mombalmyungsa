@@ -1,0 +1,16 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "05_script_approval",
+  "status": "completed",
+  "revision": 6,
+  "approved_by": "user",
+  "approved_at": "2026-08-22T02:54:06+09:00",
+  "input_hashes": {},
+  "output_hashes": {
+    "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3"
+  },
+  "sentence_count": 37,
+  "human_approved": true,
+  "paid_generation_allowed": true
+}
+

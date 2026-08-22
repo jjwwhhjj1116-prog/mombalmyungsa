@@ -1,0 +1,312 @@
+{
+  "schema_version": "timemedic.flow-generation-plan.v2",
+  "topic_id": "topic-002",
+  "revision": 6,
+  "script_sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
+  "storyboard_sha256": "bc5b03ed3c0fe498d913d7a6c046de4bee7e9b991001cbd3dd5c95a2351413d2",
+  "engine": "Google Flow",
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "9:16",
+  "seconds_per_unit": 8,
+  "sequential_generation_only": true,
+  "minimum_seconds_between_generation_clicks": 180,
+  "cooldown_seconds_after_three_jobs": 600,
+  "pilot_unit_ids": [
+    "vit-v6-u01",
+    "vit-v6-u10"
+  ],
+  "style_prefix": "Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic.",
+  "global_avoid": "No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+  "reference_grammar_lock_path": "generation/07-reference-grammar-v6.lock.json",
+  "units": [
+    {
+      "unit_id": "vit-v6-u01",
+      "sentence_ids": [
+        "s01",
+        "s02",
+        "s03"
+      ],
+      "candidate_count": 1,
+      "risk": "modern_korea_hook",
+      "motion_carrier": "right_hand_to_bottle",
+      "continuity_anchors": [
+        "bottle_center",
+        "rightward_hand",
+        "camera_axis"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: exact thumbnail composition without text, Korean adult puppet holds abdomen and reaches toward closed giant amber bottle. SHOT B: bottle settles on brass turntable while Korean pharmacy drawers open. SHOT C: camera and puppet gaze push toward the untouched metal cap and stop before opening. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u02",
+      "sentence_ids": [
+        "s04",
+        "s05",
+        "s06"
+      ],
+      "candidate_count": 1,
+      "risk": "hook_sensory_timeline",
+      "motion_carrier": "bubble_to_timeline",
+      "continuity_anchors": [
+        "bottle_neck",
+        "upward_bubble",
+        "rightward_rail"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: the hand twists the cap once; visible fine vapor and bubbles rise exactly with the cap movement. SHOT B: macro follows one bubble to a tactile enamel tongue model. SHOT C: the bubble enters a brass time rail leading from the modern bottle to a still non-carbonated 1897 bottle. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u03",
+      "sentence_ids": [
+        "s07",
+        "s08",
+        "s09"
+      ],
+      "candidate_count": 1,
+      "risk": "1897_context",
+      "motion_carrier": "steam_to_cauldron",
+      "continuity_anchors": [
+        "amber_bottle",
+        "rightward_camera",
+        "warm_light"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: bottle-shoulder match cut opens a Korean Empire 1897 wooden apothecary museum set. SHOT B: a Korean family opens an empty medicine cabinet. SHOT C: camera reaches a distant cauldron where herbs, water, fire and steam show the slow decoction process. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u04",
+      "sentence_ids": [
+        "s10",
+        "s11",
+        "s12"
+      ],
+      "candidate_count": 1,
+      "risk": "problem_to_person",
+      "motion_carrier": "steam_wipe",
+      "continuity_anchors": [
+        "steam",
+        "same_rightward_camera",
+        "hand_gesture"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: ill adult grips abdomen beside a painfully slow hourglass and steaming cauldron, no gore. SHOT B: steam wipes the frame and reveals an observant Joseon-period court official looking between patient and process. SHOT C: in a Korean royal medicinal records room, he studies herbal prescriptions; role before name, no readable writing. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u05",
+      "sentence_ids": [
+        "s13",
+        "s14",
+        "s15"
+      ],
+      "candidate_count": 1,
+      "risk": "method_reframe",
+      "motion_carrier": "liquid_through_strainer",
+      "continuity_anchors": [
+        "workbench",
+        "left_to_right_flow",
+        "brass_rail"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: the official rearranges cauldron, fine cloth strainer and bottle into a shorter production line. SHOT B: Korean court herbal drawers on the left connect to Western glass measuring tools on the right. SHOT C: brown decoction flows through white cloth and a fine strainer, residue remains above and clear liquid collects below. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u06",
+      "sentence_ids": [
+        "s16",
+        "s17"
+      ],
+      "candidate_count": 1,
+      "risk": "ready_to_drink_invention",
+      "motion_carrier": "bottle_handoff",
+      "continuity_anchors": [
+        "liquid_flow",
+        "rightward_handoff",
+        "same_bottle"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: unlabeled ingredient vessels representing catechu, clove and menthol pour measured contents into the filtered liquid and fill a small amber bottle. SHOT B: a long hourglass is pushed away and the finished bottle is immediately handed to the relieved patient, easy visual analogy for ready-to-drink medicine. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u07",
+      "sentence_ids": [
+        "s18",
+        "s19",
+        "s20"
+      ],
+      "candidate_count": 1,
+      "risk": "pharmacy_mass_production",
+      "motion_carrier": "conveyor_bottles",
+      "continuity_anchors": [
+        "same_bottle",
+        "rightward_rail",
+        "hand_match"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: the bottle rides a brass rail to adult son Min Kang; father and son open a Korean wooden pharmacy together. SHOT B: one bottle passes through a small filling mechanism and becomes many bottles moving right. SHOT C: a bottle match cut moves from the royal workbench to a public pharmacy shelf as many Korean hands pick it up. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u08",
+      "sentence_ids": [
+        "s21",
+        "s22",
+        "s23"
+      ],
+      "candidate_count": 1,
+      "risk": "success_and_question",
+      "motion_carrier": "static_original_bottle",
+      "continuity_anchors": [
+        "central_bottle",
+        "background_motion",
+        "frontal_axis"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: customers line up and a blank brass gauge needle rises. SHOT B: many differently shaped unlabeled similar bottles multiply around one central original bottle; leave a clean blank counter area for post text. SHOT C: the copies slide away while the original stays perfectly still; after a brief evidence hold the back wall begins to rotate. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u09",
+      "sentence_ids": [
+        "s24",
+        "s25"
+      ],
+      "candidate_count": 1,
+      "risk": "1960s_risk_question",
+      "motion_carrier": "orbit_to_valve",
+      "continuity_anchors": [
+        "central_bottle",
+        "same_height",
+        "new_camera_axis"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: rotating wall occlusion reveals a mid-1960s Korean pharmaceutical factory carbonation table, keeping the bottle in the exact same screen position. SHOT B: camera orbits between the successful bottle and a closed brass carbonation valve; a Korean worker hand approaches then pauses before touching it. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u10",
+      "sentence_ids": [
+        "s26",
+        "s27"
+      ],
+      "candidate_count": 1,
+      "risk": "carbonation_solution",
+      "motion_carrier": "bubble_in_tube",
+      "continuity_anchors": [
+        "valve",
+        "bubble_path",
+        "same_bottle"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: a blank official record card stays in the background while the brass valve opens and fine gas bubbles travel through a clear tube into amber liquid. SHOT B: old herbal liquid from the warm left and new carbonation from the cool right converge inside the same bottle, visibly preserving one and changing the other. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u11",
+      "sentence_ids": [
+        "s28",
+        "s29",
+        "s30"
+      ],
+      "candidate_count": 1,
+      "risk": "sensory_mechanism",
+      "motion_carrier": "single_bubble_senses",
+      "continuity_anchors": [
+        "single_bubble",
+        "upward_path",
+        "macro_axis"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: macro inside the amber bottle, dissolved bubbles gather under the cap; when the cap opens fine vapor rises. SHOT B: one bubble touches an enamel tongue model and pops as camera performs one short purposeful punch-in. SHOT C: the same bubble path reaches a thin brass ear diaphragm and tongue model, making the unseen change understandable through hearing and taste. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u12",
+      "sentence_ids": [
+        "s31",
+        "s32",
+        "s33"
+      ],
+      "candidate_count": 1,
+      "risk": "product_and_return",
+      "motion_carrier": "vapor_timeline",
+      "continuity_anchors": [
+        "bottle_neck",
+        "hiss",
+        "same_hand"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: the completed bubbling amber bottle lands on a brass pedestal and machinery stops. SHOT B: bottle-neck match cut returns to the modern Korean pharmacy and the same hand twists the cap once. SHOT C: visible hiss vapor becomes a curved brass time rail joining the 1897 apothecary and 1960s factory in one miniature museum view. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    },
+    {
+      "unit_id": "vit-v6-u13",
+      "sentence_ids": [
+        "s34",
+        "s35",
+        "s36",
+        "s37"
+      ],
+      "candidate_count": 1,
+      "risk": "two_changes_closing",
+      "motion_carrier": "bubble_pop_loop",
+      "continuity_anchors": [
+        "same_bottle",
+        "upward_bubble",
+        "opening_composition"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "9:16",
+      "seconds": 8,
+      "en_generation_prompt": "9:16 vertical. Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic. SHOT A: cauldron liquid crosses strainer and bottle directly into a patient's hand, compressing the first change. SHOT B: bubbles enter that same bottle while light shifts from warm historical amber to cool modern teal, the second change. SHOT C: one bubble reflects cauldron, strainer, bottle and valve as camera follows it upward. SHOT D: bubble pops and returns seamlessly to opening giant bottle and Korean puppet composition, warm final hold. Native audio: only visible object and room sounds synchronized within two frames; no speech and no music. No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
+      "harvest_rule": "Harvest only the 1-3 second segment whose visible action exactly matches each owned sentence; final edit may cut only after that sentence ends in final TTS."
+    }
+  ],
+  "status": "planned",
+  "paid_generation_allowed": true,
+  "batch_generation_allowed": false,
+  "completed_at": "2026-08-22T03:05:16+09:00"
+}

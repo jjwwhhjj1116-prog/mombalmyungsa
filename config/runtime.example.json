@@ -1,0 +1,14 @@
+{
+  "flow": {
+    "account_role": "dedicated_flow_creator",
+    "expected_model": "Omni Flash"
+  },
+  "youtube": {
+    "account_role": "body_invention_channel_owner",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g"
+  },
+  "elevenlabs": {
+    "credential_source": "local_secret_store_or_signed_in_browser"
+  }
+}
+

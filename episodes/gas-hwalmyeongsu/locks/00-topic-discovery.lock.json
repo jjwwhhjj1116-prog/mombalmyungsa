@@ -1,0 +1,12 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "00_topic_discovery",
+  "status": "completed",
+  "revision": 6,
+  "approved_by": "validator",
+  "input_hashes": {},
+  "output_hashes": {
+    "evidence/00-topic-selection.json": "0ed70f2a975eaa4c0894f1341a8c4addc81f31a0383c2a3166a1134ce67ac958"
+  }
+}
+

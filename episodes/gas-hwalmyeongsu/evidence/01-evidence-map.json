@@ -1,0 +1,145 @@
+{
+  "schema_version": "timemedic.evidence-map.v1",
+  "topic_id": "topic-002",
+  "checked_at": "2026-08-22T00:00:00+09:00",
+  "sources": [
+    {
+      "source_id": "VIT-S01",
+      "type": "government_museum_history",
+      "title": "근현대 매약 이야기",
+      "url": "https://www.much.go.kr/webzine/vol26/sub2-2.html",
+      "supports": ["VIT-C01", "VIT-C02", "VIT-C03"]
+    },
+    {
+      "source_id": "VIT-S02",
+      "type": "official_company_history",
+      "title": "활명수이야기",
+      "url": "https://dong-wha.co.kr/company/whalmyungsu.asp",
+      "supports": ["VIT-C01", "VIT-C03", "VIT-C04", "VIT-C06"]
+    },
+    {
+      "source_id": "VIT-S03",
+      "type": "peer_reviewed_medical_history",
+      "title": "Traditional Medicine Doctor Kim Gwangjin’s Battle against Jaundice during the Japanese Colonial Period",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10568154/",
+      "supports": ["VIT-C03"]
+    },
+    {
+      "source_id": "VIT-S04",
+      "type": "independent_news_history",
+      "title": "원조활명수, 역사 속으로",
+      "url": "https://www.asiae.co.kr/article/2011061310305258438",
+      "supports": ["VIT-C05", "VIT-C06"]
+    },
+    {
+      "source_id": "VIT-S05",
+      "type": "official_company_history",
+      "title": "동화약품 창업 History",
+      "url": "https://www.dong-wha.co.kr/company/foundation.asp",
+      "supports": ["VIT-C05"]
+    },
+    {
+      "source_id": "VIT-S06",
+      "type": "official_company_history",
+      "title": "활명수 109주년, 장수비결은 무엇인가",
+      "url": "https://www.dong-wha.co.kr/mediaCenter/dnews/content.asp?t_idx=226",
+      "supports": ["VIT-C09"]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "VIT-C01",
+      "status": "verified",
+      "claim": "1897년 궁중 선전관 민병호가 한약재 기반 처방에 서양 의학을 접목해 활명수를 개발·대중화했다.",
+      "source_ids": ["VIT-S01", "VIT-S02"]
+    },
+    {
+      "claim_id": "VIT-C02",
+      "status": "verified",
+      "claim": "19세기 후반에는 급체로도 사망하는 경우가 있었고 약품 접근성이 낮았다.",
+      "source_ids": ["VIT-S01"]
+    },
+    {
+      "claim_id": "VIT-C03",
+      "status": "verified",
+      "claim": "활명수는 전통 한약재와 당시 서양 약물을 결합한 근대 매약이었다.",
+      "source_ids": ["VIT-S01", "VIT-S02", "VIT-S03"]
+    },
+    {
+      "claim_id": "VIT-C04",
+      "status": "verified",
+      "claim": "1910년대 활명수 한 병 가격은 50전으로, 회사 기록상 설렁탕 두 그릇과 막걸리 두세 잔 수준이었다.",
+      "source_ids": ["VIT-S02"]
+    },
+    {
+      "claim_id": "VIT-C05",
+      "status": "verified",
+      "claim": "탄산을 넣은 까스활명수는 1967년에 출시됐다.",
+      "source_ids": ["VIT-S04", "VIT-S05"]
+    },
+    {
+      "claim_id": "VIT-C06",
+      "status": "supported_inference",
+      "claim": "유사 제품과 달라진 음용 환경 속에서, 까스활명수 출시는 처방의 뿌리는 유지하고 마시는 경험은 바꾼 대응으로 해석할 수 있다.",
+      "source_ids": ["VIT-S02", "VIT-S04"]
+    },
+    {
+      "claim_id": "VIT-C07",
+      "status": "verified",
+      "claim": "민병호와 아들 민강은 1897년 활명수를 대중화하기 위해 동화약방을 설립했다.",
+      "source_ids": ["VIT-S02"]
+    },
+    {
+      "claim_id": "VIT-C08",
+      "status": "verified",
+      "claim": "동화약품 기록에는 1910년대 활명수와 비슷한 이름의 유사 제품이 약 60종 난립했다고 적혀 있다.",
+      "source_ids": ["VIT-S02"]
+    },
+    {
+      "claim_id": "VIT-C09",
+      "status": "verified_with_date_uncertainty",
+      "claim": "동화약품 공식 기록은 1960년대 중반 기존 활명수에 탄산가스를 넣어 청량감을 보강한 까스활명수를 출시했다고 설명하지만, 출시 연도는 공식 페이지 사이에서 1966년과 1967년으로 엇갈린다.",
+      "source_ids": ["VIT-S05", "VIT-S06"]
+    },
+    {
+      "claim_id": "VIT-C10",
+      "status": "verified",
+      "claim": "19세기 말 급체와 소화불량은 흔했지만 특별한 약이 부족했고, 민간요법이나 달여 먹는 탕약에 의존하는 경우가 많았다.",
+      "source_ids": ["VIT-S01", "VIT-S06"]
+    },
+    {
+      "claim_id": "VIT-C11",
+      "status": "verified_company_attributed",
+      "claim": "동화약품 기록은 민병호가 궁중 생약 처방을 일반 백성이 직접 달이지 않고 복용할 수 있게 양약의 장점과 제조법을 취해 혼합 처방을 완성했다고 설명한다.",
+      "source_ids": ["VIT-S06"]
+    },
+    {
+      "claim_id": "VIT-C12",
+      "status": "verified_company_attributed",
+      "claim": "동화약품 기록에 따르면 초기 제조는 생약을 달여 진한 팅크를 만들고 여과한 뒤 아선약·정향·멘톨 등을 배합하는 액체약 방식이었다.",
+      "source_ids": ["VIT-S06"]
+    }
+  ],
+  "removed_or_weakened_claims": [
+    {
+      "raw": "한 병 값이 쌀 한 가마니였다",
+      "decision": "remove",
+      "replacement": "1910년대 50전으로 당시 기준 비싼 약이었다",
+      "reason": "공식 기록은 설렁탕 두 그릇과 막걸리 두세 잔 수준이며 쌀 한 가마니 근거는 확인되지 않음"
+    },
+    {
+      "raw": "왕실 비방",
+      "decision": "attribute_carefully",
+      "replacement": "궁중에서 쓰이던 생약 처방을 바탕으로 했다는 회사 기록과 민병호의 동서 의학 접목을 함께 설명",
+      "reason": "왕실 비밀 처방이라는 자극적 단정 대신 출처 범위에 맞춰 표현"
+    },
+    {
+      "raw": "까스활명수는 1967년에 출시됐다",
+      "decision": "weaken",
+      "replacement": "1960년대 중반, 활명수 출시 약 칠십 년 뒤 탄산가스를 넣어 청량감을 보강한 까스활명수가 등장했다",
+      "reason": "동화약품 공식 기록 사이에서 1966년과 1967년이 엇갈려 정확한 단일 연도를 확정하지 않음"
+    }
+  ],
+  "medical_safety_boundary": "제품 역사를 다루며 현대의 급성 복통·구토를 자가 치료하라고 권하지 않는다.",
+  "source_ids": ["VIT-S01", "VIT-S02", "VIT-S03", "VIT-S04", "VIT-S05", "VIT-S06"]
+}

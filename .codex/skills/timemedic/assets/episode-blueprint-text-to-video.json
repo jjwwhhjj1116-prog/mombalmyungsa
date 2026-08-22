@@ -1,0 +1,249 @@
+{
+  "schema_version": "timemedic.text-to-video.v2",
+  "id": "episode-id",
+  "brand": "몸의 발명사",
+  "title": "현재의 익숙한 장면과 역사적 반전을 함께 담은 제목",
+  "target_seconds": 58,
+  "script_profile": "short_50_58",
+  "production_mode": "tts_owned_text_to_video_multishot",
+  "stage_pipeline_asset": "assets/omni-stage-pipeline.json",
+  "story_contract": {
+    "intent": "마지막에 남길 단 하나의 의미",
+    "present_anchor": "현재 사람들이 익숙하게 보는 완성된 행동",
+    "assumption": "당연하다고 믿는 상식",
+    "contradiction": "그 상식을 깨는 검증된 사실",
+    "protagonist": "문제를 직접 겪거나 해결한 인물",
+    "unavoidable_mechanism": "피할 수 없는 반복 구조",
+    "escalation": "반복될수록 커지는 손실",
+    "double_bind": "어느 쪽을 택해도 생기는 두 손실",
+    "old_question": "기존 방식의 질문",
+    "new_question": "발상을 뒤집은 질문",
+    "concrete_action": "새 질문이 만든 실제 행동",
+    "unexpected_result": "최초 의도를 넘어선 결과",
+    "proof": "수치·기록·관찰",
+    "present_return": "현재 장면으로 돌아오는 연결",
+    "meaning": "시작과 끝을 묶는 의미"
+  },
+  "generation_policy": {
+    "engine": "Google Flow",
+    "primary_model": "Omni Flash",
+    "fallback_model": "Veo 3.1 Fast",
+    "forbidden_model": "Veo 3.1 Quality",
+    "mode": "text_to_video",
+    "aspect_ratio": "9:16",
+    "seconds": 8,
+    "default_outputs_per_prompt": 1,
+    "high_risk_outputs_per_prompt": 2,
+    "high_risk_units": ["hook", "reversal", "complex_hand_action", "internal_body_mechanism", "continuity_critical"],
+    "pilot_units": ["hook", "mechanism_or_reversal"],
+    "prompt_views": ["ko_review", "en_generation"],
+    "generation_units_for_40_to_80_seconds": [10, 18],
+    "sentences_per_generation_unit": [2, 3],
+    "shots_per_generation_unit": [2, 3],
+    "final_timing_master": "approved final TTS word alignment",
+    "reference_flow_grammar": "references/reference-channel-flow-grammar.md",
+    "reference_grammar_lock_required": true,
+    "final_timeline_asset": "moving_mp4_only",
+    "image_keyframe_route": "exception_only",
+    "generated_text_policy": "blank_plates_only",
+    "harvest_seconds_per_sentence": [1, 3],
+    "candidate_selection": "best_segment_harvest",
+    "optical_flow_policy": "exceptional_duration_repair_only",
+    "final_resolution": "1080x1920"
+    ,"native_audio_policy": "visible_event_only_keep_if_within_2_frames_else_replace"
+    ,"continuous_motion_contract": "carry_motion_carrier_across_cuts"
+  },
+  "style_prefix": "Vertical 9:16 premium handcrafted 3D medical museum miniature diorama, adult-proportioned matte resin stop-motion puppets, visible scale cues, tactile materials, cinematic macro lens, layered parallax and volumetric museum light, no live actors, no photoreal skin, no chibi, no gore, no readable text, no letters, no numbers, no logos.",
+  "generation_unit_template": {
+    "generation_unit_id": "V01",
+    "sentence_ids": ["S01", "S02", "S03"],
+    "purpose": "인과적으로 붙은 세 문장의 공통 목적",
+    "risk_tier": "high_or_normal",
+    "candidate_count": 2,
+    "continuity_in": "이전 단위에서 이어받을 운동 방향·피사체·조명",
+    "continuity_out": "다음 단위에 넘길 운동 방향·피사체·조명",
+    "motion_carrier": "샷을 가로질러 시선이 따라갈 손·물체·입자·카메라 운동",
+    "transition_mechanism": "action_match_or_object_match_or_occlusion_or_whip_or_wall_pass",
+    "prompt_ko_review": "사람이 행동·카메라·종료 앵커를 검수하는 한국어 프롬프트",
+    "prompt_en_generation": "SHOT A 0.0-2.7s: situation and physical action. SHOT B 2.7-5.4s: causal process and camera track. SHOT C 5.4-8.0s: evidence, question or reversal with a fast push-in and short hold.",
+    "native_audio_plan": [
+      {
+        "subshot_id": "V01-A",
+        "visible_event": "화면에 보이는 물리 사건",
+        "requested_native_audio": ["matching object and room sound only"],
+        "forbidden_audio": ["speech", "narration", "music", "cinematic boom"],
+        "harvest_policy": "keep_if_frame_locked_else_replace",
+        "sync_tolerance_frames": 2
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "V01-C01",
+        "status": "pending_generation",
+        "reject_reason": null
+      }
+    ],
+    "harvest": {
+      "S01": {
+        "candidate_id": null,
+        "source_in": null,
+        "source_out": null,
+        "speed_ratio": 1.0,
+        "optical_flow": false,
+        "action": "사용할 행동과 1-3초 구간",
+        "native_audio_decision": "pending_keep_mute_replace",
+        "audio_harvest_window": null,
+        "sync_error_frames": null
+      },
+      "S02": {
+        "candidate_id": null,
+        "source_in": null,
+        "source_out": null,
+        "speed_ratio": 1.0,
+        "optical_flow": false,
+        "action": "사용할 행동과 1-3초 구간"
+      },
+      "S03": {
+        "candidate_id": null,
+        "source_in": null,
+        "source_out": null,
+        "speed_ratio": 1.0,
+        "optical_flow": false,
+        "action": "사용할 행동과 1-3초 구간"
+      }
+    },
+    "avoid": [
+      "random motion",
+      "lip sync",
+      "generated narration",
+      "readable generated text",
+      "morphing",
+      "duplicate limbs",
+      "premature next-sentence disclosure"
+    ]
+  },
+  "sentence_timeline_template": {
+    "sentence_id": "S01",
+    "narration": "TTS가 실제로 읽는 한 문장",
+    "emotion": "urgent",
+    "generation_unit_id": "V01",
+    "subshot_window": "0.0-2.7s",
+    "scene_action": "문장이 말하는 실제 행동",
+    "meaning_target": "시청자가 봐야 할 대상",
+    "camera_purpose": "왜 이 대상을 이 방식으로 찍는지",
+    "continuity_in": "이전 문장에서 이어받는 방향·대상·구도",
+    "continuity_out": "다음 문장으로 넘기는 방향·대상·구도",
+    "match_anchor": "앞뒤 장면이 공유하는 물체·위치·조명",
+    "motion_carrier": "다음 컷까지 이어질 주 운동 대상",
+    "transition_mechanism": "행동·물체·가림·휩팬·벽 통과 중 하나",
+    "harvest_rule": "원본에서 건질 시작·끝 행동",
+    "next_sentence_spoiler_forbidden": true,
+    "overlay": {
+      "trigger_phrase": "실제 발화 문구",
+      "anchor": "화면 대상 좌표",
+      "causal_purpose": "오버레이가 필요한 이유"
+    },
+    "sound_event": {
+      "trigger_phrase": "실제 발화 문구",
+      "kind": "diegetic_or_editorial_or_silence",
+      "causal_purpose": "소리가 필요한 이유"
+    }
+  },
+  "storyboard_contract": {
+    "required_triplet": ["dialogue", "scene", "emotion"],
+    "one_sentence_one_timing_owner": true,
+    "visual_cuts_inside_one_sentence": [1, 3],
+    "next_sentence_meaning_before_boundary": false,
+    "chapter_order": [
+      "common_present_and_contradiction",
+      "physical_discovery_question",
+      "past_problem_and_double_bind",
+      "anomalous_observation_and_reframe",
+      "concrete_action_validation_and_spread",
+      "present_loop_and_meaning"
+    ],
+    "audience_timeline_seconds": [[0, 5], [5, 15], [15, 27], [27, 40], [40, 50], [50, 58]]
+  },
+  "typography": {
+    "font_family": "Gmarket Sans Bold",
+    "font_size_px": 100,
+    "stroke_width_px": 30,
+    "stroke_color": "#000000",
+    "shadow_required": true,
+    "paint_order": "stroke fill",
+    "caption_chunk": "2-4 eojeol with manual Korean line breaks",
+    "timing_source": "final_tts_word_alignment",
+    "even_split_forbidden": true,
+    "anchor_x_px": 540,
+    "anchor_y_px": 1200,
+    "anchor_y_ratio": 0.625,
+    "anchor_reference": "10_of_16_from_top",
+    "block_anchor": "center"
+  },
+  "shorts_thumbnail": {
+    "route": "embed_as_frame_zero_then_select_during_shorts_upload",
+    "separate_custom_thumbnail_upload_supported": false,
+    "copy_max_visible_characters_per_line": 7,
+    "default_lines": 2,
+    "maximum_lines": 3,
+    "copy_reveals_answer": false,
+    "background_source": "highest_impact_verified_video_moment_or_matching_generated_frame",
+    "single_visual_anchor": true,
+    "font_family": "Gmarket Sans Bold",
+    "font_size_px": 175,
+    "primary_fill_color": "#FFFF00",
+    "allowed_fill_colors": ["#FFFF00", "#00FF22", "#FF0033", "#FFFFFF"],
+    "stroke_width_px": 30,
+    "stroke_color": "#000000",
+    "shadow_required": true,
+    "native_kerning": true,
+    "manual_tracking_added": false,
+    "manual_line_breaks": true,
+    "mobile_preview_required": true,
+    "contract_stage": "06_storyboard",
+    "must_equal_final_video_t0": true,
+    "frame_zero_hold_seconds": 0.7,
+    "first_motion_after_hold": true,
+    "first_two_seconds_discontinuity_count_max": 0
+  },
+  "youtube_ai_disclosure": {
+    "ai_generated_visuals": true,
+    "studio_attribute": "AI use",
+    "selection": "Yes",
+    "description_disclosure": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.",
+    "release_lock_required": true
+  },
+  "commerce_route": {
+    "status": "review_required",
+    "reason": null,
+    "product": {
+      "url": null,
+      "sku_or_option": null,
+      "seller": null,
+      "price": null,
+      "stock": null,
+      "shipping": null,
+      "checked_at": null
+    },
+    "source_ids": [],
+    "affiliate_link": null,
+    "disclosure_text": null,
+    "youtube_paid_promotion": null,
+    "youtube_shopping_tag": "unchecked",
+    "exact_package_approved": false,
+    "idempotency_key": null,
+    "publish_blockers": ["exact product package not approved"]
+  },
+  "voice_profile": {
+    "provider": "ElevenLabs",
+    "voice": "episode-approved saved voice and take",
+    "model": "Eleven v3",
+    "status": "human_audition_then_lock"
+  },
+  "approval": {
+    "requires_human_approval": true,
+    "human_approved": false,
+    "paid_generation_allowed": false,
+    "publishable": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "body-invention.spoken-korean-review.v1",
+  "topic_id": "topic-002",
+  "script": "editorial/04-script-clean-v6-locked.txt",
+  "reviewed_at": "2026-08-22T02:54:06+09:00",
+  "status": "PASS_WITH_ACTUAL_TTS_DURATION_PENDING",
+  "errors": [],
+  "metrics": {
+    "chapter_count": 6,
+    "sentence_count": 37,
+    "character_count_without_whitespace": 1078,
+    "word_token_count": 351,
+    "nida_count": 12,
+    "nida_ratio": 0.324,
+    "forbidden_phrase_hits": 0,
+    "arabic_digit_hits_in_clean_tts": 0
+  },
+  "owner_tone_checks": {
+    "shared_korean_life_memory_opener": true,
+    "product_confirmation_before_history": true,
+    "sensory_question_ladder": true,
+    "role_before_name": true,
+    "birth_mechanism_not_skipped": true,
+    "forbidden_geureonde_mariyeyo_absent": true,
+    "narration_caption_number_split_required_in_storyboard": true
+  },
+  "performance_notes": [
+    "궁중에서 쓰던 생약 처방에, 당시 서양 약의 장점과 제조 방식으로.는 사용자가 승인한 반전 전 호흡형 문장 조각으로 보존한다.",
+    "천팔백구십칠년, 천구백십년대, 육십 종, 천구백육십년대 중반은 단위까지 한 호흡으로 읽는다.",
+    "최종 길이는 승인된 ElevenLabs Take 2 합성 후 확정하며 기존 50~58초 임시 타임라인은 재사용하지 않는다."
+  ],
+  "human_approved": true
+}

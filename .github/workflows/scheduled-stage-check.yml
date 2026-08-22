@@ -1,0 +1,24 @@
+name: scheduled-stage-check
+
+on:
+  schedule:
+    # 10:00 and 18:00 Asia/Seoul (UTC+9)
+    - cron: "0 1,9 * * *"
+  workflow_dispatch:
+
+jobs:
+  inspect-next-stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate all immutable stage locks
+        run: python scripts/pipeline.py validate --all
+      - name: Write current resume point
+        run: python scripts/pipeline.py status --episode episodes/gas-hwalmyeongsu >> "$GITHUB_STEP_SUMMARY"
+
+      # This workflow intentionally does not call Flow, ElevenLabs, or YouTube.
+      # Those steps require the locally signed-in Chrome profiles and are executed
+      # by the Codex desktop automation after it reads the validated resume point.

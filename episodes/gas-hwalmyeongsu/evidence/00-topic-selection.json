@@ -1,0 +1,12 @@
+{
+  "schema_version": "timemedic.topic-selection.v1",
+  "topic_id": "topic-002",
+  "title": "까스활명수",
+  "selection_mode": "user_provided_strict_queue",
+  "queue_index": 2,
+  "day_index": 1,
+  "lane": "b",
+  "candidate_scoring_skipped_reason": "사용자가 제공한 100개 주제를 번호 순서대로 처리하는 승인된 운영 계약",
+  "raw_claim_is_fact": false,
+  "selected": true
+}

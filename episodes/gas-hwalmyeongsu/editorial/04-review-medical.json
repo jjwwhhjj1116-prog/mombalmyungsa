@@ -1,0 +1,53 @@
+{
+  "schema_version": "body-invention.medical-fact-review.v1",
+  "topic_id": "topic-002",
+  "script": "editorial/04-script-clean-v6-locked.txt",
+  "reviewed_at": "2026-08-22T02:54:06+09:00",
+  "status": "PASS",
+  "errors": [],
+  "claim_checks": [
+    {
+      "claim": "활명수는 1897년에 나왔고 당시에는 탄산이 없었다.",
+      "status": "verified",
+      "source_ids": ["VIT-S01", "VIT-S02"]
+    },
+    {
+      "claim": "19세기 말에는 약품 접근성이 낮았고 달여 먹는 탕약에 의존하는 경우가 많았다.",
+      "status": "verified",
+      "source_ids": ["VIT-S01", "VIT-S06"]
+    },
+    {
+      "claim": "민병호는 궁중 생약 처방과 당시 서양 약의 장점·제조법을 결합해 바로 마실 수 있는 액체약을 만들었다.",
+      "status": "verified_company_attributed",
+      "source_ids": ["VIT-S01", "VIT-S02", "VIT-S06"]
+    },
+    {
+      "claim": "초기 제조는 생약을 달여 여과하고 아선약·정향·멘톨 등을 배합하는 방식이었다.",
+      "status": "verified_company_attributed",
+      "source_ids": ["VIT-S06"]
+    },
+    {
+      "claim": "민강과 동화약방은 활명수의 생산과 대중화 체계를 만들었다.",
+      "status": "verified_company_attributed",
+      "source_ids": ["VIT-S02", "VIT-S06"]
+    },
+    {
+      "claim": "1910년대 활명수와 비슷한 이름의 유사 제품 약 60종이 나왔다.",
+      "status": "verified_company_attributed",
+      "source_ids": ["VIT-S02", "VIT-S06"]
+    },
+    {
+      "claim": "1960년대 중반 기존 활명수에 탄산가스를 넣어 청량감을 더한 까스활명수가 등장했다.",
+      "status": "verified_with_date_uncertainty",
+      "source_ids": ["VIT-S05", "VIT-S06"],
+      "script_guard": "공식 기록의 1966년·1967년 차이 때문에 단일 출시연도 대신 1960년대 중반으로 표현한다."
+    }
+  ],
+  "dramatic_language_boundaries": [
+    "약 기다리다 약올라서 더 죽을 거 같은은 사용자가 승인한 과장된 생활 반응이며 사망 인과로 시각화하지 않는다.",
+    "환상적인 물 같은 약은 쉬운 비유이며 현대 효능 보장이나 복용 권고로 사용하지 않는다.",
+    "여러 사람이 살 수 있도록은 대량생산 문맥에서 구매 접근성으로 연출하고 생존 보장으로 연출하지 않는다."
+  ],
+  "medical_safety": "제품 역사를 다루며 급성 복통의 자가진단·복용 권고 또는 치료 보장을 넣지 않는다.",
+  "human_approved": true
+}

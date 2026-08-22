@@ -1,0 +1,384 @@
+{
+  "schema_version": "timemedic.omni-stage-pipeline.v1",
+  "id": "episode-id",
+  "brand": "몸의 발명사",
+  "production_mode": "stage_gated_tts_owned_omni_text_to_video",
+  "benchmark_reference": {
+    "url": "https://www.youtube.com/watch?v=ReUyaMDGj9o",
+    "adopted": [
+      "topic candidates before script",
+      "separate narration and visual prompts",
+      "Korean review prompt plus English generation prompt",
+      "candidate clips and best-segment harvesting",
+      "TTS-owned editing",
+      "optical flow only for necessary duration repair"
+    ],
+    "rejected": [
+      "generated readable Korean text",
+      "720p final delivery",
+      "two candidates for every low-risk unit",
+      "whole generated clip used by default"
+    ]
+  },
+  "topic_selection": {
+    "minimum_candidates": 10,
+    "score_range": [0, 5],
+    "dimensions": [
+      "present_familiarity",
+      "hidden_contradiction",
+      "visual_mechanism",
+      "human_stakes",
+      "reversal_strength",
+      "evidence_strength",
+      "current_relevance",
+      "originality"
+    ],
+    "hard_reject": {
+      "evidence_strength_below": 4,
+      "visual_mechanism_below": 3,
+      "medical_safety_language_missing": true
+    },
+    "finalists": 3,
+    "selected_topics": 1
+  },
+  "invariants": {
+    "one_sentence_one_timing_owner": true,
+    "final_timing_master": "final_tts_word_alignment",
+    "next_sentence_meaning_before_boundary": false,
+    "generated_text_policy": "blank_plates_only",
+    "paid_generation_before_script_approval": false,
+    "batch_generation_before_pilot_approval": false,
+    "final_width": 1080,
+    "final_height": 1920,
+    "duration_tolerance_frames": 1,
+    "caption_timing_source": "final_tts_word_alignment",
+    "caption_even_split_forbidden": true,
+    "flow_reference_grammar_lock_required": true,
+    "shorts_thumbnail_route": "approved_frame_zero_then_select_frame",
+    "thumbnail_is_video_frame_zero": true,
+    "thumbnail_contract_stage": "06_storyboard",
+    "first_two_seconds_discontinuity_count_max": 0,
+    "ai_use_disclosure_for_flow_reconstruction": "yes"
+    ,"native_audio_visible_event_only": true
+    ,"native_audio_sync_tolerance_frames": 2
+    ,"continuous_motion_carrier_required": true
+    ,"commerce_route_required": true
+  },
+  "script_contract": {
+    "beats": 16,
+    "default_profile": "short_50_58",
+    "profiles": {
+      "short_50_58": {
+        "target_seconds": [50, 58],
+        "sentence_count": [22, 30],
+        "audience_timeline_seconds": [[0, 5], [5, 15], [15, 27], [27, 40], [40, 50], [50, 58]]
+      },
+      "extended_60_80": {
+        "target_seconds": [60, 80],
+        "sentence_count": [24, 36]
+      }
+    },
+    "order": [
+      "present_result",
+      "familiar_assumption",
+      "verified_contradiction",
+      "past_problem",
+      "failed_solution",
+      "secondary_crisis",
+      "double_bind",
+      "emotional_impasse",
+      "anomalous_observation",
+      "question_reframe",
+      "concrete_action",
+      "verified_result",
+      "cost_before_triumph",
+      "proof",
+      "present_return",
+      "meaning"
+    ],
+    "review_passes": [
+      "medical_and_historical_fact_review",
+      "spoken_korean_pronunciation_and_rhythm_review"
+    ],
+    "user_revision_required": true,
+    "final_human_approval_required": true
+  },
+  "visual_generation": {
+    "engine": "Google Flow",
+    "model": "Omni Flash",
+    "forbidden_model": "Veo 3.1 Quality",
+    "mode": "text_to_video",
+    "aspect_ratio": "9:16",
+    "seconds_per_unit": 8,
+    "sentences_per_unit": [2, 3],
+    "default_candidate_count": 1,
+    "high_risk_candidate_count": 2,
+    "high_risk_units": [
+      "hook",
+      "reversal",
+      "complex_hand_action",
+      "internal_body_mechanism",
+      "continuity_critical"
+    ],
+    "pilot_units": ["hook", "mechanism_or_reversal"],
+    "prompt_views": ["ko_review", "en_generation"],
+    "candidate_selection": "best_segment_harvest",
+    "harvest_seconds_per_sentence": [1, 3],
+    "optical_flow_policy": "exceptional_duration_repair_only"
+  },
+  "typography": {
+    "font_family": "Gmarket Sans Bold",
+    "font_size_px": 100,
+    "stroke_width_px": 30,
+    "stroke_color": "#000000",
+    "shadow_required": true,
+    "manual_line_breaks": true,
+    "anchor_x_px": 540,
+    "anchor_y_px": 1200,
+    "anchor_y_ratio": 0.625,
+    "anchor_reference": "10_of_16_from_top",
+    "block_anchor": "center"
+  },
+  "stages": [
+    {
+      "id": "00_topic_discovery",
+      "objective": "검증 가능하고 시각적으로 강한 의학·건강 발명사 주제 하나를 고른다.",
+      "depends_on": [],
+      "inputs": ["series_niche", "recent_topic_ledger"],
+      "outputs": ["00-topic-candidates.json", "00-topic.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["10개 이상 후보", "상위 3개 훅", "하드 탈락 조건 통과", "최종 1개 선택"],
+        "blocked_actions": ["evidence_map", "script_draft", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "01_evidence_map",
+      "objective": "영상의 모든 핵심 주장과 의료 안전 문구를 1차·학술 자료에 연결한다.",
+      "depends_on": ["00_topic_discovery"],
+      "inputs": ["00-topic.lock.json"],
+      "outputs": ["01-evidence-map.json", "01-evidence.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["핵심 주장마다 source_id", "사실·추론 분리", "불확실성 표기", "의료 안전 문구"],
+        "blocked_actions": ["story_contract", "script_draft", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "02_story_contract",
+      "objective": "현재 결과에서 질문 전환과 현재 의미까지 인과 사슬을 잠근다.",
+      "depends_on": ["01_evidence_map"],
+      "inputs": ["01-evidence.lock.json"],
+      "outputs": ["02-story-contract.json", "02-story.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["현재 결과", "검증된 모순", "양쪽 손실", "질문 전환", "구체적 행동", "증거", "현재 회귀"],
+        "blocked_actions": ["script_draft", "storyboard", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "03_script_draft",
+      "objective": "16비트와 22–30개 짧은 문장으로 사용자 수정용 초안을 쓴다.",
+      "depends_on": ["02_story_contract"],
+      "inputs": ["02-story.lock.json", "01-evidence.lock.json"],
+      "outputs": ["03-script-user-editable.md", "03-script-draft.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["한 문장 한 행동", "결과 선공개", "친근한 구어체", "은유와 전문성 균형", "기계적 어미 반복 없음"],
+        "blocked_actions": ["script_lock", "storyboard", "voice", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "04_script_review",
+      "objective": "사용자 수정본을 사실·의학과 구어체·발음 두 번으로 검수한다.",
+      "depends_on": ["03_script_draft"],
+      "inputs": ["03-script-user-edited.md", "01-evidence.lock.json"],
+      "outputs": ["04-review-medical.json", "04-review-language.json", "04-script-clean.txt"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["검증되지 않은 단정 0", "의학 과장 0", "어미 연속 오류 0", "숫자·영문 발음 검토"],
+        "blocked_actions": ["script_approval", "storyboard", "voice", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "05_script_approval",
+      "objective": "최종 clean 대본과 사람 승인을 SHA-256으로 잠근다.",
+      "depends_on": ["04_script_review"],
+      "inputs": ["04-script-clean.txt", "04-review-medical.json", "04-review-language.json"],
+      "outputs": ["05-script.lock.json"],
+      "gate": {
+        "human_approval_required": true,
+        "pass_criteria": ["사용자 최종 승인", "clean 대본 해시", "대본 문장 수 확정"],
+        "blocked_actions": ["storyboard", "voice", "flow_generation", "paid_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "06_storyboard",
+      "objective": "승인 대본의 문장마다 대사·장면·감정과 연속성 앵커를 설계한다.",
+      "depends_on": ["05_script_approval"],
+      "inputs": ["05-script.lock.json"],
+      "outputs": ["06-storyboard.json", "06-storyboard.lock.json", "06-thumbnail-frame-zero.png", "06-thumbnail-hook-contract.json", "06-thumbnail.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["문장 수=의미 장면 수", "대사·장면·감정 완비", "continuity_in/out", "다음 문장 조기 공개 없음", "승인 썸네일과 첫 훅의 피사체·구도·카메라·조명 약속 일치", "첫 Flow 훅 단위가 승인 썸네일 구도로 시작"],
+        "blocked_actions": ["generation_plan", "flow_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "07_generation_plan",
+      "objective": "2–3문장 단위 Omni 멀티샷과 후보·수확 계획을 작성한다.",
+      "depends_on": ["06_storyboard"],
+      "inputs": ["06-storyboard.lock.json", "06-thumbnail.lock.json", "references/reference-channel-flow-grammar.md"],
+      "outputs": ["07-generation-units.json", "07-reference-grammar.lock.json", "07-generation-plan.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["한국어 검수 프롬프트", "영어 생성 프롬프트", "시작·종료 앵커", "후보 위험 등급", "문장별 수확 규칙", "샷별 motion_carrier와 transition_mechanism", "visible-event-only native_audio_plan", "훅 단위 시작 프레임이 승인 썸네일 구도와 동일", "reference grammar lock PASS", "특정 참고 장면 복제 0"],
+        "blocked_actions": ["pilot_generation", "batch_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "08_pilot_generation",
+      "objective": "훅과 메커니즘/반전 두 단위만 생성해 시리즈 문법을 검증한다.",
+      "depends_on": ["07_generation_plan"],
+      "inputs": ["07-generation-plan.lock.json", "06-thumbnail.lock.json"],
+      "outputs": ["08-pilot-candidates.json", "08-pilot-contact-sheet.jpg", "08-pilot.lock.json"],
+      "gate": {
+        "human_approval_required": true,
+        "pass_criteria": ["훅 약속 증명", "승인 썸네일과 정확히 같은 구도로 시작", "행동 물리 정확성", "연속 운동 운반체", "네이티브 오디오 화면 사건 정합", "스타일 일관성", "문장별 1–3초 수확 가능"],
+        "blocked_actions": ["batch_generation", "voice_full_generation"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "09_batch_generation",
+      "objective": "승인된 파일럿 문법으로 나머지 Omni 원본을 생성하고 비용을 기록한다.",
+      "depends_on": ["08_pilot_generation"],
+      "inputs": ["08-pilot.lock.json", "07-generation-plan.lock.json"],
+      "outputs": ["09-generation-log.json", "09-batch.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["단위별 원본 존재", "실패 단위만 재시도", "모델·프롬프트·비용 기록", "생성 글자·고어 없음"],
+        "blocked_actions": ["clip_harvest", "final_edit"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "10_clip_harvest",
+      "objective": "각 문장에 가장 정확한 1–3초 구간을 선택하고 보간 필요성을 판정한다.",
+      "depends_on": ["09_batch_generation"],
+      "inputs": ["09-batch.lock.json", "06-storyboard.lock.json"],
+      "outputs": ["10-clip-manifest.json", "10-harvest-contact-sheet.jpg", "10-harvest.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["candidate_id와 in/out", "행동·해부 정확성", "스타일 드리프트 없음", "광학 흐름 예외 사유"],
+        "blocked_actions": ["tts_owned_edit", "optical_flow_without_reason"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "11_voice_alignment",
+      "objective": "승인 보이스로 clean 대본을 합성하고 단어·문장 타임코드를 잠근다.",
+      "depends_on": ["10_clip_harvest"],
+      "inputs": ["05-script.lock.json", "10-harvest.lock.json"],
+      "outputs": ["11-narration.wav", "11-word-alignment.json", "11-voice.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["대본-음성 동일성", "최대 자연 속도", "목적 있는 호흡", "모든 문장 타임코드"],
+        "blocked_actions": ["rough_cut", "caption_timing"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "12_tts_owned_edit",
+      "objective": "최종 TTS 구간 안에서만 수확 클립을 배치해 러프컷을 만든다.",
+      "depends_on": ["11_voice_alignment"],
+      "inputs": ["11-voice.lock.json", "10-harvest.lock.json", "06-thumbnail.lock.json"],
+      "outputs": ["12-cut-manifest.json", "12-rough-cut.mp4", "12-edit.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["문장별 소유 구간", "조기 장면 전환 0", "최종 영상과 TTS 길이 오차 1프레임 이하", "보간 프레임 변형 없음", "영상 t=0.000이 승인 썸네일과 동일"],
+        "blocked_actions": ["semantic_motion", "final_render"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "13_semantic_motion_sound",
+      "objective": "발화와 화면 대상에 고정된 VOK·자막·사운드를 합성한다.",
+      "depends_on": ["12_tts_owned_edit"],
+      "inputs": ["12-edit.lock.json", "11-word-alignment.json"],
+      "outputs": ["13-motion-timeline.json", "13-sound-timeline.json", "13-caption-timeline.json", "13-motion.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["트리거 문구", "실제 화면 앵커", "인과 목적", "Gmarket Sans Bold 100px", "자막 중심 x=540 y=1200", "외곽선 30px와 그림자", "강제정렬 단어 타이밍", "균등 분할 타이밍 0"],
+        "blocked_actions": ["final_render", "decorative_random_motion"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "14_final_qa",
+      "objective": "최종 RC의 사실·음성·영상·자막·모션·권리를 독립 검수한다.",
+      "depends_on": ["13_semantic_motion_sound"],
+      "inputs": ["13-motion.lock.json", "05-script.lock.json", "01-evidence.lock.json", "06-thumbnail.lock.json"],
+      "outputs": ["14-final-1080x1920.mp4", "14-qa-report.json", "14-contact-sheet.jpg", "14-final.lock.json"],
+      "gate": {
+        "human_approval_required": false,
+        "pass_criteria": ["1080x1920", "최종 영상과 TTS 길이 오차 1프레임 이하", "조기 전환 0", "대본 누락 0", "자막 오류 0", "강제정렬 자막 싱크 오류 0", "블랙·정지 0", "권리검수 완료", "t=0.000 승인 썸네일 시각 일치", "첫 2초 불연속 0"],
+        "blocked_actions": ["upload", "publish"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    },
+    {
+      "id": "15_packaging_release",
+      "objective": "사실적인 제목·설명을 확정하고 06단계 승인 썸네일을 재검증한 뒤 별도 승인으로 업로드한다.",
+      "depends_on": ["14_final_qa"],
+      "inputs": ["14-final.lock.json", "01-evidence.lock.json", "06-thumbnail.lock.json"],
+      "outputs": ["15-packaging.json", "15-thumbnail-verification.json", "15-publish-job.json", "15-publication.lock.json"],
+      "gate": {
+        "human_approval_required": true,
+        "pass_criteria": ["제목 5개 점수화", "한 줄 7글자 이하·2–3줄 썸네일 문구", "06단계 썸네일과 최종 영상 t=0.000 일치", "frame zero와 제목 약속 일치", "AI use Yes", "AI 재현 고지", "공식 출처", "정확한 채널", "별도 게시 승인"],
+        "blocked_actions": ["public_upload", "schedule_without_approval"]
+      },
+      "status": "pending",
+      "lock_path": null,
+      "lock_sha256": null
+    }
+  ]
+}

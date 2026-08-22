@@ -1,0 +1,21 @@
+{
+  "schema_version": "body-invention.thumbnail-lock.v1",
+  "stage_id": "06_storyboard",
+  "status": "completed",
+  "revision": 6,
+  "approved_by": "user_and_visual_qa",
+  "input_hashes": {
+    "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3"
+  },
+  "output_hashes": {
+    "assets/frame-zero-bg-v6.png": "271827af1ac2238a0dcf30fc79d167554354c64391321825e9f8e93590a9bac5",
+    "assets/frame-zero-v6-approved.png": "199d4e025c75b62f83d55159278cc098a284710498788708fce1d7ea5ad68cf0"
+  },
+  "copy_lines": ["처음엔", "까스가", "없었다"],
+  "font": "Gmarket Sans Bold",
+  "font_size_px": 175,
+  "stroke_width_px": 30,
+  "frame_zero_hold_seconds": 0.7,
+  "first_hook_sentence_id": "s01",
+  "rights_review_completed": true
+}

@@ -1,0 +1,363 @@
+{
+  "id": "episode-id",
+  "brand": "몸의 발명사",
+  "title": "현재의 익숙한 장면과 역사적 반전을 함께 담은 제목",
+  "target_seconds": 75,
+  "production_mode": "sentence_video",
+  "generation_policy": {
+    "sentence_to_clip_ratio": "1:1",
+    "sentence_count_range": [24, 36],
+    "final_timeline_asset": "moving_mp4_only",
+    "image_role": "clean_start_and_optional_target_pair",
+    "clip_generation": "image_to_video",
+    "generated_clip_seconds": [4, 6, 8],
+    "edited_clip_seconds": [1.7, 3.2],
+    "allowed_playback_rate": [1.05, 1.6],
+    "required_motion_channels": 2,
+    "motion_channels": ["subject_motion", "camera_motion", "environment_motion"],
+    "forbidden_static_shortcuts": ["subtle_breathing_only", "lamp_flicker_only", "slow_zoom_only", "still_image_on_timeline"],
+    "text_policy": "dimensions_numbers_names_materials_and_rare_keywords_only"
+  },
+  "scene_unit_template": {
+    "sentence_id": "b01-s01",
+    "beat_id": 1,
+    "narration": "TTS가 실제로 읽는 한 문장",
+    "scene": "화면에서 실제로 시작하고 완료하는 행동, 카메라가 도착할 의미 앵커",
+    "emotion": "curious",
+    "tts_tag": "",
+    "flow_mode": "narrative_action",
+    "image_prompt": "9:16 살아 있는 의학 미니어처 시작 키프레임 프롬프트",
+    "clean_prompt": "글자·그래픽이 없는 9:16 CLEAN 시작 상태 프롬프트",
+    "target_prompt": "같은 구도의 행동 완료 또는 INFO_GEOMETRY 목표 상태 프롬프트",
+    "video_prompt": {
+      "subject_motion": "문장의 동사를 인물이 실제로 수행한다",
+      "camera_motion": "의미 대상 앵커로 이동하고 부드럽게 착지한다",
+      "environment_motion": "액체, 천, 도구, 전경 중 하나가 인과에 맞게 반응한다",
+      "avoid": "정지 포즈, 무의미한 입 모양, 신체 변형, 얼굴 변화, 랜덤 동작, 생성 텍스트"
+    },
+    "continuity_in": "이전 클립의 운동·물체·구도 중 하나를 이어 받는다",
+    "continuity_out": "다음 클립이 이어 받을 끝 동작과 끝 구도를 지정한다",
+    "match_anchor": "공유 물체 또는 화면 좌표",
+    "transition": "match_action",
+    "keyframe_path": "keyframes/b01-s01-clean.png",
+    "target_keyframe_path": "keyframes/b01-s01-target.png",
+    "overlay_manifest_path": "overlays/b01-s01.json",
+    "video_path": "clips/b01-s01.mp4"
+  },
+  "storyboard_contract": {
+    "required_triplet": ["dialogue", "scene", "emotion"],
+    "one_sentence_one_scene": true,
+    "chapter_order": ["result_first", "discovery_question", "impasse", "anomalous_observation", "reframed_question_and_proof", "present_meaning"]
+  },
+  "typography": {
+    "font_family": "Gmarket Sans Bold",
+    "font_size_px": 175,
+    "stroke_width_px": 30,
+    "stroke_color": "#000000",
+    "shadow_required": true,
+    "paint_order": "stroke fill",
+    "caption_chunk": "2-4 eojeol with manual Korean line breaks"
+  },
+  "voice_profile": {
+    "name": "body-invention-main",
+    "model": "eleven_v3",
+    "stability_mode": "natural"
+  },
+  "sound_design": {
+    "enabled": true,
+    "voice_policy": "elevenlabs_clean_tts_only",
+    "native_audio_policy": "conditional",
+    "music_policy": "duck_under_voice_and_semantic_hits",
+    "mix_buses": ["voice", "diegetic", "editorial", "music"]
+  },
+  "sound_events": [
+    {"sound_id":"snd-01a","beat_id":1,"trigger_phrase":"익숙한 행동","kind":"diegetic","asset_key":"present_action_foley","source_policy":"generated_native_if_clean_else_edit","sync":"under_action","lead_frames":0,"gain_db":-18,"duck_music_db":-3,"duration_policy":"under_action","causal_purpose":"현재의 익숙한 몸 동작을 실제 공간의 사건처럼 느끼게 한다"},
+    {"sound_id":"snd-03a","beat_id":3,"trigger_phrase":"아니었습니다","kind":"editorial","asset_key":"assumption_break_hit","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-10,"duck_music_db":-6,"duration_policy":"one_shot","causal_purpose":"시청자가 믿던 상식이 깨지는 첫 반전을 또렷하게 착지시킨다"},
+    {"sound_id":"snd-05a","beat_id":5,"trigger_phrase":"계속 반복됐습니다","kind":"editorial","asset_key":"repeat_pressure_ticks","source_policy":"edit_primary","sync":"phrase_span","lead_frames":0,"gain_db":-18,"duck_music_db":-3,"duration_policy":"to_phrase_end","causal_purpose":"같은 원인이 되풀이되며 압박이 쌓이는 구조를 들려준다"},
+    {"sound_id":"snd-09a","beat_id":9,"trigger_phrase":"환장할 노릇이었죠","kind":"intentional_silence","asset_key":"silence","source_policy":"intentional_silence","sync":"pre_roll_to_phrase","lead_frames":2,"gain_db":-48,"duck_music_db":-12,"duration_policy":"short_hold","causal_purpose":"양쪽 손실이 모두 막힌 순간을 짧은 정적으로 체감시킨다"},
+    {"sound_id":"snd-10a","beat_id":10,"trigger_phrase":"새로운 질문","kind":"transition","asset_key":"reverse_riser_short","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-14,"duck_music_db":-5,"duration_policy":"one_shot","causal_purpose":"증상에서 원인 구조로 질문의 방향이 바뀌는 이동을 예고한다"},
+    {"sound_id":"snd-11a","beat_id":11,"trigger_phrase":"발상을 뒤집습니다","kind":"editorial","asset_key":"reverse_whoosh_impact","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-9,"duck_music_db":-7,"duration_policy":"one_shot","causal_purpose":"새 질문이 구체 행동으로 바뀌는 반전의 순간을 착지시킨다"},
+    {"sound_id":"snd-14a","beat_id":14,"trigger_phrase":"수치와 기록","kind":"editorial","asset_key":"evidence_counter_ticks","source_policy":"edit_primary","sync":"phrase_span","lead_frames":0,"gain_db":-20,"duck_music_db":-2,"duration_policy":"to_phrase_end","causal_purpose":"주장과 검증 수치를 분리하고 증거가 계산되는 느낌을 준다"},
+    {"sound_id":"snd-16a","beat_id":16,"trigger_phrase":"이렇게 탄생했습니다","kind":"transition","asset_key":"warm_resolve_loop_tail","source_policy":"edit_primary","sync":"on_phrase","lead_frames":1,"gain_db":-14,"duck_music_db":-4,"duration_policy":"loop_overlap","causal_purpose":"발명의 의미를 닫으면서 첫 장면의 공간음으로 자연스럽게 되돌린다"}
+  ],
+  "approval": {
+    "requires_human_approval": true,
+    "human_approved": false,
+    "publishable": false
+  },
+  "story_contract": {
+    "intent": "시청자가 마지막에 이해하고 느껴야 할 단 하나의 의미",
+    "present_anchor": "현재 사람들이 익숙하게 보는 장면",
+    "assumption": "시청자가 당연하다고 믿는 상식",
+    "contradiction": "그 상식을 깨는 검증된 사실",
+    "protagonist": "문제를 직접 겪는 인물",
+    "unavoidable_mechanism": "고통을 반복시키는 피할 수 없는 구조",
+    "escalation": "반복될수록 심각해지는 손실",
+    "double_bind": "어느 쪽을 선택해도 발생하는 두 가지 손실",
+    "old_question": "기존 방식이 묻던 질문",
+    "new_question": "발상을 뒤집은 뒤의 질문",
+    "concrete_action": "새 질문이 만든 구체적인 행동",
+    "unexpected_result": "최초 의도를 넘어선 결과",
+    "proof": "반전을 뒷받침하는 수치·기록·관찰",
+    "present_return": "처음의 현재 장면으로 돌아오는 연결",
+    "meaning": "시작과 결말을 묶는 마지막 의미"
+  },
+  "research": [
+    {
+      "claim": "핵심 역사 주장",
+      "status": "verified",
+      "source_type": "primary",
+      "title": "공식 또는 학술 출처 제목",
+      "url": "https://example.com/source"
+    },
+    {
+      "claim": "핵심 결과 또는 수치",
+      "status": "verified",
+      "source_type": "review",
+      "title": "독립된 두 번째 출처 제목",
+      "url": "https://example.org/source"
+    }
+  ],
+  "beats": [
+    {
+      "id": 1,
+      "role": "hook_present",
+      "narration": "현재의 익숙한 행동과 도구를 보여줍니다.",
+      "emotion": "curious",
+      "tts_tag": "curious",
+      "purpose": "즉시 자기 이야기로 느끼게 한다",
+      "transition": "행동에서 도구로 연결",
+      "fact_status": "verified",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s01a","trigger_phrase":"익숙한 행동","subject_focus":"present_body_action","anchor_id":"body_action","camera_move":"macro_push_in","camera_easing":"fast_travel_soft_arrival","overlay":"none","transition":"hard_cut","duration_seconds":1.3,"causal_purpose":"현재의 몸 동작을 즉시 인식시킨다","asset_route":"generative_video"},
+        {"shot_id":"s01b","trigger_phrase":"도구","subject_focus":"present_medical_tool","anchor_id":"tool_detail","camera_move":"follow_track","camera_easing":"fast_travel_soft_arrival","overlay":"pencil_highlight","transition":"zoom_blur","duration_seconds":1.4,"causal_purpose":"현재 행동과 의료 도구를 연결한다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 2,
+      "role": "hook_feeling",
+      "narration": "화자가 그 장면에서 느끼는 감정을 짧게 말합니다.",
+      "emotion": "personal_wonder",
+      "tts_tag": "",
+      "purpose": "채널주의 목소리를 만든다",
+      "transition": "감정에서 상식으로 연결",
+      "fact_status": "supported_inference",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s02a","trigger_phrase":"화자가","subject_focus":"narrator_point_of_view","anchor_id":"pov_center","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"paper_texture","transition":"match_motion","duration_seconds":1.2,"causal_purpose":"화자의 개인 시선을 현재 장면에 결합한다","asset_route":"image_to_video"},
+        {"shot_id":"s02b","trigger_phrase":"감정","subject_focus":"reaction_detail","anchor_id":"reaction_face","camera_move":"snap_zoom","camera_easing":"sharp_arrival","overlay":"reaction_cutout","transition":"hard_cut","duration_seconds":1.2,"causal_purpose":"화자의 반응을 시청자의 반응으로 전환한다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 3,
+      "role": "hook_contradiction",
+      "narration": "그 도구는 우리가 믿는 이유로 처음 만들어진 것이 아니었습니다.",
+      "emotion": "surprised",
+      "tts_tag": "curious",
+      "purpose": "첫 반전을 8초 안에 제시한다",
+      "transition": "현재에서 과거로 이동",
+      "fact_status": "verified",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s03a","trigger_phrase":"믿는 이유","subject_focus":"common_assumption","anchor_id":"assumption_label","camera_move":"snap_zoom","camera_easing":"sharp_arrival","overlay":"strike_through","transition":"zoom_blur","duration_seconds":1.3,"causal_purpose":"시청자의 상식을 화면에서 직접 부정한다","asset_route":"image_to_video"},
+        {"shot_id":"s03b","trigger_phrase":"아니었습니다","subject_focus":"origin_object","anchor_id":"origin_detail","camera_move":"rewind_pullback","camera_easing":"fast_travel_soft_arrival","overlay":"rewind_date","transition":"rewind","duration_seconds":1.5,"causal_purpose":"현재 도구의 기원을 과거 사건으로 되감는다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 4,
+      "role": "past_entry",
+      "narration": "연도와 장소, 그리고 문제를 직접 겪는 인물을 보여줍니다.",
+      "emotion": "grounded",
+      "tts_tag": "",
+      "purpose": "사건의 좌표를 고정한다",
+      "transition": "인물에서 반복 행동으로 연결",
+      "fact_status": "verified",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s04a","trigger_phrase":"연도와 장소","subject_focus":"historical_environment","anchor_id":"location_center","camera_move":"depth_push","camera_easing":"fast_travel_soft_arrival","overlay":"date_stamp","transition":"paper_wipe","duration_seconds":1.5,"causal_purpose":"역사 사건의 시간과 장소를 고정한다","asset_route":"generative_video"},
+        {"shot_id":"s04b","trigger_phrase":"인물","subject_focus":"protagonist","anchor_id":"protagonist_face","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"dossier","transition":"match_cut","duration_seconds":1.6,"causal_purpose":"문제를 겪는 사람에게 시선을 착지시킨다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 5,
+      "role": "mechanism",
+      "narration": "문제의 행동은 피할 수 없었고 같은 원인이 계속 반복됐습니다.",
+      "emotion": "explanatory",
+      "tts_tag": "",
+      "purpose": "문제가 반복되는 구조를 설명한다",
+      "transition": "반복에서 첫 피해로 연결",
+      "fact_status": "verified",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s05a","trigger_phrase":"피할 수 없었고","subject_focus":"unavoidable_action","anchor_id":"action_contact","camera_move":"cutaway_push_in","camera_easing":"soft_arrival","overlay":"causal_arrow","transition":"transparent_reveal","duration_seconds":1.5,"causal_purpose":"행동이 강제되는 구조를 절개로 설명한다","asset_route":"image_to_video"},
+        {"shot_id":"s05b","trigger_phrase":"계속 반복됐습니다","subject_focus":"repeat_cycle","anchor_id":"cycle_center","camera_move":"orbit_small","camera_easing":"constant_with_soft_stop","overlay":"counter","transition":"loop_match","duration_seconds":1.4,"causal_purpose":"같은 원인이 누적된다는 것을 주기로 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 6,
+      "role": "escalation_1",
+      "narration": "처음에는 작은 손상이었지만 몸의 특정 부위에서 피해가 시작됐습니다.",
+      "emotion": "concerned",
+      "tts_tag": "tense",
+      "purpose": "위험을 시작한다",
+      "transition": "초기 피해에서 악화로 연결",
+      "fact_status": "verified",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s06a","trigger_phrase":"작은 손상","subject_focus":"body_damage_initial","anchor_id":"damage_origin","camera_move":"macro_push_in","camera_easing":"fast_travel_soft_arrival","overlay":"damage_highlight","transition":"zoom_blur","duration_seconds":1.3,"causal_purpose":"피해가 시작된 정확한 신체 위치를 보여준다","asset_route":"image_to_video"},
+        {"shot_id":"s06b","trigger_phrase":"피해가 시작됐습니다","subject_focus":"damage_spread","anchor_id":"damage_edge","camera_move":"follow_track","camera_easing":"soft_arrival","overlay":"spread_line","transition":"match_motion","duration_seconds":1.4,"causal_purpose":"초기 손상이 확산될 방향을 예고한다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 7,
+      "role": "escalation_2",
+      "narration": "행동을 반복할수록 손상은 더 넓어지고 더 심각해졌습니다.",
+      "emotion": "tense",
+      "tts_tag": "tense",
+      "purpose": "돌아갈 수 없는 지점으로 밀어붙인다",
+      "transition": "악화에서 선택의 문제로 연결",
+      "fact_status": "verified",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s07a","trigger_phrase":"반복할수록","subject_focus":"repeated_action","anchor_id":"action_contact","camera_move":"repeat_punches","camera_easing":"staggered_sharp","overlay":"tally","transition":"hard_cut","duration_seconds":1.5,"causal_purpose":"반복 횟수와 피해의 누적을 같은 리듬으로 묶는다","asset_route":"generative_video"},
+        {"shot_id":"s07b","trigger_phrase":"더 심각해졌습니다","subject_focus":"body_damage_severe","anchor_id":"damage_center","camera_move":"macro_push_in","camera_easing":"fast_travel_soft_arrival","overlay":"damage_spread","transition":"zoom_blur","duration_seconds":1.6,"causal_purpose":"악화된 결과를 신체 앵커에서 증명한다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 8,
+      "role": "dilemma",
+      "narration": "한쪽을 지키면 다른 쪽을 포기해야 했고, 반대로 해도 손실이 생겼습니다.",
+      "emotion": "trapped",
+      "tts_tag": "",
+      "purpose": "양쪽 손실을 명확히 한다",
+      "transition": "선택에서 막다름으로 연결",
+      "fact_status": "supported_inference",
+      "media_kind": "motion_graphic",
+      "direction_track": [
+        {"shot_id":"s08a","trigger_phrase":"한쪽을 지키면","subject_focus":"choice_a","anchor_id":"split_left","camera_move":"split_focus_left","camera_easing":"sharp_arrival","overlay":"loss_label_a","transition":"split_reveal","duration_seconds":1.4,"causal_purpose":"첫 선택이 만드는 손실을 고정한다","asset_route":"image_to_video"},
+        {"shot_id":"s08b","trigger_phrase":"반대로 해도","subject_focus":"choice_b","anchor_id":"split_right","camera_move":"split_focus_right","camera_easing":"sharp_arrival","overlay":"loss_label_b","transition":"split_reveal","duration_seconds":1.4,"causal_purpose":"반대 선택도 안전하지 않음을 대칭으로 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 9,
+      "role": "impasse",
+      "narration": "어느 쪽도 포기할 수 없었습니다. 환장할 노릇이었죠.",
+      "emotion": "impasse",
+      "tts_tag": "sighs",
+      "purpose": "문제를 최고조로 만든다",
+      "transition": "정적 뒤 질문 전환",
+      "fact_status": "supported_inference",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s09a","trigger_phrase":"포기할 수 없었습니다","subject_focus":"locked_choices","anchor_id":"split_center","camera_move":"hold","camera_easing":"none","overlay":"choice_lock","transition":"motion_freeze","duration_seconds":1.3,"causal_purpose":"두 선택이 동시에 막혔음을 정지로 표현한다","asset_route":"image_to_video"},
+        {"shot_id":"s09b","trigger_phrase":"환장할 노릇이었죠","subject_focus":"protagonist_reaction","anchor_id":"protagonist_face","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"none","transition":"silence_hold","duration_seconds":1.2,"causal_purpose":"반전 전 감정의 최고점을 인물에게 착지시킨다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 10,
+      "role": "reversal_question",
+      "narration": "기존 질문을 버리고 문제의 시작을 막는 새로운 질문을 던집니다.",
+      "emotion": "insight",
+      "tts_tag": "",
+      "purpose": "사고의 변화 자체를 보여준다",
+      "transition": "새 질문에서 행동으로 연결",
+      "fact_status": "supported_inference",
+      "media_kind": "motion_graphic",
+      "direction_track": [
+        {"shot_id":"s10a","trigger_phrase":"기존 질문을 버리고","subject_focus":"old_question","anchor_id":"symptom_detail","camera_move":"zoom_out","camera_easing":"fast_travel_soft_arrival","overlay":"old_path_erase","transition":"axis_flip","duration_seconds":1.5,"causal_purpose":"증상에 머문 기존 시선을 해체한다","asset_route":"image_to_video"},
+        {"shot_id":"s10b","trigger_phrase":"새로운 질문","subject_focus":"root_cause","anchor_id":"cause_center","camera_move":"axis_reframe","camera_easing":"fast_travel_soft_arrival","overlay":"new_causal_path","transition":"depth_push","duration_seconds":1.6,"causal_purpose":"원인 구조로 시점이 바뀌었음을 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 11,
+      "role": "reversal_action",
+      "narration": "새 질문은 구체적인 행동을 만들었습니다. 발상을 뒤집습니다.",
+      "emotion": "conviction",
+      "tts_tag": "excited",
+      "purpose": "반전을 행동으로 증명한다",
+      "transition": "행동에서 제작으로 연결",
+      "fact_status": "verified",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s11a","trigger_phrase":"구체적인 행동","subject_focus":"inventor_action","anchor_id":"hands_and_material","camera_move":"follow_track","camera_easing":"fast_travel_soft_arrival","overlay":"hand_drawn_path","transition":"match_motion","duration_seconds":1.5,"causal_purpose":"새 질문이 실제 행동으로 바뀌는 순간을 보여준다","asset_route":"generative_video"},
+        {"shot_id":"s11b","trigger_phrase":"발상을 뒤집습니다","subject_focus":"reversed_mechanism","anchor_id":"solution_barrier","camera_move":"snap_zoom","camera_easing":"sharp_arrival","overlay":"arrow_reverse","transition":"impact_cut","duration_seconds":1.3,"causal_purpose":"기존 경로가 반대로 바뀌는 핵심 원리를 착지시킨다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 12,
+      "role": "solution",
+      "narration": "해결책은 부품이 만들어지고 조립되면서 원래 목적을 달성했습니다.",
+      "emotion": "satisfied",
+      "tts_tag": "",
+      "purpose": "아이디어가 물건이 되는 과정을 보여준다",
+      "transition": "최초 목적에서 예상 밖 결과로 연결",
+      "fact_status": "verified",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s12a","trigger_phrase":"부품이 만들어지고","subject_focus":"solution_parts","anchor_id":"exploded_center","camera_move":"orbit_small","camera_easing":"constant_with_soft_stop","overlay":"part_labels","transition":"exploded_reveal","duration_seconds":1.6,"causal_purpose":"해결책의 구성과 제작을 분해도로 설명한다","asset_route":"image_to_video"},
+        {"shot_id":"s12b","trigger_phrase":"조립되면서","subject_focus":"assembled_solution","anchor_id":"assembly_center","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"assembly_stagger","transition":"assemble","duration_seconds":1.5,"causal_purpose":"부품이 실제 해결책으로 완성되는 과정을 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 13,
+      "role": "unexpected",
+      "narration": "그런데 예상하지 못한 일이 벌어집니다. 사용이 다른 사람들에게 퍼졌습니다.",
+      "emotion": "surprised_wonder",
+      "tts_tag": "excited",
+      "purpose": "최초 의도를 넘어선 결과를 연다",
+      "transition": "확산에서 증거로 연결",
+      "fact_status": "verified",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s13a","trigger_phrase":"예상하지 못한 일이","subject_focus":"first_adoption","anchor_id":"first_user","camera_move":"snap_zoom","camera_easing":"sharp_arrival","overlay":"surprise_burst","transition":"hard_cut","duration_seconds":1.3,"causal_purpose":"예상 밖 사용이 시작된 첫 지점을 보여준다","asset_route":"generative_video"},
+        {"shot_id":"s13b","trigger_phrase":"다른 사람들에게 퍼졌습니다","subject_focus":"adoption_spread","anchor_id":"group_center","camera_move":"zoom_out_expand","camera_easing":"fast_travel_soft_arrival","overlay":"spread_counter","transition":"depth_expand","duration_seconds":1.6,"causal_purpose":"한 사람을 위한 해결책이 표준으로 확산됨을 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 14,
+      "role": "proof",
+      "narration": "수치와 기록, 후속 관찰이 그 변화를 증명했습니다.",
+      "emotion": "measured",
+      "tts_tag": "",
+      "purpose": "반전을 검증한다",
+      "transition": "증거에서 의미로 연결",
+      "fact_status": "verified",
+      "media_kind": "motion_graphic",
+      "direction_track": [
+        {"shot_id":"s14a","trigger_phrase":"수치와 기록","subject_focus":"proof_document","anchor_id":"record_number","camera_move":"evidence_hold","camera_easing":"soft_arrival","overlay":"number_counter","transition":"paper_slide","duration_seconds":1.7,"causal_purpose":"극적 주장과 검증 수치를 분리해 보여준다","asset_route":"verified_source"},
+        {"shot_id":"s14b","trigger_phrase":"증명했습니다","subject_focus":"before_after","anchor_id":"comparison_center","camera_move":"split_compare","camera_easing":"soft_arrival","overlay":"before_after_labels","transition":"split_reveal","duration_seconds":1.5,"causal_purpose":"전후 차이가 결과를 지지함을 시각적으로 검증한다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 15,
+      "role": "meaning",
+      "narration": "한 사람을 지키려던 선택은 결국 수많은 몸을 지키는 표준이 됐습니다.",
+      "emotion": "warm_wonder",
+      "tts_tag": "",
+      "purpose": "최초 의도와 최종 결과를 대비한다",
+      "transition": "의미에서 현재 장면으로 복귀",
+      "fact_status": "supported_inference",
+      "media_kind": "motion_still",
+      "direction_track": [
+        {"shot_id":"s15a","trigger_phrase":"한 사람을 지키려던","subject_focus":"original_person","anchor_id":"protagonist_center","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"one_person_marker","transition":"match_cut","duration_seconds":1.5,"causal_purpose":"발명의 최초 목적을 한 사람에게 다시 연결한다","asset_route":"image_to_video"},
+        {"shot_id":"s15b","trigger_phrase":"수많은 몸을 지키는","subject_focus":"modern_standard","anchor_id":"many_users","camera_move":"zoom_out_expand","camera_easing":"fast_travel_soft_arrival","overlay":"standard_stamp","transition":"depth_expand","duration_seconds":1.6,"causal_purpose":"개인 보호가 사회적 표준으로 확장된 의미를 보여준다","asset_route":"image_to_video"}
+      ]
+    },
+    {
+      "id": 16,
+      "role": "loop",
+      "narration": "오늘 우리가 당연하게 보는 이 도구는 이렇게 탄생했습니다.",
+      "emotion": "resolved",
+      "tts_tag": "",
+      "purpose": "현재 장면으로 닫고 반복 시청을 유도한다",
+      "transition": "첫 프레임과 연결",
+      "fact_status": "supported_inference",
+      "media_kind": "video",
+      "direction_track": [
+        {"shot_id":"s16a","trigger_phrase":"오늘 우리가","subject_focus":"present_scene","anchor_id":"present_center","camera_move":"match_cut_return","camera_easing":"soft_arrival","overlay":"none","transition":"match_cut","duration_seconds":1.5,"causal_purpose":"과거의 발명을 현재의 익숙한 장면으로 회수한다","asset_route":"generative_video"},
+        {"shot_id":"s16b","trigger_phrase":"이렇게 탄생했습니다","subject_focus":"present_medical_tool","anchor_id":"tool_detail","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"birth_stamp","transition":"loop_match","duration_seconds":1.5,"causal_purpose":"현재 도구의 새로운 의미를 첫 프레임에 연결한다","asset_route":"image_to_video"}
+      ]
+    }
+  ]
+}

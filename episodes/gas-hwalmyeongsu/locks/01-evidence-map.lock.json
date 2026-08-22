@@ -1,0 +1,15 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "01_evidence_map",
+  "status": "completed",
+  "revision": 6,
+  "approved_by": "validator",
+  "input_hashes": {
+    "evidence/00-topic-selection.json": "0ed70f2a975eaa4c0894f1341a8c4addc81f31a0383c2a3166a1134ce67ac958"
+  },
+  "output_hashes": {
+    "evidence/01-evidence-map.json": "461b69699401fb1b46b96a00ac4483e74624e9342403bfa12e76a6f7136e6c92"
+  },
+  "source_ids_required": true
+}
+

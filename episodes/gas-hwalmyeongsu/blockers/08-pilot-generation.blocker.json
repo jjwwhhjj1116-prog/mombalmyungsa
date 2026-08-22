@@ -1,0 +1,16 @@
+{
+  "schema_version": "body-invention.stage-blocker.v1",
+  "stage_id": "08_pilot_generation",
+  "status": "blocked",
+  "reason_code": "external_flow_editor_unresponsive",
+  "generation_submitted": false,
+  "last_confirmed_state": "prompt_not_submitted",
+  "safe_resume": "Verify the private runtime account and Omni Flash 9:16 8-second x1 settings, then submit vit-v6-u01 exactly once. After terminal QA and the configured cooldown, submit vit-v6-u10 exactly once.",
+  "forbidden": [
+    "reuse rejected V3 clips",
+    "submit duplicate jobs after an unknown browser result",
+    "switch to Quality",
+    "start batch generation before both pilots pass"
+  ]
+}
+

@@ -1,0 +1,128 @@
+{
+  "schema_version": "body-invention.episode-pipeline.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
+  "revision": 6,
+  "source_of_truth": {
+    "path": "final-script-v6.txt",
+    "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
+    "sentence_count": 37,
+    "caption_numbers": "digits_and_units",
+    "tts_numbers": "natural_korean_reading_by_unit"
+  },
+  "production_contract": {
+    "visual_identity": "continuous_living_miniature_diorama",
+    "video_model": "Omni Flash",
+    "video_mode": "text_to_video",
+    "aspect_ratio": "9:16",
+    "seconds_per_generation_unit": 8,
+    "candidates_per_unit": 1,
+    "language_and_setting": "Korean people, Korean products, historically appropriate Korea",
+    "voice_provider": "ElevenLabs",
+    "voice_take": "Take 2",
+    "voice_model": "eleven_v3",
+    "regenerate_voice_from_locked_script": true,
+    "old_voice_reuse_forbidden": true,
+    "one_sentence_one_scene": true,
+    "final_tts_is_only_timeline": true,
+    "caption_font": "Gmarket Sans Bold",
+    "caption_size_px": 100,
+    "caption_vertical_slot_of_16": 10,
+    "caption_manual_line_breaks": true,
+    "thumbnail_is_frame_zero": true,
+    "frame_zero_duration_seconds": 0.7,
+    "thumbnail_font": "Gmarket Sans Bold",
+    "thumbnail_font_size_px": 175,
+    "thumbnail_stroke_px": 30,
+    "thumbnail_text_color": "yellow",
+    "thumbnail_stroke_color": "black",
+    "thumbnail_shadow": true
+  },
+  "release_contract": {
+    "platform": "YouTube",
+    "channel_name": "몸의 발명사",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g",
+    "upload_visibility": "private",
+    "public_schedule": {
+      "lane_a_upload_kst": "10:00",
+      "lane_a_public_kst": "11:00",
+      "lane_b_upload_kst": "18:00",
+      "lane_b_public_kst": "19:00"
+    },
+    "ai_disclosure_required": true,
+    "description_disclosure": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.",
+    "final_sync_pass_required": true
+  },
+  "stages": [
+    {
+      "id": "00_topic_discovery",
+      "status": "completed",
+      "lock_path": "locks/00-topic-discovery.lock.json",
+      "lock_sha256": "70a034969d64c1f028a94b0d2b497cf33e7d3d87c83ef9a0445b8a64b2cfd51b"
+    },
+    {
+      "id": "01_evidence_map",
+      "status": "completed",
+      "lock_path": "locks/01-evidence-map.lock.json",
+      "lock_sha256": "fd6020115d2fde472ede96d440d31850704409df1ece4606702c00009c31b8d3"
+    },
+    {
+      "id": "02_story_contract",
+      "status": "completed",
+      "lock_path": "locks/02-story-contract.lock.json",
+      "lock_sha256": "43e6d2db0bee2092872465b05bc07c5aa5cba750ec24d5ede2bdade204baf4fe"
+    },
+    {
+      "id": "03_script_draft",
+      "status": "completed",
+      "lock_path": "locks/03-script-draft.lock.json",
+      "lock_sha256": "db4c3868c07d7e267f017b494165f73b21d2f00d68fe1a61639aaa07939284ba"
+    },
+    {
+      "id": "04_script_review",
+      "status": "completed",
+      "lock_path": "locks/04-script-review.lock.json",
+      "lock_sha256": "6bb6ad3491d9f6a13aee2db46fb494d9dfdc7dba1370a3d0b5d1a77d2f7871aa"
+    },
+    {
+      "id": "05_script_approval",
+      "status": "completed",
+      "lock_path": "locks/05-script-approval.lock.json",
+      "lock_sha256": "f90bf3a076ea7ebd99523f27a5bc4e5438533f85fb03f9f077242fcbcc330a61"
+    },
+    {
+      "id": "06_storyboard",
+      "status": "completed",
+      "lock_path": "locks/06-storyboard.lock.json",
+      "lock_sha256": "9228d9cee269432f6bc4dc360629c904c1d456dc022cab8f380aa30704410ace",
+      "sidecar_locks": [
+        {
+          "path": "locks/06-thumbnail.lock.json",
+          "sha256": "8a1a2561b7fece0e4cbc697f30d68cf7dcc33e6f93a2661e7d67bb8b2e5b35f0"
+        }
+      ]
+    },
+    {
+      "id": "07_generation_plan",
+      "status": "completed",
+      "lock_path": "locks/07-generation-plan.lock.json",
+      "lock_sha256": "cae8e3d4a3e7a50b11f5d3d78fb987788192dffc2b23f43416a2ae4140d04db4"
+    },
+    {
+      "id": "08_pilot_generation",
+      "status": "blocked",
+      "blocker_path": "blockers/08-pilot-generation.blocker.json"
+    },
+    { "id": "09_batch_generation", "status": "pending" },
+    { "id": "10_clip_harvest", "status": "pending" },
+    { "id": "11_voice_alignment", "status": "pending" },
+    { "id": "12_tts_owned_edit", "status": "pending" },
+    { "id": "13_semantic_motion_sound", "status": "pending" },
+    { "id": "14_final_qa", "status": "pending" },
+    { "id": "15_packaging_release", "status": "pending" }
+  ],
+  "resume": {
+    "first_non_completed_stage": "08_pilot_generation",
+    "instruction": "Read this file, validate all completed locks, then resume only 08_pilot_generation. Never skip directly to TTS, edit, or upload."
+  }
+}

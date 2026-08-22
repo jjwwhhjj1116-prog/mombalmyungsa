@@ -1,0 +1,30 @@
+{
+  "schema_version": "body-invention.stage-contract.v1",
+  "stage_ids": [
+    "00_topic_discovery",
+    "01_evidence_map",
+    "02_story_contract",
+    "03_script_draft",
+    "04_script_review",
+    "05_script_approval",
+    "06_storyboard",
+    "07_generation_plan",
+    "08_pilot_generation",
+    "09_batch_generation",
+    "10_clip_harvest",
+    "11_voice_alignment",
+    "12_tts_owned_edit",
+    "13_semantic_motion_sound",
+    "14_final_qa",
+    "15_packaging_release"
+  ],
+  "allowed_statuses": ["pending", "blocked", "completed"],
+  "rules": {
+    "first_non_completed_is_only_resume_point": true,
+    "completed_requires_lock_and_sha256": true,
+    "downstream_completed_after_gap_forbidden": true,
+    "final_upload_requires_final_sync_pass": true,
+    "secrets_in_repository_forbidden": true
+  }
+}
+
