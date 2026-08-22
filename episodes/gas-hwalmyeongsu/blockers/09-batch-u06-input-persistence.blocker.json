@@ -1,0 +1,21 @@
+{
+  "schema_version": "body-invention.blocker.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "unit_id": "vit-v6-u06",
+  "status": "retry_pending_after_cooldown",
+  "blocker_code": "invalid_prompt_persistence",
+  "candidate_id": "de4b6457-2459-40c2-b1b7-854a1d6f633a",
+  "submitted_at": "2026-08-22T17:48:32.414+09:00",
+  "terminal_confirmed_at": "2026-08-22T17:49:25+09:00",
+  "next_allowed_retry_at": "2026-08-22T18:03:32.414+09:00",
+  "expected_prompt_length": 623,
+  "editor_verified_length": 623,
+  "server_card_prompt": "8",
+  "server_card_prompt_length": 1,
+  "root_cause": "Flow Slate accepted a virtual clipboard paste visually but persisted only the first physically typed character to the server generation card.",
+  "candidate_disposition": "discard_regardless_of_visual_quality",
+  "retry_rule": "Do not resubmit until the current candidate is terminal, the three-job ten-minute generation rest is complete, and at least fifteen minutes have elapsed from the failed submission. Re-enter the whole prompt with pressSequentially-style real keystrokes, then verify the post-click server card before accepting the retry.",
+  "workflow_rule_updated": true,
+  "user_action_required": false
+}
