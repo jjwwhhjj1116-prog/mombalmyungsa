@@ -2,24 +2,24 @@
   "schema_version": "body-invention.thumbnail-lock.v1",
   "stage_id": "06_storyboard",
   "status": "completed",
-  "revision": 18,
+  "revision": 19,
   "approved_by": "owner_reference_layout_and_emotion_spec_plus_visual_qa",
   "input_hashes": {
     "final-script-v6.txt": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3"
   },
   "output_hashes": {
     "assets/frame-zero-bg-v18-no-product.png": "f8c41726909a069bc50990cdd72b27a7d26570b0eaddd00b530463ba71737b0a",
-    "assets/frame-zero-v18-deep-hook-final.png": "d18584ca16eb4d1e563eb49682b723a768895674b69df3f799a68c08b01a41ae",
-    "qa/thumbnail-v18-mobile-25pct.jpg": "a94a3fe52f8c01bf9a5603a3cc285bd36eb26451067368c15753b57b1b73e684"
+    "assets/frame-zero-v19-top-bottom-final.png": "f0b1429738f54cffa6e915195ed4141c1ac6e9d927252e7875d136294abc3862",
+    "qa/thumbnail-v19-mobile-25pct.jpg": "89560cfe7e1699d40a82537847836d4edb22376c70c74fe32df2a735002c53ae"
   },
-  "supersedes_asset": "assets/frame-zero-v7-owner-layout.png",
+  "supersedes_asset": "assets/frame-zero-v18-deep-hook-final.png",
   "layout": "deep_hook_two_tier",
-  "copy_blocks": ["까스 없는", "활명수"],
+  "copy_blocks": ["까스없는", "활명수"],
   "visible_character_count": 7,
   "font": "Gmarket Sans Bold",
   "font_sha256": "ff7c354dd1a324e4cecc1223c4f71e74fa81be7027e0c7f6324c475909cacefc",
   "font_sizes_px": [112, 270],
-  "positions_px": [[540, 1280], [540, 1440]],
+  "positions_px": [[540, 180], [540, 1480]],
   "fill_colors": ["#FFFFFF", "#FFD21F"],
   "outer_stroke_color": "#FFFFFF",
   "outer_stroke_width_px": 30,
