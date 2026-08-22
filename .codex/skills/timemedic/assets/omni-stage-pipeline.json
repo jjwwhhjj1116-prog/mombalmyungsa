@@ -2,7 +2,7 @@
   "schema_version": "timemedic.omni-stage-pipeline.v1",
   "id": "episode-id",
   "brand": "몸의 발명사",
-  "production_mode": "stage_gated_tts_owned_omni_text_to_video",
+  "production_mode": "stage_gated_tts_owned_omni_hybrid_opening_i2v_then_t2v",
   "benchmark_reference": {
     "url": "https://www.youtube.com/watch?v=ReUyaMDGj9o",
     "adopted": [
@@ -47,7 +47,7 @@
     "next_sentence_meaning_before_boundary": false,
     "generated_text_policy": "blank_plates_only",
     "paid_generation_before_script_approval": false,
-    "batch_generation_before_pilot_approval": false,
+    "batch_generation_before_pilot_qa_pass": false,
     "final_width": 1080,
     "final_height": 1920,
     "duration_tolerance_frames": 1,
@@ -57,6 +57,9 @@
     "shorts_thumbnail_route": "approved_frame_zero_then_select_frame",
     "thumbnail_is_video_frame_zero": true,
     "thumbnail_contract_stage": "06_storyboard",
+    "thumbnail_final_pixels_before_generation": true,
+    "thumbnail_mobile_qa_before_generation": true,
+    "textless_opening_image_before_generation": true,
     "first_two_seconds_discontinuity_count_max": 0,
     "ai_use_disclosure_for_flow_reconstruction": "yes"
     ,"native_audio_visible_event_only": true
@@ -108,6 +111,8 @@
     "model": "Omni Flash",
     "forbidden_model": "Veo 3.1 Quality",
     "mode": "text_to_video",
+    "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
+    "remaining_units_mode": "text_to_video",
     "aspect_ratio": "9:16",
     "seconds_per_unit": 8,
     "sentences_per_unit": [2, 3],
@@ -232,13 +237,13 @@
     },
     {
       "id": "06_storyboard",
-      "objective": "승인 대본의 문장마다 대사·장면·감정과 연속성 앵커를 설계한다.",
+      "objective": "승인 대본의 문장마다 대사·장면·감정과 연속성 앵커를 설계하고 최종 썸네일·모바일 QA·무문자 시작 이미지를 완성한다.",
       "depends_on": ["05_script_approval"],
       "inputs": ["05-script.lock.json"],
-      "outputs": ["06-storyboard.json", "06-storyboard.lock.json", "06-thumbnail-frame-zero.png", "06-thumbnail-hook-contract.json", "06-thumbnail.lock.json"],
+      "outputs": ["06-storyboard.json", "06-storyboard.lock.json", "06-thumbnail-frame-zero.png", "06-thumbnail-mobile-qa.jpg", "06-thumbnail-textless-opening.png", "06-thumbnail-visual-identity.lock.json", "06-thumbnail.lock.json"],
       "gate": {
         "human_approval_required": false,
-        "pass_criteria": ["문장 수=의미 장면 수", "대사·장면·감정 완비", "continuity_in/out", "다음 문장 조기 공개 없음", "승인 썸네일과 첫 훅의 피사체·구도·카메라·조명 약속 일치", "첫 Flow 훅 단위가 승인 썸네일 구도로 시작"],
+        "pass_criteria": ["문장 수=의미 장면 수", "대사·장면·감정 완비", "continuity_in/out", "다음 문장 조기 공개 없음", "최종 썸네일 픽셀 SHA-256", "모바일 축소 QA PASS", "무문자 시작 이미지 SHA-256", "visual identity PASS", "승인 썸네일과 첫 훅의 피사체·구도·카메라·조명 약속 일치"],
         "blocked_actions": ["generation_plan", "flow_generation"]
       },
       "status": "pending",
@@ -253,7 +258,7 @@
       "outputs": ["07-generation-units.json", "07-reference-grammar.lock.json", "07-generation-plan.lock.json"],
       "gate": {
         "human_approval_required": false,
-        "pass_criteria": ["한국어 검수 프롬프트", "영어 생성 프롬프트", "시작·종료 앵커", "후보 위험 등급", "문장별 수확 규칙", "샷별 motion_carrier와 transition_mechanism", "visible-event-only native_audio_plan", "훅 단위 시작 프레임이 승인 썸네일 구도와 동일", "reference grammar lock PASS", "특정 참고 장면 복제 0"],
+        "pass_criteria": ["한국어 검수 프롬프트", "영어 생성 프롬프트", "시작·종료 앵커", "후보 위험 등급", "문장별 수확 규칙", "샷별 motion_carrier와 transition_mechanism", "visible-event-only native_audio_plan", "첫 훅만 승인 무문자 이미지 기반 I2V", "나머지 단위는 T2V", "reference grammar lock PASS", "특정 참고 장면 복제 0"],
         "blocked_actions": ["pilot_generation", "batch_generation"]
       },
       "status": "pending",
@@ -267,7 +272,7 @@
       "inputs": ["07-generation-plan.lock.json", "06-thumbnail.lock.json"],
       "outputs": ["08-pilot-candidates.json", "08-pilot-contact-sheet.jpg", "08-pilot.lock.json"],
       "gate": {
-        "human_approval_required": true,
+        "human_approval_required": false,
         "pass_criteria": ["훅 약속 증명", "승인 썸네일과 정확히 같은 구도로 시작", "행동 물리 정확성", "연속 운동 운반체", "네이티브 오디오 화면 사건 정합", "스타일 일관성", "문장별 1–3초 수확 가능"],
         "blocked_actions": ["batch_generation", "voice_full_generation"]
       },
@@ -352,7 +357,7 @@
     },
     {
       "id": "14_final_qa",
-      "objective": "최종 RC의 사실·음성·영상·자막·모션·권리를 독립 검수한다.",
+      "objective": "최종 RC의 사실·음성·영상·자막·모션·권리를 독립 검수하고 06 승인 썸네일을 0초에 정확히 재합성한다.",
       "depends_on": ["13_semantic_motion_sound"],
       "inputs": ["13-motion.lock.json", "05-script.lock.json", "01-evidence.lock.json", "06-thumbnail.lock.json"],
       "outputs": ["14-final-1080x1920.mp4", "14-qa-report.json", "14-contact-sheet.jpg", "14-final.lock.json"],

@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 20,
+  "revision": 21,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -14,6 +14,9 @@
     "visual_identity": "continuous_living_miniature_diorama",
     "video_model": "Omni Flash",
     "video_mode": "text_to_video",
+    "generation_strategy": "first_hook_image_to_video_then_text_to_video",
+    "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
+    "remaining_flow_mode": "text_to_video",
     "aspect_ratio": "9:16",
     "seconds_per_generation_unit": 8,
     "candidates_per_unit": 1,
@@ -53,7 +56,17 @@
     "thumbnail_gold_cloud_forbidden": true,
     "thumbnail_emotion_anchor": "severe_stomach_pain_one_hand_clutching_abdomen_other_hand_reaching_into_empty_frame",
     "thumbnail_product_packshot_present": false,
-    "thumbnail_product_omission_reason": "avoid_product_shorts_ad_read"
+    "thumbnail_product_omission_reason": "avoid_product_shorts_ad_read",
+    "video_generation_requires_approved_thumbnail_lock": true,
+    "video_generation_requires_mobile_thumbnail_qa": true,
+    "video_generation_requires_textless_opening_image_lock": true,
+    "opening_textless_asset": "assets/frame-zero-bg-v18-no-product.png",
+    "opening_textless_asset_sha256": "f8c41726909a069bc50990cdd72b27a7d26570b0eaddd00b530463ba71737b0a",
+    "thumbnail_final_asset": "assets/frame-zero-v20-owner-red-box-final.png",
+    "thumbnail_final_asset_sha256": "9a7a99b99e32d8400d1c20930b3b3e8aa5f45b968afd538305601d069286d0a5",
+    "thumbnail_mobile_qa_asset": "qa/thumbnail-v20-mobile-25pct.jpg",
+    "thumbnail_mobile_qa_asset_sha256": "d50f6cade1b297aa3140111e96b02a2ec222971f02852afdfef95c846f51edf5",
+    "opening_action": "crying_stomach_pain_reach_take_unlabeled_amber_bottle_drink_then_relief_smile"
   },
   "duration_routing_contract": {
     "threshold_seconds": 180.0,
@@ -137,7 +150,7 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "dda151e934b63decea9d7bccc368f596444a4c6a71b1931f932d06c839c6279e"
+      "lock_sha256": "68777907e90bb1722ee937ca49dc2c1197ab2ba7c424ff610ebee18c0798a511"
     },
     {
       "id": "08_pilot_generation",
@@ -154,6 +167,6 @@
   ],
   "resume": {
     "first_non_completed_stage": "08_pilot_generation",
-    "instruction": "Before any paid Flow generation, synthesize the approved full-script TTS and lock 05-duration-route. If duration exceeds 180.000 seconds, rebuild 06 and 07 for 16:9 longform; otherwise confirm 9:16 and resume 08_pilot_generation."
+    "instruction": "Thumbnail V20, its mobile QA, and the textless opening image are locked. Before any paid Flow generation, synthesize the approved full-script TTS and lock 05-duration-route. If duration exceeds 180.000 seconds, rebuild 06 and 07 for 16:9 longform; otherwise confirm 9:16 and submit the first hook as I2V from the approved textless opening image, with all remaining units kept as T2V."
   }
 }

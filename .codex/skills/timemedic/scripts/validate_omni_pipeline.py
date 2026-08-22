@@ -58,8 +58,8 @@ def main():
         errors.append("schema_version must be timemedic.omni-stage-pipeline.v1")
     if data.get("brand") != "몸의 발명사":
         errors.append("brand must be 몸의 발명사")
-    if data.get("production_mode") != "stage_gated_tts_owned_omni_text_to_video":
-        errors.append("production_mode must be stage_gated_tts_owned_omni_text_to_video")
+    if data.get("production_mode") != "stage_gated_tts_owned_omni_hybrid_opening_i2v_then_t2v":
+        errors.append("production_mode must be stage_gated_tts_owned_omni_hybrid_opening_i2v_then_t2v")
 
     topic = data.get("topic_selection", {})
     if topic.get("minimum_candidates", 0) < 10:
@@ -91,7 +91,7 @@ def main():
         "next_sentence_meaning_before_boundary": False,
         "generated_text_policy": "blank_plates_only",
         "paid_generation_before_script_approval": False,
-        "batch_generation_before_pilot_approval": False,
+        "batch_generation_before_pilot_qa_pass": False,
         "final_width": 1080,
         "final_height": 1920,
         "duration_tolerance_frames": 1,
@@ -100,6 +100,9 @@ def main():
         "flow_reference_grammar_lock_required": True,
         "thumbnail_is_video_frame_zero": True,
         "thumbnail_contract_stage": "06_storyboard",
+        "thumbnail_final_pixels_before_generation": True,
+        "thumbnail_mobile_qa_before_generation": True,
+        "textless_opening_image_before_generation": True,
         "first_two_seconds_discontinuity_count_max": 0,
     }
     for key, expected in required_invariants.items():
@@ -145,6 +148,10 @@ def main():
     for key, expected in expected_visual.items():
         if visual.get(key) != expected:
             errors.append(f"visual_generation.{key} must be {expected!r}")
+    if visual.get("opening_mode_override") != "image_to_video_from_approved_textless_thumbnail":
+        errors.append("visual_generation.opening_mode_override must use the approved textless thumbnail")
+    if visual.get("remaining_units_mode") != "text_to_video":
+        errors.append("visual_generation.remaining_units_mode must remain text_to_video")
     if visual.get("pilot_units") != ["hook", "mechanism_or_reversal"]:
         errors.append("visual_generation.pilot_units must be hook plus mechanism_or_reversal")
     if set(visual.get("prompt_views", [])) != {"ko_review", "en_generation"}:
@@ -220,7 +227,7 @@ def main():
     if seen_in_progress > 1:
         errors.append("at most one stage may be in_progress")
 
-    for approval_stage in ("05_script_approval", "08_pilot_generation", "15_packaging_release"):
+    for approval_stage in ("05_script_approval", "15_packaging_release"):
         if approval_stage in stage_ids:
             stage = stages[stage_ids.index(approval_stage)]
             if stage.get("gate", {}).get("human_approval_required") is not True:

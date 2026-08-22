@@ -5,7 +5,8 @@
   "reason_code": "duration_route_pending_before_flow",
   "generation_submitted": false,
   "last_confirmed_state": "prompt_not_submitted",
-  "safe_resume": "First synthesize the approved full-script TTS and create locks/05-duration-route.lock.json. If the measured duration exceeds 180.000 seconds, invalidate and rebuild storyboard and Flow units for 16:9 longform. If it is 180.000 seconds or less, confirm 9:16, then verify the private runtime account and submit vit-v6-u01 exactly once.",
+  "thumbnail_gate_state": "V20 final pixels, mobile QA, visual identity and textless opening image are locked",
+  "safe_resume": "First synthesize the approved full-script TTS and create locks/05-duration-route.lock.json. If the measured duration exceeds 180.000 seconds, invalidate and rebuild storyboard and Flow units for 16:9 longform. If it is 180.000 seconds or less, confirm 9:16, verify the private runtime account, verify all thumbnail hashes, then submit vit-v6-u01 exactly once as I2V using assets/frame-zero-bg-v18-no-product.png. Keep every later unit as T2V.",
   "forbidden": [
     "reuse rejected V3 clips",
     "submit duplicate jobs after an unknown browser result",

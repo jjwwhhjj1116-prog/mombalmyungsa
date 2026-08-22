@@ -51,12 +51,15 @@
   },
   "typography": {
     "font_family": "Gmarket Sans Bold",
-    "font_size_px": 175,
+    "font_size_px": 100,
     "stroke_width_px": 30,
     "stroke_color": "#000000",
     "shadow_required": true,
     "paint_order": "stroke fill",
-    "caption_chunk": "2-4 eojeol with manual Korean line breaks"
+    "caption_chunk": "2-4 eojeol with manual Korean line breaks",
+    "anchor_x_px": 540,
+    "anchor_y_px": 1200,
+    "anchor_reference": "10_of_16_from_top"
   },
   "voice_profile": {
     "name": "body-invention-main",

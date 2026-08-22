@@ -97,6 +97,9 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "thumbnail_subject_is_primary": True,
         "thumbnail_gold_cloud_forbidden": True,
         "thumbnail_product_packshot_present": False,
+        "video_generation_requires_approved_thumbnail_lock": True,
+        "video_generation_requires_mobile_thumbnail_qa": True,
+        "video_generation_requires_textless_opening_image_lock": True,
     }
     for field, expected in expected_production.items():
         if production.get(field) != expected:
@@ -199,12 +202,20 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         if generation.get("script_sha256") != source.get("sha256"):
             errors.append("generation plan script_sha256 does not match source_of_truth")
         if generation.get("model") != "Omni Flash" or generation.get("mode") != "text_to_video":
-            errors.append("generation plan must use Omni Flash text_to_video")
+            errors.append("generation plan must keep Omni Flash text_to_video as the default mode")
+        if generation.get("generation_strategy") != "first_hook_image_to_video_then_text_to_video":
+            errors.append("generation plan must use the approved first-hook I2V then T2V strategy")
+        if generation.get("opening_mode_override") != "image_to_video_from_approved_textless_thumbnail":
+            errors.append("generation plan must declare the approved textless-thumbnail I2V opening override")
         if generation.get("aspect_ratio") != routed_aspect or generation.get("seconds_per_unit") != 8:
             errors.append("generation plan must match routed aspect ratio and use eight-second units")
-        for unit in generation.get("units", []):
+        units = generation.get("units", [])
+        for index, unit in enumerate(units):
             if unit.get("candidate_count") != 1:
                 errors.append(f"{unit.get('unit_id', 'unknown unit')}: candidate_count must be 1")
+            expected_mode = "image_to_video" if index == 0 else "text_to_video"
+            if unit.get("mode") != expected_mode:
+                errors.append(f"{unit.get('unit_id', 'unknown unit')}: mode must be {expected_mode}")
 
     thumbnail_lock_path = episode / "locks" / "06-thumbnail.lock.json"
     if thumbnail_lock_path.is_file():
@@ -233,6 +244,41 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             errors.append("duplicate unlabeled bottle must not remain behind the official packshot")
         if thumbnail.get("frame_zero_hold_seconds") != 0.7:
             errors.append("thumbnail frame-zero hold must be 0.7 seconds")
+        if thumbnail.get("mobile_visual_qa") != "PASS":
+            errors.append("thumbnail mobile visual QA must pass before video generation")
+
+        expected_thumbnail_assets = {
+            production.get("opening_textless_asset", ""): production.get("opening_textless_asset_sha256"),
+            production.get("thumbnail_final_asset", ""): production.get("thumbnail_final_asset_sha256"),
+            production.get("thumbnail_mobile_qa_asset", ""): production.get("thumbnail_mobile_qa_asset_sha256"),
+        }
+        valid_thumbnail_assets = {}
+        for relative, expected_hash in expected_thumbnail_assets.items():
+            if not relative or not expected_hash:
+                errors.append(f"missing locked thumbnail asset hash for {relative}")
+                continue
+            valid_thumbnail_assets[relative] = expected_hash
+            if thumbnail.get("output_hashes", {}).get(relative) != expected_hash:
+                errors.append(f"thumbnail lock does not own the current asset hash: {relative}")
+        validate_hash_map(episode, valid_thumbnail_assets, "thumbnail hard gate", errors)
+
+        visual_identity_path = episode / "locks" / "06-thumbnail-visual-identity.lock.json"
+        if not visual_identity_path.is_file():
+            errors.append("missing thumbnail visual identity lock")
+        else:
+            visual_identity = load_json(visual_identity_path)
+            if visual_identity.get("verdict") != "PASS" or visual_identity.get("manual_visual_review_completed") is not True:
+                errors.append("thumbnail visual identity lock must be manually reviewed PASS")
+
+        if generation_path.is_file():
+            generation_units = load_json(generation_path).get("units", [])
+            opening = generation_units[0] if generation_units else {}
+            expected_opening_path = production.get("opening_textless_asset")
+            expected_opening_hash = production.get("opening_textless_asset_sha256")
+            if opening.get("input_image") != expected_opening_path or opening.get("input_image_sha256") != expected_opening_hash:
+                errors.append("first Flow unit must use the locked textless thumbnail image and SHA-256")
+    elif any(stage.get("id") in {"07_generation_plan", "08_pilot_generation"} and stage.get("status") == "completed" for stage in stages):
+        errors.append("thumbnail hard gate must be completed before generation planning or Flow")
 
     return errors, {"episode": str(episode), "next_stage": next_stage, "stage_count": len(stages)}
 
