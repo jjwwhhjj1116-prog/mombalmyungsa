@@ -19,8 +19,8 @@
   "units": [
     {
       "unit_id": "vit-v6-u07",
-      "status": "platform_cooldown_24h_after_new_retry_failure_until_2026-08-23T20:58:23.2981259+09:00",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. One unlabeled amber bottle rides a brass rail to adult son Min Kang; father and son open a Korean wooden pharmacy together. The same bottle passes through a small filling machine and becomes many bottles moving right, then match-cuts onto a public pharmacy shelf as many Korean hands collect them. Native rail, bottle, machine, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "status": "simplified_retry_prompt_prepared_after_exact_prompt_generic_failure",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin Korean adults, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. SHOT A: one unlabeled amber bottle travels right on a brass rail to a father and adult son inside a late-19th-century Korean wooden pharmacy. SHOT B: they open the wooden shop and start a small hand-operated filling machine. SHOT C: identical unlabeled amber bottles move right in a neat line onto a pharmacy shelf. Native rail, door, bottle, machine and room sounds only. No speech, music, text, labels, logos, detached hands, shake, morphing, chibi or real actors."
     },
     {
       "unit_id": "vit-v6-u08",
