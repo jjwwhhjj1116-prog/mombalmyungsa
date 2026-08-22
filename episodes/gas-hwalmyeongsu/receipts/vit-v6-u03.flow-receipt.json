@@ -1,0 +1,62 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "unit_id": "vit-v6-u03",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "project_id": "f98e16bc-b689-4da5-809f-39a0e2be8682",
+  "media_id": "fe07dd84-5b20-4d10-823a-d6058d7b3801",
+  "media_url": "https://labs.google/fx/ko/tools/flow/project/f98e16bc-b689-4da5-809f-39a0e2be8682/edit/fe07dd84-5b20-4d10-823a-d6058d7b3801",
+  "submitted_at": "2026-08-22T17:25:42.997+09:00",
+  "terminal_confirmed_at": "2026-08-22T17:26:32+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "9:16",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adult figures, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. Match cut from an unlabeled amber bottle into a late-19th-century Korean Empire wooden apothecary. A Korean family opens an empty medicine cabinet. Camera continues right to a distant cauldron where herbs and water boil slowly over fire and steam. Native cabinet, fire, simmer and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+  "local_media": {
+    "path": "generated/batch/vit-v6-u03.mp4",
+    "sha256": "8bfd8c791f1c1cf5d17c92fa06923debd932472655d53c06d38f192b58d08fb6",
+    "bytes": 2260867,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/batch-u03-contact-sheet-24.jpg",
+    "contact_sheet_24_sha256": "735407d1f2f87f35f8b346a4762a0e621d3413f4a5d02e35fc488d1e5c4c6247",
+    "checks": {
+      "korean_empire_apothecary_identity": true,
+      "family_and_medicine_scarcity_context_visible": true,
+      "cauldron_decoction_process_visible": true,
+      "continuous_rightward_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "unreadable_drawer_label_texture_present": true,
+      "brand_or_label": false,
+      "photoreal_actor_drift": false,
+      "obvious_hand_failure": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -43.5,
+    "max_volume_db": -15.7,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute_and_replace_with_aligned_cabinet_fire_simmer_and_room_sfx_if_visible_events_do_not_match_within_two_frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "complete the mandatory ten-minute generation rest after three consecutive submissions, then continue with vit-v6-u04; do not regenerate u03"
+}
