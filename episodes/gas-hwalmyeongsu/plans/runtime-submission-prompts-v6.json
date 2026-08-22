@@ -25,8 +25,9 @@
     },
     {
       "unit_id": "vit-v6-u08",
-      "status": "pending",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. Korean customers line up as one unlabeled amber bottle stays centered and a blank brass gauge rises. Many differently shaped unlabeled copy bottles multiply around it, then slide away while the original remains still. The back wall begins one smooth rotation for the next scene. Native bottle, rail, gauge, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "status": "completed_visual_pass",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. Korean customers line up as one unlabeled amber bottle stays centered and a blank brass gauge rises. Many differently shaped unlabeled copy bottles multiply around it, then slide away while the original remains still. The back wall begins one smooth rotation for the next scene. Native bottle, rail, gauge, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+      "receipt": "receipts/vit-v6-u08.flow-receipt.json"
     },
     {
       "unit_id": "vit-v6-u09",
