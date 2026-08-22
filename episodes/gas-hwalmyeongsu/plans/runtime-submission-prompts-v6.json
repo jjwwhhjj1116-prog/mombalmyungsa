@@ -37,8 +37,9 @@
     },
     {
       "unit_id": "vit-v6-u11",
-      "status": "pending",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, walnut, brass, enamel and amber glass, warm amber and cool teal light, smooth macro camera, never photorealistic. Inside one unlabeled amber bottle, dissolved bubbles gather under the cap and fine vapor rises when it opens. One bubble touches an enamel tongue model and pops during one short camera push. The same upward bubble path reaches a thin brass ear diaphragm so taste and sound become visible. Native bubble, cap, vapor, pop, diaphragm and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "status": "completed_visual_pass",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, walnut, brass, enamel and amber glass, warm amber and cool teal light, smooth macro camera, never photorealistic. Inside one unlabeled amber bottle, dissolved bubbles gather under the cap and fine vapor rises when it opens. One bubble touches an enamel tongue model and pops during one short camera push. The same upward bubble path reaches a thin brass ear diaphragm so taste and sound become visible. Native bubble, cap, vapor, pop, diaphragm and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+      "receipt": "receipts/vit-v6-u11.flow-receipt.json"
     },
     {
       "unit_id": "vit-v6-u12",

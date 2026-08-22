@@ -1,0 +1,66 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "unit_id": "vit-v6-u12",
+  "attempt": 1,
+  "status": "rejected_visual_qa",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "project_id": "f98e16bc-b689-4da5-809f-39a0e2be8682",
+  "media_id": "eb522846-5726-4d5f-835b-21604c500eda",
+  "media_url": "https://labs.google/fx/ko/tools/flow/project/f98e16bc-b689-4da5-809f-39a0e2be8682/edit/eb522846-5726-4d5f-835b-21604c500eda",
+  "submitted_at": "2026-08-23T00:57:26.919+09:00",
+  "terminal_confirmed_at": "2026-08-23T00:58:37+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "9:16",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "prompt_entry_method": "pressSequentially_physical_key_events_only",
+  "pre_submit_prompt_exact_match": true,
+  "post_submit_server_card_prompt_exact_match": true,
+  "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy where the same hand twists the cap once. Hiss vapor becomes a curved brass time rail joining the old apothecary and 1960s factory in one miniature view. Native bottle, machine, cap, hiss and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+  "local_media": {
+    "path": "generated/batch/rejected/vit-v6-u12-attempt-1.mp4",
+    "sha256": "524affa6e7147e91872304b474a0f7cfa22a93f5e8cf23a398b0b1e2e7a92392",
+    "bytes": 2084717,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "FAIL",
+    "contact_sheet_24": "qa/batch-u12-attempt-1-contact-sheet-24.jpg",
+    "contact_sheet_24_sha256": "b74960427df018a26479b8223a76ec313383b4314c0acf7209377d397a31471b",
+    "failed_checks": [
+      "clearly_readable_generated_korean_signage_in_modern_pharmacy",
+      "modern_hand_drifts_to_photorealism_instead_of_matte_resin_diorama"
+    ],
+    "passed_checks": [
+      "completed_bubbling_amber_bottle_on_pedestal",
+      "bottle_neck_match_cut_to_modern_pharmacy",
+      "single_cap_twist_action",
+      "hiss_vapor_becomes_curved_brass_time_rail",
+      "old_apothecary_and_1960s_factory_join_in_one_view"
+    ]
+  },
+  "retry_contract": {
+    "same_sentence_ownership": true,
+    "same_actions_and_camera_axis": true,
+    "add_constraints": [
+      "all people and hands remain 1:5 matte-resin miniatures",
+      "pharmacy shelves use blank geometric boxes with no letters, numbers or signage",
+      "no readable writing anywhere"
+    ]
+  },
+  "binary_commit_policy": "rejected mp4 remains gitignored; rejection receipt and contact sheet are committed",
+  "next_safe_action": "retry only vit-v6-u12 after the configured interval; never harvest attempt 1"
+}
