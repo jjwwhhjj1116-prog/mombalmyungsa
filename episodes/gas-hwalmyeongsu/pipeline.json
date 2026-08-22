@@ -11,6 +11,9 @@
     "tts_numbers": "natural_korean_reading_by_unit"
   },
   "production_contract": {
+    "video_generation_provider": "Google Flow",
+    "flow_only": true,
+    "external_video_engine_fallback_allowed": false,
     "visual_identity": "continuous_living_miniature_diorama",
     "video_model": "Omni Flash",
     "video_mode": "text_to_video",

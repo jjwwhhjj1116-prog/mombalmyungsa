@@ -4,7 +4,7 @@
   "stage_id": "09_batch_generation",
   "unit_id": "vit-v6-u07",
   "status": "platform_cooldown_24h_active",
-  "blocker_code": "flow_abnormal_activity_detected",
+  "blocker_code": "provider_submission_security_rejection",
   "provider": "Google Flow",
   "account_route_verified_in_visible_flow_profile": true,
   "submitted_at": "2026-08-22T18:23:38.041+09:00",
@@ -33,5 +33,7 @@
   "retry_rule": "A historical warning card is not a new recurrence. After the minimum cooldown, verify the visible account, confirm no active request, and retry only this failed unit once. If that new submission receives the same warning, stop all Flow generation for twenty-four hours from the new failure time.",
   "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. One unlabeled amber bottle rides a brass rail to adult son Min Kang; father and son open a Korean wooden pharmacy together. The same bottle passes through a small filling machine and becomes many bottles moving right, then match-cuts onto a public pharmacy shelf as many Korean hands collect them. Native rail, bottle, machine, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
   "user_action_required": false,
-  "next_safe_action": "do not submit any Flow generation before the 24-hour read-only recheck; do not advance to u08 while u07 is unresolved; after the recheck either resume U07 only if the new restriction is absent or route the episode to an explicitly approved fallback engine"
+  "engine_policy": "google_flow_only_no_external_video_engine_fallback",
+  "cause_scope": "Flow rejected the submission before creating a candidate. The visible UI does not expose the exact server-side cause; the persistent reCAPTCHA connection notice is recorded as a correlation, not a proven cause.",
+  "next_safe_action": "do not submit any Flow generation before the 24-hour read-only recheck; do not advance to u08 while u07 is unresolved; after the recheck resume U07 only in Google Flow if the restriction is absent, otherwise keep this Flow blocker active"
 }
