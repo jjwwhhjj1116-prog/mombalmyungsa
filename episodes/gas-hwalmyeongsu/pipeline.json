@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "gas-hwalmyeongsu",
   "working_title": "까스활명수는 왜 70년 뒤에 탄산을 넣었을까",
-  "revision": 19,
+  "revision": 20,
   "source_of_truth": {
     "path": "final-script-v6.txt",
     "sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
@@ -36,8 +36,11 @@
     "frame_zero_duration_seconds": 0.7,
     "thumbnail_font": "Gmarket Sans Bold",
     "thumbnail_layout": "deep_hook_two_tier",
-    "thumbnail_setup_position_px": [540, 180],
-    "thumbnail_keyword_position_px": [540, 1480],
+    "thumbnail_setup_font_size_px": 270,
+    "thumbnail_keyword_font_size_px": 270,
+    "thumbnail_setup_position_px": [540, 90],
+    "thumbnail_keyword_position_px": [540, 1320],
+    "thumbnail_setup_width_scale": 0.84,
     "thumbnail_copy_max_visible_characters": 10,
     "thumbnail_outer_stroke_px": 30,
     "thumbnail_outer_stroke_color": "#FFFFFF",
@@ -118,11 +121,11 @@
       "id": "06_storyboard",
       "status": "completed",
       "lock_path": "locks/06-storyboard.lock.json",
-      "lock_sha256": "235dc46a5663439c5034c8507f29aad12f46577dab7d708516b08f1314e25366",
+      "lock_sha256": "1f4726f82d8fc3c68adc4daf6c4e7d32df696443f2c3975d7417c53b79569de3",
       "sidecar_locks": [
         {
           "path": "locks/06-thumbnail.lock.json",
-          "sha256": "1a251e74d3b600aeb6882f3d578ed81a4be9aae4757377ecdc3262b0e3939749"
+          "sha256": "9ccbb0baa87070f242174785357805764f87e496a6ce2a8f3c4de35fdaad1881"
         },
         {
           "path": "locks/06-thumbnail-visual-identity.lock.json",
@@ -134,7 +137,7 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "459e0788b6c1da0dee0784356da767f3c82a62d15f972a33710dd37135d5d2a9"
+      "lock_sha256": "dda151e934b63decea9d7bccc368f596444a4c6a71b1931f932d06c839c6279e"
     },
     {
       "id": "08_pilot_generation",

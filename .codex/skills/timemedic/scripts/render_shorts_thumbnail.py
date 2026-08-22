@@ -34,6 +34,12 @@ def main():
     parser.add_argument("--center-y", type=int, default=500)
     parser.add_argument("--top-font-size", type=int, default=245)
     parser.add_argument("--center-font-size", type=int, default=300)
+    parser.add_argument(
+        "--top-width-scale",
+        type=float,
+        default=1.0,
+        help="Horizontal scale for the top deep-hook tier; keeps its font height while fitting a longer setup line",
+    )
     parser.add_argument("--stroke-color", default="#000000")
     parser.add_argument("--inner-stroke", type=int, default=14)
     parser.add_argument("--accent-fill", default="#FFD21F")
@@ -93,40 +99,60 @@ def main():
         line_fills = [SERIES_FILL] * 3
 
     if args.layout == "deep-hook":
+        if not 0.5 <= args.top_width_scale <= 1.0:
+            raise SystemExit("--top-width-scale must be between 0.5 and 1.0")
         fonts = [
             ImageFont.truetype(str(args.font), args.top_font_size),
             ImageFont.truetype(str(args.font), args.center_font_size),
         ]
         placements = [(args.center_x, args.top_y), (args.center_x, args.center_y)]
         fills = ["#FFFFFF", args.accent_fill.upper()]
+        width_scales = [args.top_width_scale, 1.0]
         draw_probe = ImageDraw.Draw(image)
         block_boxes = []
-        for line, block_font, (x, y) in zip(lines, fonts, placements):
+        natural_boxes = []
+        for line, block_font, (x, y), width_scale in zip(lines, fonts, placements, width_scales):
             box = draw_probe.textbbox((x, y), line, font=block_font, anchor="ma", stroke_width=args.stroke)
-            if box[0] < 28 or box[2] > 1052 or box[1] < 28 or box[3] > 1892:
-                raise SystemExit(f"deep-hook block outside safe area: {line} {box}")
-            block_boxes.append(box)
+            scaled_width = round((box[2] - box[0]) * width_scale)
+            scaled_box = (round(x - scaled_width / 2), box[1], round(x + scaled_width / 2), box[3])
+            if scaled_box[0] < 28 or scaled_box[2] > 1052 or scaled_box[1] < 28 or scaled_box[3] > 1892:
+                raise SystemExit(f"deep-hook block outside safe area: {line} {scaled_box}")
+            natural_boxes.append(box)
+            block_boxes.append(scaled_box)
 
-        shadow = Image.new("RGBA", image.size, (0, 0, 0, 0))
-        shadow_draw = ImageDraw.Draw(shadow)
-        for line, block_font, (x, y) in zip(lines, fonts, placements):
+        image = image.convert("RGBA")
+        pad = args.stroke + 70
+        for line, block_font, (x, _y), fill, width_scale, box in zip(
+            lines, fonts, placements, fills, width_scales, natural_boxes
+        ):
+            block_width = box[2] - box[0]
+            block_height = box[3] - box[1]
+            layer = Image.new("RGBA", (block_width + pad * 2, block_height + pad * 2), (0, 0, 0, 0))
+            origin = (pad - box[0] + x, pad - box[1] + _y)
+
+            shadow = Image.new("RGBA", layer.size, (0, 0, 0, 0))
+            shadow_draw = ImageDraw.Draw(shadow)
             shadow_draw.text(
-                (x + 18, y + 24), line, font=block_font, anchor="ma",
+                (origin[0] + 18, origin[1] + 24), line, font=block_font, anchor="ma",
                 fill=(0, 0, 0, 235), stroke_width=args.stroke + 4, stroke_fill=(0, 0, 0, 225)
             )
-        shadow = shadow.filter(ImageFilter.GaussianBlur(10))
-        image = Image.alpha_composite(image.convert("RGBA"), shadow)
+            shadow = shadow.filter(ImageFilter.GaussianBlur(10))
+            layer = Image.alpha_composite(layer, shadow)
 
-        draw = ImageDraw.Draw(image)
-        for line, block_font, (x, y), fill in zip(lines, fonts, placements, fills):
-            draw.text(
-                (x, y), line, font=block_font, anchor="ma",
+            layer_draw = ImageDraw.Draw(layer)
+            layer_draw.text(
+                origin, line, font=block_font, anchor="ma",
                 fill="#FFFFFF", stroke_width=args.stroke, stroke_fill="#FFFFFF"
             )
-            draw.text(
-                (x, y), line, font=block_font, anchor="ma",
+            layer_draw.text(
+                origin, line, font=block_font, anchor="ma",
                 fill=fill, stroke_width=args.inner_stroke, stroke_fill="#111111"
             )
+            if width_scale != 1.0:
+                layer = layer.resize((round(layer.width * width_scale), layer.height), Image.Resampling.LANCZOS)
+            paste_x = round(x - layer.width / 2)
+            paste_y = box[1] - pad
+            image.alpha_composite(layer, (paste_x, paste_y))
         args.output.parent.mkdir(parents=True, exist_ok=True)
         image.convert("RGB").save(args.output, quality=95)
         print(json.dumps({
@@ -143,6 +169,7 @@ def main():
             "inner_stroke_width_px": args.inner_stroke,
             "positions": placements,
             "font_sizes": [args.top_font_size, args.center_font_size],
+            "top_width_scale": args.top_width_scale,
             "block_boxes": block_boxes,
         }, ensure_ascii=False))
         return
