@@ -1,0 +1,1923 @@
+{
+  "schema_version": "timemedic.daily-two-video.v1",
+  "brand": "몸의 발명사",
+  "topic_catalog_sha256": "ab337301a13b76657fb09784a0930fcfc537e0781875c966843e2f1b940b5ca8",
+  "timezone": "Asia/Seoul",
+  "daily_video_count": 2,
+  "total_topics": 100,
+  "total_days": 50,
+  "public_slots_local": [
+    "11:00",
+    "19:00"
+  ],
+  "private_upload_lead_minutes": 60,
+  "start_date": "2026-08-18",
+  "schedule_approved": true,
+  "pipeline": [
+    "D-2 research_script",
+    "D-1 video_production",
+    "D0 final_qa_private_upload_release"
+  ],
+  "days": [
+    {
+      "day_index": 1,
+      "public_date": "2026-08-18",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-001",
+          "queue_index": 1,
+          "title": "박카스",
+          "research_and_script_day": "2026-08-16",
+          "video_production_day": "2026-08-17",
+          "private_upload_at": "2026-08-18T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-18T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-001/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-01:lane-a:topic-001",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-002",
+          "queue_index": 2,
+          "title": "까스활명수",
+          "research_and_script_day": "2026-08-16",
+          "video_production_day": "2026-08-17",
+          "private_upload_at": "2026-08-18T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-18T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-002/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-01:lane-b:topic-002",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 2,
+      "public_date": "2026-08-19",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-003",
+          "queue_index": 3,
+          "title": "우루사",
+          "research_and_script_day": "2026-08-17",
+          "video_production_day": "2026-08-18",
+          "private_upload_at": "2026-08-19T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-19T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-003/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-02:lane-a:topic-003",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-004",
+          "queue_index": 4,
+          "title": "안티푸라민",
+          "research_and_script_day": "2026-08-17",
+          "video_production_day": "2026-08-18",
+          "private_upload_at": "2026-08-19T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-19T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-004/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-02:lane-b:topic-004",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 3,
+      "public_date": "2026-08-20",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-005",
+          "queue_index": 5,
+          "title": "정로환",
+          "research_and_script_day": "2026-08-18",
+          "video_production_day": "2026-08-19",
+          "private_upload_at": "2026-08-20T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-20T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-005/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-03:lane-a:topic-005",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-006",
+          "queue_index": 6,
+          "title": "물파스",
+          "research_and_script_day": "2026-08-18",
+          "video_production_day": "2026-08-19",
+          "private_upload_at": "2026-08-20T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-20T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-006/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-03:lane-b:topic-006",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 4,
+      "public_date": "2026-08-21",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-007",
+          "queue_index": 7,
+          "title": "게보린/타이레놀",
+          "research_and_script_day": "2026-08-19",
+          "video_production_day": "2026-08-20",
+          "private_upload_at": "2026-08-21T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-21T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-007/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-04:lane-a:topic-007",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-008",
+          "queue_index": 8,
+          "title": "이가탄 & 인사돌",
+          "research_and_script_day": "2026-08-19",
+          "video_production_day": "2026-08-20",
+          "private_upload_at": "2026-08-21T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-21T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-008/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-04:lane-b:topic-008",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 5,
+      "public_date": "2026-08-22",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-009",
+          "queue_index": 9,
+          "title": "후시딘 vs 마데카솔",
+          "research_and_script_day": "2026-08-20",
+          "video_production_day": "2026-08-21",
+          "private_upload_at": "2026-08-22T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-22T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-009/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-05:lane-a:topic-009",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-010",
+          "queue_index": 10,
+          "title": "용각산",
+          "research_and_script_day": "2026-08-20",
+          "video_production_day": "2026-08-21",
+          "private_upload_at": "2026-08-22T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-22T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-010/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-05:lane-b:topic-010",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 6,
+      "public_date": "2026-08-23",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-011",
+          "queue_index": 11,
+          "title": "비타500",
+          "research_and_script_day": "2026-08-21",
+          "video_production_day": "2026-08-22",
+          "private_upload_at": "2026-08-23T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-23T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-011/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-06:lane-a:topic-011",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-012",
+          "queue_index": 12,
+          "title": "포카리스웨트",
+          "research_and_script_day": "2026-08-21",
+          "video_production_day": "2026-08-22",
+          "private_upload_at": "2026-08-23T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-23T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-012/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-06:lane-b:topic-012",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 7,
+      "public_date": "2026-08-24",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-013",
+          "queue_index": 13,
+          "title": "판피린",
+          "research_and_script_day": "2026-08-22",
+          "video_production_day": "2026-08-23",
+          "private_upload_at": "2026-08-24T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-24T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-013/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-07:lane-a:topic-013",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-014",
+          "queue_index": 14,
+          "title": "케토톱",
+          "research_and_script_day": "2026-08-22",
+          "video_production_day": "2026-08-23",
+          "private_upload_at": "2026-08-24T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-24T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-014/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-07:lane-b:topic-014",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 8,
+      "public_date": "2026-08-25",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-015",
+          "queue_index": 15,
+          "title": "비판텐 연고",
+          "research_and_script_day": "2026-08-23",
+          "video_production_day": "2026-08-24",
+          "private_upload_at": "2026-08-25T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-25T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-015/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-08:lane-a:topic-015",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-016",
+          "queue_index": 16,
+          "title": "백내장 수술의 기원",
+          "research_and_script_day": "2026-08-23",
+          "video_production_day": "2026-08-24",
+          "private_upload_at": "2026-08-25T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-25T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-016/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-08:lane-b:topic-016",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 9,
+      "public_date": "2026-08-26",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-017",
+          "queue_index": 17,
+          "title": "마취제의 탄생",
+          "research_and_script_day": "2026-08-24",
+          "video_production_day": "2026-08-25",
+          "private_upload_at": "2026-08-26T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-26T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-017/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-09:lane-a:topic-017",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-018",
+          "queue_index": 18,
+          "title": "로버트 리스턴의 300% 사망률 수술",
+          "research_and_script_day": "2026-08-24",
+          "video_production_day": "2026-08-25",
+          "private_upload_at": "2026-08-26T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-26T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-018/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-09:lane-b:topic-018",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 10,
+      "public_date": "2026-08-27",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-019",
+          "queue_index": 19,
+          "title": "방혈 요법",
+          "research_and_script_day": "2026-08-25",
+          "video_production_day": "2026-08-26",
+          "private_upload_at": "2026-08-27T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-27T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-019/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-10:lane-a:topic-019",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-020",
+          "queue_index": 20,
+          "title": "전두엽 절제술(로보토미)",
+          "research_and_script_day": "2026-08-25",
+          "video_production_day": "2026-08-26",
+          "private_upload_at": "2026-08-27T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-27T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-020/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-10:lane-b:topic-020",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 11,
+      "public_date": "2026-08-28",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-021",
+          "queue_index": 21,
+          "title": "트레퍼네이션(두개골 천공술)",
+          "research_and_script_day": "2026-08-26",
+          "video_production_day": "2026-08-27",
+          "private_upload_at": "2026-08-28T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-28T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-021/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-11:lane-a:topic-021",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-022",
+          "queue_index": 22,
+          "title": "틀니의 섬뜩한 유래",
+          "research_and_script_day": "2026-08-26",
+          "video_production_day": "2026-08-27",
+          "private_upload_at": "2026-08-28T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-28T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-022/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-11:lane-b:topic-022",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 12,
+      "public_date": "2026-08-29",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-023",
+          "queue_index": 23,
+          "title": "수은 치료의 비극",
+          "research_and_script_day": "2026-08-27",
+          "video_production_day": "2026-08-28",
+          "private_upload_at": "2026-08-29T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-29T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-023/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-12:lane-a:topic-023",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-024",
+          "queue_index": 24,
+          "title": "충치 치료와 드릴",
+          "research_and_script_day": "2026-08-27",
+          "video_production_day": "2026-08-28",
+          "private_upload_at": "2026-08-29T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-29T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-024/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-12:lane-b:topic-024",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 13,
+      "public_date": "2026-08-30",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-025",
+          "queue_index": 25,
+          "title": "상처 소독의 혁명",
+          "research_and_script_day": "2026-08-28",
+          "video_production_day": "2026-08-29",
+          "private_upload_at": "2026-08-30T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-30T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-025/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-13:lane-a:topic-025",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-026",
+          "queue_index": 26,
+          "title": "성형수술의 시초",
+          "research_and_script_day": "2026-08-28",
+          "video_production_day": "2026-08-29",
+          "private_upload_at": "2026-08-30T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-30T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-026/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-13:lane-b:topic-026",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 14,
+      "public_date": "2026-08-31",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-027",
+          "queue_index": 27,
+          "title": "담배 연기 관장",
+          "research_and_script_day": "2026-08-29",
+          "video_production_day": "2026-08-30",
+          "private_upload_at": "2026-08-31T10:00:00+09:00",
+          "scheduled_public_at": "2026-08-31T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-027/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-14:lane-a:topic-027",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-028",
+          "queue_index": 28,
+          "title": "맹장 수술(충수염)",
+          "research_and_script_day": "2026-08-29",
+          "video_production_day": "2026-08-30",
+          "private_upload_at": "2026-08-31T18:00:00+09:00",
+          "scheduled_public_at": "2026-08-31T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-028/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-14:lane-b:topic-028",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 15,
+      "public_date": "2026-09-01",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-029",
+          "queue_index": 29,
+          "title": "지혈 겸자(혈관 집게)",
+          "research_and_script_day": "2026-08-30",
+          "video_production_day": "2026-08-31",
+          "private_upload_at": "2026-09-01T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-01T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-029/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-15:lane-a:topic-029",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-030",
+          "queue_index": 30,
+          "title": "제왕절개 수술",
+          "research_and_script_day": "2026-08-30",
+          "video_production_day": "2026-08-31",
+          "private_upload_at": "2026-09-01T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-01T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-030/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-15:lane-b:topic-030",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 16,
+      "public_date": "2026-09-02",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-031",
+          "queue_index": 31,
+          "title": "페니실린",
+          "research_and_script_day": "2026-08-31",
+          "video_production_day": "2026-09-01",
+          "private_upload_at": "2026-09-02T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-02T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-031/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-16:lane-a:topic-031",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-032",
+          "queue_index": 32,
+          "title": "엑스레이(X-ray)",
+          "research_and_script_day": "2026-08-31",
+          "video_production_day": "2026-09-01",
+          "private_upload_at": "2026-09-02T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-02T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-032/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-16:lane-b:topic-032",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 17,
+      "public_date": "2026-09-03",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-033",
+          "queue_index": 33,
+          "title": "비아그라",
+          "research_and_script_day": "2026-09-01",
+          "video_production_day": "2026-09-02",
+          "private_upload_at": "2026-09-03T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-03T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-033/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-17:lane-a:topic-033",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-034",
+          "queue_index": 34,
+          "title": "보톡스",
+          "research_and_script_day": "2026-09-01",
+          "video_production_day": "2026-09-02",
+          "private_upload_at": "2026-09-03T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-03T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-034/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-17:lane-b:topic-034",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 18,
+      "public_date": "2026-09-04",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-035",
+          "queue_index": 35,
+          "title": "인공감미료 사카린",
+          "research_and_script_day": "2026-09-02",
+          "video_production_day": "2026-09-03",
+          "private_upload_at": "2026-09-04T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-04T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-035/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-18:lane-a:topic-035",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-036",
+          "queue_index": 36,
+          "title": "전자레인지와 온열 찜질기",
+          "research_and_script_day": "2026-09-02",
+          "video_production_day": "2026-09-03",
+          "private_upload_at": "2026-09-04T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-04T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-036/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-18:lane-b:topic-036",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 19,
+      "public_date": "2026-09-05",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-037",
+          "queue_index": 37,
+          "title": "인슐린",
+          "research_and_script_day": "2026-09-03",
+          "video_production_day": "2026-09-04",
+          "private_upload_at": "2026-09-05T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-05T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-037/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-19:lane-a:topic-037",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-038",
+          "queue_index": 38,
+          "title": "항암제의 탄생 (질소 머스터드)",
+          "research_and_script_day": "2026-09-03",
+          "video_production_day": "2026-09-04",
+          "private_upload_at": "2026-09-05T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-05T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-038/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-19:lane-b:topic-038",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 20,
+      "public_date": "2026-09-06",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-039",
+          "queue_index": 39,
+          "title": "청진기",
+          "research_and_script_day": "2026-09-04",
+          "video_production_day": "2026-09-05",
+          "private_upload_at": "2026-09-06T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-06T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-039/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-20:lane-a:topic-039",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-040",
+          "queue_index": 40,
+          "title": "임신테스트기",
+          "research_and_script_day": "2026-09-04",
+          "video_production_day": "2026-09-05",
+          "private_upload_at": "2026-09-06T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-06T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-040/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-20:lane-b:topic-040",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 21,
+      "public_date": "2026-09-07",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-041",
+          "queue_index": 41,
+          "title": "콘택트렌즈",
+          "research_and_script_day": "2026-09-05",
+          "video_production_day": "2026-09-06",
+          "private_upload_at": "2026-09-07T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-07T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-041/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-21:lane-a:topic-041",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-042",
+          "queue_index": 42,
+          "title": "정맥주사 링거액",
+          "research_and_script_day": "2026-09-05",
+          "video_production_day": "2026-09-06",
+          "private_upload_at": "2026-09-07T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-07T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-042/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-21:lane-b:topic-042",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 22,
+      "public_date": "2026-09-08",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-043",
+          "queue_index": 43,
+          "title": "체온계",
+          "research_and_script_day": "2026-09-06",
+          "video_production_day": "2026-09-07",
+          "private_upload_at": "2026-09-08T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-08T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-043/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-22:lane-a:topic-043",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-044",
+          "queue_index": 44,
+          "title": "반창고(대일밴드/밴드에이드)",
+          "research_and_script_day": "2026-09-06",
+          "video_production_day": "2026-09-07",
+          "private_upload_at": "2026-09-08T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-08T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-044/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-22:lane-b:topic-044",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 23,
+      "public_date": "2026-09-09",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-045",
+          "queue_index": 45,
+          "title": "수술용 고무장갑",
+          "research_and_script_day": "2026-09-07",
+          "video_production_day": "2026-09-08",
+          "private_upload_at": "2026-09-09T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-09T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-045/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-23:lane-a:topic-045",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-046",
+          "queue_index": 46,
+          "title": "생리대(코텍스)",
+          "research_and_script_day": "2026-09-07",
+          "video_production_day": "2026-09-08",
+          "private_upload_at": "2026-09-09T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-09T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-046/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-23:lane-b:topic-046",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 24,
+      "public_date": "2026-09-10",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-047",
+          "queue_index": 47,
+          "title": "칫솔과 치약",
+          "research_and_script_day": "2026-09-08",
+          "video_production_day": "2026-09-09",
+          "private_upload_at": "2026-09-10T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-10T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-047/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-24:lane-a:topic-047",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-048",
+          "queue_index": 48,
+          "title": "의사의 손 씻기 (제멜바이스)",
+          "research_and_script_day": "2026-09-08",
+          "video_production_day": "2026-09-09",
+          "private_upload_at": "2026-09-10T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-10T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-048/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-24:lane-b:topic-048",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 25,
+      "public_date": "2026-09-11",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-049",
+          "queue_index": 49,
+          "title": "마스크의 역사",
+          "research_and_script_day": "2026-09-09",
+          "video_production_day": "2026-09-10",
+          "private_upload_at": "2026-09-11T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-11T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-049/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-25:lane-a:topic-049",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-050",
+          "queue_index": 50,
+          "title": "콘돔의 역사",
+          "research_and_script_day": "2026-09-09",
+          "video_production_day": "2026-09-10",
+          "private_upload_at": "2026-09-11T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-11T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-050/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-25:lane-b:topic-050",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 26,
+      "public_date": "2026-09-12",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-051",
+          "queue_index": 51,
+          "title": "주사기와 주삿바늘",
+          "research_and_script_day": "2026-09-10",
+          "video_production_day": "2026-09-11",
+          "private_upload_at": "2026-09-12T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-12T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-051/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-26:lane-a:topic-051",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-052",
+          "queue_index": 52,
+          "title": "소독약 포비돈 요오드 (빨간약)",
+          "research_and_script_day": "2026-09-10",
+          "video_production_day": "2026-09-11",
+          "private_upload_at": "2026-09-12T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-12T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-052/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-26:lane-b:topic-052",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 27,
+      "public_date": "2026-09-13",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-053",
+          "queue_index": 53,
+          "title": "틀니 세정제와 치실",
+          "research_and_script_day": "2026-09-11",
+          "video_production_day": "2026-09-12",
+          "private_upload_at": "2026-09-13T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-13T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-053/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-27:lane-a:topic-053",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-054",
+          "queue_index": 54,
+          "title": "틀어진 치아 교정기",
+          "research_and_script_day": "2026-09-11",
+          "video_production_day": "2026-09-12",
+          "private_upload_at": "2026-09-13T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-13T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-054/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-27:lane-b:topic-054",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 28,
+      "public_date": "2026-09-14",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-055",
+          "queue_index": 55,
+          "title": "인공와우(보청기)",
+          "research_and_script_day": "2026-09-12",
+          "video_production_day": "2026-09-13",
+          "private_upload_at": "2026-09-14T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-14T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-055/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-28:lane-a:topic-055",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-056",
+          "queue_index": 56,
+          "title": "안경의 탄생",
+          "research_and_script_day": "2026-09-12",
+          "video_production_day": "2026-09-13",
+          "private_upload_at": "2026-09-14T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-14T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-056/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-28:lane-b:topic-056",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 29,
+      "public_date": "2026-09-15",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-057",
+          "queue_index": 57,
+          "title": "수혈의 공포",
+          "research_and_script_day": "2026-09-13",
+          "video_production_day": "2026-09-14",
+          "private_upload_at": "2026-09-15T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-15T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-057/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-29:lane-a:topic-057",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-058",
+          "queue_index": 58,
+          "title": "혈액형(ABO)의 발견",
+          "research_and_script_day": "2026-09-13",
+          "video_production_day": "2026-09-14",
+          "private_upload_at": "2026-09-15T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-15T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-058/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-29:lane-b:topic-058",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 30,
+      "public_date": "2026-09-16",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-059",
+          "queue_index": 59,
+          "title": "인공호흡기 (철의 폐, Iron Lung)",
+          "research_and_script_day": "2026-09-14",
+          "video_production_day": "2026-09-15",
+          "private_upload_at": "2026-09-16T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-16T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-059/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-30:lane-a:topic-059",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-060",
+          "queue_index": 60,
+          "title": "위시경/내시경",
+          "research_and_script_day": "2026-09-14",
+          "video_production_day": "2026-09-15",
+          "private_upload_at": "2026-09-16T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-16T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-060/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-30:lane-b:topic-060",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 31,
+      "public_date": "2026-09-17",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-061",
+          "queue_index": 61,
+          "title": "천연두와 종두법",
+          "research_and_script_day": "2026-09-15",
+          "video_production_day": "2026-09-16",
+          "private_upload_at": "2026-09-17T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-17T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-061/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-31:lane-a:topic-061",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-062",
+          "queue_index": 62,
+          "title": "소아마비 백신 (조너스 소크)",
+          "research_and_script_day": "2026-09-15",
+          "video_production_day": "2026-09-16",
+          "private_upload_at": "2026-09-17T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-17T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-062/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-31:lane-b:topic-062",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 32,
+      "public_date": "2026-09-18",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-063",
+          "queue_index": 63,
+          "title": "콜레라와 브로드 스트리트 펌프",
+          "research_and_script_day": "2026-09-16",
+          "video_production_day": "2026-09-17",
+          "private_upload_at": "2026-09-18T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-18T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-063/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-32:lane-a:topic-063",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-064",
+          "queue_index": 64,
+          "title": "광견병 백신",
+          "research_and_script_day": "2026-09-16",
+          "video_production_day": "2026-09-17",
+          "private_upload_at": "2026-09-18T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-18T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-064/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-32:lane-b:topic-064",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 33,
+      "public_date": "2026-09-19",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-065",
+          "queue_index": 65,
+          "title": "결핵과 크리스마스 실",
+          "research_and_script_day": "2026-09-17",
+          "video_production_day": "2026-09-18",
+          "private_upload_at": "2026-09-19T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-19T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-065/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-33:lane-a:topic-065",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-066",
+          "queue_index": 66,
+          "title": "말라리아와 퀴닌",
+          "research_and_script_day": "2026-09-17",
+          "video_production_day": "2026-09-18",
+          "private_upload_at": "2026-09-19T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-19T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-066/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-33:lane-b:topic-066",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 34,
+      "public_date": "2026-09-20",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-067",
+          "queue_index": 67,
+          "title": "괴혈병과 레몬",
+          "research_and_script_day": "2026-09-18",
+          "video_production_day": "2026-09-19",
+          "private_upload_at": "2026-09-20T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-20T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-067/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-34:lane-a:topic-067",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-068",
+          "queue_index": 68,
+          "title": "파상풍과 항독소",
+          "research_and_script_day": "2026-09-18",
+          "video_production_day": "2026-09-19",
+          "private_upload_at": "2026-09-20T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-20T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-068/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-34:lane-b:topic-068",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 35,
+      "public_date": "2026-09-21",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-069",
+          "queue_index": 69,
+          "title": "황열병과 모기",
+          "research_and_script_day": "2026-09-19",
+          "video_production_day": "2026-09-20",
+          "private_upload_at": "2026-09-21T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-21T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-069/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-35:lane-a:topic-069",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-070",
+          "queue_index": 70,
+          "title": "흑사병과 격리(Quarantine)",
+          "research_and_script_day": "2026-09-19",
+          "video_production_day": "2026-09-20",
+          "private_upload_at": "2026-09-21T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-21T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-070/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-35:lane-b:topic-070",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 36,
+      "public_date": "2026-09-22",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-071",
+          "queue_index": 71,
+          "title": "나병(한센병)의 진실",
+          "research_and_script_day": "2026-09-20",
+          "video_production_day": "2026-09-21",
+          "private_upload_at": "2026-09-22T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-22T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-071/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-36:lane-a:topic-071",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-072",
+          "queue_index": 72,
+          "title": "위궤양과 헬리코박터균",
+          "research_and_script_day": "2026-09-20",
+          "video_production_day": "2026-09-21",
+          "private_upload_at": "2026-09-22T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-22T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-072/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-36:lane-b:topic-072",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 37,
+      "public_date": "2026-09-23",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-073",
+          "queue_index": 73,
+          "title": "각기병과 비타민B1",
+          "research_and_script_day": "2026-09-21",
+          "video_production_day": "2026-09-22",
+          "private_upload_at": "2026-09-23T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-23T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-073/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-37:lane-a:topic-073",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-074",
+          "queue_index": 74,
+          "title": "갑상선종과 아이오딘(요오드) 소금",
+          "research_and_script_day": "2026-09-21",
+          "video_production_day": "2026-09-22",
+          "private_upload_at": "2026-09-23T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-23T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-074/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-37:lane-b:topic-074",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 38,
+      "public_date": "2026-09-24",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-075",
+          "queue_index": 75,
+          "title": "구루병과 비타민D",
+          "research_and_script_day": "2026-09-22",
+          "video_production_day": "2026-09-23",
+          "private_upload_at": "2026-09-24T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-24T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-075/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-38:lane-a:topic-075",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-076",
+          "queue_index": 76,
+          "title": "코카콜라와 코카인",
+          "research_and_script_day": "2026-09-22",
+          "video_production_day": "2026-09-23",
+          "private_upload_at": "2026-09-24T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-24T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-076/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-38:lane-b:topic-076",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 39,
+      "public_date": "2026-09-25",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-077",
+          "queue_index": 77,
+          "title": "헤로인 기침 시럽",
+          "research_and_script_day": "2026-09-23",
+          "video_production_day": "2026-09-24",
+          "private_upload_at": "2026-09-25T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-25T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-077/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-39:lane-a:topic-077",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-078",
+          "queue_index": 78,
+          "title": "라듐 음료수 (라디톨)",
+          "research_and_script_day": "2026-09-23",
+          "video_production_day": "2026-09-24",
+          "private_upload_at": "2026-09-25T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-25T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-078/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-39:lane-b:topic-078",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 40,
+      "public_date": "2026-09-26",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-079",
+          "queue_index": 79,
+          "title": "아편 젖꼭지 시럽",
+          "research_and_script_day": "2026-09-24",
+          "video_production_day": "2026-09-25",
+          "private_upload_at": "2026-09-26T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-26T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-079/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-40:lane-a:topic-079",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-080",
+          "queue_index": 80,
+          "title": "비소와 미백 화장품",
+          "research_and_script_day": "2026-09-24",
+          "video_production_day": "2026-09-25",
+          "private_upload_at": "2026-09-26T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-26T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-080/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-40:lane-b:topic-080",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 41,
+      "public_date": "2026-09-27",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-081",
+          "queue_index": 81,
+          "title": "담배를 천식 치료제로 처방한 의사들",
+          "research_and_script_day": "2026-09-25",
+          "video_production_day": "2026-09-26",
+          "private_upload_at": "2026-09-27T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-27T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-081/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-41:lane-a:topic-081",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-082",
+          "queue_index": 82,
+          "title": "전기 충격 만병통치 벨트",
+          "research_and_script_day": "2026-09-25",
+          "video_production_day": "2026-09-26",
+          "private_upload_at": "2026-09-27T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-27T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-082/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-41:lane-b:topic-082",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 42,
+      "public_date": "2026-09-28",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-083",
+          "queue_index": 83,
+          "title": "납 중독과 로마 제국의 멸망",
+          "research_and_script_day": "2026-09-26",
+          "video_production_day": "2026-09-27",
+          "private_upload_at": "2026-09-28T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-28T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-083/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-42:lane-a:topic-083",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-084",
+          "queue_index": 84,
+          "title": "체중 감량제 DNP의 지옥",
+          "research_and_script_day": "2026-09-26",
+          "video_production_day": "2026-09-27",
+          "private_upload_at": "2026-09-28T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-28T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-084/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-42:lane-b:topic-084",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 43,
+      "public_date": "2026-09-29",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-085",
+          "queue_index": 85,
+          "title": "탈리도마이드의 비극",
+          "research_and_script_day": "2026-09-27",
+          "video_production_day": "2026-09-28",
+          "private_upload_at": "2026-09-29T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-29T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-085/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-43:lane-a:topic-085",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-086",
+          "queue_index": 86,
+          "title": "자동 심장충격기 (AED)",
+          "research_and_script_day": "2026-09-27",
+          "video_production_day": "2026-09-28",
+          "private_upload_at": "2026-09-29T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-29T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-086/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-43:lane-b:topic-086",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 44,
+      "public_date": "2026-09-30",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-087",
+          "queue_index": 87,
+          "title": "혈액투석기 (인공신장)",
+          "research_and_script_day": "2026-09-28",
+          "video_production_day": "2026-09-29",
+          "private_upload_at": "2026-09-30T10:00:00+09:00",
+          "scheduled_public_at": "2026-09-30T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-087/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-44:lane-a:topic-087",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-088",
+          "queue_index": 88,
+          "title": "인공심장박동기 (Pacemaker)",
+          "research_and_script_day": "2026-09-28",
+          "video_production_day": "2026-09-29",
+          "private_upload_at": "2026-09-30T18:00:00+09:00",
+          "scheduled_public_at": "2026-09-30T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-088/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-44:lane-b:topic-088",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 45,
+      "public_date": "2026-10-01",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-089",
+          "queue_index": 89,
+          "title": "혈관 스텐트 시술",
+          "research_and_script_day": "2026-09-29",
+          "video_production_day": "2026-09-30",
+          "private_upload_at": "2026-10-01T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-01T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-089/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-45:lane-a:topic-089",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-090",
+          "queue_index": 90,
+          "title": "초음파 진단기",
+          "research_and_script_day": "2026-09-29",
+          "video_production_day": "2026-09-30",
+          "private_upload_at": "2026-10-01T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-01T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-090/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-45:lane-b:topic-090",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 46,
+      "public_date": "2026-10-02",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-091",
+          "queue_index": 91,
+          "title": "MRI(자기공명영상)",
+          "research_and_script_day": "2026-09-30",
+          "video_production_day": "2026-10-01",
+          "private_upload_at": "2026-10-02T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-02T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-091/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-46:lane-a:topic-091",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-092",
+          "queue_index": 92,
+          "title": "라식/라섹 수술",
+          "research_and_script_day": "2026-09-30",
+          "video_production_day": "2026-10-01",
+          "private_upload_at": "2026-10-02T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-02T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-092/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-46:lane-b:topic-092",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 47,
+      "public_date": "2026-10-03",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-093",
+          "queue_index": 93,
+          "title": "장기 이식의 기적",
+          "research_and_script_day": "2026-10-01",
+          "video_production_day": "2026-10-02",
+          "private_upload_at": "2026-10-03T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-03T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-093/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-47:lane-a:topic-093",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-094",
+          "queue_index": 94,
+          "title": "복강경 수술 (구멍 뚫는 수술)",
+          "research_and_script_day": "2026-10-01",
+          "video_production_day": "2026-10-02",
+          "private_upload_at": "2026-10-03T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-03T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-094/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-47:lane-b:topic-094",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 48,
+      "public_date": "2026-10-04",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-095",
+          "queue_index": 95,
+          "title": "인공관절 (무릎/고관절)",
+          "research_and_script_day": "2026-10-02",
+          "video_production_day": "2026-10-03",
+          "private_upload_at": "2026-10-04T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-04T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-095/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-48:lane-a:topic-095",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-096",
+          "queue_index": 96,
+          "title": "피임약(경구피임약)의 탄생",
+          "research_and_script_day": "2026-10-02",
+          "video_production_day": "2026-10-03",
+          "private_upload_at": "2026-10-04T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-04T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-096/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-48:lane-b:topic-096",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 49,
+      "public_date": "2026-10-05",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-097",
+          "queue_index": 97,
+          "title": "줄기세포와 재생 의학",
+          "research_and_script_day": "2026-10-03",
+          "video_production_day": "2026-10-04",
+          "private_upload_at": "2026-10-05T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-05T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-097/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-49:lane-a:topic-097",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-098",
+          "queue_index": 98,
+          "title": "로봇 수술 (다빈치)",
+          "research_and_script_day": "2026-10-03",
+          "video_production_day": "2026-10-04",
+          "private_upload_at": "2026-10-05T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-05T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-098/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-49:lane-b:topic-098",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    },
+    {
+      "day_index": 50,
+      "public_date": "2026-10-06",
+      "lanes": [
+        {
+          "lane": "a",
+          "topic_id": "topic-099",
+          "queue_index": 99,
+          "title": "표적항암제",
+          "research_and_script_day": "2026-10-04",
+          "video_production_day": "2026-10-05",
+          "private_upload_at": "2026-10-06T10:00:00+09:00",
+          "scheduled_public_at": "2026-10-06T11:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-099/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-50:lane-a:topic-099",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        },
+        {
+          "lane": "b",
+          "topic_id": "topic-100",
+          "queue_index": 100,
+          "title": "mRNA 백신",
+          "research_and_script_day": "2026-10-04",
+          "video_production_day": "2026-10-05",
+          "private_upload_at": "2026-10-06T18:00:00+09:00",
+          "scheduled_public_at": "2026-10-06T19:00:00+09:00",
+          "pipeline_instance_path": "episodes/topic-100/omni-stage-pipeline.json",
+          "idempotency_key": "timemedic:day-50:lane-b:topic-100",
+          "status": "queued",
+          "schedule_approved": true,
+          "human_approved": false,
+          "publishable": false
+        }
+      ]
+    }
+  ]
+}

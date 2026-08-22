@@ -77,6 +77,9 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "voice_provider": "ElevenLabs",
         "voice_take": "Take 2",
         "voice_model": "eleven_v3",
+        "tts_synthesis_strategy": "full_script_single_request",
+        "tts_max_chunks_if_provider_limit": 3,
+        "sentence_level_tts_stitching_forbidden": True,
         "one_sentence_one_scene": True,
         "final_tts_is_only_timeline": True,
         "caption_font": "Gmarket Sans Bold",
@@ -84,8 +87,11 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "caption_vertical_slot_of_16": 10,
         "thumbnail_is_frame_zero": True,
         "thumbnail_font": "Gmarket Sans Bold",
-        "thumbnail_font_size_px": 175,
-        "thumbnail_stroke_px": 30,
+        "thumbnail_layout": "split_spatial_three_blocks",
+        "thumbnail_copy_max_visible_characters": 10,
+        "thumbnail_fill_color": "#000000",
+        "thumbnail_stroke_color": "#D4AF37",
+        "thumbnail_stroke_px": 60,
     }
     for field, expected in expected_production.items():
         if production.get(field) != expected:
@@ -177,8 +183,14 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         thumbnail = load_json(thumbnail_lock_path)
         if thumbnail.get("font") != "Gmarket Sans Bold":
             errors.append("thumbnail font must be Gmarket Sans Bold")
-        if thumbnail.get("font_size_px") != 175 or thumbnail.get("stroke_width_px") != 30:
-            errors.append("thumbnail typography must be 175px with 30px stroke")
+        copy_blocks = thumbnail.get("copy_blocks", [])
+        visible_count = len(re.sub(r"[\s\W_]", "", "".join(copy_blocks), flags=re.UNICODE))
+        if thumbnail.get("layout") != "split_spatial_three_blocks" or len(copy_blocks) != 3:
+            errors.append("thumbnail must use three split spatial blocks")
+        if visible_count > 10:
+            errors.append("thumbnail copy must contain at most 10 visible characters")
+        if thumbnail.get("fill_color") != "#000000" or thumbnail.get("stroke_color") != "#D4AF37" or thumbnail.get("stroke_width_px") != 60:
+            errors.append("thumbnail typography must use black fill and 60px #D4AF37 stroke")
         if thumbnail.get("frame_zero_hold_seconds") != 0.7:
             errors.append("thumbnail frame-zero hold must be 0.7 seconds")
 
@@ -199,10 +211,41 @@ def validate_skill(errors: list[str]) -> None:
             errors.append(f"missing referenced skill file: {reference}")
 
 
+def validate_topic_queue(errors: list[str]) -> None:
+    config_root = REPO_ROOT / "config"
+    source_path = config_root / "topic-source-100.txt"
+    catalog_path = config_root / "topic-catalog-100.json"
+    schedule_path = config_root / "50-day-two-video-schedule.json"
+    for path in (source_path, catalog_path, schedule_path):
+        if not path.is_file():
+            errors.append(f"missing topic queue source: {path.relative_to(REPO_ROOT)}")
+    if errors:
+        return
+
+    catalog = load_json(catalog_path)
+    schedule = load_json(schedule_path)
+    topics = catalog.get("topics", [])
+    expected_ids = [f"topic-{index:03d}" for index in range(1, 101)]
+    actual_ids = [topic.get("topic_id") for topic in topics]
+    if len(topics) != 100 or actual_ids != expected_ids:
+        errors.append("topic catalog must preserve exactly topic-001 through topic-100 in order")
+    if catalog.get("source", {}).get("sha256", "").lower() != sha256(source_path):
+        errors.append("topic source SHA-256 differs from catalog source lock")
+    if schedule.get("topic_catalog_sha256", "").lower() != sha256(catalog_path):
+        errors.append("schedule topic_catalog_sha256 differs from current catalog")
+    days = schedule.get("days", [])
+    if schedule.get("total_topics") != 100 or schedule.get("total_days") != 50 or len(days) != 50:
+        errors.append("daily schedule must contain 100 topics across 50 days")
+    scheduled_ids = [lane.get("topic_id") for day in days for lane in day.get("lanes", [])]
+    if scheduled_ids != expected_ids:
+        errors.append("daily schedule must assign the 100 topics in original numeric order")
+
+
 def validate_repository() -> tuple[list[str], list[dict]]:
     errors: list[str] = []
     summaries: list[dict] = []
     validate_skill(errors)
+    validate_topic_queue(errors)
     for pipeline_path in sorted((REPO_ROOT / "episodes").glob("*/pipeline.json")):
         episode_errors, summary = validate_episode(pipeline_path.parent)
         errors.extend(episode_errors)

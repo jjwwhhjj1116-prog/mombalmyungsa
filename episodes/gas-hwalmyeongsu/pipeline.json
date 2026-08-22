@@ -21,6 +21,9 @@
     "voice_provider": "ElevenLabs",
     "voice_take": "Take 2",
     "voice_model": "eleven_v3",
+    "tts_synthesis_strategy": "full_script_single_request",
+    "tts_max_chunks_if_provider_limit": 3,
+    "sentence_level_tts_stitching_forbidden": true,
     "regenerate_voice_from_locked_script": true,
     "old_voice_reuse_forbidden": true,
     "one_sentence_one_scene": true,
@@ -32,10 +35,11 @@
     "thumbnail_is_frame_zero": true,
     "frame_zero_duration_seconds": 0.7,
     "thumbnail_font": "Gmarket Sans Bold",
-    "thumbnail_font_size_px": 175,
-    "thumbnail_stroke_px": 30,
-    "thumbnail_text_color": "yellow",
-    "thumbnail_stroke_color": "black",
+    "thumbnail_layout": "split_spatial_three_blocks",
+    "thumbnail_copy_max_visible_characters": 10,
+    "thumbnail_stroke_px": 60,
+    "thumbnail_fill_color": "#000000",
+    "thumbnail_stroke_color": "#D4AF37",
     "thumbnail_shadow": true
   },
   "release_contract": {
@@ -98,7 +102,7 @@
       "sidecar_locks": [
         {
           "path": "locks/06-thumbnail.lock.json",
-          "sha256": "8a1a2561b7fece0e4cbc697f30d68cf7dcc33e6f93a2661e7d67bb8b2e5b35f0"
+          "sha256": "f2938cf369889e153eb2b3f7ed690dc461df1d4f33d9f5bd75ca76de571f4ab9"
         }
       ]
     },
@@ -106,7 +110,7 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "cae8e3d4a3e7a50b11f5d3d78fb987788192dffc2b23f43416a2ae4140d04db4"
+      "lock_sha256": "45726760cae18a09096eaf7964487dbcdce7910e8bb6937e49874a358d4e5fb3"
     },
     {
       "id": "08_pilot_generation",

@@ -19,6 +19,9 @@
 .codex/skills/timemedic/       몸의 발명사 전체 제작 스킬과 세부 레퍼런스
 .github/workflows/validate.yml GitHub에 올라올 때 구조·해시 자동 검사
 config/stages.json             00–15단계의 기계 판독 계약
+config/topic-source-100.txt    사용자가 처음 제공한 100개 주제 원문
+config/topic-catalog-100.json  100개 주제의 검증 전 구조화 카탈로그
+config/50-day-two-video-schedule.json  번호 순서의 하루 2편 스케줄
 docs/WORKFLOW.md               사람이 읽는 전체 워크플로
 docs/RESUME.md                 중단·재개·무효화 규칙
 episodes/<slug>/pipeline.json  에피소드별 현재 상태와 다음 단계
@@ -35,6 +38,6 @@ scripts/pipeline.py            상태·해시·선행 단계 검증기
 
 ## 현재 체크포인트
 
-첫 이관 에피소드는 `까스활명수 V6`다. 사용자 승인 대본·스토리보드·썸네일·Omni 생성 계획까지 잠겨 있고, 다음 단계는 `08_pilot_generation`이다. 구버전 TTS와 구버전 영상은 폐기 대상으로 명시되어 있다.
+첫 이관 에피소드는 `까스활명수 V6`다. 사용자 승인 대본·문장별 스토리보드·`까스 / 없는 / 활명수` 썸네일 계약·Omni 생성 계획까지 잠겨 있고, 다음 단계는 `08_pilot_generation`이다. 구버전 TTS와 구버전 영상은 폐기 대상으로 명시되어 있다.
 
 세부 규칙은 [전체 워크플로](docs/WORKFLOW.md), [재개 계약](docs/RESUME.md), [몸의 발명사 스킬](.codex/skills/timemedic/SKILL.md)을 따른다.

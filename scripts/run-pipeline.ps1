@@ -7,7 +7,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$bundledPython = "C:\Users\7500F\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+$bundledPython = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 $pythonCommand = Get-Command python -ErrorAction SilentlyContinue
 
 if ($pythonCommand) {

@@ -3,10 +3,26 @@
 이 저장소를 연 에이전트는 작업 전에 반드시 다음 순서로 읽는다.
 
 1. `.codex/skills/timemedic/SKILL.md`
-2. 현재 작업 단계에 연결된 `.codex/skills/timemedic/references/*.md`
-3. `docs/WORKFLOW.md`
-4. 해당 에피소드의 `pipeline.json`
-5. `python scripts/pipeline.py validate --episode <episode-dir>` 결과
+2. `config/topic-source-100.txt`, `config/topic-catalog-100.json`, `config/50-day-two-video-schedule.json`
+3. 현재 작업 단계에 연결된 `.codex/skills/timemedic/references/*.md`
+4. `docs/WORKFLOW.md`
+5. 해당 에피소드의 `pipeline.json`
+6. `python scripts/pipeline.py validate --episode <episode-dir>` 결과
+
+## 사용자 확정 8단계
+
+모든 에피소드는 다음 큰 순서를 지킨다. 아래 순서는 00–15 기계 단계의 상위 계약이다.
+
+1. 사용자가 처음 제공한 100개 주제 큐에서 번호 순서대로 주제를 선택한다.
+2. 근거를 조사한 뒤, 초등학생도 이해하는 서울 표준 구어체와 끊기지 않는 기승전결로 대본을 작성한다.
+3. 사실·의학·한국어·TTS 호흡을 두 번 자가 검수하고 사용자에게 전문을 보여 승인받는다.
+4. 승인 대본을 바꾸지 않고 문장별 `대사·장면·감정`을 가진 고밀도 스토리보드로 분할한다.
+5. Google Flow의 `Omni Flash / Text to Video / 9:16 / 8초 / x1`으로 연속 디오라마 멀티샷과 보이는 사건의 네이티브 효과음을 생성한다.
+6. 승인 대본 전체를 한 화자·한 설정으로 합성한 TTS를 시간축으로 삼아 영상·자막을 프레임 단위로 맞춘다. 문장별 짧은 TTS 조각을 이어 붙이지 않는다.
+7. 전체 재생, 문장 경계, 자막 토큰, 모션 앵커, 네이티브 오디오, 디오라마 정체성을 자가 검수하고 불합격이면 수정·재렌더한다.
+8. 최종 첫 장면과 같은 배경으로 10글자 이하 후킹 썸네일을 렌더해 0초 frame zero에 삽입한 뒤, frame-zero와 최종 동기화를 다시 검수하고 업로드한다.
+
+스토리보드 단계에서는 8단계 썸네일의 카피·주 피사체·배치만 미리 잠근다. 최종 썸네일 픽셀은 7단계 영상 QA가 끝난 첫 장면으로 렌더하며, 삽입 후 `frame-zero QA`를 다시 통과해야 한다.
 
 ## 단일 원본
 
@@ -22,6 +38,12 @@
 - 파일이 존재한다는 이유만으로 완료 처리하지 않는다. validator가 PASS여야 한다.
 - 브라우저 연결이 끊기거나 외부 서비스가 멈추면 작업 전체를 초기화하지 않는다. 현재 단계에 blocker를 기록하고 같은 topic_id와 idempotency key로 재개한다.
 - 외부 서비스 요청 결과가 불명확하면 중복 클릭하지 않고 `status_unknown`으로 멈춘다.
+
+## TTS 연속성
+
+- 기본은 승인 대본 전체를 한 번에 합성하는 것이다.
+- 공급자 제한 때문에 분할이 불가피할 때만 `훅 / 과거 문제 / 전환 / 결과` 같은 큰 이야기 구간 최대 3개로 나눈다.
+- 문장별·한두 문장별 합성과 이어 붙이기는 금지한다. 같은 음성·모델·속도·감정 설정을 유지하고 모든 경계에서 음색·속도·호흡 점프가 0건이어야 한다.
 
 ## 자동 진행과 중단 조건
 
@@ -41,4 +63,3 @@
 - YouTube 채널 ID는 `UCYqdIlpFlB6uh_cpIYgo85g`다. 업로드 직전 보이는 채널과 ID를 모두 확인한다.
 - AI 재현 장면이 있으면 YouTube AI 사용을 `Yes`로 선택하고 설명에 고지를 넣는다.
 - 비공개 업로드 뒤 HD·전체 재생·자막·썸네일 frame zero·제목·설명·채널을 검수한 후 정해진 공개 시각으로 예약한다.
-

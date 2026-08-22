@@ -17,6 +17,15 @@
     "vit-v6-u10"
   ],
   "style_prefix": "Premium handcrafted Korean medical-history museum diorama, 1:5 scale adult matte resin puppets with solid sculpted hair, subtle joints and paint marks, walnut, brass, enamel and amber glass, obvious miniature railings, oversized screws and museum glass reflections, warm amber and cool teal cinematic light, deliberate continuous camera motion, never photorealistic.",
+  "thumbnail_opening_contract": {
+    "lock_path": "locks/06-thumbnail.lock.json",
+    "copy_blocks": ["까스", "없는", "활명수"],
+    "layout": "split_spatial_three_blocks",
+    "background_asset": "assets/frame-zero-bg-v6.png",
+    "final_pixel_asset": "assets/frame-zero-v7-owner-layout.png",
+    "flow_hook_starts_from_same_background_without_generated_text": true,
+    "final_typography_is_inserted_after_stage_14_visual_qa": true
+  },
   "global_avoid": "No readable text, letters, digits, brands, logos, trademarks or bottle labels. No real actors, photoreal skin, chibi, glossy plastic, warped hands, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, music or black frames.",
   "reference_grammar_lock_path": "generation/07-reference-grammar-v6.lock.json",
   "units": [

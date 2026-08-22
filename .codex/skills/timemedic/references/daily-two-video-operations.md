@@ -23,6 +23,14 @@
 
 원본 번호 `2n-1`과 `2n`을 `DAY n`의 A·B 레인에 배정한다.
 
+Git 단일 원본은 다음 세 파일이다.
+
+- `config/topic-source-100.txt`: 사용자가 처음 준 주제 설명 원문
+- `config/topic-catalog-100.json`: 검증 전 raw claim과 구조화된 topic ID
+- `config/50-day-two-video-schedule.json`: 50일 A/B 레인, 업로드·공개 시각, idempotency key
+
+로컬 outputs 폴더나 이전 채팅의 기억으로 큐를 재구성하지 않는다.
+
 ```text
 DAY 01: 001 박카스 / 002 까스활명수
 DAY 02: 003 우루사 / 004 안티푸라민
@@ -51,6 +59,7 @@ DAY 50: 099 표적항암제 / 100 mRNA 백신
 ### D0 검수·업로드일
 
 - `14_final_qa`와 `15_packaging_release`를 진행한다.
+- 통과한 첫 장면 위에 06에서 잠근 썸네일 카피·배치를 렌더하고 0초에 삽입한 뒤 길이·첫 훅·자막을 다시 검수한다.
 - 공개 60분 전에 비공개 업로드한다.
 - HD 처리, 자막, 제목, 설명, 썸네일, 의료 고지, 권리, 채널을 확인한 뒤 예약한다.
 - 공개 시각에 공개 URL을 다시 확인해 publication lock을 만든다.
