@@ -1,0 +1,5594 @@
+{
+  "schema_version": "body-invention.voice-alignment.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "11_voice_alignment",
+  "status": "PASS",
+  "provider": "local_faster_whisper_script_anchored_alignment",
+  "model": "small",
+  "language": "ko",
+  "language_probability": 1.0,
+  "script_path": "final-script-v6.txt",
+  "script_sha256": "434939a83ce833090bda76fb87e6ebc8f65b2d87d7b1a130e46fb569c5dae3b3",
+  "audio_path": "tts/gas-hwalmyeongsu-v6-elevenlabs-take2.mp3",
+  "audio_sha256": "5451912e7204008a09a0c75bafb6f06712e544f32f2e19cb2c4796e56faada1a",
+  "audio_duration_seconds": 152.189375,
+  "full_script_single_request": true,
+  "sentence_level_stitching": false,
+  "normalized_character_similarity": 0.934336,
+  "matched_character_coverage": 0.932,
+  "recognized_normalized_character_count": 995,
+  "script_normalized_character_count": 1000,
+  "token_count": 351,
+  "sentence_count": 37,
+  "errors": [],
+  "words": [
+    {
+      "token_index": 0,
+      "sentence_id": "s01",
+      "text": "여기,",
+      "normalized": "여기",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "token_index": 1,
+      "sentence_id": "s01",
+      "text": "한국인이라면",
+      "normalized": "한국인이라면",
+      "start": 0.26,
+      "end": 1.28
+    },
+    {
+      "token_index": 2,
+      "sentence_id": "s01",
+      "text": "체했거나",
+      "normalized": "체했거나",
+      "start": 1.44,
+      "end": 1.92
+    },
+    {
+      "token_index": 3,
+      "sentence_id": "s01",
+      "text": "속이",
+      "normalized": "속이",
+      "start": 2.1,
+      "end": 2.4
+    },
+    {
+      "token_index": 4,
+      "sentence_id": "s01",
+      "text": "더부룩할",
+      "normalized": "더부룩할",
+      "start": 2.4,
+      "end": 2.96
+    },
+    {
+      "token_index": 5,
+      "sentence_id": "s01",
+      "text": "때,",
+      "normalized": "때",
+      "start": 2.96,
+      "end": 3.1
+    },
+    {
+      "token_index": 6,
+      "sentence_id": "s01",
+      "text": "한",
+      "normalized": "한",
+      "start": 3.32,
+      "end": 3.4
+    },
+    {
+      "token_index": 7,
+      "sentence_id": "s01",
+      "text": "번쯤",
+      "normalized": "번쯤",
+      "start": 3.4,
+      "end": 3.72
+    },
+    {
+      "token_index": 8,
+      "sentence_id": "s01",
+      "text": "찾았던",
+      "normalized": "찾았던",
+      "start": 3.72,
+      "end": 4.24
+    },
+    {
+      "token_index": 9,
+      "sentence_id": "s01",
+      "text": "갈색병이",
+      "normalized": "갈색병이",
+      "start": 4.24,
+      "end": 4.92
+    },
+    {
+      "token_index": 10,
+      "sentence_id": "s01",
+      "text": "하나",
+      "normalized": "하나",
+      "start": 4.92,
+      "end": 5.06
+    },
+    {
+      "token_index": 11,
+      "sentence_id": "s01",
+      "text": "있죠.",
+      "normalized": "있죠",
+      "start": 5.06,
+      "end": 5.32
+    },
+    {
+      "token_index": 12,
+      "sentence_id": "s02",
+      "text": "네.",
+      "normalized": "네",
+      "start": 5.72,
+      "end": 5.86
+    },
+    {
+      "token_index": 13,
+      "sentence_id": "s02",
+      "text": "이건",
+      "normalized": "이건",
+      "start": 6.14,
+      "end": 6.36
+    },
+    {
+      "token_index": 14,
+      "sentence_id": "s02",
+      "text": "한국인이",
+      "normalized": "한국인이",
+      "start": 6.36,
+      "end": 6.88
+    },
+    {
+      "token_index": 15,
+      "sentence_id": "s02",
+      "text": "정말",
+      "normalized": "정말",
+      "start": 6.88,
+      "end": 7.22
+    },
+    {
+      "token_index": 16,
+      "sentence_id": "s02",
+      "text": "사랑하는",
+      "normalized": "사랑하는",
+      "start": 7.22,
+      "end": 7.84
+    },
+    {
+      "token_index": 17,
+      "sentence_id": "s02",
+      "text": "까스활명수입니다.",
+      "normalized": "까스활명수입니다",
+      "start": 7.84,
+      "end": 9.12
+    },
+    {
+      "token_index": 18,
+      "sentence_id": "s03",
+      "text": "까스활명수",
+      "normalized": "까스활명수",
+      "start": 9.32,
+      "end": 9.98
+    },
+    {
+      "token_index": 19,
+      "sentence_id": "s03",
+      "text": "하면,",
+      "normalized": "하면",
+      "start": 9.98,
+      "end": 10.24
+    },
+    {
+      "token_index": 20,
+      "sentence_id": "s03",
+      "text": "뭐가",
+      "normalized": "뭐가",
+      "start": 10.58,
+      "end": 10.7
+    },
+    {
+      "token_index": 21,
+      "sentence_id": "s03",
+      "text": "먼저",
+      "normalized": "먼저",
+      "start": 10.7,
+      "end": 11.02
+    },
+    {
+      "token_index": 22,
+      "sentence_id": "s03",
+      "text": "떠오르시나요?",
+      "normalized": "떠오르시나요",
+      "start": 11.02,
+      "end": 11.7
+    },
+    {
+      "token_index": 23,
+      "sentence_id": "s04",
+      "text": "뚜껑을",
+      "normalized": "뚜껑을",
+      "start": 12.04,
+      "end": 12.44
+    },
+    {
+      "token_index": 24,
+      "sentence_id": "s04",
+      "text": "비트는",
+      "normalized": "비트는",
+      "start": 12.44,
+      "end": 12.86
+    },
+    {
+      "token_index": 25,
+      "sentence_id": "s04",
+      "text": "순간,",
+      "normalized": "순간",
+      "start": 12.86,
+      "end": 13.12
+    },
+    {
+      "token_index": 26,
+      "sentence_id": "s04",
+      "text": "치익.",
+      "normalized": "치익",
+      "start": 13.42,
+      "end": 13.88
+    },
+    {
+      "token_index": 27,
+      "sentence_id": "s05",
+      "text": "그",
+      "normalized": "그",
+      "start": 14.04,
+      "end": 14.041
+    },
+    {
+      "token_index": 28,
+      "sentence_id": "s05",
+      "text": "톡",
+      "normalized": "톡",
+      "start": 14.04,
+      "end": 14.24
+    },
+    {
+      "token_index": 29,
+      "sentence_id": "s05",
+      "text": "쏘는",
+      "normalized": "쏘는",
+      "start": 14.24,
+      "end": 14.5
+    },
+    {
+      "token_index": 30,
+      "sentence_id": "s05",
+      "text": "느낌이",
+      "normalized": "느낌이",
+      "start": 14.5,
+      "end": 14.78
+    },
+    {
+      "token_index": 31,
+      "sentence_id": "s05",
+      "text": "먼저",
+      "normalized": "먼저",
+      "start": 14.78,
+      "end": 15.2
+    },
+    {
+      "token_index": 32,
+      "sentence_id": "s05",
+      "text": "떠오르지",
+      "normalized": "떠오르지",
+      "start": 15.2,
+      "end": 15.74
+    },
+    {
+      "token_index": 33,
+      "sentence_id": "s05",
+      "text": "않나요?",
+      "normalized": "않나요",
+      "start": 15.74,
+      "end": 16.12
+    },
+    {
+      "token_index": 34,
+      "sentence_id": "s06",
+      "text": "그런데",
+      "normalized": "그런데",
+      "start": 16.26,
+      "end": 16.54
+    },
+    {
+      "token_index": 35,
+      "sentence_id": "s06",
+      "text": "이",
+      "normalized": "이",
+      "start": 16.88,
+      "end": 16.96
+    },
+    {
+      "token_index": 36,
+      "sentence_id": "s06",
+      "text": "병에",
+      "normalized": "병에",
+      "start": 16.96,
+      "end": 17.258
+    },
+    {
+      "token_index": 37,
+      "sentence_id": "s06",
+      "text": "까스라는",
+      "normalized": "까스라는",
+      "start": 17.28,
+      "end": 17.74
+    },
+    {
+      "token_index": 38,
+      "sentence_id": "s06",
+      "text": "이름이",
+      "normalized": "이름이",
+      "start": 17.74,
+      "end": 18.18
+    },
+    {
+      "token_index": 39,
+      "sentence_id": "s06",
+      "text": "붙기까지,",
+      "normalized": "붙기까지",
+      "start": 18.172,
+      "end": 18.72
+    },
+    {
+      "token_index": 40,
+      "sentence_id": "s06",
+      "text": "무려",
+      "normalized": "무려",
+      "start": 18.96,
+      "end": 19.14
+    },
+    {
+      "token_index": 41,
+      "sentence_id": "s06",
+      "text": "칠십",
+      "normalized": "칠십",
+      "start": 19.204,
+      "end": 19.513
+    },
+    {
+      "token_index": 42,
+      "sentence_id": "s06",
+      "text": "년",
+      "normalized": "년",
+      "start": 19.513,
+      "end": 19.7
+    },
+    {
+      "token_index": 43,
+      "sentence_id": "s06",
+      "text": "가까이",
+      "normalized": "가까이",
+      "start": 19.7,
+      "end": 20.08
+    },
+    {
+      "token_index": 44,
+      "sentence_id": "s06",
+      "text": "걸렸다는",
+      "normalized": "걸렸다는",
+      "start": 20.08,
+      "end": 20.54
+    },
+    {
+      "token_index": 45,
+      "sentence_id": "s06",
+      "text": "사실,",
+      "normalized": "사실",
+      "start": 20.54,
+      "end": 20.88
+    },
+    {
+      "token_index": 46,
+      "sentence_id": "s06",
+      "text": "알고",
+      "normalized": "알고",
+      "start": 21.12,
+      "end": 21.34
+    },
+    {
+      "token_index": 47,
+      "sentence_id": "s06",
+      "text": "계셨나요?",
+      "normalized": "계셨나요",
+      "start": 21.34,
+      "end": 21.8
+    },
+    {
+      "token_index": 48,
+      "sentence_id": "s07",
+      "text": "활명수는",
+      "normalized": "활명수는",
+      "start": 22.1,
+      "end": 22.64
+    },
+    {
+      "token_index": 49,
+      "sentence_id": "s07",
+      "text": "천팔백구십칠년에",
+      "normalized": "천팔백구십칠년에",
+      "start": 22.642,
+      "end": 23.88
+    },
+    {
+      "token_index": 50,
+      "sentence_id": "s07",
+      "text": "처음",
+      "normalized": "처음",
+      "start": 23.88,
+      "end": 24.14
+    },
+    {
+      "token_index": 51,
+      "sentence_id": "s07",
+      "text": "나왔는데요.",
+      "normalized": "나왔는데요",
+      "start": 24.14,
+      "end": 24.66
+    },
+    {
+      "token_index": 52,
+      "sentence_id": "s07",
+      "text": "그때는",
+      "normalized": "그때는",
+      "start": 24.96,
+      "end": 25.38
+    },
+    {
+      "token_index": 53,
+      "sentence_id": "s07",
+      "text": "대한제국이",
+      "normalized": "대한제국이",
+      "start": 25.38,
+      "end": 26.1
+    },
+    {
+      "token_index": 54,
+      "sentence_id": "s07",
+      "text": "막",
+      "normalized": "막",
+      "start": 26.1,
+      "end": 26.28
+    },
+    {
+      "token_index": 55,
+      "sentence_id": "s07",
+      "text": "시작되던",
+      "normalized": "시작되던",
+      "start": 26.28,
+      "end": 26.84
+    },
+    {
+      "token_index": 56,
+      "sentence_id": "s07",
+      "text": "시절입니다.",
+      "normalized": "시절입니다",
+      "start": 26.84,
+      "end": 27.28
+    },
+    {
+      "token_index": 57,
+      "sentence_id": "s08",
+      "text": "그",
+      "normalized": "그",
+      "start": 27.28,
+      "end": 27.7
+    },
+    {
+      "token_index": 58,
+      "sentence_id": "s08",
+      "text": "당시에도",
+      "normalized": "당시에도",
+      "start": 27.7,
+      "end": 28.2
+    },
+    {
+      "token_index": 59,
+      "sentence_id": "s08",
+      "text": "급체와",
+      "normalized": "급체와",
+      "start": 28.2,
+      "end": 28.8
+    },
+    {
+      "token_index": 60,
+      "sentence_id": "s08",
+      "text": "소화불량은",
+      "normalized": "소화불량은",
+      "start": 28.8,
+      "end": 29.5
+    },
+    {
+      "token_index": 61,
+      "sentence_id": "s08",
+      "text": "흔했지만,",
+      "normalized": "흔했지만",
+      "start": 29.495,
+      "end": 30.02
+    },
+    {
+      "token_index": 62,
+      "sentence_id": "s08",
+      "text": "지금처럼",
+      "normalized": "지금처럼",
+      "start": 30.24,
+      "end": 30.8
+    },
+    {
+      "token_index": 63,
+      "sentence_id": "s08",
+      "text": "약국에서",
+      "normalized": "약국에서",
+      "start": 30.8,
+      "end": 31.34
+    },
+    {
+      "token_index": 64,
+      "sentence_id": "s08",
+      "text": "병",
+      "normalized": "병",
+      "start": 31.34,
+      "end": 31.62
+    },
+    {
+      "token_index": 65,
+      "sentence_id": "s08",
+      "text": "하나를",
+      "normalized": "하나를",
+      "start": 31.62,
+      "end": 31.98
+    },
+    {
+      "token_index": 66,
+      "sentence_id": "s08",
+      "text": "사서",
+      "normalized": "사서",
+      "start": 31.98,
+      "end": 32.34
+    },
+    {
+      "token_index": 67,
+      "sentence_id": "s08",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 32.34,
+      "end": 32.6
+    },
+    {
+      "token_index": 68,
+      "sentence_id": "s08",
+      "text": "마실",
+      "normalized": "마실",
+      "start": 32.6,
+      "end": 32.94
+    },
+    {
+      "token_index": 69,
+      "sentence_id": "s08",
+      "text": "수는",
+      "normalized": "수는",
+      "start": 32.94,
+      "end": 33.2
+    },
+    {
+      "token_index": 70,
+      "sentence_id": "s08",
+      "text": "없었습니다.",
+      "normalized": "없었습니다",
+      "start": 33.2,
+      "end": 33.7
+    },
+    {
+      "token_index": 71,
+      "sentence_id": "s09",
+      "text": "약이",
+      "normalized": "약이",
+      "start": 34.06,
+      "end": 34.36
+    },
+    {
+      "token_index": 72,
+      "sentence_id": "s09",
+      "text": "드물었고,",
+      "normalized": "드물었고",
+      "start": 34.36,
+      "end": 34.92
+    },
+    {
+      "token_index": 73,
+      "sentence_id": "s09",
+      "text": "약이라고",
+      "normalized": "약이라고",
+      "start": 35.1,
+      "end": 35.44
+    },
+    {
+      "token_index": 74,
+      "sentence_id": "s09",
+      "text": "해도",
+      "normalized": "해도",
+      "start": 35.44,
+      "end": 35.74
+    },
+    {
+      "token_index": 75,
+      "sentence_id": "s09",
+      "text": "약재에",
+      "normalized": "약재에",
+      "start": 35.74,
+      "end": 36.32
+    },
+    {
+      "token_index": 76,
+      "sentence_id": "s09",
+      "text": "물을",
+      "normalized": "물을",
+      "start": 36.32,
+      "end": 36.58
+    },
+    {
+      "token_index": 77,
+      "sentence_id": "s09",
+      "text": "붓고,",
+      "normalized": "붓고",
+      "start": 36.58,
+      "end": 36.98
+    },
+    {
+      "token_index": 78,
+      "sentence_id": "s09",
+      "text": "가마솥에서",
+      "normalized": "가마솥에서",
+      "start": 37.14,
+      "end": 37.7
+    },
+    {
+      "token_index": 79,
+      "sentence_id": "s09",
+      "text": "한참",
+      "normalized": "한참",
+      "start": 37.7,
+      "end": 38.12
+    },
+    {
+      "token_index": 80,
+      "sentence_id": "s09",
+      "text": "달여야",
+      "normalized": "달여야",
+      "start": 38.069,
+      "end": 38.52
+    },
+    {
+      "token_index": 81,
+      "sentence_id": "s09",
+      "text": "하는",
+      "normalized": "하는",
+      "start": 38.52,
+      "end": 38.72
+    },
+    {
+      "token_index": 82,
+      "sentence_id": "s09",
+      "text": "탕약이",
+      "normalized": "탕약이",
+      "start": 38.72,
+      "end": 39.18
+    },
+    {
+      "token_index": 83,
+      "sentence_id": "s09",
+      "text": "대부분이었죠.",
+      "normalized": "대부분이었죠",
+      "start": 39.18,
+      "end": 39.96
+    },
+    {
+      "token_index": 84,
+      "sentence_id": "s10",
+      "text": "배가",
+      "normalized": "배가",
+      "start": 40.16,
+      "end": 40.4
+    },
+    {
+      "token_index": 85,
+      "sentence_id": "s10",
+      "text": "너무",
+      "normalized": "너무",
+      "start": 40.4,
+      "end": 40.6
+    },
+    {
+      "token_index": 86,
+      "sentence_id": "s10",
+      "text": "아파",
+      "normalized": "아파",
+      "start": 40.6,
+      "end": 40.84
+    },
+    {
+      "token_index": 87,
+      "sentence_id": "s10",
+      "text": "죽겠는데,",
+      "normalized": "죽겠는데",
+      "start": 40.84,
+      "end": 41.44
+    },
+    {
+      "token_index": 88,
+      "sentence_id": "s10",
+      "text": "약",
+      "normalized": "약",
+      "start": 41.74,
+      "end": 41.9
+    },
+    {
+      "token_index": 89,
+      "sentence_id": "s10",
+      "text": "기다리다",
+      "normalized": "기다리다",
+      "start": 41.9,
+      "end": 42.3
+    },
+    {
+      "token_index": 90,
+      "sentence_id": "s10",
+      "text": "약올라서",
+      "normalized": "약올라서",
+      "start": 42.3,
+      "end": 42.8
+    },
+    {
+      "token_index": 91,
+      "sentence_id": "s10",
+      "text": "더",
+      "normalized": "더",
+      "start": 42.8,
+      "end": 43.1
+    },
+    {
+      "token_index": 92,
+      "sentence_id": "s10",
+      "text": "죽을",
+      "normalized": "죽을",
+      "start": 43.1,
+      "end": 43.42
+    },
+    {
+      "token_index": 93,
+      "sentence_id": "s10",
+      "text": "거",
+      "normalized": "거",
+      "start": 43.4,
+      "end": 43.55
+    },
+    {
+      "token_index": 94,
+      "sentence_id": "s10",
+      "text": "같은,",
+      "normalized": "같은",
+      "start": 43.54,
+      "end": 43.82
+    },
+    {
+      "token_index": 95,
+      "sentence_id": "s10",
+      "text": "아주",
+      "normalized": "아주",
+      "start": 44.02,
+      "end": 44.24
+    },
+    {
+      "token_index": 96,
+      "sentence_id": "s10",
+      "text": "환장할",
+      "normalized": "환장할",
+      "start": 44.24,
+      "end": 44.78
+    },
+    {
+      "token_index": 97,
+      "sentence_id": "s10",
+      "text": "노릇이었죠.",
+      "normalized": "노릇이었죠",
+      "start": 44.732,
+      "end": 45.38
+    },
+    {
+      "token_index": 98,
+      "sentence_id": "s11",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 45.6,
+      "end": 45.76
+    },
+    {
+      "token_index": 99,
+      "sentence_id": "s11",
+      "text": "이",
+      "normalized": "이",
+      "start": 45.76,
+      "end": 45.96
+    },
+    {
+      "token_index": 100,
+      "sentence_id": "s11",
+      "text": "불편을",
+      "normalized": "불편을",
+      "start": 45.96,
+      "end": 46.48
+    },
+    {
+      "token_index": 101,
+      "sentence_id": "s11",
+      "text": "그냥",
+      "normalized": "그냥",
+      "start": 46.48,
+      "end": 46.68
+    },
+    {
+      "token_index": 102,
+      "sentence_id": "s11",
+      "text": "지나치지",
+      "normalized": "지나치지",
+      "start": 46.68,
+      "end": 47.24
+    },
+    {
+      "token_index": 103,
+      "sentence_id": "s11",
+      "text": "않은",
+      "normalized": "않은",
+      "start": 47.24,
+      "end": 47.38
+    },
+    {
+      "token_index": 104,
+      "sentence_id": "s11",
+      "text": "사람이",
+      "normalized": "사람이",
+      "start": 47.38,
+      "end": 47.74
+    },
+    {
+      "token_index": 105,
+      "sentence_id": "s11",
+      "text": "있었어요.",
+      "normalized": "있었어요",
+      "start": 47.74,
+      "end": 48.26
+    },
+    {
+      "token_index": 106,
+      "sentence_id": "s12",
+      "text": "궁중에서",
+      "normalized": "궁중에서",
+      "start": 48.395,
+      "end": 49.02
+    },
+    {
+      "token_index": 107,
+      "sentence_id": "s12",
+      "text": "근무하며",
+      "normalized": "근무하며",
+      "start": 49.02,
+      "end": 49.62
+    },
+    {
+      "token_index": 108,
+      "sentence_id": "s12",
+      "text": "여러",
+      "normalized": "여러",
+      "start": 49.74,
+      "end": 49.92
+    },
+    {
+      "token_index": 109,
+      "sentence_id": "s12",
+      "text": "생약",
+      "normalized": "생약",
+      "start": 49.92,
+      "end": 50.26
+    },
+    {
+      "token_index": 110,
+      "sentence_id": "s12",
+      "text": "처방을",
+      "normalized": "처방을",
+      "start": 50.26,
+      "end": 50.64
+    },
+    {
+      "token_index": 111,
+      "sentence_id": "s12",
+      "text": "접했던",
+      "normalized": "접했던",
+      "start": 50.64,
+      "end": 51.08
+    },
+    {
+      "token_index": 112,
+      "sentence_id": "s12",
+      "text": "선전관,",
+      "normalized": "선전관",
+      "start": 51.08,
+      "end": 51.68
+    },
+    {
+      "token_index": 113,
+      "sentence_id": "s12",
+      "text": "민병호입니다.",
+      "normalized": "민병호입니다",
+      "start": 51.94,
+      "end": 52.42
+    },
+    {
+      "token_index": 114,
+      "sentence_id": "s13",
+      "text": "민병호는",
+      "normalized": "민병호는",
+      "start": 52.78,
+      "end": 53.3
+    },
+    {
+      "token_index": 115,
+      "sentence_id": "s13",
+      "text": "새로운",
+      "normalized": "새로운",
+      "start": 53.3,
+      "end": 53.52
+    },
+    {
+      "token_index": 116,
+      "sentence_id": "s13",
+      "text": "약재만",
+      "normalized": "약재만",
+      "start": 53.52,
+      "end": 54.12
+    },
+    {
+      "token_index": 117,
+      "sentence_id": "s13",
+      "text": "찾은",
+      "normalized": "찾은",
+      "start": 54.12,
+      "end": 54.44
+    },
+    {
+      "token_index": 118,
+      "sentence_id": "s13",
+      "text": "게",
+      "normalized": "게",
+      "start": 54.44,
+      "end": 54.52
+    },
+    {
+      "token_index": 119,
+      "sentence_id": "s13",
+      "text": "아니라,",
+      "normalized": "아니라",
+      "start": 54.52,
+      "end": 54.7
+    },
+    {
+      "token_index": 120,
+      "sentence_id": "s13",
+      "text": "사람들이",
+      "normalized": "사람들이",
+      "start": 54.7,
+      "end": 55.48
+    },
+    {
+      "token_index": 121,
+      "sentence_id": "s13",
+      "text": "약을",
+      "normalized": "약을",
+      "start": 55.48,
+      "end": 55.94
+    },
+    {
+      "token_index": 122,
+      "sentence_id": "s13",
+      "text": "먹는",
+      "normalized": "먹는",
+      "start": 55.94,
+      "end": 56.14
+    },
+    {
+      "token_index": 123,
+      "sentence_id": "s13",
+      "text": "방식부터",
+      "normalized": "방식부터",
+      "start": 56.14,
+      "end": 56.84
+    },
+    {
+      "token_index": 124,
+      "sentence_id": "s13",
+      "text": "바꿔보기로",
+      "normalized": "바꿔보기로",
+      "start": 56.84,
+      "end": 57.48
+    },
+    {
+      "token_index": 125,
+      "sentence_id": "s13",
+      "text": "합니다.",
+      "normalized": "합니다",
+      "start": 57.48,
+      "end": 57.74
+    },
+    {
+      "token_index": 126,
+      "sentence_id": "s14",
+      "text": "궁중에서",
+      "normalized": "궁중에서",
+      "start": 57.902,
+      "end": 58.48
+    },
+    {
+      "token_index": 127,
+      "sentence_id": "s14",
+      "text": "쓰던",
+      "normalized": "쓰던",
+      "start": 58.48,
+      "end": 58.84
+    },
+    {
+      "token_index": 128,
+      "sentence_id": "s14",
+      "text": "생약",
+      "normalized": "생약",
+      "start": 58.84,
+      "end": 59.16
+    },
+    {
+      "token_index": 129,
+      "sentence_id": "s14",
+      "text": "처방에,",
+      "normalized": "처방에",
+      "start": 59.16,
+      "end": 59.64
+    },
+    {
+      "token_index": 130,
+      "sentence_id": "s14",
+      "text": "당시",
+      "normalized": "당시",
+      "start": 59.82,
+      "end": 60.0
+    },
+    {
+      "token_index": 131,
+      "sentence_id": "s14",
+      "text": "서양",
+      "normalized": "서양",
+      "start": 60.0,
+      "end": 60.33
+    },
+    {
+      "token_index": 132,
+      "sentence_id": "s14",
+      "text": "약의",
+      "normalized": "약의",
+      "start": 60.33,
+      "end": 60.66
+    },
+    {
+      "token_index": 133,
+      "sentence_id": "s14",
+      "text": "장점과",
+      "normalized": "장점과",
+      "start": 60.66,
+      "end": 61.22
+    },
+    {
+      "token_index": 134,
+      "sentence_id": "s14",
+      "text": "제조",
+      "normalized": "제조",
+      "start": 61.22,
+      "end": 61.54
+    },
+    {
+      "token_index": 135,
+      "sentence_id": "s14",
+      "text": "방식으로.",
+      "normalized": "방식으로",
+      "start": 61.54,
+      "end": 62.04
+    },
+    {
+      "token_index": 136,
+      "sentence_id": "s15",
+      "text": "궁중식으로",
+      "normalized": "궁중식으로",
+      "start": 62.132,
+      "end": 62.86
+    },
+    {
+      "token_index": 137,
+      "sentence_id": "s15",
+      "text": "큰",
+      "normalized": "큰",
+      "start": 62.86,
+      "end": 63.1
+    },
+    {
+      "token_index": 138,
+      "sentence_id": "s15",
+      "text": "솥에",
+      "normalized": "솥에",
+      "start": 63.08,
+      "end": 63.451
+    },
+    {
+      "token_index": 139,
+      "sentence_id": "s15",
+      "text": "약재를",
+      "normalized": "약재를",
+      "start": 63.52,
+      "end": 63.84
+    },
+    {
+      "token_index": 140,
+      "sentence_id": "s15",
+      "text": "넣고",
+      "normalized": "넣고",
+      "start": 63.84,
+      "end": 64.18
+    },
+    {
+      "token_index": 141,
+      "sentence_id": "s15",
+      "text": "달인",
+      "normalized": "달인",
+      "start": 64.18,
+      "end": 64.513
+    },
+    {
+      "token_index": 142,
+      "sentence_id": "s15",
+      "text": "뒤,",
+      "normalized": "뒤",
+      "start": 64.52,
+      "end": 64.68
+    },
+    {
+      "token_index": 143,
+      "sentence_id": "s15",
+      "text": "고운",
+      "normalized": "고운",
+      "start": 64.9,
+      "end": 65.14
+    },
+    {
+      "token_index": 144,
+      "sentence_id": "s15",
+      "text": "체로",
+      "normalized": "체로",
+      "start": 65.145,
+      "end": 65.4
+    },
+    {
+      "token_index": 145,
+      "sentence_id": "s15",
+      "text": "찌꺼기를",
+      "normalized": "찌꺼기를",
+      "start": 65.4,
+      "end": 65.84
+    },
+    {
+      "token_index": 146,
+      "sentence_id": "s15",
+      "text": "걸러냈습니다.",
+      "normalized": "걸러냈습니다",
+      "start": 65.84,
+      "end": 66.56
+    },
+    {
+      "token_index": 147,
+      "sentence_id": "s16",
+      "text": "그리고",
+      "normalized": "그리고",
+      "start": 66.88,
+      "end": 67.08
+    },
+    {
+      "token_index": 148,
+      "sentence_id": "s16",
+      "text": "서양",
+      "normalized": "서양",
+      "start": 67.08,
+      "end": 67.453
+    },
+    {
+      "token_index": 149,
+      "sentence_id": "s16",
+      "text": "약",
+      "normalized": "약",
+      "start": 67.453,
+      "end": 67.64
+    },
+    {
+      "token_index": 150,
+      "sentence_id": "s16",
+      "text": "제조",
+      "normalized": "제조",
+      "start": 67.64,
+      "end": 67.92
+    },
+    {
+      "token_index": 151,
+      "sentence_id": "s16",
+      "text": "방식으로,",
+      "normalized": "방식으로",
+      "start": 67.92,
+      "end": 68.48
+    },
+    {
+      "token_index": 152,
+      "sentence_id": "s16",
+      "text": "아선약과",
+      "normalized": "아선약과",
+      "start": 68.7,
+      "end": 69.2
+    },
+    {
+      "token_index": 153,
+      "sentence_id": "s16",
+      "text": "정향가루,",
+      "normalized": "정향가루",
+      "start": 69.2,
+      "end": 69.82
+    },
+    {
+      "token_index": 154,
+      "sentence_id": "s16",
+      "text": "멘톨",
+      "normalized": "멘톨",
+      "start": 70.04,
+      "end": 70.3
+    },
+    {
+      "token_index": 155,
+      "sentence_id": "s16",
+      "text": "같은",
+      "normalized": "같은",
+      "start": 70.3,
+      "end": 70.5
+    },
+    {
+      "token_index": 156,
+      "sentence_id": "s16",
+      "text": "재료를",
+      "normalized": "재료를",
+      "start": 70.5,
+      "end": 70.94
+    },
+    {
+      "token_index": 157,
+      "sentence_id": "s16",
+      "text": "배합해,",
+      "normalized": "배합해",
+      "start": 70.94,
+      "end": 71.42
+    },
+    {
+      "token_index": 158,
+      "sentence_id": "s16",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 71.62,
+      "end": 71.78
+    },
+    {
+      "token_index": 159,
+      "sentence_id": "s16",
+      "text": "마실",
+      "normalized": "마실",
+      "start": 71.78,
+      "end": 72.14
+    },
+    {
+      "token_index": 160,
+      "sentence_id": "s16",
+      "text": "수",
+      "normalized": "수",
+      "start": 72.14,
+      "end": 72.28
+    },
+    {
+      "token_index": 161,
+      "sentence_id": "s16",
+      "text": "있는",
+      "normalized": "있는",
+      "start": 72.28,
+      "end": 72.46
+    },
+    {
+      "token_index": 162,
+      "sentence_id": "s16",
+      "text": "액체약을",
+      "normalized": "액체약을",
+      "start": 72.46,
+      "end": 73.06
+    },
+    {
+      "token_index": 163,
+      "sentence_id": "s16",
+      "text": "완성해버렸습니다.",
+      "normalized": "완성해버렸습니다",
+      "start": 73.06,
+      "end": 73.94
+    },
+    {
+      "token_index": 164,
+      "sentence_id": "s17",
+      "text": "쉽게",
+      "normalized": "쉽게",
+      "start": 74.24,
+      "end": 74.54
+    },
+    {
+      "token_index": 165,
+      "sentence_id": "s17",
+      "text": "말하면,",
+      "normalized": "말하면",
+      "start": 74.54,
+      "end": 74.92
+    },
+    {
+      "token_index": 166,
+      "sentence_id": "s17",
+      "text": "약을",
+      "normalized": "약을",
+      "start": 75.22,
+      "end": 75.4
+    },
+    {
+      "token_index": 167,
+      "sentence_id": "s17",
+      "text": "달이느라",
+      "normalized": "달이느라",
+      "start": 75.417,
+      "end": 75.86
+    },
+    {
+      "token_index": 168,
+      "sentence_id": "s17",
+      "text": "죽어라",
+      "normalized": "죽어라",
+      "start": 75.86,
+      "end": 76.26
+    },
+    {
+      "token_index": 169,
+      "sentence_id": "s17",
+      "text": "기다리지",
+      "normalized": "기다리지",
+      "start": 76.26,
+      "end": 76.7
+    },
+    {
+      "token_index": 170,
+      "sentence_id": "s17",
+      "text": "않고,",
+      "normalized": "않고",
+      "start": 76.7,
+      "end": 76.9
+    },
+    {
+      "token_index": 171,
+      "sentence_id": "s17",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 77.26,
+      "end": 77.38
+    },
+    {
+      "token_index": 172,
+      "sentence_id": "s17",
+      "text": "마실",
+      "normalized": "마실",
+      "start": 77.38,
+      "end": 77.72
+    },
+    {
+      "token_index": 173,
+      "sentence_id": "s17",
+      "text": "수",
+      "normalized": "수",
+      "start": 77.72,
+      "end": 77.86
+    },
+    {
+      "token_index": 174,
+      "sentence_id": "s17",
+      "text": "있는",
+      "normalized": "있는",
+      "start": 77.86,
+      "end": 78.12
+    },
+    {
+      "token_index": 175,
+      "sentence_id": "s17",
+      "text": "환상적인",
+      "normalized": "환상적인",
+      "start": 78.12,
+      "end": 78.78
+    },
+    {
+      "token_index": 176,
+      "sentence_id": "s17",
+      "text": "물",
+      "normalized": "물",
+      "start": 78.78,
+      "end": 78.98
+    },
+    {
+      "token_index": 177,
+      "sentence_id": "s17",
+      "text": "같은",
+      "normalized": "같은",
+      "start": 78.98,
+      "end": 79.18
+    },
+    {
+      "token_index": 178,
+      "sentence_id": "s17",
+      "text": "약을",
+      "normalized": "약을",
+      "start": 79.18,
+      "end": 79.58
+    },
+    {
+      "token_index": 179,
+      "sentence_id": "s17",
+      "text": "만들어낸",
+      "normalized": "만들어낸",
+      "start": 79.58,
+      "end": 80.1
+    },
+    {
+      "token_index": 180,
+      "sentence_id": "s17",
+      "text": "겁니다.",
+      "normalized": "겁니다",
+      "start": 80.1,
+      "end": 80.24
+    },
+    {
+      "token_index": 181,
+      "sentence_id": "s18",
+      "text": "이",
+      "normalized": "이",
+      "start": 80.64,
+      "end": 80.76
+    },
+    {
+      "token_index": 182,
+      "sentence_id": "s18",
+      "text": "환상적인",
+      "normalized": "환상적인",
+      "start": 80.76,
+      "end": 81.36
+    },
+    {
+      "token_index": 183,
+      "sentence_id": "s18",
+      "text": "약을",
+      "normalized": "약을",
+      "start": 81.36,
+      "end": 81.68
+    },
+    {
+      "token_index": 184,
+      "sentence_id": "s18",
+      "text": "가지고,",
+      "normalized": "가지고",
+      "start": 81.68,
+      "end": 81.92
+    },
+    {
+      "token_index": 185,
+      "sentence_id": "s18",
+      "text": "아들",
+      "normalized": "아들",
+      "start": 82.3,
+      "end": 82.48
+    },
+    {
+      "token_index": 186,
+      "sentence_id": "s18",
+      "text": "민강은",
+      "normalized": "민강은",
+      "start": 82.48,
+      "end": 82.96
+    },
+    {
+      "token_index": 187,
+      "sentence_id": "s18",
+      "text": "동화약방을",
+      "normalized": "동화약방을",
+      "start": 82.96,
+      "end": 83.64
+    },
+    {
+      "token_index": 188,
+      "sentence_id": "s18",
+      "text": "세웠습니다.",
+      "normalized": "세웠습니다",
+      "start": 83.64,
+      "end": 84.12
+    },
+    {
+      "token_index": 189,
+      "sentence_id": "s19",
+      "text": "그리고",
+      "normalized": "그리고",
+      "start": 84.12,
+      "end": 84.6
+    },
+    {
+      "token_index": 190,
+      "sentence_id": "s19",
+      "text": "이",
+      "normalized": "이",
+      "start": 84.6,
+      "end": 84.94
+    },
+    {
+      "token_index": 191,
+      "sentence_id": "s19",
+      "text": "약으로",
+      "normalized": "약으로",
+      "start": 84.94,
+      "end": 85.32
+    },
+    {
+      "token_index": 192,
+      "sentence_id": "s19",
+      "text": "여러",
+      "normalized": "여러",
+      "start": 85.32,
+      "end": 85.58
+    },
+    {
+      "token_index": 193,
+      "sentence_id": "s19",
+      "text": "사람이",
+      "normalized": "사람이",
+      "start": 85.58,
+      "end": 85.92
+    },
+    {
+      "token_index": 194,
+      "sentence_id": "s19",
+      "text": "살",
+      "normalized": "살",
+      "start": 85.92,
+      "end": 86.12
+    },
+    {
+      "token_index": 195,
+      "sentence_id": "s19",
+      "text": "수",
+      "normalized": "수",
+      "start": 86.12,
+      "end": 86.3
+    },
+    {
+      "token_index": 196,
+      "sentence_id": "s19",
+      "text": "있도록,",
+      "normalized": "있도록",
+      "start": 86.3,
+      "end": 86.58
+    },
+    {
+      "token_index": 197,
+      "sentence_id": "s19",
+      "text": "대량생산의",
+      "normalized": "대량생산의",
+      "start": 86.76,
+      "end": 87.44
+    },
+    {
+      "token_index": 198,
+      "sentence_id": "s19",
+      "text": "기틀을",
+      "normalized": "기틀을",
+      "start": 87.44,
+      "end": 87.778
+    },
+    {
+      "token_index": 199,
+      "sentence_id": "s19",
+      "text": "만들기",
+      "normalized": "만들기",
+      "start": 87.72,
+      "end": 88.26
+    },
+    {
+      "token_index": 200,
+      "sentence_id": "s19",
+      "text": "시작하죠.",
+      "normalized": "시작하죠",
+      "start": 88.26,
+      "end": 88.74
+    },
+    {
+      "token_index": 201,
+      "sentence_id": "s20",
+      "text": "궁중에서",
+      "normalized": "궁중에서",
+      "start": 88.865,
+      "end": 89.5
+    },
+    {
+      "token_index": 202,
+      "sentence_id": "s20",
+      "text": "쓰이던",
+      "normalized": "쓰이던",
+      "start": 89.5,
+      "end": 89.88
+    },
+    {
+      "token_index": 203,
+      "sentence_id": "s20",
+      "text": "처방이,",
+      "normalized": "처방이",
+      "start": 89.88,
+      "end": 90.42
+    },
+    {
+      "token_index": 204,
+      "sentence_id": "s20",
+      "text": "많은",
+      "normalized": "많은",
+      "start": 90.64,
+      "end": 90.8
+    },
+    {
+      "token_index": 205,
+      "sentence_id": "s20",
+      "text": "사람이",
+      "normalized": "사람이",
+      "start": 90.8,
+      "end": 91.12
+    },
+    {
+      "token_index": 206,
+      "sentence_id": "s20",
+      "text": "찾을",
+      "normalized": "찾을",
+      "start": 91.12,
+      "end": 91.52
+    },
+    {
+      "token_index": 207,
+      "sentence_id": "s20",
+      "text": "수",
+      "normalized": "수",
+      "start": 91.52,
+      "end": 91.64
+    },
+    {
+      "token_index": 208,
+      "sentence_id": "s20",
+      "text": "있는",
+      "normalized": "있는",
+      "start": 91.64,
+      "end": 91.8
+    },
+    {
+      "token_index": 209,
+      "sentence_id": "s20",
+      "text": "상품으로",
+      "normalized": "상품으로",
+      "start": 91.8,
+      "end": 92.36
+    },
+    {
+      "token_index": 210,
+      "sentence_id": "s20",
+      "text": "나온",
+      "normalized": "나온",
+      "start": 92.36,
+      "end": 92.58
+    },
+    {
+      "token_index": 211,
+      "sentence_id": "s20",
+      "text": "겁니다.",
+      "normalized": "겁니다",
+      "start": 92.58,
+      "end": 92.76
+    },
+    {
+      "token_index": 212,
+      "sentence_id": "s21",
+      "text": "반응은,",
+      "normalized": "반응은",
+      "start": 93.18,
+      "end": 93.62
+    },
+    {
+      "token_index": 213,
+      "sentence_id": "s21",
+      "text": "그야말로",
+      "normalized": "그야말로",
+      "start": 93.62,
+      "end": 94.16
+    },
+    {
+      "token_index": 214,
+      "sentence_id": "s21",
+      "text": "끝내줬습니다.",
+      "normalized": "끝내줬습니다",
+      "start": 94.16,
+      "end": 94.82
+    },
+    {
+      "token_index": 215,
+      "sentence_id": "s22",
+      "text": "천구백십년대에는",
+      "normalized": "천구백십년대에는",
+      "start": 94.936,
+      "end": 96.16
+    },
+    {
+      "token_index": 216,
+      "sentence_id": "s22",
+      "text": "활명수와",
+      "normalized": "활명수와",
+      "start": 96.38,
+      "end": 96.92
+    },
+    {
+      "token_index": 217,
+      "sentence_id": "s22",
+      "text": "비슷한",
+      "normalized": "비슷한",
+      "start": 96.92,
+      "end": 97.36
+    },
+    {
+      "token_index": 218,
+      "sentence_id": "s22",
+      "text": "이름을",
+      "normalized": "이름을",
+      "start": 97.36,
+      "end": 97.66
+    },
+    {
+      "token_index": 219,
+      "sentence_id": "s22",
+      "text": "붙인",
+      "normalized": "붙인",
+      "start": 97.66,
+      "end": 98.0
+    },
+    {
+      "token_index": 220,
+      "sentence_id": "s22",
+      "text": "유사",
+      "normalized": "유사",
+      "start": 98.0,
+      "end": 98.304
+    },
+    {
+      "token_index": 221,
+      "sentence_id": "s22",
+      "text": "제품만,",
+      "normalized": "제품만",
+      "start": 98.304,
+      "end": 98.76
+    },
+    {
+      "token_index": 222,
+      "sentence_id": "s22",
+      "text": "약",
+      "normalized": "약",
+      "start": 98.96,
+      "end": 99.1
+    },
+    {
+      "token_index": 223,
+      "sentence_id": "s22",
+      "text": "육십",
+      "normalized": "육십",
+      "start": 99.095,
+      "end": 99.364
+    },
+    {
+      "token_index": 224,
+      "sentence_id": "s22",
+      "text": "종이나",
+      "normalized": "종이나",
+      "start": 99.364,
+      "end": 99.76
+    },
+    {
+      "token_index": 225,
+      "sentence_id": "s22",
+      "text": "나왔으니까요.",
+      "normalized": "나왔으니까요",
+      "start": 99.76,
+      "end": 100.54
+    },
+    {
+      "token_index": 226,
+      "sentence_id": "s23",
+      "text": "이쯤이면,",
+      "normalized": "이쯤이면",
+      "start": 100.7,
+      "end": 101.18
+    },
+    {
+      "token_index": 227,
+      "sentence_id": "s23",
+      "text": "이제",
+      "normalized": "이제",
+      "start": 101.46,
+      "end": 101.62
+    },
+    {
+      "token_index": 228,
+      "sentence_id": "s23",
+      "text": "더",
+      "normalized": "더",
+      "start": 101.62,
+      "end": 101.8
+    },
+    {
+      "token_index": 229,
+      "sentence_id": "s23",
+      "text": "손댈",
+      "normalized": "손댈",
+      "start": 101.8,
+      "end": 102.111
+    },
+    {
+      "token_index": 230,
+      "sentence_id": "s23",
+      "text": "필요가",
+      "normalized": "필요가",
+      "start": 102.16,
+      "end": 102.48
+    },
+    {
+      "token_index": 231,
+      "sentence_id": "s23",
+      "text": "없어",
+      "normalized": "없어",
+      "start": 102.48,
+      "end": 102.68
+    },
+    {
+      "token_index": 232,
+      "sentence_id": "s23",
+      "text": "보이잖아요?",
+      "normalized": "보이잖아요",
+      "start": 102.68,
+      "end": 103.28
+    },
+    {
+      "token_index": 233,
+      "sentence_id": "s24",
+      "text": "그런데",
+      "normalized": "그런데",
+      "start": 103.5,
+      "end": 103.74
+    },
+    {
+      "token_index": 234,
+      "sentence_id": "s24",
+      "text": "천구백육십년대",
+      "normalized": "천구백육십년대",
+      "start": 103.789,
+      "end": 104.78
+    },
+    {
+      "token_index": 235,
+      "sentence_id": "s24",
+      "text": "중반,",
+      "normalized": "중반",
+      "start": 104.78,
+      "end": 105.18
+    },
+    {
+      "token_index": 236,
+      "sentence_id": "s24",
+      "text": "이미",
+      "normalized": "이미",
+      "start": 105.38,
+      "end": 105.56
+    },
+    {
+      "token_index": 237,
+      "sentence_id": "s24",
+      "text": "유명하던",
+      "normalized": "유명하던",
+      "start": 105.56,
+      "end": 106.16
+    },
+    {
+      "token_index": 238,
+      "sentence_id": "s24",
+      "text": "활명수는",
+      "normalized": "활명수는",
+      "start": 106.16,
+      "end": 106.82
+    },
+    {
+      "token_index": 239,
+      "sentence_id": "s24",
+      "text": "마시는",
+      "normalized": "마시는",
+      "start": 106.82,
+      "end": 107.3
+    },
+    {
+      "token_index": 240,
+      "sentence_id": "s24",
+      "text": "느낌을",
+      "normalized": "느낌을",
+      "start": 107.3,
+      "end": 107.78
+    },
+    {
+      "token_index": 241,
+      "sentence_id": "s24",
+      "text": "또",
+      "normalized": "또",
+      "start": 107.78,
+      "end": 107.92
+    },
+    {
+      "token_index": 242,
+      "sentence_id": "s24",
+      "text": "한",
+      "normalized": "한",
+      "start": 107.92,
+      "end": 108.08
+    },
+    {
+      "token_index": 243,
+      "sentence_id": "s24",
+      "text": "번",
+      "normalized": "번",
+      "start": 108.08,
+      "end": 108.2
+    },
+    {
+      "token_index": 244,
+      "sentence_id": "s24",
+      "text": "바꿔버리죠.",
+      "normalized": "바꿔버리죠",
+      "start": 108.2,
+      "end": 108.86
+    },
+    {
+      "token_index": 245,
+      "sentence_id": "s25",
+      "text": "잘",
+      "normalized": "잘",
+      "start": 109.12,
+      "end": 109.28
+    },
+    {
+      "token_index": 246,
+      "sentence_id": "s25",
+      "text": "팔리던",
+      "normalized": "팔리던",
+      "start": 109.28,
+      "end": 109.68
+    },
+    {
+      "token_index": 247,
+      "sentence_id": "s25",
+      "text": "약에,",
+      "normalized": "약에",
+      "start": 109.68,
+      "end": 110.04
+    },
+    {
+      "token_index": 248,
+      "sentence_id": "s25",
+      "text": "굳이",
+      "normalized": "굳이",
+      "start": 110.24,
+      "end": 110.44
+    },
+    {
+      "token_index": 249,
+      "sentence_id": "s25",
+      "text": "왜",
+      "normalized": "왜",
+      "start": 110.44,
+      "end": 110.6
+    },
+    {
+      "token_index": 250,
+      "sentence_id": "s25",
+      "text": "손을",
+      "normalized": "손을",
+      "start": 110.6,
+      "end": 110.86
+    },
+    {
+      "token_index": 251,
+      "sentence_id": "s25",
+      "text": "댔을까요?",
+      "normalized": "댔을까요",
+      "start": 110.85,
+      "end": 111.3
+    },
+    {
+      "token_index": 252,
+      "sentence_id": "s26",
+      "text": "동화약품의",
+      "normalized": "동화약품의",
+      "start": 111.3,
+      "end": 112.24
+    },
+    {
+      "token_index": 253,
+      "sentence_id": "s26",
+      "text": "기록을",
+      "normalized": "기록을",
+      "start": 112.24,
+      "end": 112.6
+    },
+    {
+      "token_index": 254,
+      "sentence_id": "s26",
+      "text": "보면,",
+      "normalized": "보면",
+      "start": 112.6,
+      "end": 112.78
+    },
+    {
+      "token_index": 255,
+      "sentence_id": "s26",
+      "text": "기존",
+      "normalized": "기존",
+      "start": 113.14,
+      "end": 113.34
+    },
+    {
+      "token_index": 256,
+      "sentence_id": "s26",
+      "text": "활명수에",
+      "normalized": "활명수에",
+      "start": 113.34,
+      "end": 114.001
+    },
+    {
+      "token_index": 257,
+      "sentence_id": "s26",
+      "text": "탄산가스를",
+      "normalized": "탄산가스를",
+      "start": 114.02,
+      "end": 114.68
+    },
+    {
+      "token_index": 258,
+      "sentence_id": "s26",
+      "text": "넣어",
+      "normalized": "넣어",
+      "start": 114.68,
+      "end": 115.12
+    },
+    {
+      "token_index": 259,
+      "sentence_id": "s26",
+      "text": "청량감을",
+      "normalized": "청량감을",
+      "start": 115.12,
+      "end": 115.66
+    },
+    {
+      "token_index": 260,
+      "sentence_id": "s26",
+      "text": "더했다고",
+      "normalized": "더했다고",
+      "start": 115.66,
+      "end": 116.1
+    },
+    {
+      "token_index": 261,
+      "sentence_id": "s26",
+      "text": "나옵니다.",
+      "normalized": "나옵니다",
+      "start": 116.1,
+      "end": 116.6
+    },
+    {
+      "token_index": 262,
+      "sentence_id": "s27",
+      "text": "기존",
+      "normalized": "기존",
+      "start": 116.8,
+      "end": 117.04
+    },
+    {
+      "token_index": 263,
+      "sentence_id": "s27",
+      "text": "생약",
+      "normalized": "생약",
+      "start": 117.04,
+      "end": 117.36
+    },
+    {
+      "token_index": 264,
+      "sentence_id": "s27",
+      "text": "처방의",
+      "normalized": "처방의",
+      "start": 117.36,
+      "end": 117.737
+    },
+    {
+      "token_index": 265,
+      "sentence_id": "s27",
+      "text": "뿌리는",
+      "normalized": "뿌리는",
+      "start": 117.76,
+      "end": 118.02
+    },
+    {
+      "token_index": 266,
+      "sentence_id": "s27",
+      "text": "이어가면서,",
+      "normalized": "이어가면서",
+      "start": 118.02,
+      "end": 118.76
+    },
+    {
+      "token_index": 267,
+      "sentence_id": "s27",
+      "text": "마시는",
+      "normalized": "마시는",
+      "start": 118.98,
+      "end": 119.32
+    },
+    {
+      "token_index": 268,
+      "sentence_id": "s27",
+      "text": "순간의",
+      "normalized": "순간의",
+      "start": 119.32,
+      "end": 119.8
+    },
+    {
+      "token_index": 269,
+      "sentence_id": "s27",
+      "text": "느낌을",
+      "normalized": "느낌을",
+      "start": 119.8,
+      "end": 120.18
+    },
+    {
+      "token_index": 270,
+      "sentence_id": "s27",
+      "text": "새롭게",
+      "normalized": "새롭게",
+      "start": 120.18,
+      "end": 120.58
+    },
+    {
+      "token_index": 271,
+      "sentence_id": "s27",
+      "text": "만든",
+      "normalized": "만든",
+      "start": 120.58,
+      "end": 120.78
+    },
+    {
+      "token_index": 272,
+      "sentence_id": "s27",
+      "text": "거죠.",
+      "normalized": "거죠",
+      "start": 120.78,
+      "end": 121.04
+    },
+    {
+      "token_index": 273,
+      "sentence_id": "s28",
+      "text": "병",
+      "normalized": "병",
+      "start": 121.32,
+      "end": 121.46
+    },
+    {
+      "token_index": 274,
+      "sentence_id": "s28",
+      "text": "안에",
+      "normalized": "안에",
+      "start": 121.46,
+      "end": 121.64
+    },
+    {
+      "token_index": 275,
+      "sentence_id": "s28",
+      "text": "녹아",
+      "normalized": "녹아",
+      "start": 121.64,
+      "end": 121.89
+    },
+    {
+      "token_index": 276,
+      "sentence_id": "s28",
+      "text": "있던",
+      "normalized": "있던",
+      "start": 121.89,
+      "end": 122.14
+    },
+    {
+      "token_index": 277,
+      "sentence_id": "s28",
+      "text": "탄산가스가,",
+      "normalized": "탄산가스가",
+      "start": 122.14,
+      "end": 122.94
+    },
+    {
+      "token_index": 278,
+      "sentence_id": "s28",
+      "text": "뚜껑을",
+      "normalized": "뚜껑을",
+      "start": 123.16,
+      "end": 123.56
+    },
+    {
+      "token_index": 279,
+      "sentence_id": "s28",
+      "text": "여는",
+      "normalized": "여는",
+      "start": 123.56,
+      "end": 123.82
+    },
+    {
+      "token_index": 280,
+      "sentence_id": "s28",
+      "text": "순간",
+      "normalized": "순간",
+      "start": 123.82,
+      "end": 124.08
+    },
+    {
+      "token_index": 281,
+      "sentence_id": "s28",
+      "text": "치익.",
+      "normalized": "치익",
+      "start": 124.36,
+      "end": 124.69
+    },
+    {
+      "token_index": 282,
+      "sentence_id": "s29",
+      "text": "입안에서는",
+      "normalized": "입안에서는",
+      "start": 124.72,
+      "end": 125.2
+    },
+    {
+      "token_index": 283,
+      "sentence_id": "s29",
+      "text": "톡.",
+      "normalized": "톡",
+      "start": 125.458,
+      "end": 125.555
+    },
+    {
+      "token_index": 284,
+      "sentence_id": "s30",
+      "text": "눈에",
+      "normalized": "눈에",
+      "start": 125.8,
+      "end": 126.02
+    },
+    {
+      "token_index": 285,
+      "sentence_id": "s30",
+      "text": "보이지",
+      "normalized": "보이지",
+      "start": 126.02,
+      "end": 126.28
+    },
+    {
+      "token_index": 286,
+      "sentence_id": "s30",
+      "text": "않던",
+      "normalized": "않던",
+      "start": 126.28,
+      "end": 126.6
+    },
+    {
+      "token_index": 287,
+      "sentence_id": "s30",
+      "text": "약의",
+      "normalized": "약의",
+      "start": 126.6,
+      "end": 126.94
+    },
+    {
+      "token_index": 288,
+      "sentence_id": "s30",
+      "text": "변화가,",
+      "normalized": "변화가",
+      "start": 126.94,
+      "end": 127.36
+    },
+    {
+      "token_index": 289,
+      "sentence_id": "s30",
+      "text": "이제는",
+      "normalized": "이제는",
+      "start": 127.54,
+      "end": 127.94
+    },
+    {
+      "token_index": 290,
+      "sentence_id": "s30",
+      "text": "귀와",
+      "normalized": "귀와",
+      "start": 127.94,
+      "end": 128.24
+    },
+    {
+      "token_index": 291,
+      "sentence_id": "s30",
+      "text": "혀로",
+      "normalized": "혀로",
+      "start": 128.24,
+      "end": 128.42
+    },
+    {
+      "token_index": 292,
+      "sentence_id": "s30",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 128.42,
+      "end": 128.72
+    },
+    {
+      "token_index": 293,
+      "sentence_id": "s30",
+      "text": "느껴지기",
+      "normalized": "느껴지기",
+      "start": 128.72,
+      "end": 129.2
+    },
+    {
+      "token_index": 294,
+      "sentence_id": "s30",
+      "text": "시작한",
+      "normalized": "시작한",
+      "start": 129.2,
+      "end": 129.62
+    },
+    {
+      "token_index": 295,
+      "sentence_id": "s30",
+      "text": "거죠.",
+      "normalized": "거죠",
+      "start": 129.62,
+      "end": 129.74
+    },
+    {
+      "token_index": 296,
+      "sentence_id": "s31",
+      "text": "그렇게",
+      "normalized": "그렇게",
+      "start": 130.06,
+      "end": 130.32
+    },
+    {
+      "token_index": 297,
+      "sentence_id": "s31",
+      "text": "우리가",
+      "normalized": "우리가",
+      "start": 130.32,
+      "end": 130.6
+    },
+    {
+      "token_index": 298,
+      "sentence_id": "s31",
+      "text": "아는,",
+      "normalized": "아는",
+      "start": 130.6,
+      "end": 131.06
+    },
+    {
+      "token_index": 299,
+      "sentence_id": "s31",
+      "text": "까스활명수가",
+      "normalized": "까스활명수가",
+      "start": 131.055,
+      "end": 131.86
+    },
+    {
+      "token_index": 300,
+      "sentence_id": "s31",
+      "text": "등장했습니다.",
+      "normalized": "등장했습니다",
+      "start": 131.86,
+      "end": 132.48
+    },
+    {
+      "token_index": 301,
+      "sentence_id": "s32",
+      "text": "다시",
+      "normalized": "다시",
+      "start": 132.9,
+      "end": 133.08
+    },
+    {
+      "token_index": 302,
+      "sentence_id": "s32",
+      "text": "뚜껑을",
+      "normalized": "뚜껑을",
+      "start": 133.08,
+      "end": 133.54
+    },
+    {
+      "token_index": 303,
+      "sentence_id": "s32",
+      "text": "비틀면,",
+      "normalized": "비틀면",
+      "start": 133.54,
+      "end": 133.98
+    },
+    {
+      "token_index": 304,
+      "sentence_id": "s32",
+      "text": "치익.",
+      "normalized": "치익",
+      "start": 134.32,
+      "end": 134.58
+    },
+    {
+      "token_index": 305,
+      "sentence_id": "s33",
+      "text": "이제",
+      "normalized": "이제",
+      "start": 134.64,
+      "end": 134.84
+    },
+    {
+      "token_index": 306,
+      "sentence_id": "s33",
+      "text": "이",
+      "normalized": "이",
+      "start": 134.84,
+      "end": 135.08
+    },
+    {
+      "token_index": 307,
+      "sentence_id": "s33",
+      "text": "소리가,",
+      "normalized": "소리가",
+      "start": 135.08,
+      "end": 135.5
+    },
+    {
+      "token_index": 308,
+      "sentence_id": "s33",
+      "text": "조금",
+      "normalized": "조금",
+      "start": 135.64,
+      "end": 135.82
+    },
+    {
+      "token_index": 309,
+      "sentence_id": "s33",
+      "text": "다르게",
+      "normalized": "다르게",
+      "start": 135.82,
+      "end": 136.2
+    },
+    {
+      "token_index": 310,
+      "sentence_id": "s33",
+      "text": "들리지",
+      "normalized": "들리지",
+      "start": 136.2,
+      "end": 136.58
+    },
+    {
+      "token_index": 311,
+      "sentence_id": "s33",
+      "text": "않나요?",
+      "normalized": "않나요",
+      "start": 136.58,
+      "end": 136.98
+    },
+    {
+      "token_index": 312,
+      "sentence_id": "s34",
+      "text": "처음에는",
+      "normalized": "처음에는",
+      "start": 137.14,
+      "end": 137.52
+    },
+    {
+      "token_index": 313,
+      "sentence_id": "s34",
+      "text": "달여",
+      "normalized": "달여",
+      "start": 137.57,
+      "end": 137.853
+    },
+    {
+      "token_index": 314,
+      "sentence_id": "s34",
+      "text": "먹던",
+      "normalized": "먹던",
+      "start": 137.86,
+      "end": 138.18
+    },
+    {
+      "token_index": 315,
+      "sentence_id": "s34",
+      "text": "약을,",
+      "normalized": "약을",
+      "start": 138.18,
+      "end": 138.54
+    },
+    {
+      "token_index": 316,
+      "sentence_id": "s34",
+      "text": "병을",
+      "normalized": "병을",
+      "start": 138.7,
+      "end": 138.96
+    },
+    {
+      "token_index": 317,
+      "sentence_id": "s34",
+      "text": "열어",
+      "normalized": "열어",
+      "start": 138.96,
+      "end": 139.16
+    },
+    {
+      "token_index": 318,
+      "sentence_id": "s34",
+      "text": "바로",
+      "normalized": "바로",
+      "start": 139.16,
+      "end": 139.38
+    },
+    {
+      "token_index": 319,
+      "sentence_id": "s34",
+      "text": "마실",
+      "normalized": "마실",
+      "start": 139.38,
+      "end": 139.72
+    },
+    {
+      "token_index": 320,
+      "sentence_id": "s34",
+      "text": "수",
+      "normalized": "수",
+      "start": 139.72,
+      "end": 139.86
+    },
+    {
+      "token_index": 321,
+      "sentence_id": "s34",
+      "text": "있게",
+      "normalized": "있게",
+      "start": 139.86,
+      "end": 140.0
+    },
+    {
+      "token_index": 322,
+      "sentence_id": "s34",
+      "text": "바꿨고요.",
+      "normalized": "바꿨고요",
+      "start": 140.0,
+      "end": 140.5
+    },
+    {
+      "token_index": 323,
+      "sentence_id": "s35",
+      "text": "약",
+      "normalized": "약",
+      "start": 140.5,
+      "end": 140.92
+    },
+    {
+      "token_index": 324,
+      "sentence_id": "s35",
+      "text": "칠십",
+      "normalized": "칠십",
+      "start": 140.76,
+      "end": 141.28
+    },
+    {
+      "token_index": 325,
+      "sentence_id": "s35",
+      "text": "년",
+      "normalized": "년",
+      "start": 141.28,
+      "end": 141.46
+    },
+    {
+      "token_index": 326,
+      "sentence_id": "s35",
+      "text": "뒤에는,",
+      "normalized": "뒤에는",
+      "start": 141.46,
+      "end": 141.86
+    },
+    {
+      "token_index": 327,
+      "sentence_id": "s35",
+      "text": "마시는",
+      "normalized": "마시는",
+      "start": 142.06,
+      "end": 142.4
+    },
+    {
+      "token_index": 328,
+      "sentence_id": "s35",
+      "text": "순간의",
+      "normalized": "순간의",
+      "start": 142.4,
+      "end": 142.88
+    },
+    {
+      "token_index": 329,
+      "sentence_id": "s35",
+      "text": "느낌까지",
+      "normalized": "느낌까지",
+      "start": 142.88,
+      "end": 143.42
+    },
+    {
+      "token_index": 330,
+      "sentence_id": "s35",
+      "text": "시대에",
+      "normalized": "시대에",
+      "start": 143.64,
+      "end": 143.92
+    },
+    {
+      "token_index": 331,
+      "sentence_id": "s35",
+      "text": "맞춰",
+      "normalized": "맞춰",
+      "start": 143.92,
+      "end": 144.2
+    },
+    {
+      "token_index": 332,
+      "sentence_id": "s35",
+      "text": "바꿨죠.",
+      "normalized": "바꿨죠",
+      "start": 144.2,
+      "end": 144.66
+    },
+    {
+      "token_index": 333,
+      "sentence_id": "s36",
+      "text": "우리가",
+      "normalized": "우리가",
+      "start": 144.9,
+      "end": 145.06
+    },
+    {
+      "token_index": 334,
+      "sentence_id": "s36",
+      "text": "듣는",
+      "normalized": "듣는",
+      "start": 145.06,
+      "end": 145.44
+    },
+    {
+      "token_index": 335,
+      "sentence_id": "s36",
+      "text": "그",
+      "normalized": "그",
+      "start": 145.44,
+      "end": 145.62
+    },
+    {
+      "token_index": 336,
+      "sentence_id": "s36",
+      "text": "짧은",
+      "normalized": "짧은",
+      "start": 145.62,
+      "end": 146.0
+    },
+    {
+      "token_index": 337,
+      "sentence_id": "s36",
+      "text": "치익",
+      "normalized": "치익",
+      "start": 145.953,
+      "end": 146.23
+    },
+    {
+      "token_index": 338,
+      "sentence_id": "s36",
+      "text": "소리에는,",
+      "normalized": "소리에는",
+      "start": 146.24,
+      "end": 146.66
+    },
+    {
+      "token_index": 339,
+      "sentence_id": "s36",
+      "text": "오래된",
+      "normalized": "오래된",
+      "start": 146.9,
+      "end": 147.26
+    },
+    {
+      "token_index": 340,
+      "sentence_id": "s36",
+      "text": "약이",
+      "normalized": "약이",
+      "start": 147.26,
+      "end": 147.52
+    },
+    {
+      "token_index": 341,
+      "sentence_id": "s36",
+      "text": "두",
+      "normalized": "두",
+      "start": 147.52,
+      "end": 147.66
+    },
+    {
+      "token_index": 342,
+      "sentence_id": "s36",
+      "text": "번이나",
+      "normalized": "번이나",
+      "start": 147.66,
+      "end": 148.0
+    },
+    {
+      "token_index": 343,
+      "sentence_id": "s36",
+      "text": "스스로를",
+      "normalized": "스스로를",
+      "start": 148.0,
+      "end": 148.54
+    },
+    {
+      "token_index": 344,
+      "sentence_id": "s36",
+      "text": "바꾼",
+      "normalized": "바꾼",
+      "start": 148.54,
+      "end": 148.9
+    },
+    {
+      "token_index": 345,
+      "sentence_id": "s36",
+      "text": "시간이",
+      "normalized": "시간이",
+      "start": 148.9,
+      "end": 149.14
+    },
+    {
+      "token_index": 346,
+      "sentence_id": "s36",
+      "text": "들어",
+      "normalized": "들어",
+      "start": 149.14,
+      "end": 149.38
+    },
+    {
+      "token_index": 347,
+      "sentence_id": "s36",
+      "text": "있습니다.",
+      "normalized": "있습니다",
+      "start": 149.38,
+      "end": 149.7
+    },
+    {
+      "token_index": 348,
+      "sentence_id": "s37",
+      "text": "까스활명수는,",
+      "normalized": "까스활명수는",
+      "start": 149.895,
+      "end": 150.9
+    },
+    {
+      "token_index": 349,
+      "sentence_id": "s37",
+      "text": "이렇게",
+      "normalized": "이렇게",
+      "start": 150.98,
+      "end": 151.22
+    },
+    {
+      "token_index": 350,
+      "sentence_id": "s37",
+      "text": "만들어졌습니다.",
+      "normalized": "만들어졌습니다",
+      "start": 151.22,
+      "end": 152.0
+    }
+  ],
+  "sentence_alignment": [
+    {
+      "sentence_id": "s01",
+      "text": "여기, 한국인이라면 체했거나 속이 더부룩할 때, 한 번쯤 찾았던 갈색병이 하나 있죠.",
+      "token_start_index": 0,
+      "token_end_index": 11,
+      "start": 0.0,
+      "end": 5.32,
+      "duration": 5.32
+    },
+    {
+      "sentence_id": "s02",
+      "text": "네. 이건 한국인이 정말 사랑하는 까스활명수입니다.",
+      "token_start_index": 12,
+      "token_end_index": 17,
+      "start": 5.72,
+      "end": 9.12,
+      "duration": 3.4
+    },
+    {
+      "sentence_id": "s03",
+      "text": "까스활명수 하면, 뭐가 먼저 떠오르시나요?",
+      "token_start_index": 18,
+      "token_end_index": 22,
+      "start": 9.32,
+      "end": 11.7,
+      "duration": 2.38
+    },
+    {
+      "sentence_id": "s04",
+      "text": "뚜껑을 비트는 순간, 치익.",
+      "token_start_index": 23,
+      "token_end_index": 26,
+      "start": 12.04,
+      "end": 13.88,
+      "duration": 1.84
+    },
+    {
+      "sentence_id": "s05",
+      "text": "그 톡 쏘는 느낌이 먼저 떠오르지 않나요?",
+      "token_start_index": 27,
+      "token_end_index": 33,
+      "start": 14.04,
+      "end": 16.12,
+      "duration": 2.08
+    },
+    {
+      "sentence_id": "s06",
+      "text": "그런데 이 병에 까스라는 이름이 붙기까지, 무려 칠십 년 가까이 걸렸다는 사실, 알고 계셨나요?",
+      "token_start_index": 34,
+      "token_end_index": 47,
+      "start": 16.26,
+      "end": 21.8,
+      "duration": 5.54
+    },
+    {
+      "sentence_id": "s07",
+      "text": "활명수는 천팔백구십칠년에 처음 나왔는데요. 그때는 대한제국이 막 시작되던 시절입니다.",
+      "token_start_index": 48,
+      "token_end_index": 56,
+      "start": 22.1,
+      "end": 27.28,
+      "duration": 5.18
+    },
+    {
+      "sentence_id": "s08",
+      "text": "그 당시에도 급체와 소화불량은 흔했지만, 지금처럼 약국에서 병 하나를 사서 바로 마실 수는 없었습니다.",
+      "token_start_index": 57,
+      "token_end_index": 70,
+      "start": 27.28,
+      "end": 33.7,
+      "duration": 6.42
+    },
+    {
+      "sentence_id": "s09",
+      "text": "약이 드물었고, 약이라고 해도 약재에 물을 붓고, 가마솥에서 한참 달여야 하는 탕약이 대부분이었죠.",
+      "token_start_index": 71,
+      "token_end_index": 83,
+      "start": 34.06,
+      "end": 39.96,
+      "duration": 5.9
+    },
+    {
+      "sentence_id": "s10",
+      "text": "배가 너무 아파 죽겠는데, 약 기다리다 약올라서 더 죽을 거 같은, 아주 환장할 노릇이었죠.",
+      "token_start_index": 84,
+      "token_end_index": 97,
+      "start": 40.16,
+      "end": 45.38,
+      "duration": 5.22
+    },
+    {
+      "sentence_id": "s11",
+      "text": "바로 이 불편을 그냥 지나치지 않은 사람이 있었어요.",
+      "token_start_index": 98,
+      "token_end_index": 105,
+      "start": 45.6,
+      "end": 48.26,
+      "duration": 2.66
+    },
+    {
+      "sentence_id": "s12",
+      "text": "궁중에서 근무하며 여러 생약 처방을 접했던 선전관, 민병호입니다.",
+      "token_start_index": 106,
+      "token_end_index": 113,
+      "start": 48.395,
+      "end": 52.42,
+      "duration": 4.025
+    },
+    {
+      "sentence_id": "s13",
+      "text": "민병호는 새로운 약재만 찾은 게 아니라, 사람들이 약을 먹는 방식부터 바꿔보기로 합니다.",
+      "token_start_index": 114,
+      "token_end_index": 125,
+      "start": 52.78,
+      "end": 57.74,
+      "duration": 4.96
+    },
+    {
+      "sentence_id": "s14",
+      "text": "궁중에서 쓰던 생약 처방에, 당시 서양 약의 장점과 제조 방식으로.",
+      "token_start_index": 126,
+      "token_end_index": 135,
+      "start": 57.902,
+      "end": 62.04,
+      "duration": 4.138
+    },
+    {
+      "sentence_id": "s15",
+      "text": "궁중식으로 큰 솥에 약재를 넣고 달인 뒤, 고운 체로 찌꺼기를 걸러냈습니다.",
+      "token_start_index": 136,
+      "token_end_index": 146,
+      "start": 62.132,
+      "end": 66.56,
+      "duration": 4.428
+    },
+    {
+      "sentence_id": "s16",
+      "text": "그리고 서양 약 제조 방식으로, 아선약과 정향가루, 멘톨 같은 재료를 배합해, 바로 마실 수 있는 액체약을 완성해버렸습니다.",
+      "token_start_index": 147,
+      "token_end_index": 163,
+      "start": 66.88,
+      "end": 73.94,
+      "duration": 7.06
+    },
+    {
+      "sentence_id": "s17",
+      "text": "쉽게 말하면, 약을 달이느라 죽어라 기다리지 않고, 바로 마실 수 있는 환상적인 물 같은 약을 만들어낸 겁니다.",
+      "token_start_index": 164,
+      "token_end_index": 180,
+      "start": 74.24,
+      "end": 80.24,
+      "duration": 6.0
+    },
+    {
+      "sentence_id": "s18",
+      "text": "이 환상적인 약을 가지고, 아들 민강은 동화약방을 세웠습니다.",
+      "token_start_index": 181,
+      "token_end_index": 188,
+      "start": 80.64,
+      "end": 84.12,
+      "duration": 3.48
+    },
+    {
+      "sentence_id": "s19",
+      "text": "그리고 이 약으로 여러 사람이 살 수 있도록, 대량생산의 기틀을 만들기 시작하죠.",
+      "token_start_index": 189,
+      "token_end_index": 200,
+      "start": 84.12,
+      "end": 88.74,
+      "duration": 4.62
+    },
+    {
+      "sentence_id": "s20",
+      "text": "궁중에서 쓰이던 처방이, 많은 사람이 찾을 수 있는 상품으로 나온 겁니다.",
+      "token_start_index": 201,
+      "token_end_index": 211,
+      "start": 88.865,
+      "end": 92.76,
+      "duration": 3.895
+    },
+    {
+      "sentence_id": "s21",
+      "text": "반응은, 그야말로 끝내줬습니다.",
+      "token_start_index": 212,
+      "token_end_index": 214,
+      "start": 93.18,
+      "end": 94.82,
+      "duration": 1.64
+    },
+    {
+      "sentence_id": "s22",
+      "text": "천구백십년대에는 활명수와 비슷한 이름을 붙인 유사 제품만, 약 육십 종이나 나왔으니까요.",
+      "token_start_index": 215,
+      "token_end_index": 225,
+      "start": 94.936,
+      "end": 100.54,
+      "duration": 5.604
+    },
+    {
+      "sentence_id": "s23",
+      "text": "이쯤이면, 이제 더 손댈 필요가 없어 보이잖아요?",
+      "token_start_index": 226,
+      "token_end_index": 232,
+      "start": 100.7,
+      "end": 103.28,
+      "duration": 2.58
+    },
+    {
+      "sentence_id": "s24",
+      "text": "그런데 천구백육십년대 중반, 이미 유명하던 활명수는 마시는 느낌을 또 한 번 바꿔버리죠.",
+      "token_start_index": 233,
+      "token_end_index": 244,
+      "start": 103.5,
+      "end": 108.86,
+      "duration": 5.36
+    },
+    {
+      "sentence_id": "s25",
+      "text": "잘 팔리던 약에, 굳이 왜 손을 댔을까요?",
+      "token_start_index": 245,
+      "token_end_index": 251,
+      "start": 109.12,
+      "end": 111.3,
+      "duration": 2.18
+    },
+    {
+      "sentence_id": "s26",
+      "text": "동화약품의 기록을 보면, 기존 활명수에 탄산가스를 넣어 청량감을 더했다고 나옵니다.",
+      "token_start_index": 252,
+      "token_end_index": 261,
+      "start": 111.3,
+      "end": 116.6,
+      "duration": 5.3
+    },
+    {
+      "sentence_id": "s27",
+      "text": "기존 생약 처방의 뿌리는 이어가면서, 마시는 순간의 느낌을 새롭게 만든 거죠.",
+      "token_start_index": 262,
+      "token_end_index": 272,
+      "start": 116.8,
+      "end": 121.04,
+      "duration": 4.24
+    },
+    {
+      "sentence_id": "s28",
+      "text": "병 안에 녹아 있던 탄산가스가, 뚜껑을 여는 순간 치익.",
+      "token_start_index": 273,
+      "token_end_index": 281,
+      "start": 121.32,
+      "end": 124.69,
+      "duration": 3.37
+    },
+    {
+      "sentence_id": "s29",
+      "text": "입안에서는 톡.",
+      "token_start_index": 282,
+      "token_end_index": 283,
+      "start": 124.72,
+      "end": 125.555,
+      "duration": 0.835
+    },
+    {
+      "sentence_id": "s30",
+      "text": "눈에 보이지 않던 약의 변화가, 이제는 귀와 혀로 바로 느껴지기 시작한 거죠.",
+      "token_start_index": 284,
+      "token_end_index": 295,
+      "start": 125.8,
+      "end": 129.74,
+      "duration": 3.94
+    },
+    {
+      "sentence_id": "s31",
+      "text": "그렇게 우리가 아는, 까스활명수가 등장했습니다.",
+      "token_start_index": 296,
+      "token_end_index": 300,
+      "start": 130.06,
+      "end": 132.48,
+      "duration": 2.42
+    },
+    {
+      "sentence_id": "s32",
+      "text": "다시 뚜껑을 비틀면, 치익.",
+      "token_start_index": 301,
+      "token_end_index": 304,
+      "start": 132.9,
+      "end": 134.58,
+      "duration": 1.68
+    },
+    {
+      "sentence_id": "s33",
+      "text": "이제 이 소리가, 조금 다르게 들리지 않나요?",
+      "token_start_index": 305,
+      "token_end_index": 311,
+      "start": 134.64,
+      "end": 136.98,
+      "duration": 2.34
+    },
+    {
+      "sentence_id": "s34",
+      "text": "처음에는 달여 먹던 약을, 병을 열어 바로 마실 수 있게 바꿨고요.",
+      "token_start_index": 312,
+      "token_end_index": 322,
+      "start": 137.14,
+      "end": 140.5,
+      "duration": 3.36
+    },
+    {
+      "sentence_id": "s35",
+      "text": "약 칠십 년 뒤에는, 마시는 순간의 느낌까지 시대에 맞춰 바꿨죠.",
+      "token_start_index": 323,
+      "token_end_index": 332,
+      "start": 140.5,
+      "end": 144.66,
+      "duration": 4.16
+    },
+    {
+      "sentence_id": "s36",
+      "text": "우리가 듣는 그 짧은 치익 소리에는, 오래된 약이 두 번이나 스스로를 바꾼 시간이 들어 있습니다.",
+      "token_start_index": 333,
+      "token_end_index": 347,
+      "start": 144.9,
+      "end": 149.7,
+      "duration": 4.8
+    },
+    {
+      "sentence_id": "s37",
+      "text": "까스활명수는, 이렇게 만들어졌습니다.",
+      "token_start_index": 348,
+      "token_end_index": 350,
+      "start": 149.895,
+      "end": 152.0,
+      "duration": 2.105
+    }
+  ],
+  "raw_asr_segments": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 5.32,
+      "text": " 여기 한국인이라면, 체했거나, 속이 더부룩할 때, 한 번쯤 찾았던 갈색병이 하나 있죠?",
+      "words": [
+        {
+          "text": " 여기",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.865893
+        },
+        {
+          "text": " 한국인이라면,",
+          "start": 0.26,
+          "end": 1.28,
+          "probability": 0.969069
+        },
+        {
+          "text": " 체했거나,",
+          "start": 1.44,
+          "end": 1.92,
+          "probability": 0.446552
+        },
+        {
+          "text": " 속이",
+          "start": 2.1,
+          "end": 2.4,
+          "probability": 0.992372
+        },
+        {
+          "text": " 더부룩할",
+          "start": 2.4,
+          "end": 2.96,
+          "probability": 0.790931
+        },
+        {
+          "text": " 때,",
+          "start": 2.96,
+          "end": 3.1,
+          "probability": 0.990579
+        },
+        {
+          "text": " 한",
+          "start": 3.32,
+          "end": 3.4,
+          "probability": 0.770494
+        },
+        {
+          "text": " 번쯤",
+          "start": 3.4,
+          "end": 3.72,
+          "probability": 0.976707
+        },
+        {
+          "text": " 찾았던",
+          "start": 3.72,
+          "end": 4.24,
+          "probability": 0.991835
+        },
+        {
+          "text": " 갈색병이",
+          "start": 4.24,
+          "end": 4.92,
+          "probability": 0.936561
+        },
+        {
+          "text": " 하나",
+          "start": 4.92,
+          "end": 5.06,
+          "probability": 0.999127
+        },
+        {
+          "text": " 있죠?",
+          "start": 5.06,
+          "end": 5.32,
+          "probability": 0.951843
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 5.72,
+      "end": 9.12,
+      "text": " 네, 이건 한국인이 정말 사랑하는 까스왈 명수입니다.",
+      "words": [
+        {
+          "text": " 네,",
+          "start": 5.72,
+          "end": 5.86,
+          "probability": 0.932936
+        },
+        {
+          "text": " 이건",
+          "start": 6.14,
+          "end": 6.36,
+          "probability": 0.982336
+        },
+        {
+          "text": " 한국인이",
+          "start": 6.36,
+          "end": 6.88,
+          "probability": 0.980566
+        },
+        {
+          "text": " 정말",
+          "start": 6.88,
+          "end": 7.22,
+          "probability": 0.99241
+        },
+        {
+          "text": " 사랑하는",
+          "start": 7.22,
+          "end": 7.84,
+          "probability": 0.995103
+        },
+        {
+          "text": " 까스왈",
+          "start": 7.84,
+          "end": 8.5,
+          "probability": 0.406705
+        },
+        {
+          "text": " 명수입니다.",
+          "start": 8.5,
+          "end": 9.12,
+          "probability": 0.960723
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 9.32,
+      "end": 11.7,
+      "text": " 까스왈 명수하면, 뭐가 먼저 떠오르시나요?",
+      "words": [
+        {
+          "text": " 까스왈",
+          "start": 9.32,
+          "end": 9.72,
+          "probability": 0.978128
+        },
+        {
+          "text": " 명수하면,",
+          "start": 9.72,
+          "end": 10.24,
+          "probability": 0.837937
+        },
+        {
+          "text": " 뭐가",
+          "start": 10.58,
+          "end": 10.7,
+          "probability": 0.986484
+        },
+        {
+          "text": " 먼저",
+          "start": 10.7,
+          "end": 11.02,
+          "probability": 0.997181
+        },
+        {
+          "text": " 떠오르시나요?",
+          "start": 11.02,
+          "end": 11.7,
+          "probability": 0.989129
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 12.04,
+      "end": 16.12,
+      "text": " 뚜껑을 비트는 순간, 치익. 그 톡 쏘는 느낌이 먼저 떠오르지 않나요?",
+      "words": [
+        {
+          "text": " 뚜껑을",
+          "start": 12.04,
+          "end": 12.44,
+          "probability": 0.86857
+        },
+        {
+          "text": " 비트는",
+          "start": 12.44,
+          "end": 12.86,
+          "probability": 0.908808
+        },
+        {
+          "text": " 순간,",
+          "start": 12.86,
+          "end": 13.12,
+          "probability": 0.995144
+        },
+        {
+          "text": " 치익.",
+          "start": 13.42,
+          "end": 13.88,
+          "probability": 0.324227
+        },
+        {
+          "text": " 그",
+          "start": 14.04,
+          "end": 14.04,
+          "probability": 0.979457
+        },
+        {
+          "text": " 톡",
+          "start": 14.04,
+          "end": 14.24,
+          "probability": 0.950131
+        },
+        {
+          "text": " 쏘는",
+          "start": 14.24,
+          "end": 14.5,
+          "probability": 0.957931
+        },
+        {
+          "text": " 느낌이",
+          "start": 14.5,
+          "end": 14.78,
+          "probability": 0.952789
+        },
+        {
+          "text": " 먼저",
+          "start": 14.78,
+          "end": 15.2,
+          "probability": 0.966749
+        },
+        {
+          "text": " 떠오르지",
+          "start": 15.2,
+          "end": 15.74,
+          "probability": 0.994699
+        },
+        {
+          "text": " 않나요?",
+          "start": 15.74,
+          "end": 16.12,
+          "probability": 0.997192
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 16.26,
+      "end": 21.8,
+      "text": " 그런데, 이 병의 까스라는 이름이 부키까지, 무려 70년 가까이 걸렸다는 사실, 알고 계셨나요?",
+      "words": [
+        {
+          "text": " 그런데,",
+          "start": 16.26,
+          "end": 16.54,
+          "probability": 0.963176
+        },
+        {
+          "text": " 이",
+          "start": 16.88,
+          "end": 16.96,
+          "probability": 0.983922
+        },
+        {
+          "text": " 병의",
+          "start": 16.96,
+          "end": 17.28,
+          "probability": 0.769116
+        },
+        {
+          "text": " 까스라는",
+          "start": 17.28,
+          "end": 17.74,
+          "probability": 0.829182
+        },
+        {
+          "text": " 이름이",
+          "start": 17.74,
+          "end": 18.18,
+          "probability": 0.992945
+        },
+        {
+          "text": " 부키까지,",
+          "start": 18.18,
+          "end": 18.72,
+          "probability": 0.618321
+        },
+        {
+          "text": " 무려",
+          "start": 18.96,
+          "end": 19.14,
+          "probability": 0.913184
+        },
+        {
+          "text": " 70년",
+          "start": 19.14,
+          "end": 19.7,
+          "probability": 0.987101
+        },
+        {
+          "text": " 가까이",
+          "start": 19.7,
+          "end": 20.08,
+          "probability": 0.997475
+        },
+        {
+          "text": " 걸렸다는",
+          "start": 20.08,
+          "end": 20.54,
+          "probability": 0.994171
+        },
+        {
+          "text": " 사실,",
+          "start": 20.54,
+          "end": 20.88,
+          "probability": 0.996353
+        },
+        {
+          "text": " 알고",
+          "start": 21.12,
+          "end": 21.34,
+          "probability": 0.998169
+        },
+        {
+          "text": " 계셨나요?",
+          "start": 21.34,
+          "end": 21.8,
+          "probability": 0.990522
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 22.1,
+      "end": 24.66,
+      "text": " 활명수는 1897년에 처음 나왔는데요.",
+      "words": [
+        {
+          "text": " 활명수는",
+          "start": 22.1,
+          "end": 22.64,
+          "probability": 0.868104
+        },
+        {
+          "text": " 1897년에",
+          "start": 22.64,
+          "end": 23.88,
+          "probability": 0.985152
+        },
+        {
+          "text": " 처음",
+          "start": 23.88,
+          "end": 24.14,
+          "probability": 0.961462
+        },
+        {
+          "text": " 나왔는데요.",
+          "start": 24.14,
+          "end": 24.66,
+          "probability": 0.980186
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 24.96,
+      "end": 27.28,
+      "text": " 그때는 대안제국이 막 시작되던 시절입니다.",
+      "words": [
+        {
+          "text": " 그때는",
+          "start": 24.96,
+          "end": 25.38,
+          "probability": 0.80037
+        },
+        {
+          "text": " 대안제국이",
+          "start": 25.38,
+          "end": 26.1,
+          "probability": 0.758516
+        },
+        {
+          "text": " 막",
+          "start": 26.1,
+          "end": 26.28,
+          "probability": 0.992879
+        },
+        {
+          "text": " 시작되던",
+          "start": 26.28,
+          "end": 26.84,
+          "probability": 0.946601
+        },
+        {
+          "text": " 시절입니다.",
+          "start": 26.84,
+          "end": 27.28,
+          "probability": 0.98713
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 27.28,
+      "end": 30.02,
+      "text": " 그 당시에도 급체와 소화불량은 한했지만,",
+      "words": [
+        {
+          "text": " 그",
+          "start": 27.28,
+          "end": 27.7,
+          "probability": 0.741075
+        },
+        {
+          "text": " 당시에도",
+          "start": 27.7,
+          "end": 28.2,
+          "probability": 0.863878
+        },
+        {
+          "text": " 급체와",
+          "start": 28.2,
+          "end": 28.8,
+          "probability": 0.870208
+        },
+        {
+          "text": " 소화불량은",
+          "start": 28.8,
+          "end": 29.5,
+          "probability": 0.89368
+        },
+        {
+          "text": " 한했지만,",
+          "start": 29.5,
+          "end": 30.02,
+          "probability": 0.766429
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 30.24,
+      "end": 33.7,
+      "text": " 지금처럼 약국에서 병 하나를 사서 바로 마실 수는 없었습니다.",
+      "words": [
+        {
+          "text": " 지금처럼",
+          "start": 30.24,
+          "end": 30.8,
+          "probability": 0.983488
+        },
+        {
+          "text": " 약국에서",
+          "start": 30.8,
+          "end": 31.34,
+          "probability": 0.98279
+        },
+        {
+          "text": " 병",
+          "start": 31.34,
+          "end": 31.62,
+          "probability": 0.99718
+        },
+        {
+          "text": " 하나를",
+          "start": 31.62,
+          "end": 31.98,
+          "probability": 0.583294
+        },
+        {
+          "text": " 사서",
+          "start": 31.98,
+          "end": 32.34,
+          "probability": 0.993768
+        },
+        {
+          "text": " 바로",
+          "start": 32.34,
+          "end": 32.6,
+          "probability": 0.982181
+        },
+        {
+          "text": " 마실",
+          "start": 32.6,
+          "end": 32.94,
+          "probability": 0.992806
+        },
+        {
+          "text": " 수는",
+          "start": 32.94,
+          "end": 33.2,
+          "probability": 0.971998
+        },
+        {
+          "text": " 없었습니다.",
+          "start": 33.2,
+          "end": 33.7,
+          "probability": 0.996448
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 34.06,
+      "end": 36.98,
+      "text": " 약이 드물었고, 약이라고 해도 약제에 물을 붓고,",
+      "words": [
+        {
+          "text": " 약이",
+          "start": 34.06,
+          "end": 34.36,
+          "probability": 0.961734
+        },
+        {
+          "text": " 드물었고,",
+          "start": 34.36,
+          "end": 34.92,
+          "probability": 0.931851
+        },
+        {
+          "text": " 약이라고",
+          "start": 35.1,
+          "end": 35.44,
+          "probability": 0.981979
+        },
+        {
+          "text": " 해도",
+          "start": 35.44,
+          "end": 35.74,
+          "probability": 0.976714
+        },
+        {
+          "text": " 약제에",
+          "start": 35.74,
+          "end": 36.32,
+          "probability": 0.814497
+        },
+        {
+          "text": " 물을",
+          "start": 36.32,
+          "end": 36.58,
+          "probability": 0.988456
+        },
+        {
+          "text": " 붓고,",
+          "start": 36.58,
+          "end": 36.98,
+          "probability": 0.905844
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 37.14,
+      "end": 39.96,
+      "text": " 가마솥에서 한참 다려야 하는 탕약이 대부분이었죠.",
+      "words": [
+        {
+          "text": " 가마솥에서",
+          "start": 37.14,
+          "end": 37.7,
+          "probability": 0.884434
+        },
+        {
+          "text": " 한참",
+          "start": 37.7,
+          "end": 38.12,
+          "probability": 0.992391
+        },
+        {
+          "text": " 다려야",
+          "start": 38.12,
+          "end": 38.52,
+          "probability": 0.872515
+        },
+        {
+          "text": " 하는",
+          "start": 38.52,
+          "end": 38.72,
+          "probability": 0.822614
+        },
+        {
+          "text": " 탕약이",
+          "start": 38.72,
+          "end": 39.18,
+          "probability": 0.945626
+        },
+        {
+          "text": " 대부분이었죠.",
+          "start": 39.18,
+          "end": 39.96,
+          "probability": 0.986586
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 40.16,
+      "end": 45.38,
+      "text": " 배가 너무 아파 죽겠는데, 약 기다리다 약올라서 더 죽을 것 같은, 아주 환장할 누르시였죠?",
+      "words": [
+        {
+          "text": " 배가",
+          "start": 40.16,
+          "end": 40.4,
+          "probability": 0.944187
+        },
+        {
+          "text": " 너무",
+          "start": 40.4,
+          "end": 40.6,
+          "probability": 0.997277
+        },
+        {
+          "text": " 아파",
+          "start": 40.6,
+          "end": 40.84,
+          "probability": 0.98997
+        },
+        {
+          "text": " 죽겠는데,",
+          "start": 40.84,
+          "end": 41.44,
+          "probability": 0.973725
+        },
+        {
+          "text": " 약",
+          "start": 41.74,
+          "end": 41.9,
+          "probability": 0.982314
+        },
+        {
+          "text": " 기다리다",
+          "start": 41.9,
+          "end": 42.3,
+          "probability": 0.900505
+        },
+        {
+          "text": " 약올라서",
+          "start": 42.3,
+          "end": 42.8,
+          "probability": 0.868303
+        },
+        {
+          "text": " 더",
+          "start": 42.8,
+          "end": 43.1,
+          "probability": 0.996171
+        },
+        {
+          "text": " 죽을",
+          "start": 43.1,
+          "end": 43.42,
+          "probability": 0.99779
+        },
+        {
+          "text": " 것",
+          "start": 43.42,
+          "end": 43.54,
+          "probability": 0.764708
+        },
+        {
+          "text": " 같은,",
+          "start": 43.54,
+          "end": 43.82,
+          "probability": 0.984493
+        },
+        {
+          "text": " 아주",
+          "start": 44.02,
+          "end": 44.24,
+          "probability": 0.99269
+        },
+        {
+          "text": " 환장할",
+          "start": 44.24,
+          "end": 44.78,
+          "probability": 0.886762
+        },
+        {
+          "text": " 누르시였죠?",
+          "start": 44.78,
+          "end": 45.38,
+          "probability": 0.849482
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 45.6,
+      "end": 48.26,
+      "text": " 바로 이 불편을 그냥 지나치지 않은 사람이 있었어요.",
+      "words": [
+        {
+          "text": " 바로",
+          "start": 45.6,
+          "end": 45.76,
+          "probability": 0.996694
+        },
+        {
+          "text": " 이",
+          "start": 45.76,
+          "end": 45.96,
+          "probability": 0.990325
+        },
+        {
+          "text": " 불편을",
+          "start": 45.96,
+          "end": 46.48,
+          "probability": 0.996501
+        },
+        {
+          "text": " 그냥",
+          "start": 46.48,
+          "end": 46.68,
+          "probability": 0.99785
+        },
+        {
+          "text": " 지나치지",
+          "start": 46.68,
+          "end": 47.24,
+          "probability": 0.997424
+        },
+        {
+          "text": " 않은",
+          "start": 47.24,
+          "end": 47.38,
+          "probability": 0.914238
+        },
+        {
+          "text": " 사람이",
+          "start": 47.38,
+          "end": 47.74,
+          "probability": 0.995282
+        },
+        {
+          "text": " 있었어요.",
+          "start": 47.74,
+          "end": 48.26,
+          "probability": 0.997402
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 48.54,
+      "end": 52.42,
+      "text": " 공중에서 근무하며, 여러 생약 처방을 접했던 선정관, 민병호입니다.",
+      "words": [
+        {
+          "text": " 공중에서",
+          "start": 48.54,
+          "end": 49.02,
+          "probability": 0.828049
+        },
+        {
+          "text": " 근무하며,",
+          "start": 49.02,
+          "end": 49.62,
+          "probability": 0.977397
+        },
+        {
+          "text": " 여러",
+          "start": 49.74,
+          "end": 49.92,
+          "probability": 0.990598
+        },
+        {
+          "text": " 생약",
+          "start": 49.92,
+          "end": 50.26,
+          "probability": 0.950062
+        },
+        {
+          "text": " 처방을",
+          "start": 50.26,
+          "end": 50.64,
+          "probability": 0.870106
+        },
+        {
+          "text": " 접했던",
+          "start": 50.64,
+          "end": 51.08,
+          "probability": 0.992029
+        },
+        {
+          "text": " 선정관,",
+          "start": 51.08,
+          "end": 51.68,
+          "probability": 0.971804
+        },
+        {
+          "text": " 민병호입니다.",
+          "start": 51.94,
+          "end": 52.42,
+          "probability": 0.857443
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 52.78,
+      "end": 54.7,
+      "text": " 민병호는 새로운 약제만 찾은 게 아니라,",
+      "words": [
+        {
+          "text": " 민병호는",
+          "start": 52.78,
+          "end": 53.3,
+          "probability": 0.993213
+        },
+        {
+          "text": " 새로운",
+          "start": 53.3,
+          "end": 53.52,
+          "probability": 0.992306
+        },
+        {
+          "text": " 약제만",
+          "start": 53.52,
+          "end": 54.12,
+          "probability": 0.960593
+        },
+        {
+          "text": " 찾은",
+          "start": 54.12,
+          "end": 54.44,
+          "probability": 0.992176
+        },
+        {
+          "text": " 게",
+          "start": 54.44,
+          "end": 54.52,
+          "probability": 0.881289
+        },
+        {
+          "text": " 아니라,",
+          "start": 54.52,
+          "end": 54.7,
+          "probability": 0.996325
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 54.7,
+      "end": 57.74,
+      "text": " 사람들이 약을 먹는 방식부터 바꿔보기로 합니다.",
+      "words": [
+        {
+          "text": " 사람들이",
+          "start": 54.7,
+          "end": 55.48,
+          "probability": 0.008098
+        },
+        {
+          "text": " 약을",
+          "start": 55.48,
+          "end": 55.94,
+          "probability": 0.979294
+        },
+        {
+          "text": " 먹는",
+          "start": 55.94,
+          "end": 56.14,
+          "probability": 0.995666
+        },
+        {
+          "text": " 방식부터",
+          "start": 56.14,
+          "end": 56.84,
+          "probability": 0.949206
+        },
+        {
+          "text": " 바꿔보기로",
+          "start": 56.84,
+          "end": 57.48,
+          "probability": 0.867356
+        },
+        {
+          "text": " 합니다.",
+          "start": 57.48,
+          "end": 57.74,
+          "probability": 0.979416
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 58.04,
+      "end": 62.04,
+      "text": " 공중에서 쓰던 생약 처방에, 당시 서양약의 장점과 제조 방식으로,",
+      "words": [
+        {
+          "text": " 공중에서",
+          "start": 58.04,
+          "end": 58.48,
+          "probability": 0.643295
+        },
+        {
+          "text": " 쓰던",
+          "start": 58.48,
+          "end": 58.84,
+          "probability": 0.996433
+        },
+        {
+          "text": " 생약",
+          "start": 58.84,
+          "end": 59.16,
+          "probability": 0.946295
+        },
+        {
+          "text": " 처방에,",
+          "start": 59.16,
+          "end": 59.64,
+          "probability": 0.823505
+        },
+        {
+          "text": " 당시",
+          "start": 59.82,
+          "end": 60.0,
+          "probability": 0.987614
+        },
+        {
+          "text": " 서양약의",
+          "start": 60.0,
+          "end": 60.66,
+          "probability": 0.945779
+        },
+        {
+          "text": " 장점과",
+          "start": 60.66,
+          "end": 61.22,
+          "probability": 0.994326
+        },
+        {
+          "text": " 제조",
+          "start": 61.22,
+          "end": 61.54,
+          "probability": 0.889717
+        },
+        {
+          "text": " 방식으로,",
+          "start": 61.54,
+          "end": 62.04,
+          "probability": 0.993568
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 62.22,
+      "end": 66.56,
+      "text": " 공중식으로 큰 소태의 약제를 넣고 다린 뒤, 고운 채로 찌꺼기를 걸러냈습니다.",
+      "words": [
+        {
+          "text": " 공중식으로",
+          "start": 62.22,
+          "end": 62.86,
+          "probability": 0.962686
+        },
+        {
+          "text": " 큰",
+          "start": 62.86,
+          "end": 63.1,
+          "probability": 0.991137
+        },
+        {
+          "text": " 소태의",
+          "start": 63.1,
+          "end": 63.52,
+          "probability": 0.621974
+        },
+        {
+          "text": " 약제를",
+          "start": 63.52,
+          "end": 63.84,
+          "probability": 0.87934
+        },
+        {
+          "text": " 넣고",
+          "start": 63.84,
+          "end": 64.18,
+          "probability": 0.994655
+        },
+        {
+          "text": " 다린",
+          "start": 64.18,
+          "end": 64.52,
+          "probability": 0.592425
+        },
+        {
+          "text": " 뒤,",
+          "start": 64.52,
+          "end": 64.68,
+          "probability": 0.991491
+        },
+        {
+          "text": " 고운",
+          "start": 64.9,
+          "end": 65.14,
+          "probability": 0.895354
+        },
+        {
+          "text": " 채로",
+          "start": 65.14,
+          "end": 65.4,
+          "probability": 0.755226
+        },
+        {
+          "text": " 찌꺼기를",
+          "start": 65.4,
+          "end": 65.84,
+          "probability": 0.819046
+        },
+        {
+          "text": " 걸러냈습니다.",
+          "start": 65.84,
+          "end": 66.56,
+          "probability": 0.985869
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 66.88,
+      "end": 71.42,
+      "text": " 그리고 서양약 제조 방식으로, 아선약과 정양가루, 멘톨 같은 재료를 배합해,",
+      "words": [
+        {
+          "text": " 그리고",
+          "start": 66.88,
+          "end": 67.08,
+          "probability": 0.987494
+        },
+        {
+          "text": " 서양약",
+          "start": 67.08,
+          "end": 67.64,
+          "probability": 0.971322
+        },
+        {
+          "text": " 제조",
+          "start": 67.64,
+          "end": 67.92,
+          "probability": 0.928993
+        },
+        {
+          "text": " 방식으로,",
+          "start": 67.92,
+          "end": 68.48,
+          "probability": 0.998231
+        },
+        {
+          "text": " 아선약과",
+          "start": 68.7,
+          "end": 69.2,
+          "probability": 0.838366
+        },
+        {
+          "text": " 정양가루,",
+          "start": 69.2,
+          "end": 69.82,
+          "probability": 0.849412
+        },
+        {
+          "text": " 멘톨",
+          "start": 70.04,
+          "end": 70.3,
+          "probability": 0.849365
+        },
+        {
+          "text": " 같은",
+          "start": 70.3,
+          "end": 70.5,
+          "probability": 0.878577
+        },
+        {
+          "text": " 재료를",
+          "start": 70.5,
+          "end": 70.94,
+          "probability": 0.984566
+        },
+        {
+          "text": " 배합해,",
+          "start": 70.94,
+          "end": 71.42,
+          "probability": 0.924795
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 71.62,
+      "end": 73.94,
+      "text": " 바로 마실 수 있는 액체약을 완성해버렸습니다.",
+      "words": [
+        {
+          "text": " 바로",
+          "start": 71.62,
+          "end": 71.78,
+          "probability": 0.998165
+        },
+        {
+          "text": " 마실",
+          "start": 71.78,
+          "end": 72.14,
+          "probability": 0.98994
+        },
+        {
+          "text": " 수",
+          "start": 72.14,
+          "end": 72.28,
+          "probability": 0.980634
+        },
+        {
+          "text": " 있는",
+          "start": 72.28,
+          "end": 72.46,
+          "probability": 0.993335
+        },
+        {
+          "text": " 액체약을",
+          "start": 72.46,
+          "end": 73.06,
+          "probability": 0.868845
+        },
+        {
+          "text": " 완성해버렸습니다.",
+          "start": 73.06,
+          "end": 73.94,
+          "probability": 0.918554
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 74.24,
+      "end": 76.9,
+      "text": " 쉽게 말하면, 약을 다리느라 죽어라 기다리지 않고,",
+      "words": [
+        {
+          "text": " 쉽게",
+          "start": 74.24,
+          "end": 74.54,
+          "probability": 0.992473
+        },
+        {
+          "text": " 말하면,",
+          "start": 74.54,
+          "end": 74.92,
+          "probability": 0.994954
+        },
+        {
+          "text": " 약을",
+          "start": 75.22,
+          "end": 75.4,
+          "probability": 0.980947
+        },
+        {
+          "text": " 다리느라",
+          "start": 75.4,
+          "end": 75.86,
+          "probability": 0.931797
+        },
+        {
+          "text": " 죽어라",
+          "start": 75.86,
+          "end": 76.26,
+          "probability": 0.921988
+        },
+        {
+          "text": " 기다리지",
+          "start": 76.26,
+          "end": 76.7,
+          "probability": 0.982787
+        },
+        {
+          "text": " 않고,",
+          "start": 76.7,
+          "end": 76.9,
+          "probability": 0.992437
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 77.26,
+      "end": 80.24,
+      "text": " 바로 마실 수 있는 환상적인 물 같은 약을 만들어낸 겁니다.",
+      "words": [
+        {
+          "text": " 바로",
+          "start": 77.26,
+          "end": 77.38,
+          "probability": 0.998492
+        },
+        {
+          "text": " 마실",
+          "start": 77.38,
+          "end": 77.72,
+          "probability": 0.994045
+        },
+        {
+          "text": " 수",
+          "start": 77.72,
+          "end": 77.86,
+          "probability": 0.991684
+        },
+        {
+          "text": " 있는",
+          "start": 77.86,
+          "end": 78.12,
+          "probability": 0.993535
+        },
+        {
+          "text": " 환상적인",
+          "start": 78.12,
+          "end": 78.78,
+          "probability": 0.980582
+        },
+        {
+          "text": " 물",
+          "start": 78.78,
+          "end": 78.98,
+          "probability": 0.997983
+        },
+        {
+          "text": " 같은",
+          "start": 78.98,
+          "end": 79.18,
+          "probability": 0.874923
+        },
+        {
+          "text": " 약을",
+          "start": 79.18,
+          "end": 79.58,
+          "probability": 0.997314
+        },
+        {
+          "text": " 만들어낸",
+          "start": 79.58,
+          "end": 80.1,
+          "probability": 0.920841
+        },
+        {
+          "text": " 겁니다.",
+          "start": 80.1,
+          "end": 80.24,
+          "probability": 0.960832
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 80.64,
+      "end": 84.12,
+      "text": " 이 환상적인 약을 가지고, 아들 민강은 동화약방을 세웠습니다.",
+      "words": [
+        {
+          "text": " 이",
+          "start": 80.64,
+          "end": 80.76,
+          "probability": 0.99584
+        },
+        {
+          "text": " 환상적인",
+          "start": 80.76,
+          "end": 81.36,
+          "probability": 0.996078
+        },
+        {
+          "text": " 약을",
+          "start": 81.36,
+          "end": 81.68,
+          "probability": 0.99789
+        },
+        {
+          "text": " 가지고,",
+          "start": 81.68,
+          "end": 81.92,
+          "probability": 0.989779
+        },
+        {
+          "text": " 아들",
+          "start": 82.3,
+          "end": 82.48,
+          "probability": 0.991679
+        },
+        {
+          "text": " 민강은",
+          "start": 82.48,
+          "end": 82.96,
+          "probability": 0.903332
+        },
+        {
+          "text": " 동화약방을",
+          "start": 82.96,
+          "end": 83.64,
+          "probability": 0.902398
+        },
+        {
+          "text": " 세웠습니다.",
+          "start": 83.64,
+          "end": 84.12,
+          "probability": 0.978014
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 84.12,
+      "end": 88.74,
+      "text": " 그리고 이 약으로 여러 사람이 살 수 있도록, 대량 생산의 기트를 만들기 시작하죠.",
+      "words": [
+        {
+          "text": " 그리고",
+          "start": 84.12,
+          "end": 84.6,
+          "probability": 0.588308
+        },
+        {
+          "text": " 이",
+          "start": 84.6,
+          "end": 84.94,
+          "probability": 0.976534
+        },
+        {
+          "text": " 약으로",
+          "start": 84.94,
+          "end": 85.32,
+          "probability": 0.978122
+        },
+        {
+          "text": " 여러",
+          "start": 85.32,
+          "end": 85.58,
+          "probability": 0.981541
+        },
+        {
+          "text": " 사람이",
+          "start": 85.58,
+          "end": 85.92,
+          "probability": 0.964509
+        },
+        {
+          "text": " 살",
+          "start": 85.92,
+          "end": 86.12,
+          "probability": 0.975123
+        },
+        {
+          "text": " 수",
+          "start": 86.12,
+          "end": 86.3,
+          "probability": 0.998156
+        },
+        {
+          "text": " 있도록,",
+          "start": 86.3,
+          "end": 86.58,
+          "probability": 0.997423
+        },
+        {
+          "text": " 대량",
+          "start": 86.76,
+          "end": 87.0,
+          "probability": 0.986112
+        },
+        {
+          "text": " 생산의",
+          "start": 87.0,
+          "end": 87.44,
+          "probability": 0.91476
+        },
+        {
+          "text": " 기트를",
+          "start": 87.44,
+          "end": 87.72,
+          "probability": 0.756449
+        },
+        {
+          "text": " 만들기",
+          "start": 87.72,
+          "end": 88.26,
+          "probability": 0.994027
+        },
+        {
+          "text": " 시작하죠.",
+          "start": 88.26,
+          "end": 88.74,
+          "probability": 0.991777
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 88.98,
+      "end": 92.76,
+      "text": " 공중에서 쓰이던 처방이, 많은 사람이 찾을 수 있는 상품으로 나온 겁니다.",
+      "words": [
+        {
+          "text": " 공중에서",
+          "start": 88.98,
+          "end": 89.5,
+          "probability": 0.552327
+        },
+        {
+          "text": " 쓰이던",
+          "start": 89.5,
+          "end": 89.88,
+          "probability": 0.986364
+        },
+        {
+          "text": " 처방이,",
+          "start": 89.88,
+          "end": 90.42,
+          "probability": 0.979154
+        },
+        {
+          "text": " 많은",
+          "start": 90.64,
+          "end": 90.8,
+          "probability": 0.991411
+        },
+        {
+          "text": " 사람이",
+          "start": 90.8,
+          "end": 91.12,
+          "probability": 0.990943
+        },
+        {
+          "text": " 찾을",
+          "start": 91.12,
+          "end": 91.52,
+          "probability": 0.980711
+        },
+        {
+          "text": " 수",
+          "start": 91.52,
+          "end": 91.64,
+          "probability": 0.994146
+        },
+        {
+          "text": " 있는",
+          "start": 91.64,
+          "end": 91.8,
+          "probability": 0.99366
+        },
+        {
+          "text": " 상품으로",
+          "start": 91.8,
+          "end": 92.36,
+          "probability": 0.990578
+        },
+        {
+          "text": " 나온",
+          "start": 92.36,
+          "end": 92.58,
+          "probability": 0.998013
+        },
+        {
+          "text": " 겁니다.",
+          "start": 92.58,
+          "end": 92.76,
+          "probability": 0.951511
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 93.18,
+      "end": 94.82,
+      "text": " 반응은 그야말로 끝내줬습니다.",
+      "words": [
+        {
+          "text": " 반응은",
+          "start": 93.18,
+          "end": 93.62,
+          "probability": 0.98946
+        },
+        {
+          "text": " 그야말로",
+          "start": 93.62,
+          "end": 94.16,
+          "probability": 0.984385
+        },
+        {
+          "text": " 끝내줬습니다.",
+          "start": 94.16,
+          "end": 94.82,
+          "probability": 0.826248
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 95.52,
+      "end": 100.54,
+      "text": " 1910년도에는, 활명수와 비슷한 이름을 붙인 유사제품만, 약 60종이나 나왔으니까요.",
+      "words": [
+        {
+          "text": " 1910년도에는,",
+          "start": 95.52,
+          "end": 96.16,
+          "probability": 0.813228
+        },
+        {
+          "text": " 활명수와",
+          "start": 96.38,
+          "end": 96.92,
+          "probability": 0.856048
+        },
+        {
+          "text": " 비슷한",
+          "start": 96.92,
+          "end": 97.36,
+          "probability": 0.998973
+        },
+        {
+          "text": " 이름을",
+          "start": 97.36,
+          "end": 97.66,
+          "probability": 0.997074
+        },
+        {
+          "text": " 붙인",
+          "start": 97.66,
+          "end": 98.0,
+          "probability": 0.972749
+        },
+        {
+          "text": " 유사제품만,",
+          "start": 98.0,
+          "end": 98.76,
+          "probability": 0.877092
+        },
+        {
+          "text": " 약",
+          "start": 98.96,
+          "end": 99.1,
+          "probability": 0.995997
+        },
+        {
+          "text": " 60종이나",
+          "start": 99.1,
+          "end": 99.76,
+          "probability": 0.981621
+        },
+        {
+          "text": " 나왔으니까요.",
+          "start": 99.76,
+          "end": 100.54,
+          "probability": 0.971767
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 100.7,
+      "end": 103.28,
+      "text": " 이쯤이면, 이제 더 선될 필요가 없어 보이잖아요?",
+      "words": [
+        {
+          "text": " 이쯤이면,",
+          "start": 100.7,
+          "end": 101.18,
+          "probability": 0.965538
+        },
+        {
+          "text": " 이제",
+          "start": 101.46,
+          "end": 101.62,
+          "probability": 0.982501
+        },
+        {
+          "text": " 더",
+          "start": 101.62,
+          "end": 101.8,
+          "probability": 0.986936
+        },
+        {
+          "text": " 선될",
+          "start": 101.8,
+          "end": 102.16,
+          "probability": 0.715479
+        },
+        {
+          "text": " 필요가",
+          "start": 102.16,
+          "end": 102.48,
+          "probability": 0.954888
+        },
+        {
+          "text": " 없어",
+          "start": 102.48,
+          "end": 102.68,
+          "probability": 0.717523
+        },
+        {
+          "text": " 보이잖아요?",
+          "start": 102.68,
+          "end": 103.28,
+          "probability": 0.981363
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 103.5,
+      "end": 108.86,
+      "text": " 그런데 1960년대 중반, 이미 유명하던 활명수는 마시는 느낌을 또 한 번 바꿔버리죠.",
+      "words": [
+        {
+          "text": " 그런데",
+          "start": 103.5,
+          "end": 103.74,
+          "probability": 0.951842
+        },
+        {
+          "text": " 1960년대",
+          "start": 103.74,
+          "end": 104.78,
+          "probability": 0.944796
+        },
+        {
+          "text": " 중반,",
+          "start": 104.78,
+          "end": 105.18,
+          "probability": 0.950988
+        },
+        {
+          "text": " 이미",
+          "start": 105.38,
+          "end": 105.56,
+          "probability": 0.998054
+        },
+        {
+          "text": " 유명하던",
+          "start": 105.56,
+          "end": 106.16,
+          "probability": 0.995246
+        },
+        {
+          "text": " 활명수는",
+          "start": 106.16,
+          "end": 106.82,
+          "probability": 0.994324
+        },
+        {
+          "text": " 마시는",
+          "start": 106.82,
+          "end": 107.3,
+          "probability": 0.605155
+        },
+        {
+          "text": " 느낌을",
+          "start": 107.3,
+          "end": 107.78,
+          "probability": 0.995523
+        },
+        {
+          "text": " 또",
+          "start": 107.78,
+          "end": 107.92,
+          "probability": 0.943189
+        },
+        {
+          "text": " 한",
+          "start": 107.92,
+          "end": 108.08,
+          "probability": 0.51172
+        },
+        {
+          "text": " 번",
+          "start": 108.08,
+          "end": 108.2,
+          "probability": 0.994434
+        },
+        {
+          "text": " 바꿔버리죠.",
+          "start": 108.2,
+          "end": 108.86,
+          "probability": 0.952298
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 109.12,
+      "end": 111.3,
+      "text": " 잘 팔리던 약에, 굳이 왜 손을 냈을까요?",
+      "words": [
+        {
+          "text": " 잘",
+          "start": 109.12,
+          "end": 109.28,
+          "probability": 0.98099
+        },
+        {
+          "text": " 팔리던",
+          "start": 109.28,
+          "end": 109.68,
+          "probability": 0.996525
+        },
+        {
+          "text": " 약에,",
+          "start": 109.68,
+          "end": 110.04,
+          "probability": 0.946548
+        },
+        {
+          "text": " 굳이",
+          "start": 110.24,
+          "end": 110.44,
+          "probability": 0.990764
+        },
+        {
+          "text": " 왜",
+          "start": 110.44,
+          "end": 110.6,
+          "probability": 0.996995
+        },
+        {
+          "text": " 손을",
+          "start": 110.6,
+          "end": 110.86,
+          "probability": 0.99075
+        },
+        {
+          "text": " 냈을까요?",
+          "start": 110.86,
+          "end": 111.3,
+          "probability": 0.816787
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 111.3,
+      "end": 116.6,
+      "text": " 동화약품의 기록을 보면, 기존 활명수의 탄산가스를 넣어 청량감을 더했다고 나옵니다.",
+      "words": [
+        {
+          "text": " 동화약품의",
+          "start": 111.3,
+          "end": 112.24,
+          "probability": 0.690914
+        },
+        {
+          "text": " 기록을",
+          "start": 112.24,
+          "end": 112.6,
+          "probability": 0.995933
+        },
+        {
+          "text": " 보면,",
+          "start": 112.6,
+          "end": 112.78,
+          "probability": 0.98362
+        },
+        {
+          "text": " 기존",
+          "start": 113.14,
+          "end": 113.34,
+          "probability": 0.991873
+        },
+        {
+          "text": " 활명수의",
+          "start": 113.34,
+          "end": 114.02,
+          "probability": 0.812328
+        },
+        {
+          "text": " 탄산가스를",
+          "start": 114.02,
+          "end": 114.68,
+          "probability": 0.921934
+        },
+        {
+          "text": " 넣어",
+          "start": 114.68,
+          "end": 115.12,
+          "probability": 0.974309
+        },
+        {
+          "text": " 청량감을",
+          "start": 115.12,
+          "end": 115.66,
+          "probability": 0.875016
+        },
+        {
+          "text": " 더했다고",
+          "start": 115.66,
+          "end": 116.1,
+          "probability": 0.971698
+        },
+        {
+          "text": " 나옵니다.",
+          "start": 116.1,
+          "end": 116.6,
+          "probability": 0.997319
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 116.8,
+      "end": 121.04,
+      "text": " 기존 생약 처방에 뿌리는 이어가면서, 마시는 순간의 느낌을 새롭게 만든 거죠.",
+      "words": [
+        {
+          "text": " 기존",
+          "start": 116.8,
+          "end": 117.04,
+          "probability": 0.989565
+        },
+        {
+          "text": " 생약",
+          "start": 117.04,
+          "end": 117.36,
+          "probability": 0.981411
+        },
+        {
+          "text": " 처방에",
+          "start": 117.36,
+          "end": 117.76,
+          "probability": 0.831774
+        },
+        {
+          "text": " 뿌리는",
+          "start": 117.76,
+          "end": 118.02,
+          "probability": 0.994377
+        },
+        {
+          "text": " 이어가면서,",
+          "start": 118.02,
+          "end": 118.76,
+          "probability": 0.898741
+        },
+        {
+          "text": " 마시는",
+          "start": 118.98,
+          "end": 119.32,
+          "probability": 0.681974
+        },
+        {
+          "text": " 순간의",
+          "start": 119.32,
+          "end": 119.8,
+          "probability": 0.977582
+        },
+        {
+          "text": " 느낌을",
+          "start": 119.8,
+          "end": 120.18,
+          "probability": 0.992728
+        },
+        {
+          "text": " 새롭게",
+          "start": 120.18,
+          "end": 120.58,
+          "probability": 0.996501
+        },
+        {
+          "text": " 만든",
+          "start": 120.58,
+          "end": 120.78,
+          "probability": 0.997613
+        },
+        {
+          "text": " 거죠.",
+          "start": 120.78,
+          "end": 121.04,
+          "probability": 0.700942
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 121.32,
+      "end": 124.52,
+      "text": " 병 안에 녹아있던 탄산가스가, 뚜껑을 여는 순간, 치!",
+      "words": [
+        {
+          "text": " 병",
+          "start": 121.32,
+          "end": 121.46,
+          "probability": 0.989269
+        },
+        {
+          "text": " 안에",
+          "start": 121.46,
+          "end": 121.64,
+          "probability": 0.944708
+        },
+        {
+          "text": " 녹아있던",
+          "start": 121.64,
+          "end": 122.14,
+          "probability": 0.927827
+        },
+        {
+          "text": " 탄산가스가,",
+          "start": 122.14,
+          "end": 122.94,
+          "probability": 0.973985
+        },
+        {
+          "text": " 뚜껑을",
+          "start": 123.16,
+          "end": 123.56,
+          "probability": 0.990144
+        },
+        {
+          "text": " 여는",
+          "start": 123.56,
+          "end": 123.82,
+          "probability": 0.944653
+        },
+        {
+          "text": " 순간,",
+          "start": 123.82,
+          "end": 124.08,
+          "probability": 0.991929
+        },
+        {
+          "text": " 치!",
+          "start": 124.36,
+          "end": 124.52,
+          "probability": 0.324178
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 124.72,
+      "end": 129.74,
+      "text": " 입 안에서는 턱, 눈에 보이지 않던 약의 변화가, 이제는 귀와 혀로 바로 느껴지기 시작한 거죠.",
+      "words": [
+        {
+          "text": " 입",
+          "start": 124.72,
+          "end": 124.86,
+          "probability": 0.947107
+        },
+        {
+          "text": " 안에서는",
+          "start": 124.86,
+          "end": 125.2,
+          "probability": 0.722609
+        },
+        {
+          "text": " 턱,",
+          "start": 125.2,
+          "end": 125.72,
+          "probability": 0.61299
+        },
+        {
+          "text": " 눈에",
+          "start": 125.8,
+          "end": 126.02,
+          "probability": 0.991685
+        },
+        {
+          "text": " 보이지",
+          "start": 126.02,
+          "end": 126.28,
+          "probability": 0.998078
+        },
+        {
+          "text": " 않던",
+          "start": 126.28,
+          "end": 126.6,
+          "probability": 0.988153
+        },
+        {
+          "text": " 약의",
+          "start": 126.6,
+          "end": 126.94,
+          "probability": 0.967136
+        },
+        {
+          "text": " 변화가,",
+          "start": 126.94,
+          "end": 127.36,
+          "probability": 0.99604
+        },
+        {
+          "text": " 이제는",
+          "start": 127.54,
+          "end": 127.94,
+          "probability": 0.96603
+        },
+        {
+          "text": " 귀와",
+          "start": 127.94,
+          "end": 128.24,
+          "probability": 0.890184
+        },
+        {
+          "text": " 혀로",
+          "start": 128.24,
+          "end": 128.42,
+          "probability": 0.851923
+        },
+        {
+          "text": " 바로",
+          "start": 128.42,
+          "end": 128.72,
+          "probability": 0.928666
+        },
+        {
+          "text": " 느껴지기",
+          "start": 128.72,
+          "end": 129.2,
+          "probability": 0.835089
+        },
+        {
+          "text": " 시작한",
+          "start": 129.2,
+          "end": 129.62,
+          "probability": 0.992771
+        },
+        {
+          "text": " 거죠.",
+          "start": 129.62,
+          "end": 129.74,
+          "probability": 0.912579
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "start": 130.06,
+      "end": 132.48,
+      "text": " 그렇게 우리가 아는, 가스 활명수가 등장했습니다.",
+      "words": [
+        {
+          "text": " 그렇게",
+          "start": 130.06,
+          "end": 130.32,
+          "probability": 0.951009
+        },
+        {
+          "text": " 우리가",
+          "start": 130.32,
+          "end": 130.6,
+          "probability": 0.667516
+        },
+        {
+          "text": " 아는,",
+          "start": 130.6,
+          "end": 131.06,
+          "probability": 0.991105
+        },
+        {
+          "text": " 가스",
+          "start": 131.18,
+          "end": 131.38,
+          "probability": 0.642015
+        },
+        {
+          "text": " 활명수가",
+          "start": 131.38,
+          "end": 131.86,
+          "probability": 0.800501
+        },
+        {
+          "text": " 등장했습니다.",
+          "start": 131.86,
+          "end": 132.48,
+          "probability": 0.993247
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "start": 132.9,
+      "end": 134.42,
+      "text": " 다시 뚜껑을 비틀면, 치!",
+      "words": [
+        {
+          "text": " 다시",
+          "start": 132.9,
+          "end": 133.08,
+          "probability": 0.981308
+        },
+        {
+          "text": " 뚜껑을",
+          "start": 133.08,
+          "end": 133.54,
+          "probability": 0.996733
+        },
+        {
+          "text": " 비틀면,",
+          "start": 133.54,
+          "end": 133.98,
+          "probability": 0.950586
+        },
+        {
+          "text": " 치!",
+          "start": 134.32,
+          "end": 134.42,
+          "probability": 0.952049
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "start": 134.64,
+      "end": 136.98,
+      "text": " 이제 이 소리가, 조금 다르게 들리지 않나요?",
+      "words": [
+        {
+          "text": " 이제",
+          "start": 134.64,
+          "end": 134.84,
+          "probability": 0.947722
+        },
+        {
+          "text": " 이",
+          "start": 134.84,
+          "end": 135.08,
+          "probability": 0.802392
+        },
+        {
+          "text": " 소리가,",
+          "start": 135.08,
+          "end": 135.5,
+          "probability": 0.862105
+        },
+        {
+          "text": " 조금",
+          "start": 135.64,
+          "end": 135.82,
+          "probability": 0.982024
+        },
+        {
+          "text": " 다르게",
+          "start": 135.82,
+          "end": 136.2,
+          "probability": 0.990845
+        },
+        {
+          "text": " 들리지",
+          "start": 136.2,
+          "end": 136.58,
+          "probability": 0.989807
+        },
+        {
+          "text": " 않나요?",
+          "start": 136.58,
+          "end": 136.98,
+          "probability": 0.995407
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "start": 137.14,
+      "end": 140.5,
+      "text": " 처음에는 다려 먹던 약을, 병을 열어 바로 마실 수 있게 바꿨고요.",
+      "words": [
+        {
+          "text": " 처음에는",
+          "start": 137.14,
+          "end": 137.52,
+          "probability": 0.99214
+        },
+        {
+          "text": " 다려",
+          "start": 137.52,
+          "end": 137.86,
+          "probability": 0.697675
+        },
+        {
+          "text": " 먹던",
+          "start": 137.86,
+          "end": 138.18,
+          "probability": 0.994011
+        },
+        {
+          "text": " 약을,",
+          "start": 138.18,
+          "end": 138.54,
+          "probability": 0.997177
+        },
+        {
+          "text": " 병을",
+          "start": 138.7,
+          "end": 138.96,
+          "probability": 0.995072
+        },
+        {
+          "text": " 열어",
+          "start": 138.96,
+          "end": 139.16,
+          "probability": 0.940607
+        },
+        {
+          "text": " 바로",
+          "start": 139.16,
+          "end": 139.38,
+          "probability": 0.909306
+        },
+        {
+          "text": " 마실",
+          "start": 139.38,
+          "end": 139.72,
+          "probability": 0.995021
+        },
+        {
+          "text": " 수",
+          "start": 139.72,
+          "end": 139.86,
+          "probability": 0.984895
+        },
+        {
+          "text": " 있게",
+          "start": 139.86,
+          "end": 140.0,
+          "probability": 0.985884
+        },
+        {
+          "text": " 바꿨고요.",
+          "start": 140.0,
+          "end": 140.5,
+          "probability": 0.836936
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "start": 140.5,
+      "end": 144.66,
+      "text": " 약 70년 뒤에는, 마시는 순간의 느낌까지, 시대에 맞춰 바꿨죠?",
+      "words": [
+        {
+          "text": " 약",
+          "start": 140.5,
+          "end": 140.92,
+          "probability": 0.985254
+        },
+        {
+          "text": " 70년",
+          "start": 140.92,
+          "end": 141.46,
+          "probability": 0.98076
+        },
+        {
+          "text": " 뒤에는,",
+          "start": 141.46,
+          "end": 141.86,
+          "probability": 0.97949
+        },
+        {
+          "text": " 마시는",
+          "start": 142.06,
+          "end": 142.4,
+          "probability": 0.758097
+        },
+        {
+          "text": " 순간의",
+          "start": 142.4,
+          "end": 142.88,
+          "probability": 0.99265
+        },
+        {
+          "text": " 느낌까지,",
+          "start": 142.88,
+          "end": 143.42,
+          "probability": 0.977453
+        },
+        {
+          "text": " 시대에",
+          "start": 143.64,
+          "end": 143.92,
+          "probability": 0.982759
+        },
+        {
+          "text": " 맞춰",
+          "start": 143.92,
+          "end": 144.2,
+          "probability": 0.949119
+        },
+        {
+          "text": " 바꿨죠?",
+          "start": 144.2,
+          "end": 144.66,
+          "probability": 0.97191
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "start": 144.9,
+      "end": 149.7,
+      "text": " 우리가 듣는 그 짧은 칙 소리에는, 오래된 약이 두 번이나 스스로를 바꾼 시간이 들어 있습니다.",
+      "words": [
+        {
+          "text": " 우리가",
+          "start": 144.9,
+          "end": 145.06,
+          "probability": 0.966903
+        },
+        {
+          "text": " 듣는",
+          "start": 145.06,
+          "end": 145.44,
+          "probability": 0.995275
+        },
+        {
+          "text": " 그",
+          "start": 145.44,
+          "end": 145.62,
+          "probability": 0.98698
+        },
+        {
+          "text": " 짧은",
+          "start": 145.62,
+          "end": 146.0,
+          "probability": 0.997955
+        },
+        {
+          "text": " 칙",
+          "start": 146.0,
+          "end": 146.24,
+          "probability": 0.8504
+        },
+        {
+          "text": " 소리에는,",
+          "start": 146.24,
+          "end": 146.66,
+          "probability": 0.668713
+        },
+        {
+          "text": " 오래된",
+          "start": 146.9,
+          "end": 147.26,
+          "probability": 0.98995
+        },
+        {
+          "text": " 약이",
+          "start": 147.26,
+          "end": 147.52,
+          "probability": 0.982135
+        },
+        {
+          "text": " 두",
+          "start": 147.52,
+          "end": 147.66,
+          "probability": 0.6128
+        },
+        {
+          "text": " 번이나",
+          "start": 147.66,
+          "end": 148.0,
+          "probability": 0.998584
+        },
+        {
+          "text": " 스스로를",
+          "start": 148.0,
+          "end": 148.54,
+          "probability": 0.959413
+        },
+        {
+          "text": " 바꾼",
+          "start": 148.54,
+          "end": 148.9,
+          "probability": 0.930125
+        },
+        {
+          "text": " 시간이",
+          "start": 148.9,
+          "end": 149.14,
+          "probability": 0.994988
+        },
+        {
+          "text": " 들어",
+          "start": 149.14,
+          "end": 149.38,
+          "probability": 0.559
+        },
+        {
+          "text": " 있습니다.",
+          "start": 149.38,
+          "end": 149.7,
+          "probability": 0.994981
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "start": 150.04,
+      "end": 152.0,
+      "text": " 가스 활명수는, 이렇게 만들어졌습니다.",
+      "words": [
+        {
+          "text": " 가스",
+          "start": 150.04,
+          "end": 150.3,
+          "probability": 0.655088
+        },
+        {
+          "text": " 활명수는,",
+          "start": 150.3,
+          "end": 150.9,
+          "probability": 0.761421
+        },
+        {
+          "text": " 이렇게",
+          "start": 150.98,
+          "end": 151.22,
+          "probability": 0.989062
+        },
+        {
+          "text": " 만들어졌습니다.",
+          "start": 151.22,
+          "end": 152.0,
+          "probability": 0.976949
+        }
+      ]
+    }
+  ],
+  "completed_at": "2026-08-23T02:25:33.873534+09:00"
+}

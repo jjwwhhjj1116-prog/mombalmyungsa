@@ -20,6 +20,7 @@ credentials/
 *.tmp
 *.log
 node_modules/
+.local-tools/
 __pycache__/
 *.pyc
 .pytest_cache/
