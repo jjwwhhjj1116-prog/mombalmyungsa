@@ -3,14 +3,17 @@
   "episode_id": "gas-hwalmyeongsu",
   "stage_id": "09_batch_generation",
   "unit_id": "vit-v6-u07",
-  "status": "platform_cooldown_readonly_recheck_pending",
+  "status": "platform_cooldown_24h_active",
   "blocker_code": "flow_abnormal_activity_detected",
   "provider": "Google Flow",
   "account_route": "jjwwhhjj1116@gmail.com",
   "project_id": "f98e16bc-b689-4da5-809f-39a0e2be8682",
   "submitted_at": "2026-08-22T18:23:38.041+09:00",
   "failure_confirmed_at": "2026-08-22T18:23:50+09:00",
-  "next_allowed_readonly_recheck_at": "2026-08-22T20:23:38.041+09:00",
+  "readonly_rechecked_at": "2026-08-22T20:36:53.2577711+09:00",
+  "readonly_recheck_result": "same_abnormal_activity_warning_still_visible",
+  "readonly_recheck_additional_ui_state": "reCAPTCHA service connection error visible; no CAPTCHA was solved and no generation control was clicked",
+  "next_allowed_readonly_recheck_at": "2026-08-23T20:36:53.2577711+09:00",
   "next_allowed_retry_at": null,
   "generation_click_count": 1,
   "expected_prompt_length": 645,
@@ -23,5 +26,5 @@
   "retry_rule": "Abnormal activity is not a normal generation failure. Do not retry in the same session. Wait at least two hours, then inspect the correct account and restriction state read-only. A new generation may be considered only after the warning is absent. If it reappears, stop Flow generation for twenty-four hours and notify the user.",
   "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth rightward camera, never photorealistic. One unlabeled amber bottle rides a brass rail to adult son Min Kang; father and son open a Korean wooden pharmacy together. The same bottle passes through a small filling machine and becomes many bottles moving right, then match-cuts onto a public pharmacy shelf as many Korean hands collect them. Native rail, bottle, machine, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
   "user_action_required": false,
-  "next_safe_action": "at or after next_allowed_readonly_recheck_at, inspect the correct Flow account and warning state without submitting; do not advance to u08 while u07 is unresolved"
+  "next_safe_action": "do not submit any Flow generation for twenty-four hours; at or after next_allowed_readonly_recheck_at, inspect the correct Flow account and warning state read-only; do not advance to u08 while u07 is unresolved"
 }
