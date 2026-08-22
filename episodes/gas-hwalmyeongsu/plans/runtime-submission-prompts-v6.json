@@ -31,8 +31,9 @@
     },
     {
       "unit_id": "vit-v6-u09",
-      "status": "pending",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth orbit camera, never photorealistic. A rotating wall smoothly reveals a mid-1960s Korean pharmaceutical workshop while the same unlabeled amber bottle remains in the same screen position. Camera orbits from the successful bottle to a closed brass carbonation valve; a Korean worker hand approaches but pauses before touching it. Native wall, bottle, valve, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "status": "completed_visual_pass",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth orbit camera, never photorealistic. A rotating wall smoothly reveals a mid-1960s Korean pharmaceutical workshop while the same unlabeled amber bottle remains in the same screen position. Camera orbits from the successful bottle to a closed brass carbonation valve; a Korean worker hand approaches but pauses before touching it. Native wall, bottle, valve, hand and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+      "receipt": "receipts/vit-v6-u09.flow-receipt.json"
     },
     {
       "unit_id": "vit-v6-u11",
