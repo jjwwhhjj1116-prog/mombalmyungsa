@@ -1,0 +1,66 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "stage_id": "09_batch_generation",
+  "unit_id": "vit-v6-u13",
+  "attempt": 1,
+  "status": "rejected_visual_qa",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "project_id": "f98e16bc-b689-4da5-809f-39a0e2be8682",
+  "media_id": "cd34db55-69de-4ce7-b149-79c05c0728ec",
+  "media_url": "https://labs.google/fx/ko/tools/flow/project/f98e16bc-b689-4da5-809f-39a0e2be8682/edit/cd34db55-69de-4ce7-b149-79c05c0728ec",
+  "submitted_at": "2026-08-23T01:13:25.298+09:00",
+  "terminal_confirmed_at": "2026-08-23T01:14:36+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "9:16",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "prompt_entry_method": "pressSequentially_physical_key_events_only",
+  "pre_submit_prompt_exact_match": true,
+  "post_submit_server_card_prompt_exact_match": true,
+  "submitted_prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber shifting to cool teal light, smooth upward camera, never photorealistic. Amber liquid moves from cauldron through cloth strainer and bottle into a patient's hand. Bubbles enter the same bottle as history becomes modern. One rising bubble reflects the cauldron, strainer, bottle and valve, then pops into the opening giant-bottle composition for a warm final hold. Native cauldron, cloth, liquid, bottle, bubble and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+  "local_media": {
+    "path": "generated/batch/rejected/vit-v6-u13-attempt-1.mp4",
+    "sha256": "c8b4097a0472f22fbb11c82bb0764e459ce267865fb19a3ade0a8384b8f82a47",
+    "bytes": 2061352,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "FAIL",
+    "contact_sheet_24": "qa/batch-u13-attempt-1-contact-sheet-24.jpg",
+    "contact_sheet_24_sha256": "bc43ad769865482cd903eba984aa7b0baa955fe887cc62c96ba09de7dc796782",
+    "failed_checks": [
+      "generated_calligraphy_and_plaque_like_text_behind_final_bottle"
+    ],
+    "passed_checks": [
+      "amber_liquid_moves_from_cauldron_through_cloth_strainer",
+      "liquid_enters_same_amber_bottle",
+      "bubbles_make_history_to_modern_transition",
+      "rising_bubble_reflects_cauldron_strainer_bottle_and_valve",
+      "bubble_pops_to_large_bottle_final_composition",
+      "matte_resin_diorama_style_is_consistent"
+    ]
+  },
+  "retry_contract": {
+    "same_sentence_ownership": true,
+    "same_actions_and_upward_camera": true,
+    "add_constraints": [
+      "plain blank walls and cabinets",
+      "no plaques, posters, papers, gauges, signs or writing surfaces",
+      "no letters, numbers, symbols or calligraphy anywhere"
+    ]
+  },
+  "binary_commit_policy": "rejected mp4 remains gitignored; rejection receipt and contact sheet are committed",
+  "next_safe_action": "retry only vit-v6-u13 after the configured interval; never harvest attempt 1"
+}

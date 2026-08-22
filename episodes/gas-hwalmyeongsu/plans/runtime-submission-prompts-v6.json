@@ -44,12 +44,19 @@
     {
       "unit_id": "vit-v6-u12",
       "status": "pending",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy where the same hand twists the cap once. Hiss vapor becomes a curved brass time rail joining the old apothecary and 1960s factory in one miniature view. Native bottle, machine, cap, hiss and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber and cool teal light, smooth camera, never photorealistic. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy where the same hand twists the cap once. Hiss vapor becomes a curved brass time rail joining the old apothecary and 1960s factory in one miniature view. Native bottle, machine, cap, hiss and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+      "corrective_attempt": {
+        "authority": "user standing instruction to continue Flow-only generation after recorded visual failures",
+        "reason": "attempts 1 and 2 preserved the story action but repeatedly rendered photoreal skin hands and readable generated signage",
+        "plan_revision": "remove humans entirely, replace the cap-twisting hand with an explicitly nonhuman articulated wooden mannequin hand, remove all writing surfaces and use blank architectural silhouettes",
+        "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin objects, walnut, brass and amber glass, blank white geometric pharmacy boxes, warm amber and cool teal light, smooth camera, never photorealistic. No human appears. A completed bubbling unlabeled amber bottle lands on a brass pedestal and the machine stops. A bottle-neck match cut returns to a modern Korean pharmacy miniature where one clearly nonhuman articulated wooden mannequin hand with exposed ball joints twists the cap once. Hiss vapor becomes a curved brass time rail joining blank silhouettes of the old apothecary and 1960s factory. Native bottle, machine, cap, hiss and room sounds only. No skin, faces, people, speech, music, text, letters, numbers, symbols, plaques, papers, gauges, signs, labels, logos, shake, morphing or chibi."
+      }
     },
     {
       "unit_id": "vit-v6-u13",
-      "status": "pending",
-      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber shifting to cool teal light, smooth upward camera, never photorealistic. Amber liquid moves from cauldron through cloth strainer and bottle into a patient's hand. Bubbles enter the same bottle as history becomes modern. One rising bubble reflects the cauldron, strainer, bottle and valve, then pops into the opening giant-bottle composition for a warm final hold. Native cauldron, cloth, liquid, bottle, bubble and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors."
+      "status": "completed_visual_pass",
+      "prompt": "8-second vertical Omni Flash. Handcrafted Korean medical-history museum diorama, 1:5 matte-resin adults, walnut, brass and amber glass, warm amber shifting to cool teal light, smooth upward camera, never photorealistic. Amber liquid moves from cauldron through cloth strainer and bottle into a patient's hand. Bubbles enter the same bottle as history becomes modern. One rising bubble reflects the cauldron, strainer, bottle and valve, then pops into the opening giant-bottle composition for a warm final hold. Native cauldron, cloth, liquid, bottle, bubble and room sounds only. No speech, music, text, label, logo, shake, morphing, chibi or real actors.",
+      "receipt": "receipts/vit-v6-u13.flow-receipt.json"
     }
   ]
 }
