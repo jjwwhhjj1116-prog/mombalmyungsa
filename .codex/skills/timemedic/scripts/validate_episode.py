@@ -294,8 +294,8 @@ def main():
         warnings.append(f"use about 4-14 generative video shot events; found {generative_video_events}")
 
     by_role = {beat.get("role"): beat for beat in beats}
-    if "환장할 노릇" not in by_role.get("impasse", {}).get("narration", ""):
-        warnings.append("impasse beat should earn and contain ‘환장할 노릇이었죠’")
+    if "환장할 노릇" in " ".join(beat.get("narration", "") for beat in beats):
+        errors.append("body invention scripts must not use the retired phrase ‘환장할 노릇이었죠’")
     reversal_narration = " ".join(
         [
             by_role.get("reversal_question", {}).get("narration", ""),

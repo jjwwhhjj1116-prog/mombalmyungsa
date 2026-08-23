@@ -83,7 +83,7 @@
     {"sound_id":"snd-01a","beat_id":1,"trigger_phrase":"익숙한 행동","kind":"diegetic","asset_key":"present_action_foley","source_policy":"generated_native_if_clean_else_edit","sync":"under_action","lead_frames":0,"gain_db":-18,"duck_music_db":-3,"duration_policy":"under_action","causal_purpose":"현재의 익숙한 몸 동작을 실제 공간의 사건처럼 느끼게 한다"},
     {"sound_id":"snd-03a","beat_id":3,"trigger_phrase":"아니었습니다","kind":"editorial","asset_key":"assumption_break_hit","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-10,"duck_music_db":-6,"duration_policy":"one_shot","causal_purpose":"시청자가 믿던 상식이 깨지는 첫 반전을 또렷하게 착지시킨다"},
     {"sound_id":"snd-05a","beat_id":5,"trigger_phrase":"계속 반복됐습니다","kind":"editorial","asset_key":"repeat_pressure_ticks","source_policy":"edit_primary","sync":"phrase_span","lead_frames":0,"gain_db":-18,"duck_music_db":-3,"duration_policy":"to_phrase_end","causal_purpose":"같은 원인이 되풀이되며 압박이 쌓이는 구조를 들려준다"},
-    {"sound_id":"snd-09a","beat_id":9,"trigger_phrase":"환장할 노릇이었죠","kind":"intentional_silence","asset_key":"silence","source_policy":"intentional_silence","sync":"pre_roll_to_phrase","lead_frames":2,"gain_db":-48,"duck_music_db":-12,"duration_policy":"short_hold","causal_purpose":"양쪽 손실이 모두 막힌 순간을 짧은 정적으로 체감시킨다"},
+    {"sound_id":"snd-09a","beat_id":9,"trigger_phrase":"어느 쪽을 골라도 답이 없었습니다","kind":"intentional_silence","asset_key":"silence","source_policy":"intentional_silence","sync":"pre_roll_to_phrase","lead_frames":2,"gain_db":-48,"duck_music_db":-12,"duration_policy":"short_hold","causal_purpose":"양쪽 손실이 모두 막힌 순간을 짧은 정적으로 체감시킨다"},
     {"sound_id":"snd-10a","beat_id":10,"trigger_phrase":"새로운 질문","kind":"transition","asset_key":"reverse_riser_short","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-14,"duck_music_db":-5,"duration_policy":"one_shot","causal_purpose":"증상에서 원인 구조로 질문의 방향이 바뀌는 이동을 예고한다"},
     {"sound_id":"snd-11a","beat_id":11,"trigger_phrase":"사람을 살리는 질문부터 뒤집습니다","kind":"editorial","asset_key":"reverse_whoosh_impact","source_policy":"edit_primary","sync":"pre_roll_to_phrase","lead_frames":3,"gain_db":-9,"duck_music_db":-7,"duration_policy":"one_shot","causal_purpose":"새 질문이 구체 행동으로 바뀌는 반전의 순간을 착지시킨다"},
     {"sound_id":"snd-14a","beat_id":14,"trigger_phrase":"수치와 기록","kind":"editorial","asset_key":"evidence_counter_ticks","source_policy":"edit_primary","sync":"phrase_span","lead_frames":0,"gain_db":-20,"duck_music_db":-2,"duration_policy":"to_phrase_end","causal_purpose":"주장과 검증 수치를 분리하고 증거가 계산되는 느낌을 준다"},
@@ -251,7 +251,7 @@
     {
       "id": 9,
       "role": "impasse",
-      "narration": "어느 쪽도 포기할 수 없었습니다. 환장할 노릇이었죠.",
+      "narration": "어느 쪽도 포기할 수 없었습니다. 이대로는, 어느 쪽을 골라도 답이 없었습니다.",
       "emotion": "impasse",
       "tts_tag": "sighs",
       "purpose": "문제를 최고조로 만든다",
@@ -260,7 +260,7 @@
       "media_kind": "motion_still",
       "direction_track": [
         {"shot_id":"s09a","trigger_phrase":"포기할 수 없었습니다","subject_focus":"locked_choices","anchor_id":"split_center","camera_move":"hold","camera_easing":"none","overlay":"choice_lock","transition":"motion_freeze","duration_seconds":1.3,"causal_purpose":"두 선택이 동시에 막혔음을 정지로 표현한다","asset_route":"image_to_video"},
-        {"shot_id":"s09b","trigger_phrase":"환장할 노릇이었죠","subject_focus":"protagonist_reaction","anchor_id":"protagonist_face","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"none","transition":"silence_hold","duration_seconds":1.2,"causal_purpose":"반전 전 감정의 최고점을 인물에게 착지시킨다","asset_route":"image_to_video"}
+        {"shot_id":"s09b","trigger_phrase":"어느 쪽을 골라도 답이 없었습니다","subject_focus":"protagonist_reaction","anchor_id":"protagonist_face","camera_move":"slow_push_in","camera_easing":"soft_arrival","overlay":"none","transition":"silence_hold","duration_seconds":1.2,"causal_purpose":"반전 전 감정의 최고점을 인물에게 착지시킨다","asset_route":"image_to_video"}
       ]
     },
     {
