@@ -1,0 +1,86 @@
+{
+  "schema_version": "body-invention.youtube-package.v1",
+  "episode_id": "gas-hwalmyeongsu",
+  "status": "SCHEDULED_NOT_PUBLIC",
+  "channel": {
+    "name": "몸의 발명사",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g",
+    "required_google_account": "unari8484@gmail.com"
+  },
+  "release_candidate": {
+    "path": "renders/gas-hwalmyeongsu-v6-release.mp4",
+    "sha256": "b67251562648c81ad29fadc11910a0e6ab4cc874439fef00b47a0d861c1dede5",
+    "duration_seconds": 152.2,
+    "format": "shorts",
+    "aspect_ratio": "9:16"
+  },
+  "title_candidates": [
+    {
+      "title": "까스활명수에 원래 탄산이 없었다고?",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "활명수에 '까스'가 붙기까지 70년 걸린 이유",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 4},
+      "total": 24
+    },
+    {
+      "title": "70년 뒤 탄산을 넣은 활명수의 반전",
+      "scores": {"clarity": 4, "curiosity_gap": 4, "search_relevance": 5, "video_match": 5, "factuality": 4},
+      "total": 22
+    },
+    {
+      "title": "까스활명수는 왜 한참 뒤에 탄산을 넣었을까",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "한국인이 사랑한 갈색병, 뒤늦게 바뀐 이유",
+      "scores": {"clarity": 4, "curiosity_gap": 4, "search_relevance": 3, "video_match": 4, "factuality": 5},
+      "total": 20
+    }
+  ],
+  "selected_title": "까스활명수에 원래 탄산이 없었다고?",
+  "selection_reason": "썸네일 문구 '까스없는 활명수'와 첫 장면의 약속을 가장 직접적으로 이어가며, 결말은 숨기고 검증된 역사적 모순을 질문으로 남긴다.",
+  "thumbnail": {
+    "copy": "까스없는 활명수",
+    "path": "assets/frame-zero-v20-owner-red-box-final.png",
+    "sha256": "9a7a99b99e32d8400d1c20930b3b3e8aa5f45b968afd538305601d069286d0a5",
+    "route": "embedded_frame_zero",
+    "selection_required": true
+  },
+  "description": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.\n한국인이 사랑한 까스활명수. 하지만 1897년 처음 나온 활명수에는 탄산이 없었습니다.\n\n약을 달여 기다려야 했던 대한제국 시절, 민병호는 바로 마실 수 있는 액체약을 만들었습니다. 이후 기존 처방의 뿌리를 지키면서도 마시는 순간의 청량감을 더하기 위해 탄산가스를 넣었고, 우리가 아는 까스활명수가 등장했습니다.\n\n이 영상은 까스활명수의 탄생사를 소개하는 교육 콘텐츠입니다. 증상이 지속되거나 심하면 의료 전문가와 상담하세요.\n\n타임라인\n00:00 까스 없는 활명수?\n00:22 1897년 대한제국의 약 사정\n00:45 민병호, 약 먹는 방식을 바꾸다\n01:20 동화약방과 대량생산\n01:40 유명한 약을 다시 바꾼 이유\n01:51 탄산을 더한 까스활명수\n02:10 오늘의 갈색병이 탄생하다\n\n자료\n대한민국역사박물관: https://www.much.go.kr/webzine/vol26/sub2-2.html\n동화약품 활명수 역사: https://dong-wha.co.kr/company/whalmyungsu.asp\n동화약품 창업 역사: https://www.dong-wha.co.kr/company/foundation.asp\n동화약품 공식 기록: https://www.dong-wha.co.kr/mediaCenter/dnews/content.asp?t_idx=226\n의학 문헌: https://pmc.ncbi.nlm.nih.gov/articles/PMC10568154/\n참고 기사: https://www.asiae.co.kr/article/2011061310305258438\n\n#까스활명수 #활명수 #의학역사 #건강상식 #몸의발명사\n#건강 #건강정보 #건강관리 #건강습관 #건강상식 #건강한중년 #건강꿀팁 #시니어건강 #시니어 #시니어라이프 #시니어공감 #응급의학 #응급상황대처 #응급처치 #응급 #몸의발명사",
+  "timeline": [
+    {"start": "00:00", "label": "까스 없는 활명수?"},
+    {"start": "00:22", "label": "1897년 대한제국의 약 사정"},
+    {"start": "00:45", "label": "민병호, 약 먹는 방식을 바꾸다"},
+    {"start": "01:20", "label": "동화약방과 대량생산"},
+    {"start": "01:40", "label": "유명한 약을 다시 바꾼 이유"},
+    {"start": "01:51", "label": "탄산을 더한 까스활명수"},
+    {"start": "02:10", "label": "오늘의 갈색병이 탄생하다"}
+  ],
+  "audience": "not_made_for_kids",
+  "language": "ko",
+  "category": "Education",
+  "ai_use": {
+    "required": true,
+    "selection": "Yes",
+    "description_disclosure_present": true
+  },
+  "commerce_route": {
+    "status": "not_eligible",
+    "reason": "의약품 성격의 제품 탄생사이며 정확한 판매 옵션·효능 주장·가격·재고·제휴 패키지가 잠기지 않아 비제휴 교육 콘텐츠로 게시한다.",
+    "affiliate_link": null,
+    "youtube_paid_promotion": false,
+    "youtube_shopping_tag": "unavailable",
+    "exact_package_approved": false
+  },
+  "source_ids": ["VIT-S01", "VIT-S02", "VIT-S03", "VIT-S04", "VIT-S05", "VIT-S06"],
+  "rights_review_required": true,
+  "rights_review_completed": true,
+  "visibility": "private",
+  "scheduled_public_at": "2026-08-23T13:00:00+09:00",
+  "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:gas-hwalmyeongsu:v6:b67251562648",
+  "created_at": "2026-08-23T04:05:00+09:00"
+}
