@@ -111,6 +111,9 @@ def main():
 
     signature = data.get("signature_contract", {})
     expected_signature = {
+        "impasse": "여러분, 이거 정말 미치고 팔짝 뛸 노릇 아니겠습니까?",
+        "impasse_count_when_verified_double_bind": 1,
+        "impasse_position": "immediately_after_both_verified_losses",
         "middle": "그래서, 사람을 살리는 질문부터 뒤집습니다.",
         "middle_count": 1,
         "middle_position": "after_old_question_limit_before_new_question_or_action",

@@ -294,8 +294,15 @@ def main():
         warnings.append(f"use about 4-14 generative video shot events; found {generative_video_events}")
 
     by_role = {beat.get("role"): beat for beat in beats}
-    if "환장할 노릇" in " ".join(beat.get("narration", "") for beat in beats):
+    all_narration = " ".join(beat.get("narration", "") for beat in beats)
+    if "환장할 노릇" in all_narration:
         errors.append("body invention scripts must not use the retired phrase ‘환장할 노릇이었죠’")
+    impasse_signature = "여러분, 이거 정말 미치고 팔짝 뛸 노릇 아니겠습니까?"
+    if by_role.get("impasse", {}).get("narration", "").count(impasse_signature) != 1:
+        errors.append(
+            "impasse beat must contain the body-invention impasse signature exactly once: "
+            f"‘{impasse_signature}’"
+        )
     reversal_narration = " ".join(
         [
             by_role.get("reversal_question", {}).get("narration", ""),
