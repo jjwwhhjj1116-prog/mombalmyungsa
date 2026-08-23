@@ -24,7 +24,7 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 
 - 대본을 쓰거나 고칠 때 [references/health-history-chapter-engine.md](references/health-history-chapter-engine.md)를 먼저 끝까지 읽고, 이어서 [references/story-grammar.md](references/story-grammar.md)를 끝까지 읽는다. 두 문서가 충돌하면 전자가 최신 5챕터 집필 계약이다.
 - 의학·건강·역사 사실을 포함할 때 [references/medical-evidence.md](references/medical-evidence.md)를 끝까지 읽는다.
-- Typecast 또는 ElevenLabs 보이스·TTS를 설계할 때 [references/voice-and-performance.md](references/voice-and-performance.md)를 끝까지 읽는다.
+- ElevenLabs 보이스·TTS를 설계할 때 [references/voice-and-performance.md](references/voice-and-performance.md)를 끝까지 읽는다.
 - 스토리보드·영상 연출·모션을 설계할 때 [references/semantic-motion-direction.md](references/semantic-motion-direction.md)를 끝까지 읽는다.
 - Google Flow 텍스트 투 비디오·멀티샷 클립을 설계할 때 [references/text-to-video-multishot.md](references/text-to-video-multishot.md)를 끝까지 읽는다.
 - 공개된 신비한 건축사전형 제작 튜토리얼에서 추출한 고수준 편집 문법을 Flow 프롬프트로 컴파일할 때 [references/reference-channel-flow-grammar.md](references/reference-channel-flow-grammar.md)를 끝까지 읽는다.
@@ -127,9 +127,9 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 ## 대표 문장 조건
 
 - `환장할 노릇이었죠`는 양쪽 손실을 모두 들려준 뒤에만 쓴다.
-- `발상을 뒤집습니다`는 막다른 상황 뒤에 기존 질문과 새로운 질문의 차이가 선명해졌을 때만 쓴다. 이 문장 직후 반드시 구체 행동을 보여준다.
+- 몸의 발명사 중간 시그니처는 `그래서, 사람을 살리는 질문부터 뒤집습니다.`다. 막다른 상황 뒤에 기존 질문과 새 질문을 실제로 대비한 지점에서 정확히 한 번 쓰고, 직후 새 질문 또는 구체 행동을 보여준다.
 - `그런데 예상하지 못한 일이 벌어집니다`는 최초 목적을 넘어선 결과가 시작될 때만 쓴다.
-- `이렇게 탄생했습니다`는 현재 장면으로 돌아와 발명의 의미를 완성한 뒤에만 쓴다.
+- 몸의 발명사 마지막 시그니처는 `몸을 살린 생각의 전환, [대상]은/는 이렇게 탄생했습니다.`다. 현재 장면과 첫 질문을 모두 회수한 마지막 한 문장으로 정확히 한 번 쓰며, `[대상]`에는 질병이 아니라 영상이 설명한 해결책·도구·치료·제도를 넣고 받침에 맞춰 `은/는`을 고른다.
 
 대표 문장을 사건 대신 사용하지 않는다. 사건을 먼저 보여주고 문장은 그 의미를 선언하게 한다.
 
@@ -165,7 +165,7 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 - 한 문장은 한 연기 목적만 가진다. 문장 중간에 설명·반전·결론이 함께 있으면 문장을 나눈다.
 - `~습니다 / ~합니다 / ~됩니다`를 3문장 연속 쓰지 않는다. `~죠 / ~요 / ~다 / 질문 / 짧은 단정`을 발화 목적에 맞게 섞고, 같은 어미만 기계적으로 반복하지 않는다.
 - 훅은 친밀하고 호기심 있게, 악화는 속도와 압박을 높이고, 반전 직전은 짧게 비운다.
-- `발상을 뒤집습니다`는 소리치지 않고 정확히 착지시킨다.
+- `그래서, 사람을 살리는 질문부터 뒤집습니다.`는 질문 전환 직전 짧게 비운 뒤, 소리치지 않고 반 박자 느리게 정확히 착지시킨다.
 - 증거와 결말은 속도를 낮춰 오늘의 의미를 남긴다.
 
 ## 문장과 연출의 단일 원본
@@ -296,7 +296,7 @@ clean TTS와 감독본의 실제 발화문은 글자 단위로 같아야 한다.
 ## 의미 결합형 사운드
 
 - 생성 영상의 소리는 물·바람·공간음처럼 정확하고 깨끗할 때만 살리고, 아니면 클립을 음소거한 뒤 편집 SFX로 교체한다.
-- 내레이션과 인물 대사는 생성 영상에 넣지 않고 승인된 Typecast clean TTS를 단일 원본으로 쓴다. ElevenLabs는 사용자가 다시 선택한 경우에만 대체 원본이 된다.
+- 내레이션과 인물 대사는 생성 영상에 넣지 않고 ElevenLabs voice ID `wTGzPmtwk7nDNybbk0OL`의 clean TTS를 단일 원본으로 쓴다. 모델과 설정은 [references/voice-and-performance.md](references/voice-and-performance.md)의 고정 프로필을 사용하며 다른 보이스로 자동 대체하지 않는다.
 - 장갑 스냅, 손그림 선, 숫자 틱, 반전 임팩트처럼 정합이 중요한 소리는 편집에서 넣는다.
 - 큰 시각 타격의 효과음은 보통 2–3프레임 먼저 시작하고, 음악은 타격 때 4–8dB 덕킹한다.
 - 모든 `sound_events[]`에는 실제 내레이션의 `trigger_phrase`와 `causal_purpose`가 있어야 한다.
@@ -336,6 +336,7 @@ clean TTS와 감독본의 실제 발화문은 글자 단위로 같아야 한다.
 - 모든 장면이 앞 장면의 결과이거나 다음 장면의 원인인가?
 - 반복 원인과 양쪽 손실이 모두 명시되었는가?
 - 기존 질문과 새로운 질문이 한 번에 구분되는가?
+- 중간 시그니처가 실제 질문 전환 지점에 정확히 한 번 있는가?
 - 반전이 구체 행동으로 이어지는가?
 - 최초 의도와 최종 결과가 다른가?
 - 수치·기록·관찰이 반전을 증명하는가?
@@ -353,6 +354,7 @@ clean TTS와 감독본의 실제 발화문은 글자 단위로 같아야 한다.
 - 관련 상품이 없는 편에 제휴 링크를 억지로 붙이지 않았고, `eligible` 편은 정확한 상품·고지·링크·유료 프로모션 상태가 잠겼는가?
 - 자막을 지워도 손, 얼굴, 원리, 선택, 증거 중 무엇을 보는지 알 수 있는가?
 - 마지막이 첫 장면을 새롭게 보게 하는가?
+- 마지막 시그니처의 `[대상]`이 질병명이 아니라 검증된 해결책이고, 조사 `은/는`이 자연스러우며 마지막 문장에 정확히 한 번 있는가?
 
 하나라도 `아니오`면 수정하고 다시 검사한다.
 
@@ -364,7 +366,7 @@ clean TTS와 감독본의 실제 발화문은 글자 단위로 같아야 한다.
 4. 사용자 수정본에 대한 사실·문법·TTS 발음 이중 검수
 5. 문장별 감정·TTS 지시
 6. 16비트·24–36문장 영상 연출본과 1문장 1의미 구간·8초 텍스트 투 비디오 멀티샷 묶음
-7. Typecast clean TTS 입력본과 ElevenLabs 비교본(요청 시)
+7. 고정 ElevenLabs clean TTS 입력본과 강제정렬본
 8. 사운드 타임라인·큐시트와 네이티브 오디오 사용 정책
 9. 에셋 라우팅과 예상 생성 비용
 10. 승인 상태

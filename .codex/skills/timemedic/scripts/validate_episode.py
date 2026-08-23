@@ -296,12 +296,29 @@ def main():
     by_role = {beat.get("role"): beat for beat in beats}
     if "환장할 노릇" not in by_role.get("impasse", {}).get("narration", ""):
         warnings.append("impasse beat should earn and contain ‘환장할 노릇이었죠’")
-    if "발상을 뒤집" not in by_role.get("reversal_action", {}).get("narration", ""):
-        warnings.append("reversal_action beat should earn and contain ‘발상을 뒤집습니다’")
+    reversal_narration = " ".join(
+        [
+            by_role.get("reversal_question", {}).get("narration", ""),
+            by_role.get("reversal_action", {}).get("narration", ""),
+        ]
+    )
+    middle_signature = "그래서, 사람을 살리는 질문부터 뒤집습니다."
+    if reversal_narration.count(middle_signature) != 1:
+        warnings.append(
+            "reversal question/action beats should contain the body-invention middle signature exactly once: "
+            f"‘{middle_signature}’"
+        )
     if "예상하지 못한" not in by_role.get("unexpected", {}).get("narration", ""):
         warnings.append("unexpected beat should mark the result beyond the original intent")
-    if "이렇게 탄생" not in by_role.get("loop", {}).get("narration", ""):
-        warnings.append("loop beat should close with ‘이렇게 탄생했습니다’ when appropriate")
+    loop_narration = by_role.get("loop", {}).get("narration", "")
+    valid_signature_ending = loop_narration.endswith("은 이렇게 탄생했습니다.") or loop_narration.endswith(
+        "는 이렇게 탄생했습니다."
+    )
+    if "몸을 살린 생각의 전환," not in loop_narration or not valid_signature_ending:
+        warnings.append(
+            "loop beat should use the body-invention ending signature: "
+            "‘몸을 살린 생각의 전환, [대상]은/는 이렇게 탄생했습니다.’"
+        )
 
     video_count = sum(beat.get("media_kind") == "video" for beat in beats)
     if not 4 <= video_count <= 6:

@@ -246,9 +246,15 @@
   },
   "voice_profile": {
     "provider": "ElevenLabs",
-    "voice": "episode-approved saved voice and take",
-    "model": "Eleven v3",
-    "status": "human_audition_then_lock"
+    "voice_id": "wTGzPmtwk7nDNybbk0OL",
+    "model_id": "eleven_multilingual_v2",
+    "model_label": "Eleven Multilingual v2",
+    "speed": 1.05,
+    "stability": 0.4,
+    "similarity_boost": 0.85,
+    "style": 0.5,
+    "use_speaker_boost": true,
+    "status": "series_locked"
   },
   "approval": {
     "requires_human_approval": true,

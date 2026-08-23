@@ -64,7 +64,7 @@ Omni 생성 단위와 각 서브샷에는 화면에 실제로 보이는 사건�
 {
   "sound_id": "snd-11b",
   "beat_id": 11,
-  "trigger_phrase": "발상을 뒤집습니다",
+  "trigger_phrase": "사람을 살리는 질문부터 뒤집습니다",
   "kind": "editorial",
   "asset_key": "reverse_whoosh_impact",
   "source_policy": "edit_primary",

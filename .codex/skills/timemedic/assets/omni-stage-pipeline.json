@@ -67,6 +67,26 @@
     ,"continuous_motion_carrier_required": true
     ,"commerce_route_required": true
   },
+  "signature_contract": {
+    "middle": "그래서, 사람을 살리는 질문부터 뒤집습니다.",
+    "middle_count": 1,
+    "middle_position": "after_old_question_limit_before_new_question_or_action",
+    "ending_pattern": "몸을 살린 생각의 전환, [대상]은/는 이렇게 탄생했습니다.",
+    "ending_count": 1,
+    "ending_target_policy": "verified_solution_tool_treatment_or_system_not_disease"
+  },
+  "voice_contract": {
+    "provider": "ElevenLabs",
+    "voice_id": "wTGzPmtwk7nDNybbk0OL",
+    "model_id": "eleven_multilingual_v2",
+    "model_label": "Eleven Multilingual v2",
+    "speed": 1.05,
+    "stability": 0.4,
+    "similarity_boost": 0.85,
+    "style": 0.5,
+    "use_speaker_boost": true,
+    "fallback_forbidden": true
+  },
   "script_contract": {
     "beats": 16,
     "default_profile": "short_50_58",

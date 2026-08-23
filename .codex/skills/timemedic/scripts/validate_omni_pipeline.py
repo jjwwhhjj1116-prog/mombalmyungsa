@@ -109,6 +109,36 @@ def main():
         if invariants.get(key) != expected:
             errors.append(f"invariants.{key} must be {expected!r}")
 
+    signature = data.get("signature_contract", {})
+    expected_signature = {
+        "middle": "그래서, 사람을 살리는 질문부터 뒤집습니다.",
+        "middle_count": 1,
+        "middle_position": "after_old_question_limit_before_new_question_or_action",
+        "ending_pattern": "몸을 살린 생각의 전환, [대상]은/는 이렇게 탄생했습니다.",
+        "ending_count": 1,
+        "ending_target_policy": "verified_solution_tool_treatment_or_system_not_disease",
+    }
+    for key, expected in expected_signature.items():
+        if signature.get(key) != expected:
+            errors.append(f"signature_contract.{key} must be {expected!r}")
+
+    voice = data.get("voice_contract", {})
+    expected_voice = {
+        "provider": "ElevenLabs",
+        "voice_id": "wTGzPmtwk7nDNybbk0OL",
+        "model_id": "eleven_multilingual_v2",
+        "model_label": "Eleven Multilingual v2",
+        "speed": 1.05,
+        "stability": 0.4,
+        "similarity_boost": 0.85,
+        "style": 0.5,
+        "use_speaker_boost": True,
+        "fallback_forbidden": True,
+    }
+    for key, expected in expected_voice.items():
+        if voice.get(key) != expected:
+            errors.append(f"voice_contract.{key} must be {expected!r}")
+
     script = data.get("script_contract", {})
     if script.get("beats") != 16:
         errors.append("script_contract.beats must be 16")
