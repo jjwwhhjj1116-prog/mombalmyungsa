@@ -1,0 +1,29 @@
+{
+  "schema_version": "body-invention.editorial-priority.v1",
+  "updated_at": "2026-08-23T19:00:00+09:00",
+  "source": "explicit_user_direction",
+  "series_rule": {
+    "preserve_original_queue_index": true,
+    "allow_explicit_user_priority_override": true,
+    "preserve_skipped_topics_as_queued": true,
+    "avoid_product_only_streaks": true,
+    "duration_route": {
+      "shorts_max_seconds": 180.0,
+      "shorts_aspect_ratio": "9:16",
+      "longform_min_rule": "duration_seconds > 180.0",
+      "longform_aspect_ratio": "16:9",
+      "measurement_source": "approved_full_script_final_tts"
+    }
+  },
+  "next_priority": {
+    "topic_id": "topic-070",
+    "queue_index": 70,
+    "title": "흑사병과 격리(Quarantine)",
+    "editorial_angle": "흑사병은 한 번에 정복된 병이 아니라 접촉을 끊는 격리와 감시, 병원체·벡터 이해, 현대 항생제 치료가 층층이 쌓여 통제된 역사",
+    "reason": "제품 탄생기 연속 편성을 끊고 전염병·공중보건사의 강한 문제 해결 서사로 전환",
+    "status": "evidence_mapping",
+    "human_priority_approved": true,
+    "paid_generation_allowed": false,
+    "publishable": false
+  }
+}

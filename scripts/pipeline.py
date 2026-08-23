@@ -340,14 +340,15 @@ def validate_repository() -> tuple[list[str], list[dict]]:
         errors.append("no episode pipeline.json files found")
 
     secret_pattern = re.compile(r"(?:sk_[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{25,})")
+    excluded_scan_parts = {".git", ".local-tools", "node_modules", "__pycache__"}
     for path in REPO_ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts:
+        if not path.is_file() or any(part in excluded_scan_parts for part in path.parts):
             continue
         if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".webp"}:
             continue
         try:
             content = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
+        except (UnicodeDecodeError, PermissionError):
             continue
         if secret_pattern.search(content):
             errors.append(f"possible secret committed: {path.relative_to(REPO_ROOT)}")
