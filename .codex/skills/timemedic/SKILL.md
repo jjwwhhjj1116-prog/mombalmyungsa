@@ -1,6 +1,6 @@
 ---
 name: timemedic
-description: Design, research, critique, rewrite, and produce “몸의 발명사” Korean medical and health-history short-form stories. Use for 몸의 발명사 스킬·에이전트, 타임메딕 이전 명칭, 50~58초 상식 파괴 훅·과거 딜레마·관찰·발상 전환·현재 회수 6단계 대본, 100개 주제 50일 하루 2편 큐, D-2 대본·D-1 영상·D0 업로드 롤링 운영, 사용자 대본 수정 게이트, 16비트 대본, 1문장 1의미 타임라인, Flow Omni Flash 텍스트 투 비디오·8초 멀티샷·좋은 구간 수확, Typecast·ElevenLabs TTS, 영상연출본과 TTS본 분리, 3D 의학 미니어처·CAD 설명 영상, VOX/VOK 모션, 카메라 줌·오버레이·손그림 선, 장면 효과음·네이티브 오디오·사운드 큐·자동 믹스, Shorts/Reels/YouTube, “환장할 노릇이었죠”, “발상을 뒤집습니다”, or “이렇게 탄생했습니다”.
+description: Design, research, critique, rewrite, and produce “몸의 발명사” Korean medical and health-history stories. Use for 몸의 발명사 스킬·에이전트, 타임메딕 이전 명칭, 현재 질문→역사적 필요와 부분 성공→다중 딜레마→의학적 질문 전환과 작동 해부→현재 회수의 5챕터 대본, 100개 주제 큐, Shorts/longform 길이 분기, 사용자 대본 수정 게이트, 1문장 1의미 타임라인, Flow Omni Flash, TTS, VOK 모션, 사운드, YouTube 제작·공개 운영.
 ---
 
 # 몸의 발명사 스토리·보이스·모션 에이전트
@@ -22,7 +22,7 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 
 ## 반드시 읽기
 
-- 대본을 쓰거나 고칠 때 [references/story-grammar.md](references/story-grammar.md)를 끝까지 읽는다.
+- 대본을 쓰거나 고칠 때 [references/health-history-chapter-engine.md](references/health-history-chapter-engine.md)를 먼저 끝까지 읽고, 이어서 [references/story-grammar.md](references/story-grammar.md)를 끝까지 읽는다. 두 문서가 충돌하면 전자가 최신 5챕터 집필 계약이다.
 - 의학·건강·역사 사실을 포함할 때 [references/medical-evidence.md](references/medical-evidence.md)를 끝까지 읽는다.
 - Typecast 또는 ElevenLabs 보이스·TTS를 설계할 때 [references/voice-and-performance.md](references/voice-and-performance.md)를 끝까지 읽는다.
 - 스토리보드·영상 연출·모션을 설계할 때 [references/semantic-motion-direction.md](references/semantic-motion-direction.md)를 끝까지 읽는다.
@@ -35,7 +35,7 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 - 쿠팡 상품 링크·YouTube Shopping 태그·제휴 고지를 검토하거나 붙일 때 [references/commerce-routing.md](references/commerce-routing.md)를 끝까지 읽고, 실제 상품 검증은 설치된 `$run-coupang-partners-shorts-lab`으로 라우팅한다.
 - Shorts 썸네일 프레임과 AI 사용 고지를 만들거나 업로드할 때 [references/shorts-thumbnail-and-ai-disclosure.md](references/shorts-thumbnail-and-ai-disclosure.md)를 끝까지 읽는다.
 - 하루 두 편의 주제 큐·롤링 제작·업로드를 운영할 때 [references/daily-two-video-operations.md](references/daily-two-video-operations.md)를 끝까지 읽는다.
-- 대본 조사·초안·이중 검수는 설치된 `$body-invention-script-writer`를 먼저 사용한다. 해당 스킬을 사용할 수 없을 때만 [assets/body-invention-script-master-prompt.md](assets/body-invention-script-master-prompt.md)를 대체 경로로 사용하며, 반드시 `01_evidence_map`의 검증 주장과 source_id를 먼저 주입한다.
+- 대본 조사·초안·이중 검수는 설치된 `$body-invention-script-writer`를 먼저 사용하되, 챕터 구조와 연결 규칙은 이 저장소의 [references/health-history-chapter-engine.md](references/health-history-chapter-engine.md)가 우선한다. 해당 스킬을 사용할 수 없을 때는 [assets/body-invention-script-master-prompt.md](assets/body-invention-script-master-prompt.md)를 사용하며, 반드시 `01_evidence_map`의 검증 주장과 source_id를 먼저 주입한다.
 - 전체 자동화 상태에는 [assets/omni-stage-pipeline.json](assets/omni-stage-pipeline.json), 에피소드 연출에는 [assets/episode-blueprint-text-to-video.json](assets/episode-blueprint-text-to-video.json)을 사용한다. 기존 `episode-blueprint.json`은 이미지 키프레임 예외 경로에서만 사용한다.
 
 ## 수정 학습 루프
@@ -61,7 +61,7 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 1. `00_topic_discovery`: 후보 10개 이상을 근거·시각성·모순·현재성으로 점수화하고 상위 세 훅에서 하나만 잠근다.
 2. `01_evidence_map`: 공식 기록과 학술 자료로 주장 ID, 불확실성, 의료 안전 문구를 잠근다.
 3. `02_story_contract`: 현재 결과, 검증된 모순, 양쪽 손실, 질문 전환, 행동, 증거, 현재 의미를 한 문장씩 확정한다.
-4. `03_script_draft`: 먼저 길이 제한보다 이해와 인과를 우선한 `coherence_master`를 쓴다. 초등학생 재설명 검사와 챕터 연결 검사를 통과한 뒤에만 기본 50–58초 `delivery_cut`을 별도 생성한다. 글자 수 때문에 설명 사다리·인물 역할·원인·연결어를 먼저 자르지 않는다.
+4. `03_script_draft`: 먼저 `현재 질문 → 필요·시도·부분 성공·새 문제 → 다중 딜레마 → 질문 전환·작동 해부·검증 → 현재 답`의 건강 역사형 5챕터로 `coherence_master`를 쓴다. 초등학생 재설명 검사와 챕터 연결 검사를 통과한 뒤에만 `delivery_cut`을 별도 생성한다. 글자 수 때문에 설명 사다리·인물 역할·원인·연결어를 먼저 자르지 않는다.
 5. `04_script_review`: 사용자 수정본을 전문 그대로 보존한 뒤 수정 의도를 분석한다. 사실·의학 표현으로 1차, 문법·구어체·어미·TTS 발음과 장면 연결로 2차 검수한다. 사용자의 말맛을 AI 설명조로 되돌리거나 승인 없이 압축하지 않는다.
 6. `05_script_approval`: 두 검수 결과와 전체 clean 대본을 보여주고 사람 승인과 SHA-256을 잠근다. 이전에는 유료 TTS와 Flow 생성을 금지한다.
 7. `05_duration_route`: 승인 대본 전체를 최종 보이스로 한 번 합성해 실제 TTS 길이를 잠근다. `180.000초 이하`는 `9:16 Shorts`, `180.000초 초과`는 `16:9 longform`으로 고정하며 이 잠금 전에는 유료 Flow를 시작하지 않는다.
