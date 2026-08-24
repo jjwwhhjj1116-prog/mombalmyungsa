@@ -1,0 +1,60 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u21",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T20:09:40+09:00",
+  "terminal_confirmed_at": "2026-08-24T20:11:10+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "9045f24138f4fdf59af767f95f046964cd3360af603a7c2185f0a2ae5b467da2",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u21-omni-flash-v1.mp4",
+    "sha256": "0c981987b1fd0438a08205a74c63eea4e69e790fa8210c72295866e1a613d1a1",
+    "bytes": 2094019,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u21-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "a7ac4bad36a119b87034f0d7c53aca1956a897e4fbbb4eaa981b6132e7d67fd3",
+    "checks": {
+      "camera_passes_through_microscope_lens": true,
+      "rod_shaped_bacteria_are_cleanly_visible": true,
+      "camera_returns_through_same_lens": true,
+      "later_investigation_table_is_established": true,
+      "rat_cage_and_human_case_proxy_are_visible": true,
+      "flea_link_is_reserved_for_u22_closeup": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -30.5,
+    "max_volume_db": -1.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the focus click, glass slide or cage movement miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u22 after the required request interval; do not regenerate bdq-v1-u21."
+}
