@@ -1,0 +1,57 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u26",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T21:36:34+09:00",
+  "terminal_confirmed_at": "2026-08-24T21:38:53+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "8ba83584e3831ccf27843ac66683c463bd228dab3b8fd19b1b18ea49765a3d53",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u26-omni-flash-v1.mp4",
+    "sha256": "d1f03a50bc70b6cb2f08bb292d0e71d29969322702e6f32b2e8c0e138df3fa9e",
+    "bytes": 2232053,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u26-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "771a280842d919ea113cb5a4e72a66873d8764e8d67271083d385e2b90f4d7eb",
+    "checks": {
+      "layered_city_defenses_are_visible": true,
+      "port_alley_rodent_and_clinical_layers_progress": true,
+      "single_miracle_cure_is_not_implied": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -34.4,
+    "max_volume_db": -0.0,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if mechanical actions miss visible events by more than two frames or if peak clipping is audible"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u27 after the required request interval; do not regenerate bdq-v1-u26."
+}

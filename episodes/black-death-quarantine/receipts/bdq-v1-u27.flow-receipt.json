@@ -1,0 +1,62 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u27",
+  "status": "completed_visual_pass_with_mandatory_crop_or_mask",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T21:43:23+09:00",
+  "terminal_confirmed_at": "2026-08-24T21:45:03+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "30cb5f11f825555468f10f53928341f2d175bd008a2eaef9a7194d4ae7fdb764",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u27-omni-flash-v1.mp4",
+    "sha256": "b3ee83d213ab21c6cfe1ccb3f9313ee98520ce761b5c2dfb35a699bda3e95ac8",
+    "bytes": 2231005,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS_WITH_MANDATORY_CROP_OR_MASK",
+    "contact_sheet_24": "qa/stage09/u27-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "d332374d07ee638a94599e34d29063bf1c4bbddcc0393ab35d47609216ad8b86",
+    "checks": {
+      "complete_transmission_network_is_visible": true,
+      "multiple_routes_are_shown_simultaneously": true,
+      "rat_is_only_one_node_among_many": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "photoreal_actor_drift": false
+    },
+    "mandatory_stage_10_repair": {
+      "problem": "small generated English phrase appears in the upper-right network area",
+      "required_action": "select a clean harvest interval or cover the phrase with an opaque semantic VOK evidence panel",
+      "acceptance": "zero readable generated writing in every selected frame",
+      "release_blocked_if_unrepaired": true
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -35.2,
+    "max_volume_db": -17.6,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace when the network sound is not visibly motivated"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u28 after the required request interval; preserve the mandatory stage-10 crop-or-mask repair."
+}

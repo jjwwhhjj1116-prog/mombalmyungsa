@@ -21,6 +21,8 @@ credentials/
 *.log
 node_modules/
 .local-tools/
+.runtime-faster-whisper/
+.runtime-models/
 __pycache__/
 *.pyc
 .pytest_cache/
