@@ -68,5 +68,15 @@
   ],
   "stage_status": "BLOCKED",
   "batch_generation_allowed": false,
-  "next_safe_action": "Revise only the opening unit into two four-second I2V shots: s01 rat-motion from the locked textless thumbnail and s02 lights-out Europe map from the clean textless map asset, joined by a pupil-to-map match cut. Re-lock stage 07 before any additional generation."
+  "stage_07_repair": {
+    "revision": 2,
+    "plan_path": "plans/generation-units-v6.json",
+    "plan_sha256": "204fe5e2f2bd8eb7729b492543f8a8d491f034ffa3ea07fa8a5a9af741b16884",
+    "replacement_unit_ids": [
+      "bdq-v1-u01a",
+      "bdq-v1-u01b"
+    ],
+    "passed_unit_preserved": "bdq-v1-u16"
+  },
+  "next_safe_action": "Generate revised opening pilots bdq-v1-u01a and bdq-v1-u01b one at a time. Both must pass identity, textless-frame, motion-continuity and four-second-harvest QA before stage 08 can complete. Do not regenerate bdq-v1-u16."
 }

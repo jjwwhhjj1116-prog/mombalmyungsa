@@ -1,22 +1,37 @@
 {
   "schema_version": "timemedic.flow-generation-plan.v2",
   "topic_id": "black-death-quarantine",
-  "revision": 1,
+  "revision": 2,
   "script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
   "storyboard_sha256": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
   "final_tts_duration_seconds": 223.085688,
   "engine": "Google Flow",
   "model": "Omni Flash",
   "mode": "text_to_video",
-  "generation_strategy": "first_hook_image_to_video_then_text_to_video",
-  "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
+  "generation_strategy": "split_opening_image_to_video_repair_then_text_to_video",
+  "opening_mode_override": "two_eight_second_i2v_sources_with_four_second_harvest_targets",
+  "opening_repair_contract": {
+    "status": "approved_after_two_failed_combined_opening_pilots",
+    "failed_unit_id": "bdq-v1-u01",
+    "replacement_unit_ids": [
+      "bdq-v1-u01a",
+      "bdq-v1-u01b"
+    ],
+    "first_unit_uses_locked_thumbnail": true,
+    "second_unit_is_clean_info_i2v": true,
+    "second_input_image": "assets/u01-end-frame-europe-map-v1.png",
+    "second_input_image_sha256": "91c6c28aab330cb7778f6eb1166c8e9feb79d87302257a167169e9096b280621",
+    "join_mechanism": "pupil_to_map_match_cut",
+    "batch_generation_remains_blocked_until_both_pass": true
+  },
   "aspect_ratio": "16:9",
   "seconds_per_unit": 8,
   "sequential_generation_only": true,
   "minimum_seconds_between_generation_clicks": 180,
   "cooldown_seconds_after_three_jobs": 600,
   "pilot_unit_ids": [
-    "bdq-v1-u01",
+    "bdq-v1-u01a",
+    "bdq-v1-u01b",
     "bdq-v1-u16"
   ],
   "style_prefix": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic.",
@@ -50,40 +65,71 @@
   "global_avoid": "No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
   "units": [
     {
-      "unit_id": "bdq-v1-u01",
+      "unit_id": "bdq-v1-u01a",
       "sentence_ids": [
-        "s01",
-        "s02"
+        "s01"
       ],
       "candidate_count": 1,
-      "risk": "rat_swarm_to_mass_death_scale",
-      "motion_carrier": "rats_forward_run+extinguishing_city_lights",
+      "risk": "lead_rat_identity_and_frame_zero_continuity",
+      "motion_carrier": "black_resin_rat_forward_step+swarm_forward_run",
       "continuity_anchors": [
         "exact_frame_zero",
         "lead_rat_eyes",
-        "black_route_line",
-        "dark_map_route"
+        "black_resin_fur",
+        "centered_pupil_match_anchor"
       ],
       "model": "Omni Flash",
       "mode": "image_to_video",
       "aspect_ratio": "16:9",
       "seconds": 8,
-      "en_generation_prompt": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Use the supplied textless 16:9 thumbnail as the exact first frame. Hold the composition for 0.7 seconds, then the upright grinning resin rat takes one sharp step toward lens while the swarm runs forward and the camera retreats smoothly along the brass rail. Push through the lead rat's eye into a carved miniature map of Europe where city lanterns extinguish in sequence and empty plazas reveal the scale of death. Preserve the exact rat, alley, lighting, resin texture and camera axis; no reset or random shake. Native audio only from visible events, synchronized within two frames: many_small_paws_on_cobblestone, lanterns_extinguish_in_sequence. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "target_harvest_seconds": 4,
+      "en_generation_prompt": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin animal miniatures, carved wood, brass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, never photorealistic. Use the supplied textless 16:9 rat thumbnail as the exact first frame. Hold the exact composition for 0.7 seconds. Then the same upright black resin rat, with the same black color, face, eyes, teeth, proportions and matte sculpted fur, takes one sharp step toward the lens while the same black rat swarm runs forward. The camera retreats smoothly along the same brass rail and finishes in a tight centered push toward the unchanged lead rat pupil for a later match cut. Do not reveal a map in this source. Preserve the exact lead rat identity, alley, lighting, resin texture and camera axis from first frame to last; no color drift, grey rat, face morph, reset or random shake. Native audio only from visible events, synchronized within two frames: many_small_paws_on_cobblestone. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal fur, chibi, glossy toy plastic, giant animals, warped anatomy, face morphing, color drift, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
       "native_audio_plan": [
         {
           "event": "many_small_paws_on_cobblestone",
           "disposition_if_sync_passes": "keep",
           "disposition_if_sync_fails": "replace_in_edit"
-        },
+        }
+      ],
+      "harvest_rule": "Harvest the strongest identity-stable four-second rat advance for s01, ending on the centered unchanged pupil. Reject any frame with grey color drift, facial morphing, pseudo text or a map reveal. Final edit may change scene only after s01 ends in the final locked TTS.",
+      "input_image": "assets/frame-zero-bg-v1-landscape.png",
+      "input_image_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602"
+    },
+    {
+      "unit_id": "bdq-v1-u01b",
+      "sentence_ids": [
+        "s02"
+      ],
+      "candidate_count": 1,
+      "risk": "textless_europe_map_and_extinguishing_city_lights",
+      "motion_carrier": "city_lanterns_extinguish_along_map_route",
+      "continuity_anchors": [
+        "centered_dark_map_origin",
+        "textless_europe_relief",
+        "amber_city_lights",
+        "dark_route_finish"
+      ],
+      "model": "Omni Flash",
+      "mode": "image_to_video_clean_info_repair",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "target_harvest_seconds": 4,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum map diorama made from carved dark wood, matte resin, brass, enamel and stone, obvious miniature frame seams and oversized screws, warm amber city lights against cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, never photorealistic. Use the supplied clean textless Europe map image as the exact first frame and preserve its geography, relief, materials, lighting and camera axis. Begin at the centered dark origin that can receive a pupil-to-map match cut. The camera glides forward along one unmarked carved route while amber city lanterns extinguish one after another and tiny empty plazas darken, revealing the spreading scale of death without showing bodies. Keep the map completely free of labels from first frame to last. Finish on a dark route at the same screen axis for the next cut. Native audio only from visible events, synchronized within two frames: lanterns_extinguish_in_sequence, faint_museum_wood_resonance. No speech, narration or music. No readable text, pseudo text, labels, letters, digits, symbols, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, map morphing, geography changes, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, bodies, black frames or scene reset.",
+      "native_audio_plan": [
         {
           "event": "lanterns_extinguish_in_sequence",
           "disposition_if_sync_passes": "keep",
           "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "faint_museum_wood_resonance",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "mute"
         }
       ],
-      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS.",
-      "input_image": "assets/frame-zero-bg-v1-landscape.png",
-      "input_image_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602"
+      "harvest_rule": "Harvest the strongest four-second textless lights-out map motion for s02. Reject any pseudo label, geography morph or random camera shake. Join after s01 with a pupil-to-map match cut, but do not reveal this meaning before s02 begins in the final locked TTS.",
+      "input_image": "assets/u01-end-frame-europe-map-v1.png",
+      "input_image_sha256": "91c6c28aab330cb7778f6eb1166c8e9feb79d87302257a167169e9096b280621"
     },
     {
       "unit_id": "bdq-v1-u02",

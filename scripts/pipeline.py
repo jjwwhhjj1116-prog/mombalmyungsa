@@ -209,17 +209,51 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             errors.append("generation plan script_sha256 does not match source_of_truth")
         if generation.get("model") != "Omni Flash" or generation.get("mode") != "text_to_video":
             errors.append("generation plan must keep Omni Flash text_to_video as the default mode")
-        if generation.get("generation_strategy") != "first_hook_image_to_video_then_text_to_video":
-            errors.append("generation plan must use the approved first-hook I2V then T2V strategy")
-        if generation.get("opening_mode_override") != "image_to_video_from_approved_textless_thumbnail":
-            errors.append("generation plan must declare the approved textless-thumbnail I2V opening override")
+        strategy = generation.get("generation_strategy")
+        opening_override = generation.get("opening_mode_override")
+        standard_opening = (
+            strategy == "first_hook_image_to_video_then_text_to_video"
+            and opening_override == "image_to_video_from_approved_textless_thumbnail"
+        )
+        split_opening_repair = (
+            strategy == "split_opening_image_to_video_repair_then_text_to_video"
+            and opening_override == "two_eight_second_i2v_sources_with_four_second_harvest_targets"
+        )
+        if not (standard_opening or split_opening_repair):
+            errors.append("generation plan must use the approved first-hook path or a locked two-source opening repair")
         if generation.get("aspect_ratio") != routed_aspect or generation.get("seconds_per_unit") != 8:
             errors.append("generation plan must match routed aspect ratio and use eight-second units")
         units = generation.get("units", [])
+        repair = generation.get("opening_repair_contract", {})
+        if split_opening_repair:
+            required_repair = {
+                "status": "approved_after_two_failed_combined_opening_pilots",
+                "first_unit_uses_locked_thumbnail": True,
+                "second_unit_is_clean_info_i2v": True,
+                "batch_generation_remains_blocked_until_both_pass": True,
+            }
+            for key, value in required_repair.items():
+                if repair.get(key) != value:
+                    errors.append(f"opening repair contract mismatch: {key}")
+            repair_asset = repair.get("second_input_image", "")
+            repair_asset_path = episode / repair_asset
+            repair_asset_hash = repair.get("second_input_image_sha256")
+            if not repair_asset_path.is_file() or sha256(repair_asset_path) != repair_asset_hash:
+                errors.append("opening repair clean-info asset missing or SHA-256 mismatch")
+            if repair.get("replacement_unit_ids") != ["bdq-v1-u01a", "bdq-v1-u01b"]:
+                errors.append("opening repair replacement unit IDs are not locked")
+
         for index, unit in enumerate(units):
             if unit.get("candidate_count") != 1:
                 errors.append(f"{unit.get('unit_id', 'unknown unit')}: candidate_count must be 1")
-            expected_mode = "image_to_video" if index == 0 else "text_to_video"
+            if split_opening_repair and index == 1:
+                expected_mode = "image_to_video_clean_info_repair"
+                if unit.get("input_image") != repair.get("second_input_image"):
+                    errors.append(f"{unit.get('unit_id', 'unknown unit')}: clean-info input image mismatch")
+                if unit.get("input_image_sha256") != repair.get("second_input_image_sha256"):
+                    errors.append(f"{unit.get('unit_id', 'unknown unit')}: clean-info input SHA-256 mismatch")
+            else:
+                expected_mode = "image_to_video" if index == 0 else "text_to_video"
             if unit.get("mode") != expected_mode:
                 errors.append(f"{unit.get('unit_id', 'unknown unit')}: mode must be {expected_mode}")
 
