@@ -38,10 +38,12 @@ class ScriptToken:
     char_end: int
 
 
-def load_script(path: Path) -> tuple[list[ScriptToken], list[dict], str]:
+def load_script(path: Path, expected_sentences: int) -> tuple[list[ScriptToken], list[dict], str]:
     lines = [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    if len(lines) != 37:
-        raise ValueError(f"expected 37 non-empty script lines, got {len(lines)}")
+    if len(lines) != expected_sentences:
+        raise ValueError(
+            f"expected {expected_sentences} non-empty script lines, got {len(lines)}"
+        )
     tokens: list[ScriptToken] = []
     sentences: list[dict] = []
     cursor = 0
@@ -130,12 +132,25 @@ def main() -> int:
     parser.add_argument("--download-root", type=Path, default=Path(".local-tools/models"))
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--compute-type", default="int8")
+    parser.add_argument("--episode-id", default="gas-hwalmyeongsu")
+    parser.add_argument("--script-rel", default="final-script-v6.txt")
+    parser.add_argument(
+        "--audio-rel", default="tts/gas-hwalmyeongsu-v6-elevenlabs-take2.mp3"
+    )
+    parser.add_argument(
+        "--receipt-rel",
+        default="tts/gas-hwalmyeongsu-v6-elevenlabs-take2.receipt.json",
+    )
+    parser.add_argument(
+        "--output-rel", default="tts/gas-hwalmyeongsu-v6-alignment.json"
+    )
+    parser.add_argument("--expected-sentences", type=int, default=37)
     args = parser.parse_args()
 
     episode = args.episode.resolve()
-    script_path = episode / "final-script-v6.txt"
-    audio_path = episode / "tts" / "gas-hwalmyeongsu-v6-elevenlabs-take2.mp3"
-    receipt_path = episode / "tts" / "gas-hwalmyeongsu-v6-elevenlabs-take2.receipt.json"
+    script_path = episode / args.script_rel
+    audio_path = episode / args.audio_rel
+    receipt_path = episode / args.receipt_rel
     receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
     audio_duration = float(receipt["duration_seconds"])
     if sha256(script_path) != receipt["script_sha256"]:
@@ -187,7 +202,9 @@ def main() -> int:
             }
         )
 
-    tokens, sentence_defs, script_chars = load_script(script_path)
+    tokens, sentence_defs, script_chars = load_script(
+        script_path, args.expected_sentences
+    )
     char_starts, char_ends, asr_chars, similarity = build_char_time_map(script_chars, asr_words)
     starts = interpolate_missing(char_starts, audio_duration)
     ends = interpolate_missing(char_ends, audio_duration)
@@ -228,7 +245,7 @@ def main() -> int:
         errors.append(f"normalized character similarity too low: {similarity:.4f}")
     if coverage < 0.88:
         errors.append(f"matched character coverage too low: {coverage:.4f}")
-    if len(aligned_tokens) == 0 or len(sentence_alignment) != 37:
+    if len(aligned_tokens) == 0 or len(sentence_alignment) != args.expected_sentences:
         errors.append("incomplete token or sentence alignment")
     for i in range(1, len(aligned_tokens)):
         if aligned_tokens[i]["start"] + 0.001 < aligned_tokens[i - 1]["start"]:
@@ -239,16 +256,16 @@ def main() -> int:
 
     output = {
         "schema_version": "body-invention.voice-alignment.v1",
-        "episode_id": "gas-hwalmyeongsu",
+        "episode_id": args.episode_id,
         "stage_id": "11_voice_alignment",
         "status": "PASS" if not errors else "FAIL",
         "provider": "local_faster_whisper_script_anchored_alignment",
         "model": args.model,
         "language": info.language,
         "language_probability": round(float(info.language_probability), 6),
-        "script_path": "final-script-v6.txt",
+        "script_path": args.script_rel,
         "script_sha256": sha256(script_path),
-        "audio_path": "tts/gas-hwalmyeongsu-v6-elevenlabs-take2.mp3",
+        "audio_path": args.audio_rel,
         "audio_sha256": sha256(audio_path),
         "audio_duration_seconds": audio_duration,
         "full_script_single_request": True,
@@ -265,7 +282,7 @@ def main() -> int:
         "raw_asr_segments": raw_segments,
         "completed_at": datetime.now(timezone.utc).astimezone().isoformat(),
     }
-    out_path = episode / "tts" / "gas-hwalmyeongsu-v6-alignment.json"
+    out_path = episode / args.output_rel
     out_path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: output[k] for k in ["status", "normalized_character_similarity", "matched_character_coverage", "token_count", "sentence_count", "errors"]}, ensure_ascii=False, indent=2))
     return 0 if not errors else 1

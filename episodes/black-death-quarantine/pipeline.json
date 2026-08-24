@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 10,
+  "revision": 11,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -160,7 +160,12 @@
       "lock_path": "locks/08-pilot-generation.lock.json",
       "lock_sha256": "52834d6a5f39906a626d31277b57a7c4fa6853b8f62a600af3b905f90175bb57"
     },
-    {"id": "09_batch_generation", "status": "pending"},
+    {
+      "id": "09_batch_generation",
+      "status": "completed",
+      "lock_path": "locks/09-batch-generation.lock.json",
+      "lock_sha256": "7284ce9fcc0b1504fe13aba68a5c544d074952ca7c7c71e5d1c050134499b770"
+    },
     {"id": "10_clip_harvest", "status": "pending"},
     {"id": "11_voice_alignment", "status": "pending"},
     {"id": "12_tts_owned_edit", "status": "pending"},
@@ -169,8 +174,8 @@
     {"id": "15_packaging_release", "status": "pending"}
   ],
   "resume": {
-    "first_non_completed_stage": "09_batch_generation",
-    "precondition": "Stage 08 pilot generation is locked and passed. Pilot units bdq-v1-u01a attempt 2, bdq-v1-u01b attempt 1 and bdq-v1-u16 attempt 1 must be preserved. The u01a approved harvest ends no later than 6.00 seconds before its generated map reveal, and s02 remains owned by the preserved u01b map pilot.",
-    "instruction": "Resume stage 09 with the first non-pilot pending generation unit. Generate sequentially in Flow Omni Flash, one 8-second 16:9 candidate at a time, and do not regenerate passed pilot units."
+    "first_non_completed_stage": "10_clip_harvest",
+    "precondition": "Stage 09 is locked with 29 approved generation units including three preserved pilots. Rejected attempts remain audit-only and must never enter the edit.",
+    "instruction": "Select sentence-owned clean visual windows, audit every native audio event, and apply the mandatory u02/u03/u06/u27 harvest repairs before locking stage 10."
   }
 }

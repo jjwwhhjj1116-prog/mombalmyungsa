@@ -1,0 +1,90 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "09_batch_generation",
+  "status": "completed",
+  "revision": 11,
+  "approved_by": "internal_visual_qa_and_validator",
+  "input_hashes": {
+    "locks/08-pilot-generation.lock.json": "52834d6a5f39906a626d31277b57a7c4fa6853b8f62a600af3b905f90175bb57",
+    "plans/generation-units-v6.json": "0637a26c61bde65d8207ffa5b22fb75fd781a727fe875fc6482161d3eb5360c5",
+    "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9"
+  },
+  "output_summary": {
+    "accepted_batch_receipt_count": 26,
+    "accepted_batch_receipt_bundle_sha256": "2642b8933b5569ab7ce25f70b30690ff1137fe7bba39e8c75ded14c1408beba3",
+    "pilot_units_preserved_by_stage_08": [
+      "bdq-v1-u01a",
+      "bdq-v1-u01b",
+      "bdq-v1-u16"
+    ],
+    "total_approved_generation_units": 29
+  },
+  "accepted_batch_receipts": [
+    "receipts/bdq-v1-u02.flow-receipt.json",
+    "receipts/bdq-v1-u03.flow-receipt.json",
+    "receipts/bdq-v1-u04.flow-receipt.json",
+    "receipts/bdq-v1-u05.flow-receipt.json",
+    "receipts/bdq-v1-u06.flow-receipt.json",
+    "receipts/bdq-v1-u07.flow-receipt.json",
+    "receipts/bdq-v1-u08.flow-receipt.json",
+    "receipts/bdq-v1-u09.flow-receipt.json",
+    "receipts/bdq-v1-u10-attempt-2.flow-receipt.json",
+    "receipts/bdq-v1-u11.flow-receipt.json",
+    "receipts/bdq-v1-u12.flow-receipt.json",
+    "receipts/bdq-v1-u13-attempt-2.flow-receipt.json",
+    "receipts/bdq-v1-u14.flow-receipt.json",
+    "receipts/bdq-v1-u15.flow-receipt.json",
+    "receipts/bdq-v1-u17.flow-receipt.json",
+    "receipts/bdq-v1-u18.flow-receipt.json",
+    "receipts/bdq-v1-u19.flow-receipt.json",
+    "receipts/bdq-v1-u20.flow-receipt.json",
+    "receipts/bdq-v1-u21.flow-receipt.json",
+    "receipts/bdq-v1-u22.flow-receipt.json",
+    "receipts/bdq-v1-u23.flow-receipt.json",
+    "receipts/bdq-v1-u24.flow-receipt.json",
+    "receipts/bdq-v1-u25.flow-receipt.json",
+    "receipts/bdq-v1-u26.flow-receipt.json",
+    "receipts/bdq-v1-u27.flow-receipt.json",
+    "receipts/bdq-v1-u28.flow-receipt.json"
+  ],
+  "rejected_attempts_preserved": [
+    "receipts/bdq-v1-u06-attempt-1.flow-receipt.json",
+    "receipts/bdq-v1-u10-attempt-1.flow-receipt.json",
+    "receipts/bdq-v1-u13-attempt-1.flow-receipt.json",
+    "receipts/bdq-v1-u18-attempt-1.flow-receipt.json",
+    "receipts/bdq-v1-u23-attempt-1.flow-receipt.json",
+    "receipts/bdq-v1-u28-attempt1.flow-receipt.json",
+    "receipts/bdq-v1-u28-attempt2.flow-receipt.json"
+  ],
+  "conditional_pass_units": [
+    {
+      "unit_id": "bdq-v1-u02",
+      "required_stage_10_action": "respect the approved harvest constraint recorded in the receipt"
+    },
+    {
+      "unit_id": "bdq-v1-u03",
+      "required_stage_10_action": "apply the required semantic evidence overlay recorded in the receipt"
+    },
+    {
+      "unit_id": "bdq-v1-u06",
+      "required_stage_10_action": "respect the approved harvest constraint recorded in the receipt"
+    },
+    {
+      "unit_id": "bdq-v1-u27",
+      "required_stage_10_action": "select a clean interval or mask the generated upper-right English phrase with an opaque semantic VOK panel"
+    }
+  ],
+  "native_audio_route": {
+    "status": "deferred_to_clip_harvest_audit",
+    "rule": "keep only when a visible event aligns within two frames and no speech or music exists; otherwise mute and replace with frame-aligned edit SFX"
+  },
+  "final_unit": {
+    "unit_id": "bdq-v1-u28",
+    "accepted_attempt": 3,
+    "media_sha256": "4b8a6375e9ef9812eceea93e76671045e2865d53f55a36587b2b6bd41296a949",
+    "visual_qa": "PASS",
+    "server_prompt_verification": "PASS"
+  },
+  "completed_at": "2026-08-24T22:17:00+09:00",
+  "next_stage": "10_clip_harvest"
+}

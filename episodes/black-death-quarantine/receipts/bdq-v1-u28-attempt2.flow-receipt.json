@@ -1,0 +1,49 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u28",
+  "attempt": 2,
+  "status": "rejected_incomplete_server_prompt",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T22:06:04+09:00",
+  "terminal_confirmed_at": "2026-08-24T22:08:04+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "f05dc460978a22ddd047ea247b17499a9426f088c228751ae30444651986c48e",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u28-omni-flash-v2.mp4",
+    "sha256": "e6a97efb8c02194adba73a2cd0d63cf2f80b258251fed47d14ccf110c1cca54c",
+    "bytes": 2157874,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "FAIL",
+    "contact_sheet_24": "qa/stage09/u28-contact-24-v2.jpg",
+    "contact_sheet_24_sha256": "7af76994d1da7a339c8d8beb08cf5d5c73f965863d4ba2bfe34e0f06ab911220",
+    "failure_reason": "The visible editor contained the full prompt, but the provider detail showed only the leading phrase. The result was a photoreal physician drawing an anatomy diagram instead of the required miniature city infection network.",
+    "do_not_harvest": true
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -26.1,
+    "max_volume_db": -6.1,
+    "disposition": "reject_with_video"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Submit the compact replacement prompt using genuine sequential key events, then verify the complete server-backed prompt before accepting the result."
+}
