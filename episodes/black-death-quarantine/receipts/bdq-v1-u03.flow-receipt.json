@@ -1,0 +1,65 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u03",
+  "status": "completed_visual_pass_with_semantic_overlay_requirement",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T16:40:46+09:00",
+  "terminal_confirmed_at": "2026-08-24T16:41:17+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "59c8d13770b91d53762db08acd7360690b29dc62047a1c3c0e99d042b460c5f0",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u03-omni-flash-v1.mp4",
+    "sha256": "a0e29f8cc1676cd6e90fe5550f1a84c2a3e6216500f5968c0a0086866f8384bb",
+    "bytes": 2211347,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS_WITH_MANDATORY_SEMANTIC_OVERLAY",
+    "contact_sheet_24": "qa/stage09/u03-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "798091a736cc0bb859dce834b98385167cdc847d0d456a0cf0b9004f259ff056",
+    "checks": {
+      "medieval_harbor_diorama_identity": true,
+      "invisible_enemy_problem_is_visualized": true,
+      "harbor_gate_motion_is_visible": true,
+      "black_sail_occlusion_transition": true,
+      "merchant_ship_arrival_is_visible": true,
+      "slumped_sailors_and_dockworker_alarm_are_visible": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    },
+    "mandatory_stage_13_overlay": {
+      "problem": "The dark bacterial stream is visually strong but can read as a creature-like ribbon without context.",
+      "required_action": "Attach small rod-shaped bacteria particles to the same moving path during the owned TTS phrase so the stream unmistakably represents invisible plague bacteria.",
+      "acceptance": "The overlay follows the existing path, appears only during the matching narration, and does not introduce text or cover the sail transition."
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -28.2,
+    "max_volume_db": -7.6,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if harbor wind, hull water and rope snap do not align with visible events within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "After the required interval, continue with bdq-v1-u04. Preserve u03 and carry its mandatory semantic overlay into stage 13."
+}
