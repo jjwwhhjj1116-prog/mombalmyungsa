@@ -1,0 +1,34 @@
+{
+  "schema_version": "body-invention.rights-review.v1",
+  "episode_id": "black-death-quarantine",
+  "status": "PASS",
+  "rights_review_required": true,
+  "rights_review_completed": true,
+  "visual_assets": {
+    "source": "Google Flow generated miniature-diorama historical scenes plus a creator-controlled generated thumbnail background",
+    "third_party_stock_footage": false,
+    "third_party_product_packshot": false,
+    "photoreal_real_person_clone": false,
+    "generated_brand_label": false,
+    "basis": "creator-controlled generated media with programmatic Korean typography, masks, captions, and semantic graphics"
+  },
+  "audio_assets": {
+    "narration": "ElevenLabs licensed subscriber generation, approved full-script Take 2",
+    "voice_id": "wTGzPmtwk7nDNybbk0OL",
+    "model": "eleven_multilingual_v2",
+    "music": false,
+    "sound_effects": "locally synthesized event-matched effects",
+    "third_party_recording": false
+  },
+  "factual_source_ids": [
+    "who-plague-fact-sheet",
+    "cdc-how-plague-spreads",
+    "cdc-quarantine-history-2013",
+    "cdc-quarantine-history-2005",
+    "institut-pasteur-discoveries",
+    "cdc-clinical-care-plague",
+    "pnas-human-ectoparasites",
+    "pnas-rat-borne-discussion"
+  ],
+  "reviewed_at": "2026-08-24T23:18:19.7852575+09:00"
+}

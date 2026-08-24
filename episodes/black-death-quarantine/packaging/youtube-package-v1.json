@@ -1,0 +1,108 @@
+{
+  "schema_version": "body-invention.youtube-package.v1",
+  "episode_id": "black-death-quarantine",
+  "status": "READY_FOR_PRIVATE_UPLOAD",
+  "channel": {
+    "name": "몸의 발명사",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g"
+  },
+  "release_candidate": {
+    "path": "renders/black-death-v1-final.mp4",
+    "sha256": "85abdbdb012bd98a63bbf2c3b3215224c163bffe26114bf5c25a3d45dd06b8cf",
+    "duration_seconds": 223.1,
+    "format": "longform",
+    "aspect_ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "title_candidates": [
+    {
+      "title": "쥐만 잡아선 안 됐다, 흑사병을 막은 진짜 순서",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "흑사병의 범인은 정말 쥐였을까?",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "5천만 명을 죽인 흑사병, 40일이 만든 반전",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "흑사병은 왜 항구에서 40일을 기다렸을까?",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 4, "factuality": 5},
+      "total": 24
+    },
+    {
+      "title": "도시 문을 닫아도 흑사병이 끝나지 않은 이유",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 4, "factuality": 5},
+      "total": 24
+    }
+  ],
+  "selected_title": "쥐만 잡아선 안 됐다, 흑사병을 막은 진짜 순서",
+  "selection_reason": "썸네일의 사망 규모를 반복하지 않으면서 쥐 단독 원인설의 모순과 격리·벼룩·설치류·치료로 이어지는 영상의 핵심 해결 순서를 정확히 약속한다.",
+  "thumbnail": {
+    "copy": "5천만 명을 죽인 / 흑사병",
+    "path": "assets/thumbnail-v1-landscape.png",
+    "sha256": "08cb93f242142c6d2660c559ecf7fbdcc24d8178c29969bcc28a2746f6637f59",
+    "route": "separate_longform_thumbnail",
+    "upload_required": true
+  },
+  "description": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.\n5천만 명 넘는 목숨을 앗아간 흑사병. 인류는 격리, 벼룩·설치류 통제, 조기 진단과 항생제 치료를 겹쳐 감염의 길을 끊었습니다.\n\n중세 항구는 배를 막으면 생계가 흔들리고, 들이면 감염이 번지는 딜레마에 빠졌습니다. 1377년 라구사는 의심 지역에서 온 사람과 배를 30일 동안 도시 밖에 머물게 했고, 이 기간은 뒤에 40일로 늘어 검역을 뜻하는 쿼런틴의 뿌리가 됩니다.\n\n하지만 격리만으로 흑사병이 사라진 것은 아닙니다. 페스트균과 벼룩의 전파 역할을 찾아낸 뒤, 벼룩을 먼저 통제하고 설치류를 통제하며 환자를 조기에 찾아 항생제로 치료하는 대응이 더해졌습니다. 이 영상은 역사·공중보건 교육 콘텐츠이며 개인의 진단이나 치료 지시가 아닙니다.\n\n타임라인\n00:00 쥐가 흑사병의 범인일까\n00:22 무역선을 타고 온 흑사병\n01:05 도시 문을 닫으면 생기는 일\n01:37 언제나 한발 늦었던 항구 도시\n01:53 사람을 살리는 질문을 뒤집다\n02:00 30일에서 시작된 격리\n02:34 페스트균과 벼룩을 찾아내다\n02:58 오늘날 흑사병을 막는 순서\n03:16 보이지 않는 감염의 길\n\n자료\n세계보건기구 페스트 팩트시트: https://www.who.int/news-room/fact-sheets/detail/plague\n미국 질병통제예방센터 전파 경로: https://www.cdc.gov/plague/causes/index.html\nCDC 라구사 검역 역사: https://wwwnc.cdc.gov/eid/article/19/2/12-0312_article\nCDC 검역의 역사: https://wwwnc.cdc.gov/eid/article/11/5/04-0616_article\n파스퇴르연구소 발견사: https://www.pasteur.fr/en/about-us/our-dna/discoveries\nCDC 페스트 치료: https://www.cdc.gov/plague/hcp/clinical-care/index.html\n사람 외부기생충 전파 가설: https://pubmed.ncbi.nlm.nih.gov/29339508/\n쥐 매개 전파 논쟁: https://pubmed.ncbi.nlm.nih.gov/30076235/\n\n#흑사병 #페스트 #검역 #의학역사 #공중보건 #몸의발명사\n#건강 #건강정보 #건강관리 #건강습관 #건강상식 #건강한중년 #건강꿀팁 #시니어건강 #시니어 #시니어라이프 #시니어공감 #응급의학 #응급상황대처 #응급처치 #응급 #몸의발명사",
+  "timeline": [
+    {"start": "00:00", "label": "쥐가 흑사병의 범인일까"},
+    {"start": "00:22", "label": "무역선을 타고 온 흑사병"},
+    {"start": "01:05", "label": "도시 문을 닫으면 생기는 일"},
+    {"start": "01:37", "label": "언제나 한발 늦었던 항구 도시"},
+    {"start": "01:53", "label": "사람을 살리는 질문을 뒤집다"},
+    {"start": "02:00", "label": "30일에서 시작된 격리"},
+    {"start": "02:34", "label": "페스트균과 벼룩을 찾아내다"},
+    {"start": "02:58", "label": "오늘날 흑사병을 막는 순서"},
+    {"start": "03:16", "label": "보이지 않는 감염의 길"}
+  ],
+  "audience": "not_made_for_kids",
+  "language": "ko",
+  "category": "Education",
+  "ai_use": {
+    "required": true,
+    "selection": "Yes",
+    "basis": "Google Flow generated historical and medical reenactment scenes",
+    "description_disclosure_present": true
+  },
+  "commerce_route": {
+    "status": "not_eligible",
+    "reason": "전염병·공중보건 역사 교육편으로 직접 관련된 안전한 판매 상품 패키지가 없으며 상품 연결이 영상의 신뢰를 해칠 수 있다.",
+    "affiliate_link": null,
+    "youtube_paid_promotion": false,
+    "youtube_shopping_tag": "not_applicable",
+    "exact_package_approved": false
+  },
+  "source_ids": [
+    "who-plague-fact-sheet",
+    "cdc-how-plague-spreads",
+    "cdc-quarantine-history-2013",
+    "cdc-quarantine-history-2005",
+    "institut-pasteur-discoveries",
+    "cdc-clinical-care-plague",
+    "pnas-human-ectoparasites",
+    "pnas-rat-borne-discussion"
+  ],
+  "rights_review_required": true,
+  "rights_review_completed": true,
+  "rights_review_path": "qa/stage14/rights-review-v1.json",
+  "final_sync_path": "locks/final-sync.lock.json",
+  "visibility": "private",
+  "release_window": {
+    "lane": "b",
+    "missed_slot": "2026-08-24T19:00:00+09:00",
+    "target_private_upload_at": "2026-08-25T18:00:00+09:00",
+    "target_public_at": "2026-08-25T19:00:00+09:00",
+    "status": "WAITING_FOR_APPROVED_WINDOW"
+  },
+  "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:v1:85abdbdb012b",
+  "created_at": "2026-08-24T23:18:19.7852575+09:00"
+}

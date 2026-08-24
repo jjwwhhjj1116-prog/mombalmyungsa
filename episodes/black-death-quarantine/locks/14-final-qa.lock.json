@@ -2,8 +2,8 @@
   "schema_version": "body-invention.stage-lock.v1",
   "stage_id": "14_final_qa",
   "status": "completed",
-  "revision": 16,
-  "approved_by": "final_qa_validator_and_50_sentence_midpoint_visual_review",
+  "revision": 17,
+  "approved_by": "final_qa_validator_technical_scan_rights_review_and_50_sentence_midpoint_visual_review",
   "input_hashes": {
     "locks/13-semantic-motion-sound.lock.json": "4f533b3e269dc86073da9260ed96504903bfaebc555c7265583e5f9e8586b369",
     "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -12,7 +12,9 @@
   },
   "output_hashes": {
     "renders/black-death-v1-final.mp4": "85abdbdb012bd98a63bbf2c3b3215224c163bffe26114bf5c25a3d45dd06b8cf",
-    "qa/stage14/final-qa-v1.json": "414b706b6362a476e64007d81fef738c75fda22daff38277c218e9640581d721",
+    "qa/stage14/final-qa-v1.json": "878adf514bfb8146ea2ddb2e9e5394d4442b8c4fda4483b940a3f1b529303710",
+    "qa/stage14/rights-review-v1.json": "0f85316e1d352db41d1ebb12c58f117e1ac2102244a5170aab831fc52d27c4c5",
+    "locks/final-sync.lock.json": "5c23855ad6a46d8deebb63dc77278b78be4778b04abdbf414887f1e57686ce2e",
     "qa/stage14/frame-zero-rendered.png": "cfd2ea0498237a200aa974297e106ad555855cf954f94e6f876a391dc000cdb3",
     "qa/stage14/sentence-midpoints-contact-5x10.jpg": "c3bac6b98b7d16b6be14e8acc60deb1a398b0a61d94b3bb36aff856ddb1c5da1"
   },
@@ -29,6 +31,13 @@
     "caption_page_count": 107,
     "semantic_event_count": 16,
     "premature_scene_cut_count": 0,
+    "missing_caption_token_count": 0,
+    "overlapping_caption_page_count": 0,
+    "black_frame_interval_count": 0,
+    "freeze_over_0_71_seconds_count": 0,
+    "rights_review_completed": true,
+    "source_ids_present": true,
+    "final_sync_status": "PASS",
     "frame_zero_psnr": 34.283,
     "full_midpoint_visual_review": "PASS"
   },

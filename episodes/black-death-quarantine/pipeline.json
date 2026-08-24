@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 16,
+  "revision": 17,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -194,7 +194,7 @@
       "id": "14_final_qa",
       "status": "completed",
       "lock_path": "locks/14-final-qa.lock.json",
-      "lock_sha256": "55a42f0516e35e82e0dd038c43e58de4e1987f39d04c904eb1542301ac1b4fe8"
+      "lock_sha256": "ec621deeb50d390147f5aeb2cf25c4d758dd5224a7a250f697bccab506989025"
     },
     {"id": "15_packaging_release", "status": "pending"}
   ],
