@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u12",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:29:27+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:30:06+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "92255eb2ebdc93b5698fd86a97f397319bb19cb470c3fa407b5824169e3edf6e",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u12-omni-flash-v1.mp4",
+    "sha256": "ec2c8bdead1c1d6fb0c047ceadc0ed8a5500c5484fc5e0ab1b73ee9d444c4f7a",
+    "bytes": 1874544,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u12-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "d7fc2f7fa1e5a7b69bb0ee620f8e161a74d46a986b77bbe111fc6f2b515f9c73",
+    "checks": {
+      "healthy_traveler_passes_gate": true,
+      "same_corridor_is_preserved": true,
+      "traveler_later_kneels_and_collapses_gently": true,
+      "hourglass_marks_delayed_symptoms": true,
+      "guard_realizes_traveler_already_passed": true,
+      "no_readable_numbers": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -47.0,
+    "max_volume_db": -14.0,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the clock ticks or knee drop misses its visible event by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u13 after the required request interval; do not regenerate bdq-v1-u12."
+}

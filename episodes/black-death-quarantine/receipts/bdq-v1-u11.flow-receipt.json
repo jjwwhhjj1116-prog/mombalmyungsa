@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u11",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:20:50+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:22:19+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "73d38569a5aac4facd34c55a6209fa910cac50f1d42c08f23e66994887bc1892",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u11-omni-flash-v1.mp4",
+    "sha256": "cf0c6f30d24cad173612db61a4cca73ac08448941bb3768cc6c50a5bb3b2fc7e",
+    "bytes": 1912700,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u11-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "99a90ca6bea797d66a5a017f417a37d6d2068bd734ea0f391aaa8a1bf7abe37a",
+    "checks": {
+      "bread_and_trade_on_one_scale_pan": true,
+      "dark_spreading_route_on_other_pan": true,
+      "scale_never_settles": true,
+      "mayor_reads_both_sides_with_exasperation": true,
+      "restrained_camera_push_in": true,
+      "serious_not_slapstick": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -46.4,
+    "max_volume_db": -19.6,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the scale creak or short exhale misses its visible event by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u12 after the required request interval; do not regenerate bdq-v1-u11."
+}
