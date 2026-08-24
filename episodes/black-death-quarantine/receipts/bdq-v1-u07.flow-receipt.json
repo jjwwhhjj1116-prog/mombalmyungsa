@@ -1,0 +1,60 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u07",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:26:48+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:27:54+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "658c8f55c31850359baf2fd03ab976d3045670f88795759e7b64a98ac570d0f3",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u07-omni-flash-v1.mp4",
+    "sha256": "99b1b1ea0bb42bead89f7b12f98dc18be82329fcbdeca6a5720db21ee615d337",
+    "bytes": 1971761,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u07-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "44cf502c4cb6865cdd12ae04ddd3a3b81c03d350227664b93795e505e65af822",
+    "checks": {
+      "living_evidence_board_is_visible": true,
+      "rat_flea_human_route_remains_present": true,
+      "adjacent_insect_routes_are_distinct": true,
+      "coughing_patient_is_separated_behind_glass": true,
+      "multiple_routes_read_as_competing_evidence": true,
+      "blank_evidence_cards_have_no_generated_labels": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -36.3,
+    "max_volume_db": -9.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if evidence-card and route-impact sounds do not align within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u08 after the required request interval; do not regenerate bdq-v1-u07."
+}

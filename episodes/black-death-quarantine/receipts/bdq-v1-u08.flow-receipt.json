@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u08",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:34:26+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:35:37+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "866cf78320c965544bbf651c0457c9002bbf0c24b853ae960b2ec549d5be33b8",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u08-omni-flash-v1.mp4",
+    "sha256": "15b5f84eb8fe78626fdab2eb14ca763f72f0958f78e4ed4c0a7de7d0e77c7fe0",
+    "bytes": 2064762,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u08-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "f67e264b4361c3c69ab00b5e9d18382894e74a6b004d9467bee118ded3f7e2fb",
+    "checks": {
+      "camera_rises_from_harbor": true,
+      "ships_sacks_rodents_and_households_are_visible": true,
+      "golden_brass_pulse_branches_across_multiple_paths": true,
+      "network_spread_is_readable_without_text": true,
+      "same_route_direction_is_preserved": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -42.2,
+    "max_volume_db": -16.2,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if network clicks do not align with each visible pulse node within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u09 after the required request interval; do not regenerate bdq-v1-u08."
+}

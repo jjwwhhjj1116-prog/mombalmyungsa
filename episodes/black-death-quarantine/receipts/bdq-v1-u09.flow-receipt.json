@@ -1,0 +1,60 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u09",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:43:16+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:45:02+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "2b6596fabcba7ecff6251dbe0ec53d5618377a75e28c2468e521387f4bab72b3",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u09-omni-flash-v1.mp4",
+    "sha256": "b23e4428adbd77f2e22729142b90edd7e6dac14ddc44272531841338bf089e54",
+    "bytes": 2090943,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u09-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "25138c17c0a9324d096acbc6bd78057d541072f14322f521a0829c412cbd7a6a",
+    "checks": {
+      "approaching_ships_visible_before_closure": true,
+      "city_gate_closes_on_same_axis": true,
+      "camera_continues_through_gate_into_market": true,
+      "stopped_carts_and_crates_visible": true,
+      "empty_market_shelves_visible": true,
+      "protection_and_cost_read_without_text": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -21.1,
+    "max_volume_db": 0.0,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the gate slam or cart stop is not synchronized with the visible event within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Observe the mandatory ten-minute cooldown after the third consecutive generation click, then continue with bdq-v1-u10; do not regenerate bdq-v1-u09."
+}
