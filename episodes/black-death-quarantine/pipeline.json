@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 6,
+  "revision": 7,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -165,7 +165,7 @@
   ],
   "resume": {
     "first_non_completed_stage": "08_pilot_generation",
-    "precondition": "Stage 07 revision 2 splits the failed opening into bdq-v1-u01a and bdq-v1-u01b. Pilot unit bdq-v1-u16 remains visually approved and must not be regenerated. Batch generation remains blocked until both revised opening pilots pass.",
-    "instruction": "Generate bdq-v1-u01a from the locked textless rat thumbnail and bdq-v1-u01b from the clean textless Europe map asset, one at a time under the Flow request interval. QA both sources for identity, textlessness, continuity and harvestability; join later with a pupil-to-map match cut. Do not regenerate u16."
+    "precondition": "Stage 07 revision 2 is valid. Pilot units bdq-v1-u01b and bdq-v1-u16 passed visual QA and must not be regenerated. bdq-v1-u01a attempt 1 failed because the locked black resin rat changed into a grey photoreal rat. Batch generation remains blocked.",
+    "instruction": "After the failed-unit retry wait, submit the one allowed bdq-v1-u01a retry only. Keep the lead rat as an immobile black matte-resin sculpture and move only the background swarm and camera into the fixed pupil. PASS requires an identity-stable four-second harvest window. Do not regenerate bdq-v1-u01b or bdq-v1-u16."
   }
 }

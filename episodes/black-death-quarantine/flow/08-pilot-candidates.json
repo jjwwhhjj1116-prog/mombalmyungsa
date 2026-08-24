@@ -5,10 +5,11 @@
   "model": "Omni Flash",
   "aspect_ratio": "16:9",
   "generated_at": "2026-08-24T12:18:41+09:00",
+  "updated_at": "2026-08-24T12:53:05+09:00",
   "request_interval_seconds_minimum": 180,
   "contact_sheet": {
-    "path": "flow/pilots/08-pilot-contact-sheet-v1.jpg",
-    "sha256": "0976232c51a77138286182f9b38253ab29886bc1812b4bf0790ae63b76a90e1f"
+    "path": "flow/pilots/08-pilot-contact-sheet-v2.jpg",
+    "sha256": "c78fd16feb658a629d05b3474731eb92e596da0b3c5011c167a5a446b3f8e9ae"
   },
   "candidates": [
     {
@@ -64,6 +65,48 @@
         "lead rat identity still drifts after the one allowed retry",
         "the textless-map constraint is still violated"
       ]
+    },
+    {
+      "unit_id": "bdq-v1-u01a",
+      "attempt": 1,
+      "path": "flow/pilots/bdq-v1-u01a-omni-flash-v1.mp4",
+      "sha256": "e306846a174085bfb9ab37f90eb34a5fc2c0782a5cb44166ec1a239f070e4cb2",
+      "duration_seconds": 8.0,
+      "video": "h264 1280x720 24fps",
+      "audio": "aac 48000Hz stereo",
+      "visual_status": "FAIL",
+      "native_audio_decision": "replace_in_edit",
+      "checks": {
+        "exact_frame_zero": "PASS",
+        "lead_rat_stays_black": "FAIL_AFTER_FRAME_ZERO",
+        "lead_rat_face_identity": "FAIL_MORPH_TO_GREY_REALISTIC_RAT",
+        "text_or_map_leak": "PASS_0",
+        "continuous_camera_motion": "PASS"
+      },
+      "reject_reasons": [
+        "the exact black resin frame zero is preserved only at the start",
+        "the lead rat turns pale grey and increasingly photorealistic during motion",
+        "no identity-stable four-second harvest window exists"
+      ]
+    },
+    {
+      "unit_id": "bdq-v1-u01b",
+      "attempt": 1,
+      "path": "flow/pilots/bdq-v1-u01b-omni-flash-v1.mp4",
+      "sha256": "4bae6b8989da16ab68781577c1639a22bd799c6a26ebb7975d7336f99dd71355",
+      "duration_seconds": 8.0,
+      "video": "h264 1280x720 24fps",
+      "audio": "aac 48000Hz stereo",
+      "visual_status": "PASS",
+      "native_audio_decision": "replace_in_edit_unless_two_frame_sync_is_confirmed_during_harvest",
+      "checks": {
+        "exact_clean_map_start": "PASS",
+        "textless_map_all_frames": "PASS_0_LABELS",
+        "geography_and_relief_stability": "PASS",
+        "continuous_camera_glide": "PASS",
+        "sequential_light_reduction": "PASS",
+        "random_shake": "PASS_0"
+      }
     }
   ],
   "stage_status": "BLOCKED",
@@ -78,5 +121,13 @@
     ],
     "passed_unit_preserved": "bdq-v1-u16"
   },
-  "next_safe_action": "Generate revised opening pilots bdq-v1-u01a and bdq-v1-u01b one at a time. Both must pass identity, textless-frame, motion-continuity and four-second-harvest QA before stage 08 can complete. Do not regenerate bdq-v1-u16."
+  "rate_limit_state": {
+    "last_submit_at": "2026-08-24T12:51:01+09:00",
+    "last_terminal_at": "2026-08-24T12:52:05+09:00",
+    "next_allowed_submit_at": "2026-08-24T12:55:01+09:00",
+    "u01a_retry_not_before": "2026-08-24T13:01:28+09:00",
+    "consecutive_jobs": 2,
+    "cooldown_reason": "normal_serial_interval; failed u01a retry additionally waits fifteen minutes from its terminal confirmation"
+  },
+  "next_safe_action": "Preserve PASS units bdq-v1-u01b and bdq-v1-u16. After the failed-unit retry wait, make the one allowed bdq-v1-u01a retry with the lead rat fixed as an immobile black matte-resin museum sculpture while only the background swarm and camera move toward its pupil. Do not regenerate bdq-v1-u01b or bdq-v1-u16."
 }
