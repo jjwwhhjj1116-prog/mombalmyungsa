@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u10",
+  "attempt": 2,
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:10:43+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:12:31+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "submitted_prompt_sha256": "b939d97625adf6af589713c1569027d5414d678e9048ba06e57814251c9c09d2",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u10-omni-flash-v2.mp4",
+    "sha256": "872fa7e3b5f2133b59811ad7eae83d204e18efec27c14f969ba7973c0bb4586b",
+    "bytes": 1932519,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u10-contact-24-v2.jpg",
+    "contact_sheet_24_sha256": "fac54ab412260328e1bacec92f8a531a234691f05437a5dec592a6666d0779d1",
+    "checks": {
+      "gate_opens_and_goods_enter": true,
+      "same_market_and_camera_axis_continue": true,
+      "daylight_shift_marks_delay": true,
+      "pale_weak_arrivals_hold_foreheads": true,
+      "nearby_merchants_step_back": true,
+      "open_gate_cost_reads_without_text": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -33.3,
+    "max_volume_db": -10.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if gate, cart or fading market ambience misses its visible event by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u11 after the required request interval; do not regenerate bdq-v1-u10."
+}
