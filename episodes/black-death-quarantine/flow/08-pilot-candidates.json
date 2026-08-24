@@ -1,0 +1,72 @@
+{
+  "schema_version": "timemedic.flow-pilot-candidates.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "08_pilot_generation",
+  "model": "Omni Flash",
+  "aspect_ratio": "16:9",
+  "generated_at": "2026-08-24T12:18:41+09:00",
+  "request_interval_seconds_minimum": 180,
+  "contact_sheet": {
+    "path": "flow/pilots/08-pilot-contact-sheet-v1.jpg",
+    "sha256": "0976232c51a77138286182f9b38253ab29886bc1812b4bf0790ae63b76a90e1f"
+  },
+  "candidates": [
+    {
+      "unit_id": "bdq-v1-u16",
+      "attempt": 1,
+      "path": "flow/pilots/bdq-v1-u16-omni-flash-v1.mp4",
+      "sha256": "6e0aea215281a34d114baf459b00950ce8763e5154e09543f535eeed41c5fffa",
+      "duration_seconds": 8.0,
+      "video": "h264 1280x720 24fps",
+      "audio": "aac 48000Hz stereo",
+      "visual_status": "PASS",
+      "native_audio_decision": "replace_in_edit_unless_two_frame_sync_is_confirmed_during_harvest",
+      "checks": {
+        "diorama_identity": "PASS",
+        "continuous_camera_motion": "PASS",
+        "boat_redirect_action": "PASS",
+        "island_observation_and_hourglass": "PASS",
+        "freeze_over_0_7_seconds": "PASS_0",
+        "random_shake": "PASS_0",
+        "readable_generated_text": "PASS_0"
+      }
+    },
+    {
+      "unit_id": "bdq-v1-u01",
+      "attempt": 1,
+      "path": "flow/pilots/bdq-v1-u01-omni-flash-v1.mp4",
+      "sha256": "aaa2be665743545845deffc5a0c12b099e718d3e8da9d9e8d82b90d7e0252e63",
+      "visual_status": "FAIL",
+      "reject_reasons": [
+        "lead rat changes from the locked black resin identity to a pale grey rat",
+        "the generated Europe map contains pseudo-readable labels"
+      ]
+    },
+    {
+      "unit_id": "bdq-v1-u01",
+      "attempt": 2,
+      "path": "flow/pilots/bdq-v1-u01-omni-flash-v2.mp4",
+      "sha256": "3ad1ab1ac3cbe733cb03e1c7b051644178d4ae301f3eecf6d55882a581121a3c",
+      "duration_seconds": 8.0,
+      "video": "h264 1280x720 24fps",
+      "audio": "aac 48000Hz stereo",
+      "visual_status": "FAIL",
+      "native_audio_decision": "replace_in_edit",
+      "checks": {
+        "exact_frame_zero": "PASS",
+        "continuous_rat_to_eye_to_map_motion": "PASS",
+        "freeze_over_0_7_seconds": "PASS_0",
+        "random_shake": "PASS_0",
+        "lead_rat_identity": "FAIL_COLOR_AND_FACE_DRIFT",
+        "readable_generated_text": "FAIL_PSEUDO_LABELS_ON_MAP"
+      },
+      "reject_reasons": [
+        "lead rat identity still drifts after the one allowed retry",
+        "the textless-map constraint is still violated"
+      ]
+    }
+  ],
+  "stage_status": "BLOCKED",
+  "batch_generation_allowed": false,
+  "next_safe_action": "Revise only the opening unit into two four-second I2V shots: s01 rat-motion from the locked textless thumbnail and s02 lights-out Europe map from the clean textless map asset, joined by a pupil-to-map match cut. Re-lock stage 07 before any additional generation."
+}
