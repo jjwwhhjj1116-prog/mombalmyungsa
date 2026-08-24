@@ -1,0 +1,22 @@
+{
+  "schema_version": "body-invention.thumbnail-visual-identity-lock.v1",
+  "asset_path": "episodes/black-death-quarantine/assets/frame-zero-bg-v1-landscape.png",
+  "asset_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602",
+  "verdict": "PASS",
+  "manual_visual_review_completed": true,
+  "checks": {
+    "matte_handcrafted_resin": true,
+    "upright_rat_is_primary_subject": true,
+    "rat_swarm_is_immediately_readable": true,
+    "bright_subject_dark_background_separation": true,
+    "text_safe_negative_space_on_left": true,
+    "sixteen_by_nine_longform_composition": true
+  },
+  "visible_scale_clues": [
+    "brass_display_rail",
+    "oversized_miniature_screws",
+    "carved_resin_cobblestones",
+    "museum_display_lighting"
+  ],
+  "forbidden_detected": []
+}

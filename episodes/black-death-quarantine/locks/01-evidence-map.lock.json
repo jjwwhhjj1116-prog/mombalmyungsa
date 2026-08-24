@@ -1,0 +1,14 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "01_evidence_map",
+  "status": "completed",
+  "completed_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {
+    "editorial/topic-selection.json": "0a0b160fec03048a6e6785752d0f302f1f5607e9ec84d3d3da96442cb70eaf9c"
+  },
+  "output_hashes": {
+    "editorial/evidence-map.json": "35f8a2bc1ce1340506375e4eef96cc3bae51e17bd9ef6b92c459d8b3a63623ea"
+  },
+  "source_ids_present": true,
+  "medical_history_review": "PASS"
+}

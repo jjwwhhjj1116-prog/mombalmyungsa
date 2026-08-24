@@ -1,0 +1,20 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "06_storyboard",
+  "status": "completed",
+  "revision": 1,
+  "approved_by": "validator",
+  "input_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816"
+  },
+  "output_hashes": {
+    "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9"
+  },
+  "sentence_count": 50,
+  "one_sentence_one_scene": true,
+  "dialogue_matches_approved_script_exactly": true,
+  "premature_cut_forbidden": true,
+  "sparse_overlay_nulls_are_intentional": true,
+  "aspect_ratio": "16:9",
+  "duration_seconds": 223.085688
+}

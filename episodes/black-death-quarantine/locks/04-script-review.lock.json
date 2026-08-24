@@ -1,0 +1,17 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "04_script_review",
+  "status": "completed",
+  "completed_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {
+    "editorial/script-draft-v1.md": "4157ef2aec22958355339274ae0492d799c3788afdcb1f447999cea827686b64",
+    "editorial/narration-draft-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816"
+  },
+  "output_hashes": {
+    "editorial/chapter-self-review-v2.md": "6cf840004eecf003be6f71d2e5e0ff783e28361d0616399af018ba281c469f66",
+    "editorial/owner-revision-2026-08-23-impasse-signature.md": "4c9493eccb84ee4b0d7a74bc37d34ae9d65c708436aa0ea1d02dea804f3b1e2b"
+  },
+  "fact_medical_review": "PASS",
+  "korean_tts_review": "PASS",
+  "chapter_continuity_review": "PASS"
+}

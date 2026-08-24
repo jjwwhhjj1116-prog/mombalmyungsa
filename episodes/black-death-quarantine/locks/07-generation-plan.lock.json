@@ -1,0 +1,24 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "07_generation_plan",
+  "status": "completed",
+  "revision": 1,
+  "approved_by": "validator",
+  "input_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
+    "locks/06-thumbnail.lock.json": "32ea7035decd50a09b992bdec42cf39eb419fb41ecfd7df00f5d41b40ec9960b"
+  },
+  "output_hashes": {
+    "plans/generation-units-v6.json": "226ae248ec0f82c6c9857a0e50a4d05d4d520cbc1a2236baeed3d5161148c19b"
+  },
+  "unit_count": 28,
+  "candidates_per_unit": 1,
+  "pilot_unit_ids": [
+    "bdq-v1-u01",
+    "bdq-v1-u16"
+  ],
+  "batch_generation_allowed": false,
+  "sequential_generation_only": true,
+  "aspect_ratio": "16:9"
+}

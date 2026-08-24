@@ -1,0 +1,13 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "02_story_contract",
+  "status": "completed",
+  "completed_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {
+    "editorial/evidence-map.json": "35f8a2bc1ce1340506375e4eef96cc3bae51e17bd9ef6b92c459d8b3a63623ea"
+  },
+  "output_hashes": {
+    "editorial/story-contract.json": "260d223b79a1716f385919eef0a390596a8fd473a6fc72b7e0db1c0f8e1aea56"
+  },
+  "coherence_contract": "PASS"
+}

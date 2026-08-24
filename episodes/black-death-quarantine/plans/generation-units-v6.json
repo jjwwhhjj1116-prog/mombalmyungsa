@@ -1,0 +1,968 @@
+{
+  "schema_version": "timemedic.flow-generation-plan.v2",
+  "topic_id": "black-death-quarantine",
+  "revision": 1,
+  "script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+  "storyboard_sha256": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
+  "final_tts_duration_seconds": 223.085688,
+  "engine": "Google Flow",
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "generation_strategy": "first_hook_image_to_video_then_text_to_video",
+  "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
+  "aspect_ratio": "16:9",
+  "seconds_per_unit": 8,
+  "sequential_generation_only": true,
+  "minimum_seconds_between_generation_clicks": 180,
+  "cooldown_seconds_after_three_jobs": 600,
+  "pilot_unit_ids": [
+    "bdq-v1-u01",
+    "bdq-v1-u16"
+  ],
+  "style_prefix": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic.",
+  "thumbnail_opening_contract": {
+    "lock_path": "locks/06-thumbnail.lock.json",
+    "copy_blocks": [
+      "5천만 명을 죽인",
+      "흑사병"
+    ],
+    "layout": "deep_hook_two_tier",
+    "background_asset": "assets/frame-zero-bg-v1-landscape.png",
+    "background_asset_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602",
+    "final_pixel_asset": "assets/thumbnail-v1-landscape.png",
+    "final_pixel_asset_sha256": "08cb93f242142c6d2660c559ecf7fbdcc24d8178c29969bcc28a2746f6637f59",
+    "mobile_qa_asset": "qa/thumbnail-v1-mobile-25pct.jpg",
+    "mobile_qa_asset_sha256": "42028fb548b032bc180c547393070f2d274d392b308858f5902ae33a19016650",
+    "font": "Gmarket Sans Bold",
+    "fill_colors": [
+      "#FFFFFF",
+      "#FFD21F"
+    ],
+    "outer_stroke_width_px": 30,
+    "inner_stroke_width_px": 14,
+    "subject_is_primary": true,
+    "flow_hook_starts_from_same_background_without_generated_text": true,
+    "flow_hook_input_mode": "image_to_video",
+    "remaining_units_mode": "text_to_video",
+    "final_typography_is_locked_before_generation": true,
+    "stage_14_reuses_locked_typography_pixels_without_redesign": true
+  },
+  "global_avoid": "No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+  "units": [
+    {
+      "unit_id": "bdq-v1-u01",
+      "sentence_ids": [
+        "s01",
+        "s02"
+      ],
+      "candidate_count": 1,
+      "risk": "rat_swarm_to_mass_death_scale",
+      "motion_carrier": "rats_forward_run+extinguishing_city_lights",
+      "continuity_anchors": [
+        "exact_frame_zero",
+        "lead_rat_eyes",
+        "black_route_line",
+        "dark_map_route"
+      ],
+      "model": "Omni Flash",
+      "mode": "image_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Use the supplied textless 16:9 thumbnail as the exact first frame. Hold the composition for 0.7 seconds, then the upright grinning resin rat takes one sharp step toward lens while the swarm runs forward and the camera retreats smoothly along the brass rail. Push through the lead rat's eye into a carved miniature map of Europe where city lanterns extinguish in sequence and empty plazas reveal the scale of death. Preserve the exact rat, alley, lighting, resin texture and camera axis; no reset or random shake. Native audio only from visible events, synchronized within two frames: many_small_paws_on_cobblestone, lanterns_extinguish_in_sequence. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "many_small_paws_on_cobblestone",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "lanterns_extinguish_in_sequence",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS.",
+      "input_image": "assets/frame-zero-bg-v1-landscape.png",
+      "input_image_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602"
+    },
+    {
+      "unit_id": "bdq-v1-u02",
+      "sentence_ids": [
+        "s03",
+        "s04",
+        "s05"
+      ],
+      "candidate_count": 1,
+      "risk": "rat_bite_misconception_to_smaller_vector_to_flea_and_bacteria",
+      "motion_carrier": "rat_snout_to_halt+flea_crawl+bacteria_particle_flow",
+      "continuity_anchors": [
+        "dark_map_route",
+        "rat_back_fur",
+        "flea_abdomen",
+        "bacteria_stream",
+        "dark_particle_stream"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Continue from the dark map route into the same medieval alley. A rat approaches a person's ankle but stops before biting; split the composition to challenge the expected bite. Dive smoothly into the rat's fur, reveal one tiny flea crawling between sculpted hairs, then pass through a transparent anatomical cutaway of the flea where rod-shaped plague bacteria flow inside. Keep the reveal readable and non-gory. Native audio only from visible events, synchronized within two frames: abrupt_paw_stop, magnified_fur_rustle, soft_microscopic_flow. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "abrupt_paw_stop",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "magnified_fur_rustle",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "soft_microscopic_flow",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u03",
+      "sentence_ids": [
+        "s06",
+        "s07"
+      ],
+      "candidate_count": 1,
+      "risk": "invisible_enemy_problem_to_trade_ship_arrival",
+      "motion_carrier": "swinging_harbor_gates+ship_forward_motion",
+      "continuity_anchors": [
+        "dark_particle_stream",
+        "black_sail_edge",
+        "taut_rope",
+        "mooring_rope_tension"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Follow the dark bacterial stream as it dissolves into empty air over a medieval harbor where people cannot see the enemy. Two harbor gates sway in opposite directions. A black sail wipes the frame and becomes a merchant ship arriving at Messina in 1347; sailors slump on deck while dockworkers freeze in alarm. No corpse closeups or gore. Native audio only from visible events, synchronized within two frames: wind_through_empty_harbor, wooden_hull_water_and_rope_snap. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "wind_through_empty_harbor",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "wooden_hull_water_and_rope_snap",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u04",
+      "sentence_ids": [
+        "s08"
+      ],
+      "candidate_count": 1,
+      "risk": "swollen_lymph_nodes",
+      "motion_carrier": "lymph_node_swelling",
+      "continuity_anchors": [
+        "mooring_rope_tension",
+        "body_outline",
+        "transparent_body_outline"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Track a trembling miniature physician hand toward a sick sailor. Reveal enlarged but non-gory swollen lymph nodes as a clean medical diorama cutaway, then pull back through a narrow street where residents recoil and shutters slam. The camera movement must be motivated by the physician's hand and the spreading alarm, never handheld jitter. Native audio only from visible events, synchronized within two frames: strained_breath_only_if_visible. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "strained_breath_only_if_visible",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u05",
+      "sentence_ids": [
+        "s09",
+        "s10"
+      ],
+      "candidate_count": 1,
+      "risk": "unknown_germs_to_transmission_route_overview",
+      "motion_carrier": "lantern_beam_sweep+route_line_draw",
+      "continuity_anchors": [
+        "transparent_body_outline",
+        "beam_line",
+        "rat_body",
+        "rat_body_fall"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Lantern light searches empty air and finds nothing, showing an invisible enemy without symbols or text. Tilt down into a brass tabletop transmission model: infected rodent, flea and human arranged as one moving route. Follow one red enamel bead through the route so the mechanism is understood visually. Native audio only from visible events, synchronized within two frames: lantern_chain_creak, pencil_line_scratch. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "lantern_chain_creak",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "pencil_line_scratch",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u06",
+      "sentence_ids": [
+        "s11"
+      ],
+      "candidate_count": 1,
+      "risk": "flea_host_switch",
+      "motion_carrier": "flea_jump_to_human",
+      "continuity_anchors": [
+        "rat_body_fall",
+        "flea_jump_arc",
+        "branching_path_split"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A sick resin rat collapses in a controlled non-gory museum diorama. Fleas leave its fur, leap along the same left-to-right axis and land on a human ankle; the camera follows one flea continuously from host to host. Make the transfer physical, clear and unsettling, with no monster scale. Native audio only from visible events, synchronized within two frames: tiny_paw_scrape_and_cloth_contact. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "tiny_paw_scrape_and_cloth_contact",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u07",
+      "sentence_ids": [
+        "s12",
+        "s13"
+      ],
+      "candidate_count": 1,
+      "risk": "scientific_uncertainty_to_multiple_routes",
+      "motion_carrier": "balance_scale_sway+three_routes_converge",
+      "continuity_anchors": [
+        "branching_path_split",
+        "three_route_cards",
+        "central_city_node",
+        "network_node_city"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Open the tabletop route wider to show scientific uncertainty: one route stays rat-to-flea-to-human while adjacent branches reveal human fleas, body lice and a coughing pneumonic patient behind translucent glass. Treat these as competing routes in a living evidence board, not a final single-cause claim. Keep all labels blank. Native audio only from visible events, synchronized within two frames: paper_cards_and_scale_tick, three_soft_route_impacts. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "paper_cards_and_scale_tick",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "three_soft_route_impacts",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u08",
+      "sentence_ids": [
+        "s14"
+      ],
+      "candidate_count": 1,
+      "risk": "infection_network",
+      "motion_carrier": "network_lines_spread",
+      "continuity_anchors": [
+        "network_node_city",
+        "city_gate",
+        "city_gate_network_edge"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. The camera rises above the harbor and reveals a connected miniature network of ships, grain sacks, rodents, fleas and crowded households. One moving brass pulse travels through several paths at once, showing that the epidemic behaves like a network rather than one villain. Maintain the same map and route direction. Native audio only from visible events, synchronized within two frames: network_clicks. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "network_clicks",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u09",
+      "sentence_ids": [
+        "s15",
+        "s16"
+      ],
+      "candidate_count": 1,
+      "risk": "close_city_gate_to_closed_gate_cost",
+      "motion_carrier": "gate_closing+two_sides_stop",
+      "continuity_anchors": [
+        "city_gate_network_edge",
+        "gate_seam",
+        "gate_reopens"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A city gate slams shut in front of approaching ships. Continue the same movement to the inside, where food carts and medicine crates also stop at the gate and market shelves empty. Use one heavy gate action to show both protection and cost; no new unrelated location. Native audio only from visible events, synchronized within two frames: heavy_wood_gate_slam, ship_bell_stops_then_cart_stops. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "heavy_wood_gate_slam",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "ship_bell_stops_then_cart_stops",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u10",
+      "sentence_ids": [
+        "s17"
+      ],
+      "candidate_count": 1,
+      "risk": "open_gate_cost",
+      "motion_carrier": "cargo_to_time_wheel",
+      "continuity_anchors": [
+        "gate_reopens",
+        "market_scale",
+        "split_balance_beam"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Reverse the gate movement: merchants open it and goods flow into the city, restoring the market. After a short time-lapse within the same set, seemingly healthy arrivals begin to falter in the square. Keep the delayed consequence legible through one continuous camera orbit, not a hard reset. Native audio only from visible events, synchronized within two frames: cart_roll_coins_then_bodies_kneel. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "cart_roll_coins_then_bodies_kneel",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u11",
+      "sentence_ids": [
+        "s18",
+        "s19"
+      ],
+      "candidate_count": 1,
+      "risk": "double_bind_to_impasse_signature",
+      "motion_carrier": "balance_beam_swing+hands_to_head",
+      "continuity_anchors": [
+        "split_balance_beam",
+        "balance_pivot",
+        "clock_face",
+        "healthy_traveler_clock"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A brass balance scale holds bread and trade on one side and a dark spreading route on the other; it rocks without settling. The mayor puppet looks from one side to the other in frustrated disbelief while the camera makes one restrained push-in. Preserve seriousness with a trace of human exasperation, not slapstick. Native audio only from visible events, synchronized within two frames: wooden_scale_creak, scale_latch_and_short_exhale. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "wooden_scale_creak",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "scale_latch_and_short_exhale",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u12",
+      "sentence_ids": [
+        "s20"
+      ],
+      "candidate_count": 1,
+      "risk": "delayed_symptoms",
+      "motion_carrier": "clock_hands_forward",
+      "continuity_anchors": [
+        "healthy_traveler_clock",
+        "traveler_document",
+        "late_detection_stamp"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A traveler who looks healthy walks normally through the gate, then later in the same continuous miniature corridor develops fever and collapses gently. A guard who only checks visibly sick people realizes the traveler already passed. Show the delay with shifting lantern light and an hourglass, no readable numbers. Native audio only from visible events, synchronized within two frames: clock_ticks_then_knee_drop. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "clock_ticks_then_knee_drop",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u13",
+      "sentence_ids": [
+        "s21",
+        "s22"
+      ],
+      "candidate_count": 1,
+      "risk": "symptom_screening_failure_to_repeating_port_pattern",
+      "motion_carrier": "hidden_traveler_footsteps+circular_port_carousel",
+      "continuity_anchors": [
+        "late_detection_stamp",
+        "footprints",
+        "harbor_carousel",
+        "ship_to_falling_people_sequence"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Create a repeating harbor cycle on one circular diorama turntable: ship arrives, apparently healthy passengers enter, city lanterns begin to go dark. Repeat the same physical cycle once faster, then stop on officials watching the pattern. Camera follows the turntable rotation smoothly. Native audio only from visible events, synchronized within two frames: stamp_then_receding_footsteps, mechanical_carousel_clicks. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "stamp_then_receding_footsteps",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "mechanical_carousel_clicks",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u14",
+      "sentence_ids": [
+        "s23",
+        "s24"
+      ],
+      "candidate_count": 1,
+      "risk": "arrival_then_outbreak_to_reactive_response_too_late",
+      "motion_carrier": "sun_shadow_across_port+infection_line_outruns_guards",
+      "continuity_anchors": [
+        "ship_to_falling_people_sequence",
+        "warning_bell",
+        "screening_gate",
+        "old_question_filter_gate"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Continue from the repeating cycle. Officials rush only after residents fall, but black route beads have already spread through alleys behind them. Freeze the old strategy as a brass question mechanism focused on identifying already-sick people, then let that mechanism jam. The visual logic must clearly show why reaction after symptoms is late. Native audio only from visible events, synchronized within two frames: dock_bell_then_market_fall, late_bell_and_running_boots. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "dock_bell_then_market_fall",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "late_bell_and_running_boots",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u15",
+      "sentence_ids": [
+        "s25",
+        "s26",
+        "s27"
+      ],
+      "candidate_count": 1,
+      "risk": "old_question_to_question_reversal_to_new_question",
+      "motion_carrier": "healthy_line_passes+rotating_gate_module+hourglass_turn",
+      "continuity_anchors": [
+        "old_question_filter_gate",
+        "gate_axis",
+        "rotating_brass_axis",
+        "falling_sand",
+        "island_quarantine_route"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. The jammed brass mechanism rotates and reverses direction. Replace the old sick-person filter with a temporary holding barrier for all arrivals from suspect regions, including those who look well. Show healthy-looking travelers pausing before the city rather than being accused or harmed; this is a question reversal, not punishment. Native audio only from visible events, synchronized within two frames: gate_clicks, brass_axis_turn_and_lock, crowd_steps_stop_and_hourglass_turn. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "gate_clicks",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "brass_axis_turn_and_lock",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "crowd_steps_stop_and_hourglass_turn",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u16",
+      "sentence_ids": [
+        "s28"
+      ],
+      "candidate_count": 1,
+      "risk": "ragusa_thirty_day_isolation",
+      "motion_carrier": "boat_route_to_island",
+      "continuity_anchors": [
+        "island_quarantine_route",
+        "island_watchtower",
+        "island_observation_window"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Reveal Ragusa in 1377 as a bright Adriatic port miniature. A ship from a suspect region is redirected to an island outside the walls; travelers and cargo stay there while a large blank thirty-day hourglass turns. The city remains visible across the water, emphasizing temporary distance and observation. Native audio only from visible events, synchronized within two frames: small_boat_water_and_mooring. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "small_boat_water_and_mooring",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u17",
+      "sentence_ids": [
+        "s29",
+        "s30"
+      ],
+      "candidate_count": 1,
+      "risk": "time_as_screening_tool_to_quarantine_word_origin",
+      "motion_carrier": "day_night_observation_cycle+calendar_wheel_extension",
+      "continuity_anchors": [
+        "island_observation_window",
+        "calendar_wheel",
+        "calendar_ring",
+        "chain_link_gap"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. On the island, guards observe travelers from a respectful distance while an hourglass empties and windows open each morning. Morph the thirty-day hourglass into a longer forty-day mechanism by adding one brass chamber; then follow its circular ring into the origin of quarantine without displaying readable text. Native audio only from visible events, synchronized within two frames: window_shutter_and_quill_marks, calendar_gears. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "window_shutter_and_quill_marks",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "calendar_gears",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u18",
+      "sentence_ids": [
+        "s31",
+        "s32"
+      ],
+      "candidate_count": 1,
+      "risk": "break_transmission_chain_to_quarantine_not_eradication",
+      "motion_carrier": "chain_link_separation+other_routes_reignite",
+      "continuity_anchors": [
+        "chain_link_gap",
+        "broken_link",
+        "europe_map",
+        "century_map_pulse"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A glowing infection route from ship to city is physically interrupted by the island gap and fades before reaching residents. Then pull wider to show that some dark routes still return elsewhere in Europe, making the success partial rather than a magical ending. Keep the same map and colors. Native audio only from visible events, synchronized within two frames: chain_link_open, one_stop_then_distant_bells. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "chain_link_open",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "one_stop_then_distant_bells",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u19",
+      "sentence_ids": [
+        "s33",
+        "s34",
+        "s35"
+      ],
+      "candidate_count": 1,
+      "risk": "recurrent_outbreaks_to_remaining_question_to_pathogen_and_vector_question",
+      "motion_carrier": "century_gear_rotation+spotlight_narrows+incomplete_route_line",
+      "continuity_anchors": [
+        "century_map_pulse",
+        "central_gear_axle",
+        "glass_slide",
+        "empty_link_circle",
+        "hong_kong_lab_door"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Centuries turn on a large calendar wheel without readable dates as outbreaks reappear in different miniature cities. The wheel stops and all previous routes converge on one unresolved question: what is the disease and exactly which path carries it? Camera follows one black bead into a nineteenth-century laboratory. Native audio only from visible events, synchronized within two frames: slow_gear_clicks, gear_stop_and_room_tone, pencil_line_stops. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "slow_gear_clicks",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "gear_stop_and_room_tone",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "pencil_line_stops",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u20",
+      "sentence_ids": [
+        "s36",
+        "s37"
+      ],
+      "candidate_count": 1,
+      "risk": "yersin_enters_hong_kong_to_alexandre_yersin_identity",
+      "motion_carrier": "doctor_forward_walk+hand_adjusts_microscope",
+      "continuity_anchors": [
+        "hong_kong_lab_door",
+        "specimen_box",
+        "focus_knob",
+        "microscope_focus_knob"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Enter a handcrafted 1894 Hong Kong laboratory diorama during an epidemic. Physician Alexandre Yersin examines samples through a brass microscope while hospital tents and harbor crates remain visible beyond the window. Introduce his role before emphasizing the person; no readable papers or labels. Native audio only from visible events, synchronized within two frames: door_open_crate_set_down, microscope_knob_click. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "door_open_crate_set_down",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "microscope_knob_click",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u21",
+      "sentence_ids": [
+        "s38",
+        "s39"
+      ],
+      "candidate_count": 1,
+      "risk": "plague_bacterium_found_to_simond_tracks_route",
+      "motion_carrier": "microscope_focus_sharpens+investigator_thread_line",
+      "continuity_anchors": [
+        "microscope_focus_knob",
+        "circular_microscope_view",
+        "thread_end_at_flea",
+        "flea_link_reveal"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Pass through the microscope lens into a clean magnified specimen where rod-shaped bacteria become visible. Pull back four years later through the same lens to Paul-Louis Simond comparing a sick rat, fleas and a human case on a controlled evidence table. Keep dates implied by changing laboratory props, not text. Native audio only from visible events, synchronized within two frames: focus_click_and_glass_slide, thread_pull_and_cage_rattle. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "focus_click_and_glass_slide",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "thread_pull_and_cage_rattle",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u22",
+      "sentence_ids": [
+        "s40",
+        "s41"
+      ],
+      "candidate_count": 1,
+      "risk": "flea_vector_link_to_flea_searches_new_host",
+      "motion_carrier": "link_closes+flea_host_search",
+      "continuity_anchors": [
+        "flea_link_reveal",
+        "closed_link",
+        "flea_jump_endpoint",
+        "pest_control_order_board"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Simond's table becomes a moving mechanism: an infected rat supports fleas, the rat dies, fleas jump toward a human sleeve. One brass connector locks rat, flea and human into the same pathway while the camera traces it in a single move. Non-gory and scientifically cautious. Native audio only from visible events, synchronized within two frames: brass_link_click, fur_rustle_and_tiny_jump. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "brass_link_click",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "fur_rustle_and_tiny_jump",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u23",
+      "sentence_ids": [
+        "s42",
+        "s43"
+      ],
+      "candidate_count": 1,
+      "risk": "do_not_kill_rodents_first_to_flea_first_then_rodent",
+      "motion_carrier": "control_arrow_redirect+two_stage_control_sequence",
+      "continuity_anchors": [
+        "pest_control_order_board",
+        "redirection_arrow",
+        "two_step_indicator",
+        "clinic_response_line"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. A worker reaches to kill every rat at once, but the camera zooms to fleas scattering from a dead rodent toward people; the hand stops. Reverse the order visually: isolate and control fleas first, then remove rodents safely behind a barrier. Make the sequence unmistakable through action, not text. Native audio only from visible events, synchronized within two frames: hand_stop_and_selector_click, sprayer_click_then_trap_door. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "hand_stop_and_selector_click",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "sprayer_click_then_trap_door",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u24",
+      "sentence_ids": [
+        "s44"
+      ],
+      "candidate_count": 1,
+      "risk": "early_diagnosis_antibiotics",
+      "motion_carrier": "patient_care_conveyor",
+      "continuity_anchors": [
+        "clinic_response_line",
+        "green_status_light",
+        "return_to_rat_eye"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Transition from the flea-control barrier into a modern clinical diorama. A clinician recognizes suspicious symptoms, collects a sample, confirms the infection and begins appropriate antibiotics; use clean icons and instruments with no readable labels. Show urgency and modern capability without implying home treatment. Native audio only from visible events, synchronized within two frames: clinic_bell_vial_set_and_status_click. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "clinic_bell_vial_set_and_status_click",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u25",
+      "sentence_ids": [
+        "s45",
+        "s46"
+      ],
+      "candidate_count": 1,
+      "risk": "return_to_rat_to_no_single_miracle_cure",
+      "motion_carrier": "eye_glint_match+miracle_bottle_shatters_to_layers",
+      "continuity_anchors": [
+        "return_to_rat_eye",
+        "lead_rat_eyes",
+        "four_control_layers",
+        "layered_control_path"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Return to the opening rat on the same brass-railed alley set. It looks toward camera while the network of ships, fleas and people appears behind it. The rat remains important but is no longer framed as a lone magical cause; camera pulls back to expose the full system. Native audio only from visible events, synchronized within two frames: soft_return_paw_steps, glass_like_resin_crack_no_gore. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "soft_return_paw_steps",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "glass_like_resin_crack_no_gore",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u26",
+      "sentence_ids": [
+        "s47"
+      ],
+      "candidate_count": 1,
+      "risk": "layered_control_system",
+      "motion_carrier": "control_line_left_to_right",
+      "continuity_anchors": [
+        "layered_control_path",
+        "last_cut_route_line",
+        "network_not_single_rat"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Build a layered defense around the city: quarantine at the port, sanitation and flea control in alleys, safer rodent removal, rapid diagnosis and clinical treatment. Each layer clicks into place around the same moving route like nested museum mechanisms. Do not present one miracle cure. Native audio only from visible events, synchronized within two frames: five_visible_mechanical_actions. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "five_visible_mechanical_actions",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u27",
+      "sentence_ids": [
+        "s48"
+      ],
+      "candidate_count": 1,
+      "risk": "whole_network_problem",
+      "motion_carrier": "network_reveal_zoom_out",
+      "continuity_anchors": [
+        "network_not_single_rat",
+        "infection_network",
+        "network_lines_cut_one_by_one"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Rise above the complete diorama network. Highlight several paths at once—ships, cargo, fleas, rodents, cough transmission and delayed symptoms—while the lead rat becomes only one node among many. Camera should make one calm explanatory orbit with clear depth and continuous motion. Native audio only from visible events, synchronized within two frames: network_hum. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "network_hum",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    },
+    {
+      "unit_id": "bdq-v1-u28",
+      "sentence_ids": [
+        "s49",
+        "s50"
+      ],
+      "candidate_count": 1,
+      "risk": "paths_cut_one_by_one_to_quarantine_and_public_health_system",
+      "motion_carrier": "lines_extinguish_sequence+protective_ring_closes",
+      "continuity_anchors": [
+        "network_lines_cut_one_by_one",
+        "last_line_endpoint",
+        "city_protection_ring",
+        "end_hold"
+      ],
+      "model": "Omni Flash",
+      "mode": "text_to_video",
+      "aspect_ratio": "16:9",
+      "seconds": 8,
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin puppets and animal miniatures, solid sculpted hair and fur, subtle joints and paint marks, carved wood, brass, enamel, glass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, historically appropriate setting, never photorealistic. Cut the network routes one by one: port holding interrupts ships, flea control breaks one branch, safer rodent control closes another, diagnosis and treatment stop the final clinical route. End on the restored city lights and the fixed closing composition as the narrator's signature line lands. Warm, respectful resolution; no triumphant war imagery. Native audio only from visible events, synchronized within two frames: four_soft_line_disconnects, gate_lock_and_warm_city_ambience. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal skin, chibi, glossy toy plastic, giant animals, warped anatomy, extra fingers, face morphing, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "native_audio_plan": [
+        {
+          "event": "four_soft_line_disconnects",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        },
+        {
+          "event": "gate_lock_and_warm_city_ambience",
+          "disposition_if_sync_passes": "keep",
+          "disposition_if_sync_fails": "replace_in_edit"
+        }
+      ],
+      "harvest_rule": "Harvest only the segment whose visible action exactly matches the owned sentence meaning. Final edit may change scene only after that sentence ends in the final locked TTS."
+    }
+  ],
+  "status": "planned",
+  "paid_generation_allowed": true,
+  "batch_generation_allowed": false,
+  "completed_at": "2026-08-24T12:00:00+09:00"
+}

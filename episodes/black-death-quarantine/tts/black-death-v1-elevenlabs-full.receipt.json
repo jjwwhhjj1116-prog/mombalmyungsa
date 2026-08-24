@@ -1,0 +1,37 @@
+{
+  "schema_version": "body-invention.elevenlabs-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "script_path": "final-script-v1.txt",
+  "script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+  "local_audio_path": "tts/black-death-v1-elevenlabs-full.mp3",
+  "audio_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+  "provider": "ElevenLabs",
+  "voice_id": "wTGzPmtwk7nDNybbk0OL",
+  "voice_display_name": "오늘을 만든 이름들_역사해설_V3",
+  "model_id": "eleven_multilingual_v2",
+  "settings": {
+    "speed": 1.05,
+    "stability_ui": 0.4,
+    "similarity_boost": 0.85,
+    "style": 0.5,
+    "speaker_boost": true,
+    "language_override": "Korean",
+    "output_format": "MP3 44.1 kHz 128kbps"
+  },
+  "synthesis_strategy": "full_script_single_request",
+  "sentence_level_stitching": false,
+  "credits_before": 125653,
+  "credits_after": 123644,
+  "credits_used": 2009,
+  "duration_seconds": 223.085688,
+  "silence_audit": {
+    "leading_excess_silence": false,
+    "trailing_excess_silence": false,
+    "internal_pauses_over_0_8_seconds": [
+      {"start": 36.918073, "end": 38.364444, "duration": 1.446372, "decision": "keep_chapter_breath"},
+      {"start": 72.577642, "end": 73.585805, "duration": 1.008163, "decision": "keep_chapter_breath"}
+    ],
+    "audio_trimmed": false
+  },
+  "generated_at": "2026-08-24T11:06:00+09:00"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "03_script_draft",
+  "status": "completed",
+  "completed_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {
+    "editorial/evidence-map.json": "35f8a2bc1ce1340506375e4eef96cc3bae51e17bd9ef6b92c459d8b3a63623ea",
+    "editorial/story-contract.json": "260d223b79a1716f385919eef0a390596a8fd473a6fc72b7e0db1c0f8e1aea56"
+  },
+  "output_hashes": {
+    "editorial/script-draft-v1.md": "4157ef2aec22958355339274ae0492d799c3788afdcb1f447999cea827686b64",
+    "editorial/narration-draft-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816"
+  },
+  "profile": "coherence_master"
+}

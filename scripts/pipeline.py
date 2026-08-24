@@ -75,7 +75,6 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         "candidates_per_unit": 1,
         "voice_provider": "ElevenLabs",
         "voice_take": "Take 2",
-        "voice_model": "eleven_v3",
         "tts_synthesis_strategy": "full_script_single_request",
         "tts_max_chunks_if_provider_limit": 3,
         "sentence_level_tts_stitching_forbidden": True,
@@ -104,6 +103,13 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
     for field, expected in expected_production.items():
         if production.get(field) != expected:
             errors.append(f"production_contract.{field} must be {expected!r}")
+
+    voice_model = production.get("voice_model")
+    if episode.name == "gas-hwalmyeongsu":
+        if voice_model not in {"eleven_v3", "eleven_multilingual_v2"}:
+            errors.append("historical gas-hwalmyeongsu voice_model must remain eleven_v3 or be explicitly regenerated with eleven_multilingual_v2")
+    elif voice_model != "eleven_multilingual_v2":
+        errors.append("production_contract.voice_model must be 'eleven_multilingual_v2' for current 몸의 발명사 episodes")
 
     duration_route = pipeline.get("duration_routing_contract", {})
     if duration_route.get("threshold_seconds") != 180.0:

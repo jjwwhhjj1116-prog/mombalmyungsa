@@ -1,0 +1,13 @@
+{
+  "schema_version": "body-invention.topic-selection.v1",
+  "episode_id": "black-death-quarantine",
+  "topic": "흑사병은 어떻게 통제 가능한 감염병이 되었는가",
+  "selection_source": "user_editorial_override",
+  "selected_by": "user",
+  "selected_at": "2026-08-23T19:00:00+09:00",
+  "category": "감염병·공중보건 역사",
+  "present_anchor": "흑사병 하면 가장 먼저 떠오르는 중세 골목의 쥐떼",
+  "verified_contradiction": "쥐 한 마리가 단일 범인이 아니라 벼룩·페스트균·사람과 동물의 여러 전파 경로가 문제였다",
+  "format_hypothesis": "16:9 longform",
+  "format_gate": "최종 승인 대본의 연속 TTS 실측이 180초를 초과할 때만 longform으로 잠근다"
+}

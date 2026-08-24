@@ -1,0 +1,11 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "00_topic_discovery",
+  "status": "completed",
+  "completed_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {},
+  "output_hashes": {
+    "editorial/topic-selection.json": "0a0b160fec03048a6e6785752d0f302f1f5607e9ec84d3d3da96442cb70eaf9c"
+  },
+  "selection_source": "user_editorial_override"
+}

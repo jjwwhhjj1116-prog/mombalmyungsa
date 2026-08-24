@@ -1,0 +1,171 @@
+{
+  "schema_version": "body-invention.episode-pipeline.v1",
+  "episode_id": "black-death-quarantine",
+  "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
+  "revision": 4,
+  "source_of_truth": {
+    "path": "final-script-v1.txt",
+    "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "sentence_count": 50,
+    "caption_numbers": "digits_and_units",
+    "tts_numbers": "natural_korean_reading_by_unit"
+  },
+  "production_contract": {
+    "video_generation_provider": "Google Flow",
+    "flow_only": true,
+    "external_video_engine_fallback_allowed": false,
+    "visual_identity": "continuous_living_miniature_diorama",
+    "video_model": "Omni Flash",
+    "video_mode": "text_to_video",
+    "generation_strategy": "first_hook_image_to_video_then_text_to_video",
+    "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
+    "remaining_flow_mode": "text_to_video",
+    "aspect_ratio": "16:9",
+    "seconds_per_generation_unit": 8,
+    "candidates_per_unit": 1,
+    "language_and_setting": "Historically appropriate Europe, Mediterranean ports, Ragusa and Hong Kong, continuous miniature diorama",
+    "voice_provider": "ElevenLabs",
+    "voice_id": "wTGzPmtwk7nDNybbk0OL",
+    "voice_take": "Take 2",
+    "voice_model": "eleven_multilingual_v2",
+    "voice_speed": 1.05,
+    "voice_stability": 0.4,
+    "voice_similarity_boost": 0.85,
+    "voice_style": 0.5,
+    "voice_speaker_boost": true,
+    "tts_synthesis_strategy": "full_script_single_request",
+    "tts_max_chunks_if_provider_limit": 3,
+    "sentence_level_tts_stitching_forbidden": true,
+    "one_sentence_one_scene": true,
+    "final_tts_is_only_timeline": true,
+    "caption_font": "Gmarket Sans Bold",
+    "caption_size_px": 100,
+    "caption_vertical_slot_of_16": 10,
+    "caption_manual_line_breaks": true,
+    "thumbnail_is_frame_zero": true,
+    "frame_zero_duration_seconds": 0.7,
+    "thumbnail_font": "Gmarket Sans Bold",
+    "thumbnail_layout": "deep_hook_two_tier",
+    "thumbnail_copy_max_visible_characters": 10,
+    "thumbnail_outer_stroke_px": 30,
+    "thumbnail_outer_stroke_color": "#FFFFFF",
+    "thumbnail_inner_stroke_px": 14,
+    "thumbnail_inner_stroke_color": "#111111",
+    "thumbnail_setup_fill_color": "#FFFFFF",
+    "thumbnail_keyword_fill_color": "#FFD21F",
+    "thumbnail_subject_is_primary": true,
+    "thumbnail_gold_cloud_forbidden": true,
+    "thumbnail_product_packshot_present": false,
+    "video_generation_requires_approved_thumbnail_lock": true,
+    "video_generation_requires_mobile_thumbnail_qa": true,
+    "video_generation_requires_textless_opening_image_lock": true,
+    "opening_textless_asset": "assets/frame-zero-bg-v1-landscape.png",
+    "opening_textless_asset_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602",
+    "thumbnail_final_asset": "assets/thumbnail-v1-landscape.png",
+    "thumbnail_final_asset_sha256": "08cb93f242142c6d2660c559ecf7fbdcc24d8178c29969bcc28a2746f6637f59",
+    "thumbnail_mobile_qa_asset": "qa/thumbnail-v1-mobile-25pct.jpg",
+    "thumbnail_mobile_qa_asset_sha256": "42028fb548b032bc180c547393070f2d274d392b308858f5902ae33a19016650",
+    "thumbnail_font_asset": "assets/GmarketSansTTFBold.ttf",
+    "thumbnail_font_asset_sha256": "ff7c354dd1a324e4cecc1223c4f71e74fa81be7027e0c7f6324c475909cacefc"
+  },
+  "duration_routing_contract": {
+    "threshold_seconds": 180.0,
+    "boundary_rule": "duration_lte_180_is_shorts_duration_gt_180_is_longform",
+    "measurement_source": "final_approved_full_script_tts",
+    "lock_path": "locks/05-duration-route.lock.json",
+    "status": "locked",
+    "duration_seconds": 223.085688,
+    "audio_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+    "content_format": "longform",
+    "aspect_ratio": "16:9",
+    "flow_generation_blocked_until_locked": false
+  },
+  "release_contract": {
+    "platform": "YouTube",
+    "channel_name": "몸의 발명사",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g",
+    "upload_visibility": "private",
+    "public_schedule": {
+      "lane_a_upload_kst": "10:00",
+      "lane_a_public_kst": "11:00",
+      "lane_b_upload_kst": "18:00",
+      "lane_b_public_kst": "19:00"
+    },
+    "ai_disclosure_required": true,
+    "description_disclosure": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.",
+    "final_sync_pass_required": true
+  },
+  "stages": [
+    {
+      "id": "00_topic_discovery",
+      "status": "completed",
+      "lock_path": "locks/00-topic-discovery.lock.json",
+      "lock_sha256": "a3e64ed1f435a0a431da4065a6bb8a081a930c67289bca84e41b9f65449265ce"
+    },
+    {
+      "id": "01_evidence_map",
+      "status": "completed",
+      "lock_path": "locks/01-evidence-map.lock.json",
+      "lock_sha256": "bcc897e4f734f2f180accad682ca3140be83d9bbedb2a008976126b15c6096f4"
+    },
+    {
+      "id": "02_story_contract",
+      "status": "completed",
+      "lock_path": "locks/02-story-contract.lock.json",
+      "lock_sha256": "feeb45c9530bff8ab83d4e652643983a5f2816b93c02d2a10dfa094634f0c352"
+    },
+    {
+      "id": "03_script_draft",
+      "status": "completed",
+      "lock_path": "locks/03-script-draft.lock.json",
+      "lock_sha256": "982edbdb69bba8b0e19164ce03fa81792789ab8e630e3c347eaca8d12772dd89"
+    },
+    {
+      "id": "04_script_review",
+      "status": "completed",
+      "lock_path": "locks/04-script-review.lock.json",
+      "lock_sha256": "68c4767338530d0003cac2b1a461d177585b6b57be83922820a2e6c50284ef39"
+    },
+    {
+      "id": "05_script_approval",
+      "status": "completed",
+      "lock_path": "locks/05-script-approval.lock.json",
+      "lock_sha256": "a043fcce85031e13415ab0d731b751dd488c7a5a14186a8e9d0d0f9fb20b868d"
+    },
+    {
+      "id": "06_storyboard",
+      "status": "completed",
+      "lock_path": "locks/06-storyboard.lock.json",
+      "lock_sha256": "86bee0e3b6e71f0f97776a32f849aadaeb9a3bf76ba2d2ee169e74aacae7b50b",
+      "sidecar_locks": [
+        {
+          "path": "locks/06-thumbnail.lock.json",
+          "sha256": "32ea7035decd50a09b992bdec42cf39eb419fb41ecfd7df00f5d41b40ec9960b"
+        },
+        {
+          "path": "locks/06-thumbnail-visual-identity.lock.json",
+          "sha256": "33b09735543f5bbf7a4f86ca3611ad26ce9b3cd49058e413a22ea05155ba27dd"
+        }
+      ]
+    },
+    {
+      "id": "07_generation_plan",
+      "status": "completed",
+      "lock_path": "locks/07-generation-plan.lock.json",
+      "lock_sha256": "1728d4b692fb5ef86cedf18e796862cae0948135b4f83276ce640511a27ea27f"
+    },
+    {"id": "08_pilot_generation", "status": "pending"},
+    {"id": "09_batch_generation", "status": "pending"},
+    {"id": "10_clip_harvest", "status": "pending"},
+    {"id": "11_voice_alignment", "status": "pending"},
+    {"id": "12_tts_owned_edit", "status": "pending"},
+    {"id": "13_semantic_motion_sound", "status": "pending"},
+    {"id": "14_final_qa", "status": "pending"},
+    {"id": "15_packaging_release", "status": "pending"}
+  ],
+  "resume": {
+    "first_non_completed_stage": "08_pilot_generation",
+    "precondition": "Twenty-eight sequential eight-second Flow units are locked; unit 01 owns the opening I2V hook and unit 16 tests the Ragusa quarantine mechanism.",
+    "instruction": "Generate only pilot units bdq-v1-u01 and bdq-v1-u16 in the authorized Flow account, one at a time with the locked cooldown. Audit continuity, visible-event native audio, diorama identity, camera motivation, and absence of shake before batch generation."
+  }
+}

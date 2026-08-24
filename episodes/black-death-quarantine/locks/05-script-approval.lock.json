@@ -1,0 +1,18 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "05_script_approval",
+  "status": "completed",
+  "revision": 1,
+  "approved_by": "user",
+  "approved_at": "2026-08-24T10:58:10+09:00",
+  "input_hashes": {
+    "editorial/chapter-self-review-v2.md": "6cf840004eecf003be6f71d2e5e0ff783e28361d0616399af018ba281c469f66"
+  },
+  "output_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816"
+  },
+  "sentence_count": 50,
+  "human_approved": true,
+  "paid_generation_allowed": true,
+  "script_identity_note": "The approved final script is byte-identical to editorial/narration-draft-v1.txt."
+}
