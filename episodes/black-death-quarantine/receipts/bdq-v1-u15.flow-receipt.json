@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u15",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T19:09:18+09:00",
+  "terminal_confirmed_at": "2026-08-24T19:15:03+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "c936bf04bc13bff73e9f58df0ad1a373607fd763448dbbc95870abf3364fee6d",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u15-omni-flash-v1.mp4",
+    "sha256": "6a3be2849a9c642133581e58c0ba45fc1e6df03bb0efb04cfae0c5d94240a133",
+    "bytes": 1994441,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u15-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "316df6b508f58a27666f347497aa225777c700dd446127e2b1d525ee147f24fa",
+    "checks": {
+      "jammed_brass_mechanism_reverses": true,
+      "old_filter_becomes_holding_barrier": true,
+      "healthy_looking_travelers_pause_before_city": true,
+      "question_reversal_is_clear_without_punishment": true,
+      "hourglass_and_time_stop_are_visible": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -35.3,
+    "max_volume_db": -6.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the gate clicks, brass axis lock, stopped footsteps or hourglass turn miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Skip pilot-complete bdq-v1-u16 and continue with bdq-v1-u17 after the required request interval; do not regenerate bdq-v1-u15."
+}
