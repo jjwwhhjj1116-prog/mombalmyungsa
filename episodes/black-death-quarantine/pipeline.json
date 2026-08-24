@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 7,
+  "revision": 10,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -17,8 +17,8 @@
     "visual_identity": "continuous_living_miniature_diorama",
     "video_model": "Omni Flash",
     "video_mode": "text_to_video",
-    "generation_strategy": "split_opening_image_to_video_repair_then_text_to_video",
-    "opening_mode_override": "two_eight_second_i2v_sources_with_four_second_harvest_targets",
+    "generation_strategy": "opening_text_to_video_then_clean_map_i2v_then_text_to_video",
+    "opening_mode_override": "u01a_text_to_video_with_locked_frame_zero_insert; u01b_clean_info_i2v",
     "remaining_flow_mode": "text_to_video",
     "aspect_ratio": "16:9",
     "seconds_per_generation_unit": 8,
@@ -152,9 +152,14 @@
       "id": "07_generation_plan",
       "status": "completed",
       "lock_path": "locks/07-generation-plan.lock.json",
-      "lock_sha256": "b0ed22ade4d1e77ef5aa72c7b4c0186969d8049ea93a782d3897c73ef4ca0d6a"
+      "lock_sha256": "7e4dd1a4b6e649da42c529b33bea37975ff9af0c36d0f9a66fd0ef7a667177c9"
     },
-    {"id": "08_pilot_generation", "status": "pending"},
+    {
+      "id": "08_pilot_generation",
+      "status": "completed",
+      "lock_path": "locks/08-pilot-generation.lock.json",
+      "lock_sha256": "52834d6a5f39906a626d31277b57a7c4fa6853b8f62a600af3b905f90175bb57"
+    },
     {"id": "09_batch_generation", "status": "pending"},
     {"id": "10_clip_harvest", "status": "pending"},
     {"id": "11_voice_alignment", "status": "pending"},
@@ -164,8 +169,8 @@
     {"id": "15_packaging_release", "status": "pending"}
   ],
   "resume": {
-    "first_non_completed_stage": "08_pilot_generation",
-    "precondition": "Stage 07 revision 2 is valid. Pilot units bdq-v1-u01b and bdq-v1-u16 passed visual QA and must not be regenerated. bdq-v1-u01a attempt 1 failed because the locked black resin rat changed into a grey photoreal rat. Batch generation remains blocked.",
-    "instruction": "After the failed-unit retry wait, submit the one allowed bdq-v1-u01a retry only. Keep the lead rat as an immobile black matte-resin sculpture and move only the background swarm and camera into the fixed pupil. PASS requires an identity-stable four-second harvest window. Do not regenerate bdq-v1-u01b or bdq-v1-u16."
+    "first_non_completed_stage": "09_batch_generation",
+    "precondition": "Stage 08 pilot generation is locked and passed. Pilot units bdq-v1-u01a attempt 2, bdq-v1-u01b attempt 1 and bdq-v1-u16 attempt 1 must be preserved. The u01a approved harvest ends no later than 6.00 seconds before its generated map reveal, and s02 remains owned by the preserved u01b map pilot.",
+    "instruction": "Resume stage 09 with the first non-pilot pending generation unit. Generate sequentially in Flow Omni Flash, one 8-second 16:9 candidate at a time, and do not regenerate passed pilot units."
   }
 }

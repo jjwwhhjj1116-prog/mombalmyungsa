@@ -5,11 +5,11 @@
   "model": "Omni Flash",
   "aspect_ratio": "16:9",
   "generated_at": "2026-08-24T12:18:41+09:00",
-  "updated_at": "2026-08-24T12:53:05+09:00",
+  "updated_at": "2026-08-24T16:05:28+09:00",
   "request_interval_seconds_minimum": 180,
   "contact_sheet": {
-    "path": "flow/pilots/08-pilot-contact-sheet-v2.jpg",
-    "sha256": "c78fd16feb658a629d05b3474731eb92e596da0b3c5011c167a5a446b3f8e9ae"
+    "path": "flow/pilots/08-pilot-contact-sheet-v3.jpg",
+    "sha256": "74b33a998d85606aacd511d9cad56a738a0a2c54fb041dad01e719acfd932dcd"
   },
   "candidates": [
     {
@@ -90,6 +90,33 @@
       ]
     },
     {
+      "unit_id": "bdq-v1-u01a",
+      "attempt": 2,
+      "mode": "text_to_video",
+      "provider_project_role": "fresh_recovery_project",
+      "path": "flow/pilots/bdq-v1-u01a-omni-flash-t2v-v1.mp4",
+      "sha256": "50a07dd994a70b1b06e2daeb5711883d09fc7c967a3c55bfe497c943032c92c9",
+      "duration_seconds": 8.0,
+      "video": "h264 1280x720 24fps",
+      "audio": "aac 48000Hz stereo",
+      "visual_status": "PASS",
+      "approved_harvest_window_seconds": {
+        "start": 0.0,
+        "end_max": 6.0,
+        "target_duration": 4.0
+      },
+      "native_audio_decision": "replace_in_edit_unless_two_frame_sync_is_confirmed_during_harvest",
+      "checks": {
+        "black_resin_diorama_identity_in_harvest": "PASS",
+        "lead_rat_color_and_face_stability_in_harvest": "PASS",
+        "continuous_forward_camera_to_pupil": "PASS",
+        "background_swarm_motion": "PASS",
+        "readable_generated_text_in_harvest": "PASS_0",
+        "random_shake": "PASS_0",
+        "later_map_reveal": "EXCLUDE_AFTER_HARVEST_USE_U01B_FOR_S02"
+      }
+    },
+    {
       "unit_id": "bdq-v1-u01b",
       "attempt": 1,
       "path": "flow/pilots/bdq-v1-u01b-omni-flash-v1.mp4",
@@ -109,12 +136,58 @@
       }
     }
   ],
-  "stage_status": "BLOCKED",
-  "batch_generation_allowed": false,
+  "submission_failures": [
+    {
+      "unit_id": "bdq-v1-u01a",
+      "submission_role": "identity_lock_retry",
+      "submitted_at": "2026-08-24T15:26:12+09:00",
+      "terminal_at": "2026-08-24T15:26:15+09:00",
+      "provider_progress_percent": 14,
+      "provider_status": "FAILED_NO_MEDIA",
+      "prompt_path": "plans/bdq-v1-u01a-retry-v2.txt",
+      "prompt_sha256": "b7f5034c562f9cf20246b9caf1cf7b017fb254bf64bb1e2842b801cba32632e2",
+      "account_verified": "jjwwhhjj1116@gmail.com",
+      "model_verified": "Omni Flash",
+      "settings_verified": "16:9_8s_x1_with_locked_start_frame",
+      "candidate_attempt_consumed": false,
+      "reason": "Flow stopped at 14 percent and produced no downloadable media; this is a provider submission failure, not a visual candidate failure."
+    },
+    {
+      "unit_id": "bdq-v1-u01a",
+      "submission_role": "concise_identity_lock_technical_retry",
+      "submitted_at": "2026-08-24T15:35:09+09:00",
+      "terminal_at": "2026-08-24T15:35:12+09:00",
+      "provider_progress_percent": 14,
+      "provider_status": "FAILED_NO_MEDIA",
+      "prompt_path": "plans/bdq-v1-u01a-technical-retry-v4.txt",
+      "account_verified": "jjwwhhjj1116@gmail.com",
+      "model_verified": "Omni Flash",
+      "settings_verified": "16:9_8s_x1_with_locked_start_frame",
+      "candidate_attempt_consumed": false,
+      "reason": "A second start-image submission stopped at 14 percent with no downloadable media. The common failing route is I2V start-frame generation, so the opening pilot is revised to T2V and the locked frame zero remains an edit-stage insert."
+    },
+    {
+      "unit_id": "bdq-v1-u01a",
+      "submission_role": "text_to_video_in_original_project",
+      "submitted_at": "2026-08-24T15:50:17+09:00",
+      "terminal_at": "2026-08-24T15:50:20+09:00",
+      "provider_progress_percent": 14,
+      "provider_status": "FAILED_NO_MEDIA",
+      "prompt_path": "plans/bdq-v1-u01a-t2v-v1.txt",
+      "prompt_sha256": "9e8452356ca59e66239bb05c5dbbab328d20903a986e6acf562b1b4d89137eb0",
+      "account_verified": "jjwwhhjj1116@gmail.com",
+      "model_verified": "Omni Flash",
+      "settings_verified": "16:9_8s_x1_text_to_video_no_start_frame",
+      "candidate_attempt_consumed": false,
+      "reason": "T2V in the original project also stopped at 14 percent without output. The same prompt later completed successfully in a fresh Flow project."
+    }
+  ],
+  "stage_status": "PASSED",
+  "batch_generation_allowed": true,
   "stage_07_repair": {
-    "revision": 2,
+    "revision": 4,
     "plan_path": "plans/generation-units-v6.json",
-    "plan_sha256": "204fe5e2f2bd8eb7729b492543f8a8d491f034ffa3ea07fa8a5a9af741b16884",
+    "plan_sha256": "0637a26c61bde65d8207ffa5b22fb75fd781a727fe875fc6482161d3eb5360c5",
     "replacement_unit_ids": [
       "bdq-v1-u01a",
       "bdq-v1-u01b"
@@ -122,12 +195,12 @@
     "passed_unit_preserved": "bdq-v1-u16"
   },
   "rate_limit_state": {
-    "last_submit_at": "2026-08-24T12:51:01+09:00",
-    "last_terminal_at": "2026-08-24T12:52:05+09:00",
-    "next_allowed_submit_at": "2026-08-24T12:55:01+09:00",
+    "last_submit_at": "2026-08-24T15:59:20+09:00",
+    "last_terminal_at": "2026-08-24T16:01:00+09:00",
+    "next_allowed_submit_at": "2026-08-24T16:02:20+09:00",
     "u01a_retry_not_before": "2026-08-24T13:01:28+09:00",
-    "consecutive_jobs": 2,
-    "cooldown_reason": "normal_serial_interval; failed u01a retry additionally waits fifteen minutes from its terminal confirmation"
+    "consecutive_jobs": 1,
+    "cooldown_reason": "normal_serial_interval after successful fresh-project generation"
   },
-  "next_safe_action": "Preserve PASS units bdq-v1-u01b and bdq-v1-u16. After the failed-unit retry wait, make the one allowed bdq-v1-u01a retry with the lead rat fixed as an immobile black matte-resin museum sculpture while only the background swarm and camera move toward its pupil. Do not regenerate bdq-v1-u01b or bdq-v1-u16."
+  "next_safe_action": "Stage 08 passed. Preserve bdq-v1-u01a attempt 2, bdq-v1-u01b attempt 1 and bdq-v1-u16 attempt 1. Create the stage 08 lock, then begin stage 09 sequential batch generation after the request interval without regenerating any passed pilot."
 }

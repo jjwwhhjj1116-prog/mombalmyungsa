@@ -1,23 +1,25 @@
 {
   "schema_version": "timemedic.flow-generation-plan.v2",
   "topic_id": "black-death-quarantine",
-  "revision": 2,
+  "revision": 4,
   "script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
   "storyboard_sha256": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
   "final_tts_duration_seconds": 223.085688,
   "engine": "Google Flow",
   "model": "Omni Flash",
   "mode": "text_to_video",
-  "generation_strategy": "split_opening_image_to_video_repair_then_text_to_video",
-  "opening_mode_override": "two_eight_second_i2v_sources_with_four_second_harvest_targets",
+  "generation_strategy": "opening_text_to_video_then_clean_map_i2v_then_text_to_video",
+  "opening_mode_override": "u01a_text_to_video_with_locked_frame_zero_insert; u01b_clean_info_i2v",
   "opening_repair_contract": {
-    "status": "approved_after_two_failed_combined_opening_pilots",
+    "status": "revised_after_two_start_image_provider_failures_without_media",
     "failed_unit_id": "bdq-v1-u01",
     "replacement_unit_ids": [
       "bdq-v1-u01a",
       "bdq-v1-u01b"
     ],
-    "first_unit_uses_locked_thumbnail": true,
+    "first_unit_uses_locked_thumbnail": false,
+    "first_unit_mode": "text_to_video",
+    "locked_thumbnail_inserted_in_final_edit_for_0_7_seconds": true,
     "second_unit_is_clean_info_i2v": true,
     "second_input_image": "assets/u01-end-frame-europe-map-v1.png",
     "second_input_image_sha256": "91c6c28aab330cb7778f6eb1166c8e9feb79d87302257a167169e9096b280621",
@@ -56,8 +58,9 @@
     "outer_stroke_width_px": 30,
     "inner_stroke_width_px": 14,
     "subject_is_primary": true,
-    "flow_hook_starts_from_same_background_without_generated_text": true,
-    "flow_hook_input_mode": "image_to_video",
+    "flow_hook_starts_from_same_background_without_generated_text": false,
+    "flow_hook_visual_matches_locked_background": true,
+    "flow_hook_input_mode": "text_to_video",
     "remaining_units_mode": "text_to_video",
     "final_typography_is_locked_before_generation": true,
     "stage_14_reuses_locked_typography_pixels_without_redesign": true
@@ -79,11 +82,11 @@
         "centered_pupil_match_anchor"
       ],
       "model": "Omni Flash",
-      "mode": "image_to_video",
+      "mode": "text_to_video",
       "aspect_ratio": "16:9",
       "seconds": 8,
       "target_harvest_seconds": 4,
-      "en_generation_prompt": "Premium handcrafted European medical-history museum diorama, 1:5 scale adult matte resin animal miniatures, carved wood, brass and stone, obvious miniature railings and oversized screws, museum-display reflections, warm amber and cool moonlit teal, cinematic depth, deliberate motivated continuous camera motion, never photorealistic. Use the supplied textless 16:9 rat thumbnail as the exact first frame. Hold the exact composition for 0.7 seconds. Then the same upright black resin rat, with the same black color, face, eyes, teeth, proportions and matte sculpted fur, takes one sharp step toward the lens while the same black rat swarm runs forward. The camera retreats smoothly along the same brass rail and finishes in a tight centered push toward the unchanged lead rat pupil for a later match cut. Do not reveal a map in this source. Preserve the exact lead rat identity, alley, lighting, resin texture and camera axis from first frame to last; no color drift, grey rat, face morph, reset or random shake. Native audio only from visible events, synchronized within two frames: many_small_paws_on_cobblestone. No speech, narration or music. No readable text, letters, digits, brands, logos or trademarks. No real actors, photoreal fur, chibi, glossy toy plastic, giant animals, warped anatomy, face morphing, color drift, random shake, per-cut tremor, dialogue, narration, lip sync, generated music, unrelated impact sounds, gore, black frames or scene reset.",
+      "en_generation_prompt": "16:9 landscape. Premium handcrafted European medical-history museum diorama, clearly miniature and never photorealistic: carved dark walnut, oxidized brass rails, matte-black resin animals, stone cobbles, oversized brass screws, subtle museum-glass reflections, warm amber rim light and cool moonlit teal. Begin in a medieval European alley with one large upright matte-black resin rat statue centered on a brass-railed display plinth while smaller matte-black resin rats fill the street behind it. The lead rat remains visually stable as the background swarm runs forward. In one continuous smooth take, the camera dollies along the brass rail, passes the lead rat and pushes into the exact center of its black pupil for a pupil-to-map match cut. Preserve the same miniature materials, lighting and camera axis. Native audio only from visible movement: many small resin paws tapping stone and a quiet camera-rail glide. No speech, narration or music. No readable text, labels, symbols, logos or map. No grey rat, color drift, face morph, photoreal fur, real animal skin, camera shake, cut, reset or black frame.",
       "native_audio_plan": [
         {
           "event": "many_small_paws_on_cobblestone",
@@ -91,9 +94,7 @@
           "disposition_if_sync_fails": "replace_in_edit"
         }
       ],
-      "harvest_rule": "Harvest the strongest identity-stable four-second rat advance for s01, ending on the centered unchanged pupil. Reject any frame with grey color drift, facial morphing, pseudo text or a map reveal. Final edit may change scene only after s01 ends in the final locked TTS.",
-      "input_image": "assets/frame-zero-bg-v1-landscape.png",
-      "input_image_sha256": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602"
+      "harvest_rule": "Harvest an identity-stable rat advance from 0.00 seconds through no later than 6.00 seconds for s01, ending on the centered pupil. Reject grey color drift, facial morphing or pseudo text inside the selected harvest. Exclude the source's later generated map reveal; use the separately approved bdq-v1-u01b for s02. Insert the locked textless opening background for 0.7 seconds before this harvest in the final edit, then place the locked typography over that same frame. Final edit may change scene only after s01 ends in the final locked TTS."
     },
     {
       "unit_id": "bdq-v1-u01b",

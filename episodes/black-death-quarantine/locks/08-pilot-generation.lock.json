@@ -1,0 +1,46 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "08_pilot_generation",
+  "status": "completed",
+  "revision": 1,
+  "approved_by": "internal_visual_qa_and_validator",
+  "input_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "locks/07-generation-plan.lock.json": "7e4dd1a4b6e649da42c529b33bea37975ff9af0c36d0f9a66fd0ef7a667177c9",
+    "plans/generation-units-v6.json": "0637a26c61bde65d8207ffa5b22fb75fd781a727fe875fc6482161d3eb5360c5",
+    "assets/frame-zero-bg-v1-landscape.png": "42550ac40479887c6bb10fa3fbe2a4712dbb797e68e50e981db86f2563305602"
+  },
+  "output_hashes": {
+    "flow/08-pilot-candidates.json": "21c1201a593ba96b8f64767bcc0e0d44a2aab9ca074ea31f905b3117d513c7e7",
+    "flow/pilots/08-pilot-contact-sheet-v3.jpg": "74b33a998d85606aacd511d9cad56a738a0a2c54fb041dad01e719acfd932dcd"
+  },
+  "pilot_unit_ids": [
+    "bdq-v1-u01a",
+    "bdq-v1-u01b",
+    "bdq-v1-u16"
+  ],
+  "accepted_candidates": {
+    "bdq-v1-u01a": "attempt_2_text_to_video_fresh_project",
+    "bdq-v1-u01b": "attempt_1_clean_map_i2v",
+    "bdq-v1-u16": "attempt_1_text_to_video"
+  },
+  "visual_qa": {
+    "bdq-v1-u01a": "PASS_HARVEST_0_TO_6_SECONDS_EXCLUDE_LATER_MAP",
+    "bdq-v1-u01b": "PASS",
+    "bdq-v1-u16": "PASS"
+  },
+  "continuity_contract": {
+    "living_diorama_identity": "PASS",
+    "continuous_camera_motion": "PASS",
+    "pupil_to_map_match_anchor": "PASS",
+    "ragusa_redirect_action": "PASS",
+    "random_shake": "NONE_VISIBLE_IN_ACCEPTED_HARVESTS",
+    "generated_readable_text": "NONE_VISIBLE_IN_ACCEPTED_HARVESTS"
+  },
+  "native_audio_route": {
+    "status": "deferred_to_clip_harvest_audit",
+    "rule": "keep only if visible events align within two frames; otherwise mute and replace with aligned edit SFX"
+  },
+  "batch_generation_allowed": true,
+  "next_stage": "09_batch_generation"
+}

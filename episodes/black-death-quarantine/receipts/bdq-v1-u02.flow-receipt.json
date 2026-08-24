@@ -1,0 +1,64 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u02",
+  "status": "completed_visual_pass_with_harvest_constraint",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T16:26:46+09:00",
+  "terminal_confirmed_at": "2026-08-24T16:27:49+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "379c4a133029167a0cd7f944808a9416e19719f3146c0e0cf01c8f3e4a5a4868",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u02-omni-flash-v1.mp4",
+    "sha256": "79860605454522688c1d9c4642af1b3495d050f137842e44869ade4b8b3788f2",
+    "bytes": 2062750,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS_WITH_MANDATORY_HARVEST_CONSTRAINT",
+    "contact_sheet_24": "qa/stage09/u02-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "58bc6119b710dacd434540f3f229444e59c949ba8a9612e2dbb7c4d4339fc8b3",
+    "checks": {
+      "medieval_alley_diorama_identity": true,
+      "rat_stops_before_biting": true,
+      "camera_dives_into_sculpted_fur": true,
+      "flea_reveal_is_readable": true,
+      "plague_bacteria_cutaway_is_readable_and_non_gory": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "photoreal_actor_drift": false,
+      "generated_sign_texture_in_opening": true
+    },
+    "mandatory_harvest": {
+      "start_no_earlier_than_seconds": 1.25,
+      "end_no_later_than_seconds": 8.0,
+      "reason": "Exclude the opening alley sign texture and retain the clean rat-to-flea-to-bacteria reveal."
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -24.8,
+    "max_volume_db": -6.0,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the paw stop, fur rustle and microscopic flow do not align with visible events within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue sequentially with bdq-v1-u03 after the required request interval; do not regenerate bdq-v1-u02."
+}

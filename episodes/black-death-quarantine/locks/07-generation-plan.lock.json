@@ -2,8 +2,8 @@
   "schema_version": "body-invention.stage-lock.v1",
   "stage_id": "07_generation_plan",
   "status": "completed",
-  "revision": 2,
-  "approved_by": "validator",
+  "revision": 4,
+  "approved_by": "workflow_repair_after_two_flow_i2v_no_media_failures",
   "input_hashes": {
     "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
     "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
@@ -11,7 +11,7 @@
     "assets/u01-end-frame-europe-map-v1.png": "91c6c28aab330cb7778f6eb1166c8e9feb79d87302257a167169e9096b280621"
   },
   "output_hashes": {
-    "plans/generation-units-v6.json": "204fe5e2f2bd8eb7729b492543f8a8d491f034ffa3ea07fa8a5a9af741b16884"
+    "plans/generation-units-v6.json": "0637a26c61bde65d8207ffa5b22fb75fd781a727fe875fc6482161d3eb5360c5"
   },
   "unit_count": 29,
   "candidates_per_unit": 1,

@@ -219,7 +219,11 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
             strategy == "split_opening_image_to_video_repair_then_text_to_video"
             and opening_override == "two_eight_second_i2v_sources_with_four_second_harvest_targets"
         )
-        if not (standard_opening or split_opening_repair):
+        t2v_opening_repair = (
+            strategy == "opening_text_to_video_then_clean_map_i2v_then_text_to_video"
+            and opening_override == "u01a_text_to_video_with_locked_frame_zero_insert; u01b_clean_info_i2v"
+        )
+        if not (standard_opening or split_opening_repair or t2v_opening_repair):
             errors.append("generation plan must use the approved first-hook path or a locked two-source opening repair")
         if generation.get("aspect_ratio") != routed_aspect or generation.get("seconds_per_unit") != 8:
             errors.append("generation plan must match routed aspect ratio and use eight-second units")
@@ -242,16 +246,37 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
                 errors.append("opening repair clean-info asset missing or SHA-256 mismatch")
             if repair.get("replacement_unit_ids") != ["bdq-v1-u01a", "bdq-v1-u01b"]:
                 errors.append("opening repair replacement unit IDs are not locked")
+        if t2v_opening_repair:
+            required_repair = {
+                "status": "revised_after_two_start_image_provider_failures_without_media",
+                "first_unit_uses_locked_thumbnail": False,
+                "first_unit_mode": "text_to_video",
+                "locked_thumbnail_inserted_in_final_edit_for_0_7_seconds": True,
+                "second_unit_is_clean_info_i2v": True,
+                "batch_generation_remains_blocked_until_both_pass": True,
+            }
+            for key, value in required_repair.items():
+                if repair.get(key) != value:
+                    errors.append(f"T2V opening repair contract mismatch: {key}")
+            repair_asset = repair.get("second_input_image", "")
+            repair_asset_path = episode / repair_asset
+            repair_asset_hash = repair.get("second_input_image_sha256")
+            if not repair_asset_path.is_file() or sha256(repair_asset_path) != repair_asset_hash:
+                errors.append("T2V opening repair clean-info asset missing or SHA-256 mismatch")
+            if repair.get("replacement_unit_ids") != ["bdq-v1-u01a", "bdq-v1-u01b"]:
+                errors.append("T2V opening repair replacement unit IDs are not locked")
 
         for index, unit in enumerate(units):
             if unit.get("candidate_count") != 1:
                 errors.append(f"{unit.get('unit_id', 'unknown unit')}: candidate_count must be 1")
-            if split_opening_repair and index == 1:
+            if (split_opening_repair or t2v_opening_repair) and index == 1:
                 expected_mode = "image_to_video_clean_info_repair"
                 if unit.get("input_image") != repair.get("second_input_image"):
                     errors.append(f"{unit.get('unit_id', 'unknown unit')}: clean-info input image mismatch")
                 if unit.get("input_image_sha256") != repair.get("second_input_image_sha256"):
                     errors.append(f"{unit.get('unit_id', 'unknown unit')}: clean-info input SHA-256 mismatch")
+            elif t2v_opening_repair and index == 0:
+                expected_mode = "text_to_video"
             else:
                 expected_mode = "image_to_video" if index == 0 else "text_to_video"
             if unit.get("mode") != expected_mode:
@@ -311,11 +336,20 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
                 errors.append("thumbnail visual identity lock must be manually reviewed PASS")
 
         if generation_path.is_file():
-            generation_units = load_json(generation_path).get("units", [])
+            generation_plan = load_json(generation_path)
+            generation_units = generation_plan.get("units", [])
             opening = generation_units[0] if generation_units else {}
             expected_opening_path = production.get("opening_textless_asset")
             expected_opening_hash = production.get("opening_textless_asset_sha256")
-            if opening.get("input_image") != expected_opening_path or opening.get("input_image_sha256") != expected_opening_hash:
+            t2v_frame_zero_insert = (
+                generation_plan.get("generation_strategy") == "opening_text_to_video_then_clean_map_i2v_then_text_to_video"
+                and generation_plan.get("opening_repair_contract", {}).get("locked_thumbnail_inserted_in_final_edit_for_0_7_seconds") is True
+                and opening.get("mode") == "text_to_video"
+            )
+            if not t2v_frame_zero_insert and (
+                opening.get("input_image") != expected_opening_path
+                or opening.get("input_image_sha256") != expected_opening_hash
+            ):
                 errors.append("first Flow unit must use the locked textless thumbnail image and SHA-256")
     elif any(stage.get("id") in {"07_generation_plan", "08_pilot_generation"} and stage.get("status") == "completed" for stage in stages):
         errors.append("thumbnail hard gate must be completed before generation planning or Flow")
