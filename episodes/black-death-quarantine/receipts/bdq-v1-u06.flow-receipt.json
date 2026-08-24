@@ -1,0 +1,64 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u06",
+  "attempt": 2,
+  "status": "completed_visual_pass_with_harvest_constraint",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:16:30+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:17:36+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "1228558812e25c924a0a1d0f0b5732a7c68389e7d4b624169ac1dbff42eddf0f",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u06-omni-flash-v2.mp4",
+    "sha256": "4be3e228b319f2ed6e0c6e74d045e4c1700d0eeee18d08553aaea464e6b91a9a",
+    "bytes": 2156226,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS_WITH_MANDATORY_HARVEST_CONSTRAINT",
+    "contact_sheet_24": "qa/stage09/u06-contact-24-v2.jpg",
+    "contact_sheet_24_sha256": "4ef8aae5c8f27b37f3d1216d112636eda309bb40fec7a1792cb96703235f861a",
+    "checks": {
+      "sick_rat_collapses_without_gore": true,
+      "single_flea_is_followed_in_macro": true,
+      "left_to_right_axis_is_preserved": true,
+      "camera_pulls_back_at_human_ankle": true,
+      "monster_scale_flea_does_not_remain_in_final_normal_scale_frames": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    },
+    "mandatory_harvest": {
+      "rule": "Use the macro jump and the final pulled-back ankle frames. Do not hold on the transitional close frame where the flea and ankle overlap before the camera finishes pulling back.",
+      "stage_13_optional_precision_anchor": "A tiny non-text speck may mark the final landing point only during the matching TTS phrase."
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -31.8,
+    "max_volume_db": -5.0,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if paw scrape and cloth contact do not align within two frames"
+  },
+  "supersedes_failed_receipt": "receipts/bdq-v1-u06-attempt-1.flow-receipt.json",
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u07 after the required request interval; do not regenerate bdq-v1-u06."
+}

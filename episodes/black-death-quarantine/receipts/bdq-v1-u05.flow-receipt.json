@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u05",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:00:31+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:01:32+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "3bff7a027d0e12a0bfc12d46a878f2d983c52b58743b4412d1035b0e3792a8f0",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u05-omni-flash-v1.mp4",
+    "sha256": "79ad395ddb314793a14a5eb7fd687b9f01d795ee40d0e5585bd2c17146b801a0",
+    "bytes": 2137592,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u05-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "cd2e34e2ed734f844df2b8c56854d9eccc792dcaa8591fe7ab5d5a482614840a",
+    "checks": {
+      "lantern_search_context_is_visible": true,
+      "camera_tilts_to_brass_tabletop_model": true,
+      "rodent_flea_human_route_is_readable": true,
+      "single_red_enamel_bead_carries_attention": true,
+      "route_is_understandable_without_generated_labels": true,
+      "continuous_motivated_camera": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -38.8,
+    "max_volume_db": -2.7,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if lantern chain and tabletop mechanism sounds do not align with visible events within two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u06 after the required request interval; do not regenerate bdq-v1-u05."
+}

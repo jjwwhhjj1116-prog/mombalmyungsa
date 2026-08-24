@@ -1,0 +1,60 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u06",
+  "attempt": 1,
+  "status": "failed_visual_qa",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T17:08:45+09:00",
+  "terminal_confirmed_at": "2026-08-24T17:09:50+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "submitted_prompt_sha256": "a3733a38df45ff42093ef512861585890602166c6b1cd54adcdd8c566f0a76c2",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u06-omni-flash-v1.mp4",
+    "sha256": "7424f7f729c7cba30f58d6cefd354837c8f868faa5e20c63a49e646c821d6901",
+    "bytes": 1895443,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "FAIL",
+    "contact_sheet_24": "qa/stage09/u06-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "fccf34a602d0777b4f328294b9a0058c41ccfa8515563a023f088fdcf6f72fa4",
+    "passed": {
+      "sick_rat_collapses_without_gore": true,
+      "flea_leaves_rat_and_moves_to_human": true,
+      "camera_axis_is_continuous": true,
+      "random_shake_visible": false
+    },
+    "failed": {
+      "flea_actual_scale_at_human_ankle": "The flea remains implausibly large beside the human ankle and reads as a monster-sized insect."
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -36.1,
+    "max_volume_db": -9.9,
+    "disposition": "discard_with_failed_visual_candidate"
+  },
+  "retry": {
+    "allowed": true,
+    "failed_unit_only": true,
+    "prompt_path": "plans/bdq-v1-u06-scale-retry-v1.txt",
+    "required_change": "Macro flea must visibly shrink to an actual 2-millimeter speck when the camera pulls back at the human ankle."
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed"
+}
