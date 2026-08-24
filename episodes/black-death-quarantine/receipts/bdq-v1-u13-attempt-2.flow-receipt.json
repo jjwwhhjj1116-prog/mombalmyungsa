@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u13",
+  "attempt": 2,
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:43:28+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:44:09+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "submitted_prompt_sha256": "2d65ece6535e40088f6378b76a672d39bf4dcaf748e4c958021fddd6b14473f7",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u13-omni-flash-v2.mp4",
+    "sha256": "6e8b4a073a8c873176431a0cc92a789779380f25823cdf002f44094d9fd9a286",
+    "bytes": 2078360,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u13-contact-24-v2.jpg",
+    "contact_sheet_24_sha256": "4e71bedf93c4961fb9274e3e7da2aad3358322baf2764f07644de24bc95f11f7",
+    "checks": {
+      "guards_stop_visibly_coughing_passenger": true,
+      "healthy_traveler_passes_behind_guards": true,
+      "glowing_footprints_lead_into_city": true,
+      "camera_follows_footprints_to_harbor": true,
+      "turntable_repeats_ship_arrival_pattern": true,
+      "officials_recognize_pattern": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -28.9,
+    "max_volume_db": -1.7,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if checkpoint stamp, footsteps, carousel clicks or lantern clicks miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u14 after the required request interval; do not regenerate bdq-v1-u13."
+}

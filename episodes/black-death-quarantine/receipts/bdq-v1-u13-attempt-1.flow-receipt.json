@@ -1,0 +1,40 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u13",
+  "attempt": 1,
+  "status": "completed_visual_fail",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:36:32+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:37:11+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "submitted_prompt_sha256": "12e90ef11630640b01191d77c5129e1f495a520125f0876aeaf1591561b438ad",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u13-omni-flash-v1.mp4",
+    "sha256": "87698d759333ac4d3b474eaae7c0988d68958971b108982f635a25867eb4bb7f",
+    "bytes": 1868028,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "FAIL",
+    "contact_sheet_24": "qa/stage09/u13-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "e4490ab2491fb88d312d8fe5c07f5f65e5de0b05ead47f59da34e85dba3f31e4",
+    "failure_reason": "The harbor rotation and observing officials appear, but the visible-symptom checkpoint and apparently healthy traveler escaping into the city are missing."
+  },
+  "retry_policy": "Retry only u13 with a coughing passenger stopped in the foreground, a healthy traveler escaping behind the guards and glowing footprints leading into the rotating harbor cycle."
+}

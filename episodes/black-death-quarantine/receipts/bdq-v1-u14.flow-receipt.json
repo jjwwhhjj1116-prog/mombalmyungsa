@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u14",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T18:51:19+09:00",
+  "terminal_confirmed_at": "2026-08-24T18:52:43+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "cb3cb7d8ac934a566dcf5a1b81519ddacd54b69dfeba14698a1417a476f6086b",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u14-omni-flash-v1.mp4",
+    "sha256": "97affb38bf56ef434ab056c87f66489adebd25aaff3c070050115f1fe67d4661",
+    "bytes": 2107928,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u14-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "b27ba0f2bc2592ccc84b8b3f2ded5830d45dd101143d83cacc526057ed947e16",
+    "checks": {
+      "residents_fall_before_officials_arrive": true,
+      "black_route_beads_already_spread_through_alleys": true,
+      "officials_run_after_the_spread": true,
+      "old_strategy_becomes_brass_question_mechanism": true,
+      "mechanism_reaches_a_jammed_hold": true,
+      "late_reaction_logic_is_visualized": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -31.4,
+    "max_volume_db": -5.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the dock bell, running boots or mechanism clicks miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u15 after the required ten-minute cooldown; do not regenerate bdq-v1-u14."
+}
