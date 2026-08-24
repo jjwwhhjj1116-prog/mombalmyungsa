@@ -1,0 +1,61 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u18",
+  "attempt": 2,
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T19:41:52+09:00",
+  "terminal_confirmed_at": "2026-08-24T19:43:27+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "4eac64faab2f31817a8e00f6f9ab4d6d848238afe8896fc9dacce253ee78fab9",
+  "supersedes_failed_receipt": "receipts/bdq-v1-u18-attempt-1.flow-receipt.json",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u18-omni-flash-v2.mp4",
+    "sha256": "54d717ec32f6d63c8bf4210ec4dcc1432e0c3df6b797ab8426bf19db8d787737",
+    "bytes": 2071769,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u18-contact-24-v2.jpg",
+    "contact_sheet_24_sha256": "8b0a734377f0e9719df023879dcd5f19b64dcd9394ce92ee410a3b40674283c7",
+    "checks": {
+      "infection_route_from_ship_is_visible": true,
+      "route_is_physically_interrupted_before_residents": true,
+      "camera_pulls_wider_to_show_partial_success": true,
+      "city_remains_exposed_to_other_routes_for_edit_overlay": true,
+      "ending_is_not_presented_as_total_eradication": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -36.0,
+    "max_volume_db": -17.3,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the opening chain link or distant warning bells miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u19 after the required request interval; do not regenerate bdq-v1-u18."
+}

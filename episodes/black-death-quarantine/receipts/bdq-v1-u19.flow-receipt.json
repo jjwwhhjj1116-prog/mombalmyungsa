@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u19",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T19:48:31+09:00",
+  "terminal_confirmed_at": "2026-08-24T19:50:19+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "a9f7ab927d09ff78e6ce72fe9df08800a899aaba5876544b8055607547c96649",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u19-omni-flash-v1.mp4",
+    "sha256": "a90136aa50a2bf90c7e0a60dd5507bc4ec3cf244e9e551a80921b3ce5b6e4b47",
+    "bytes": 1945400,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u19-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "029bae26ec8caf627d0d022911533e535e7127f4c485d36fc5d76ebd879142c8",
+    "checks": {
+      "century_wheel_rotates_over_miniature_cities": true,
+      "wheel_stops_on_unresolved_question": true,
+      "black_bead_is_continuity_carrier": true,
+      "camera_follows_bead_into_laboratory": true,
+      "laboratory_reveal_is_clear": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -41.9,
+    "max_volume_db": -13.5,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the calendar clicks, gear stop or laboratory pencil contact miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u20 after the required request interval; do not regenerate bdq-v1-u19."
+}

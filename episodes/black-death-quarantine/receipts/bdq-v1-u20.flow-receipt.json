@@ -1,0 +1,59 @@
+{
+  "schema_version": "body-invention.flow-generation-receipt.v1",
+  "episode_id": "black-death-quarantine",
+  "stage_id": "09_batch_generation",
+  "unit_id": "bdq-v1-u20",
+  "status": "completed_visual_pass",
+  "provider": "Google Flow",
+  "account_route": "jjwwhhjj1116@gmail.com",
+  "private_flow_reference_committed": false,
+  "submitted_at": "2026-08-24T19:57:55+09:00",
+  "terminal_confirmed_at": "2026-08-24T19:59:28+09:00",
+  "generation_click_count": 1,
+  "model": "Omni Flash",
+  "mode": "text_to_video",
+  "aspect_ratio": "16:9",
+  "seconds": 8,
+  "candidates": 1,
+  "input_media": null,
+  "submitted_prompt_sha256": "0b004698509ce7727d6b461d921eb17a1781d645253a1eecea98a7dc1b75a328",
+  "local_media": {
+    "path": "flow/batch/bdq-v1-u20-omni-flash-v1.mp4",
+    "sha256": "6adcd337a47e1514842eccf55055ecdfe30b4c854e60e4bcbc111ad29c23d674",
+    "bytes": 1930209,
+    "duration_seconds": 8.0,
+    "video_codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "contact_sheet_24": "qa/stage09/u20-contact-24-v1.jpg",
+    "contact_sheet_24_sha256": "ae32874fcb76b30d31b09d6ee6daceb8e2dab0d9d8dcba9cf4d752db31add6ad",
+    "checks": {
+      "epidemic_era_laboratory_is_established": true,
+      "physician_role_precedes_identity_emphasis": true,
+      "brass_microscope_action_is_clear": true,
+      "harbor_and_hospital_context_remain_visible": true,
+      "microscope_focus_knob_is_continuity_anchor": true,
+      "motivated_continuous_camera_motion": true,
+      "random_shake_visible_in_24_frame_sheet": false,
+      "scene_reset": false,
+      "readable_generated_text": false,
+      "photoreal_actor_drift": false
+    }
+  },
+  "native_audio_audit": {
+    "stream_present": true,
+    "mean_volume_db": -32.1,
+    "max_volume_db": -4.8,
+    "disposition": "review_required_before_harvest",
+    "fallback": "mute and replace if the door, crate or microscope focus clicks miss visible events by more than two frames"
+  },
+  "binary_commit_policy": "mp4_is_gitignored; receipt_and_qa_hashes_are_committed",
+  "next_safe_action": "Continue with bdq-v1-u21 after the mandatory ten-minute cooldown; do not regenerate bdq-v1-u20."
+}
