@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 15,
+  "revision": 16,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -190,12 +190,17 @@
       "lock_path": "locks/13-semantic-motion-sound.lock.json",
       "lock_sha256": "4f533b3e269dc86073da9260ed96504903bfaebc555c7265583e5f9e8586b369"
     },
-    {"id": "14_final_qa", "status": "pending"},
+    {
+      "id": "14_final_qa",
+      "status": "completed",
+      "lock_path": "locks/14-final-qa.lock.json",
+      "lock_sha256": "55a42f0516e35e82e0dd038c43e58de4e1987f39d04c904eb1542301ac1b4fe8"
+    },
     {"id": "15_packaging_release", "status": "pending"}
   ],
   "resume": {
-    "first_non_completed_stage": "14_final_qa",
-    "precondition": "The 1920x1080 Remotion composition owns all fifty scenes by the final TTS timeline, uses 100px Gmarket Sans Bold captions at vertical slot ten, and contains sixteen meaning-triggered motion and sound events.",
-    "instruction": "Render the locked composition, inspect the complete video and representative frames, verify duration, audio, captions, frame zero, generated-text repairs, and zero premature scene cuts, then lock only a passing release candidate."
+    "first_non_completed_stage": "15_packaging_release",
+    "precondition": "The 223.1-second 1920x1080 H.264/AAC release candidate passed final structural and fifty-sentence midpoint visual QA with zero premature scene cuts.",
+    "instruction": "Prepare evidence-based YouTube title, description, chapters, AI disclosure, thumbnail selection, rights review, source IDs, and idempotency lock before any private upload or scheduled release."
   }
 }
