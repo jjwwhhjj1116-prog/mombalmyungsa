@@ -5,7 +5,8 @@
   "scripts": {
     "remotion:studio": "remotion studio video/src/index.ts --public-dir video/public",
     "render:gas:rough": "remotion render video/src/index.ts GasHwalmyeongsuRough episodes/gas-hwalmyeongsu/renders/gas-hwalmyeongsu-v6-rough.mp4 --public-dir video/public --codec h264 --crf 16 --overwrite",
-    "render:gas:final": "remotion render video/src/index.ts GasHwalmyeongsuFinal episodes/gas-hwalmyeongsu/renders/gas-hwalmyeongsu-v6-final.mp4 --public-dir video/public --codec h264 --crf 16 --overwrite"
+    "render:gas:final": "remotion render video/src/index.ts GasHwalmyeongsuFinal episodes/gas-hwalmyeongsu/renders/gas-hwalmyeongsu-v6-final.mp4 --public-dir video/public --codec h264 --crf 16 --overwrite",
+    "render:black-death:final": "remotion render video/src/index.ts BlackDeathFinal episodes/black-death-quarantine/renders/black-death-v1-final.mp4 --public-dir video/public --codec h264 --crf 16 --audio-codec aac --overwrite"
   },
   "dependencies": {
     "@remotion/cli": "latest",

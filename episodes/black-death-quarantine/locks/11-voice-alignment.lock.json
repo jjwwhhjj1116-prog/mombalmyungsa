@@ -1,0 +1,26 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "11_voice_alignment",
+  "status": "completed",
+  "revision": 13,
+  "approved_by": "script_anchored_alignment_validator",
+  "input_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "tts/black-death-v1-elevenlabs-full.mp3": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+    "tts/black-death-v1-elevenlabs-full.receipt.json": "8b87676047820368668a585db7ae720ffc757c7376f422ba1561ab513c352672",
+    "locks/10-clip-harvest.lock.json": "e3a17f0955fb4833e026eb9f9565deccd47c6f79baa1176b9055834e2c6802b2"
+  },
+  "output_hashes": {
+    "tts/black-death-v1-alignment.json": "a8ab855a4193b7e4638d47e3668ddda4463591d9248f3f188080793376ca0a22"
+  },
+  "audio_duration_seconds": 223.085688,
+  "normalized_character_similarity": 0.956921,
+  "matched_character_coverage": 0.956246,
+  "token_count": 492,
+  "sentence_count": 50,
+  "full_script_single_request": true,
+  "sentence_level_stitching": false,
+  "final_tts_is_only_timeline": true,
+  "completed_at": "2026-08-24T22:30:46+09:00",
+  "next_stage": "12_tts_owned_edit"
+}

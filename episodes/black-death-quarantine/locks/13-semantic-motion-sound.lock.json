@@ -1,0 +1,37 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "13_semantic_motion_sound",
+  "status": "completed",
+  "revision": 15,
+  "approved_by": "semantic_motion_sound_validator_and_typescript_check",
+  "input_hashes": {
+    "locks/12-tts-owned-edit.lock.json": "346cdbcbe71f049fab2f630d1bc32ae8861418b0c3d6351a15fbee4d3915a3d7",
+    "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9"
+  },
+  "output_hashes": {
+    "plans/semantic-motion-sound-v1.json": "7f97936e9f5881fcacf12b7018d60f3f0714cb088580143d40d6bbac6d53ad67"
+  },
+  "implementation_hashes": {
+    "video/src/data/black-death-v1-semantic.json": "7f97936e9f5881fcacf12b7018d60f3f0714cb088580143d40d6bbac6d53ad67",
+    "video/src/BlackDeathFinal.tsx": "ed96871841c835ac79666132b88fbed44a23f71ce40d1078b29f75b9966baf96"
+  },
+  "caption_contract": {
+    "font": "Gmarket Sans Bold",
+    "font_size_px": 100,
+    "vertical_slot_of_16": 10,
+    "caption_page_count": 107,
+    "screen_number_style": "digits_and_units",
+    "active_word_highlight": true
+  },
+  "semantic_event_count": 16,
+  "native_flow_audio": "muted",
+  "edit_sfx": "frame_aligned_visible_event_only",
+  "mandatory_repairs": {
+    "bdq-v1-u03": "tracked rod-shaped plague-bacteria particles",
+    "bdq-v1-u27": "opaque top-right Korean semantic mask over the selected clean interval"
+  },
+  "random_camera_shake": false,
+  "linear_css_motion": false,
+  "completed_at": "2026-08-24T22:40:50+09:00",
+  "next_stage": "14_final_qa"
+}

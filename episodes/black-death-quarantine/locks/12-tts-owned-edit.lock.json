@@ -1,0 +1,34 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "12_tts_owned_edit",
+  "status": "completed",
+  "revision": 14,
+  "approved_by": "tts_owned_edit_validator_and_typescript_check",
+  "input_hashes": {
+    "locks/10-clip-harvest.lock.json": "e3a17f0955fb4833e026eb9f9565deccd47c6f79baa1176b9055834e2c6802b2",
+    "locks/11-voice-alignment.lock.json": "f15ca8dd3e90b52a2a9d43ec8e059ee819faf40a4f75d2a3101895900c82602b"
+  },
+  "output_hashes": {
+    "plans/tts-owned-edit-v1.json": "eb95c606179c41d85675ac25c20983b2de36f607167e64a99f8860286f299141"
+  },
+  "implementation_hashes": {
+    "video/src/data/black-death-v1-timeline.json": "eb95c606179c41d85675ac25c20983b2de36f607167e64a99f8860286f299141",
+    "video/src/BlackDeathFinal.tsx": "ed96871841c835ac79666132b88fbed44a23f71ce40d1078b29f75b9966baf96"
+  },
+  "render_contract": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "total_frames": 6693,
+    "audio_duration_seconds": 223.085688,
+    "scene_count": 50,
+    "premature_scene_cut_count": 0,
+    "frame_zero_frames": 21
+  },
+  "full_script_single_request": true,
+  "final_tts_is_only_timeline": true,
+  "typescript_check": "PASS",
+  "remotion_composition_check": "PASS",
+  "completed_at": "2026-08-24T22:40:50+09:00",
+  "next_stage": "13_semantic_motion_sound"
+}

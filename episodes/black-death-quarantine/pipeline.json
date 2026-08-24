@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 11,
+  "revision": 15,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -166,16 +166,36 @@
       "lock_path": "locks/09-batch-generation.lock.json",
       "lock_sha256": "7284ce9fcc0b1504fe13aba68a5c544d074952ca7c7c71e5d1c050134499b770"
     },
-    {"id": "10_clip_harvest", "status": "pending"},
-    {"id": "11_voice_alignment", "status": "pending"},
-    {"id": "12_tts_owned_edit", "status": "pending"},
-    {"id": "13_semantic_motion_sound", "status": "pending"},
+    {
+      "id": "10_clip_harvest",
+      "status": "completed",
+      "lock_path": "locks/10-clip-harvest.lock.json",
+      "lock_sha256": "e3a17f0955fb4833e026eb9f9565deccd47c6f79baa1176b9055834e2c6802b2"
+    },
+    {
+      "id": "11_voice_alignment",
+      "status": "completed",
+      "lock_path": "locks/11-voice-alignment.lock.json",
+      "lock_sha256": "f15ca8dd3e90b52a2a9d43ec8e059ee819faf40a4f75d2a3101895900c82602b"
+    },
+    {
+      "id": "12_tts_owned_edit",
+      "status": "completed",
+      "lock_path": "locks/12-tts-owned-edit.lock.json",
+      "lock_sha256": "346cdbcbe71f049fab2f630d1bc32ae8861418b0c3d6351a15fbee4d3915a3d7"
+    },
+    {
+      "id": "13_semantic_motion_sound",
+      "status": "completed",
+      "lock_path": "locks/13-semantic-motion-sound.lock.json",
+      "lock_sha256": "4f533b3e269dc86073da9260ed96504903bfaebc555c7265583e5f9e8586b369"
+    },
     {"id": "14_final_qa", "status": "pending"},
     {"id": "15_packaging_release", "status": "pending"}
   ],
   "resume": {
-    "first_non_completed_stage": "10_clip_harvest",
-    "precondition": "Stage 09 is locked with 29 approved generation units including three preserved pilots. Rejected attempts remain audit-only and must never enter the edit.",
-    "instruction": "Select sentence-owned clean visual windows, audit every native audio event, and apply the mandatory u02/u03/u06/u27 harvest repairs before locking stage 10."
+    "first_non_completed_stage": "14_final_qa",
+    "precondition": "The 1920x1080 Remotion composition owns all fifty scenes by the final TTS timeline, uses 100px Gmarket Sans Bold captions at vertical slot ten, and contains sixteen meaning-triggered motion and sound events.",
+    "instruction": "Render the locked composition, inspect the complete video and representative frames, verify duration, audio, captions, frame zero, generated-text repairs, and zero premature scene cuts, then lock only a passing release candidate."
   }
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": "body-invention.stage-lock.v1",
+  "stage_id": "10_clip_harvest",
+  "status": "completed",
+  "revision": 12,
+  "approved_by": "internal_clip_harvest_review_and_validator",
+  "input_hashes": {
+    "final-script-v1.txt": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "plans/storyboard-v6.json": "34a0e9061ba5cac43c2a8a597d5d3f08f6fbf38ddbc032db0ba46b826b0c70e9",
+    "locks/09-batch-generation.lock.json": "7284ce9fcc0b1504fe13aba68a5c544d074952ca7c7c71e5d1c050134499b770"
+  },
+  "output_hashes": {
+    "plans/clip-harvest-v1.json": "2c1586e9beea5172a51fb3cbd0bf2e2d0686f172b33eddc71c4ecbabc77d8a11"
+  },
+  "sentence_count": 50,
+  "unique_source_count": 29,
+  "native_audio_route": "replace_with_frame_aligned_edit_sfx",
+  "mandatory_repairs": {
+    "bdq-v1-u02": "start at 1.25 seconds to exclude generated sign texture",
+    "bdq-v1-u03": "add tracked rod-shaped bacteria particles during matching narration",
+    "bdq-v1-u06": "avoid transitional overlapping flea and ankle frames",
+    "bdq-v1-u27": "use only clean 0.0-3.7 second interval and cover any residual generated phrase"
+  },
+  "one_sentence_one_scene": true,
+  "final_tts_is_only_timeline": true,
+  "completed_at": "2026-08-24T22:26:18+09:00",
+  "next_stage": "11_voice_alignment"
+}
