@@ -87,10 +87,10 @@
   "variant_lock_sha256": "28ef73d5d9bd682a51f2e1c7e79e1f97e2e0f3fa8e8b321a66ad44af46c93523",
   "visibility": "private",
   "release_window": {
-    "lane": "next_available",
-    "target_private_upload_at": null,
-    "target_public_at": null,
-    "status": "WAITING_FOR_RELEASE_SLOT"
+    "lane": "b",
+    "target_private_upload_at": "2026-08-25T18:00:00+09:00",
+    "target_public_at": "2026-08-25T19:00:00+09:00",
+    "status": "WAITING_FOR_APPROVED_WINDOW"
   },
   "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v2:43517611db66",
   "created_at": "2026-08-25T12:17:02+09:00"

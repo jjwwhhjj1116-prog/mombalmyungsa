@@ -232,7 +232,7 @@
       "qa_lock_path": "locks/derivative-short-v2.lock.json",
       "qa_lock_sha256": "28ef73d5d9bd682a51f2e1c7e79e1f97e2e0f3fa8e8b321a66ad44af46c93523",
       "youtube_package_path": "packaging/youtube-package-short-v2.json",
-      "youtube_package_sha256": "50cc0ce664a676583beab5953efc2fa85c882e798dd61332ffaa6e11dec34097",
+      "youtube_package_sha256": "ebeba129b7515df868bd4f0937c6683e95c95edfa58e7556297c6093ef145229",
       "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v2:43517611db66"
     }
   ],
