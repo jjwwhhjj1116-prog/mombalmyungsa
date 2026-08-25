@@ -78,14 +78,17 @@
 
 - 05 대본 승인 직후 최종 보이스·모델·속도로 승인 대본 전체를 한 번 합성한다. 문장별 TTS 이어붙이기는 금지한다.
 - `duration_seconds <= 180.000`이면 `content_format=shorts`, `aspect_ratio=9:16`, `render_size=1080x1920`으로 잠근다.
-- `duration_seconds > 180.000`이면 `content_format=longform`, `aspect_ratio=16:9`, `render_size=1920x1080`으로 잠근다.
+- `180.000 < duration_seconds < 480.000`이면 `status=requires_longform_expansion`으로 잠그고 유료 Flow를 차단한다. [longform-health-history.md](longform-health-history.md)의 다섯 관문을 통과한 소재는 8~10분 대본으로 확장해 사용자 재승인을 받고 TTS를 다시 만든다. 통과하지 못하면 180초 이하 독립 Shorts로 편집하거나 질문을 별도 편으로 나눈다.
+- `480.000 <= duration_seconds <= 600.000`이면 `content_format=longform`, `aspect_ratio=16:9`, `render_size=1920x1080`으로 잠근다.
+- `duration_seconds > 600.000`이면 `status=requires_longform_revision`으로 잠그고 반복·우회 설명을 덜어낸 뒤 재승인한다.
+- 과거에 승인·제작이 끝난 181~479초 영상만 `legacy_intermediate_longform_exception=true`와 사유·파생 쇼츠 계획을 명시해 보존할 수 있다. 새 에피소드에는 이 예외를 만들지 않는다.
 - `05-duration-route.lock.json`에는 TTS 파일·대본·보이스·모델·속도 해시, 실제 길이, 임계값, 선택 형식과 화면비를 기록한다.
 - 이 잠금이 없으면 06 스토리보드와 07 Flow 계획은 provisional이며 유료 Flow 생성을 시작하지 않는다.
 - 11단계는 같은 TTS에 강제정렬만 추가한다. 대본·보이스·속도가 바뀌면 05.5부터 화면비 의존 잠금을 다시 만든다.
 
 ## 06 문장별 스토리보드 계약
 
-문장마다 다음 필드를 채운다.
+문장마다 다음 필드를 채운다. 이 작업 전에 [historical-visual-authenticity.md](historical-visual-authenticity.md)의 시대·지역·제품 고증 카드를 잠근다.
 
 ```text
 sentence_id
@@ -101,6 +104,8 @@ motion_carrier
 transition_mechanism
 overlay_trigger
 sound_trigger
+era_segment_id
+historical_anchor_id
 ```
 
 한 문장 안에서 1–3개의 짧은 컷을 쓸 수 있지만 모두 같은 의미만 강화한다. 앞 문장의 `continuity_out`과 다음 문장의 `continuity_in`은 운동 방향, 피사체 위치, 물체, 조명 가운데 최소 하나를 공유해야 한다.
@@ -116,6 +121,8 @@ sound_trigger
 - 단, 훅과 CLEAN 정보 장면을 한 생성물에 묶은 파일럿이 허용된 두 후보 모두에서 피사체 변형 또는 생성 글자 때문에 실패한 경우에만, 07 계획을 새 revision으로 다시 잠가 `첫 훅 I2V + 무문자 CLEAN 정보 I2V` 두 소스로 분리할 수 있다. 두 소스는 각각 8초로 생성하되 4초 행동 구간만 수확하고, 두 입력 이미지의 SHA-256·재결합 매치컷·실패 후보 기록을 잠근다. 두 수정 파일럿이 모두 PASS하기 전에는 일괄 생성을 계속 차단한다.
 - 한국어 검수 프롬프트와 영어 생성 프롬프트를 함께 저장한다.
 - 프롬프트에는 시작 프레임, 물리 행동, 카메라 이동, 환경 반응, 종료 프레임, 다음 장면 연결 앵커를 쓴다.
+- 모든 프롬프트에 해당 `era_segment_id`의 `visual_anchor_en`과 `negative_anchor_en` 전문을 복사한다. 시대·지역·복식·건축·도구·재료 고증이 실제 후보에서 틀리면 프롬프트가 맞아도 폐기한다.
+- 작동 해부 챕터는 L3 단면→L4 분해→L5 원리를 모두 포함한다. 정지 카메라 20% 이하, 20~25단위당 관통 카메라 최소 4회, 같은 무빙 2연속 0을 계획과 실제 후보 양쪽에서 검사한다.
 - 프롬프트에는 샷별 `motion_carrier`와 화면에서 실제로 날 물체음·공간음만 적은 `native_audio_plan`을 함께 쓴다.
 - 생성 영상에는 내레이션, 대사, 정확한 글자, 숫자, 로고를 요구하지 않는다.
 - 모든 단위는 [reference-channel-flow-grammar.md](reference-channel-flow-grammar.md)의 분석 문법을 적용한 `reference_grammar_lock`을 가져야 한다. 특정 참고 영상의 장면을 복제하지 않고 멀티샷, 문제 누적, 반전 직전 홀드, 의미 대상 카메라 이동, 현재 장면 회수만 채택한다.

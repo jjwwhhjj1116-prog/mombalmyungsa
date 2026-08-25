@@ -5,6 +5,8 @@ import {GasHwalmyeongsuFinal} from './GasHwalmyeongsuFinal';
 import {GasHwalmyeongsuRoughCut} from './GasHwalmyeongsuRoughCut';
 import blackDeathTimeline from './data/black-death-v1-timeline.json';
 import {BlackDeathFinal} from './BlackDeathFinal';
+import blackDeathShort from './data/black-death-v1-short.json';
+import {BlackDeathShort} from './BlackDeathShort';
 
 export const Root: React.FC = () => {
   return (
@@ -32,6 +34,14 @@ export const Root: React.FC = () => {
         fps={blackDeathTimeline.fps}
         width={blackDeathTimeline.width}
         height={blackDeathTimeline.height}
+      />
+      <Composition
+        id="BlackDeathShort"
+        component={BlackDeathShort}
+        durationInFrames={blackDeathShort.total_frames}
+        fps={blackDeathShort.fps}
+        width={blackDeathShort.width}
+        height={blackDeathShort.height}
       />
     </>
   );

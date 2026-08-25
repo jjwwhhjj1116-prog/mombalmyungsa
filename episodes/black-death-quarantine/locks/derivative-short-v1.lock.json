@@ -1,0 +1,28 @@
+{
+  "schema_version": "body-invention.derivative-short-lock.v1",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v1",
+  "status": "completed",
+  "inputs": {
+    "approved_script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "source_tts_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+    "edit_manifest_sha256": "4da69079d5b8d086f4159f5ed6c3de09d1fca6dbe4b3ad891272afa1a160d2dd",
+    "thumbnail_sha256": "4af38fb9f8f1568505941c51294674bb403515a106b28b358b9d9768b7918660"
+  },
+  "outputs": {
+    "render_path": "renders/black-death-v1-short.mp4",
+    "render_sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
+    "video_frame_count": 1691,
+    "duration_seconds": 56.366667,
+    "qa_report_path": "qa/derivative-short/qa-report-v1.json"
+  },
+  "gate_results": {
+    "script_audio_identity": "PASS",
+    "scene_tts_ownership": "PASS",
+    "caption_sync": "PASS",
+    "frame_zero": "PASS",
+    "visual_manual_review": "PASS",
+    "rights_review": "PASS"
+  },
+  "locked_at": "2026-08-25T14:24:00+09:00"
+}

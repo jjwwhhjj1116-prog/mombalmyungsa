@@ -10,9 +10,14 @@
     "duration_route": {
       "shorts_max_seconds": 180.0,
       "shorts_aspect_ratio": "9:16",
-      "longform_min_rule": "duration_seconds > 180.0",
+      "intermediate_seconds": [180.001, 479.999],
+      "intermediate_action": "block_paid_generation_then_expand_to_8_10_min_or_return_to_shorts",
+      "longform_target_seconds": [480.0, 600.0],
+      "longform_gate": "four_of_five_with_failure_ladder_and_solution_cost_required",
       "longform_aspect_ratio": "16:9",
-      "measurement_source": "approved_full_script_final_tts"
+      "measurement_source": "approved_full_script_final_tts",
+      "longform_derivative_short_allowed": true,
+      "derivative_rule": "exact_approved_sentences_and_existing_tts_excerpts_only_without_new_approval"
     }
   },
   "next_priority": {

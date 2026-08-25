@@ -24,7 +24,11 @@
     "completed_requires_lock_and_sha256": true,
     "downstream_completed_after_gap_forbidden": true,
     "final_upload_requires_final_sync_pass": true,
+    "new_intermediate_181_479_second_master_forbidden": true,
+    "longform_target_seconds": [480.0, 600.0],
+    "historical_authenticity_card_before_generation": true,
+    "official_period_product_reference_before_generated_product_scene": true,
+    "longform_derivative_short_requires_separate_variant_and_qa": true,
     "secrets_in_repository_forbidden": true
   }
 }
-

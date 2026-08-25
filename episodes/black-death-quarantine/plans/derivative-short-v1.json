@@ -1,0 +1,62 @@
+{
+  "schema_version": "body-invention.derivative-short-plan.v1",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v1",
+  "status": "completed_and_qa_locked",
+  "source_master": "renders/black-death-v1-final.mp4",
+  "source_master_sha256": "85abdbdb012bd98a63bbf2c3b3215224c163bffe26114bf5c25a3d45dd06b8cf",
+  "source_script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+  "source_tts_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+  "selected_sentence_ids": [
+    "s01",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s16",
+    "s17",
+    "s19",
+    "s26",
+    "s27",
+    "s28",
+    "s30",
+    "s31",
+    "s50"
+  ],
+  "exact_tts_excerpt_seconds": 56.367,
+  "aspect_ratio": "9:16",
+  "render_size": [
+    1080,
+    1920
+  ],
+  "thumbnail": "assets/thumbnail-v1-short.png",
+  "frame_zero_seconds": 0.7,
+  "independent_story_arc": [
+    "hook",
+    "misconception",
+    "mechanism",
+    "double_bind",
+    "question_flip",
+    "quarantine",
+    "meaning"
+  ],
+  "new_claim_count": 0,
+  "new_tts_generation_required": false,
+  "human_reapproval_required": false,
+  "qa_required": true,
+  "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v1:216f91b47553",
+  "manifest_sha256": "4da69079d5b8d086f4159f5ed6c3de09d1fca6dbe4b3ad891272afa1a160d2dd",
+  "render": {
+    "path": "renders/black-death-v1-short.mp4",
+    "sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
+    "video_frame_count": 1691,
+    "duration_seconds": 56.366667
+  },
+  "qa": {
+    "status": "PASS",
+    "report_path": "qa/derivative-short/qa-report-v1.json",
+    "report_sha256": "2ce8abd620f304e39b88407a956c6c1d1289ac6b82d0f4d98eb833e769c8c53e",
+    "lock_path": "locks/derivative-short-v1.lock.json",
+    "lock_sha256": "2766bc2aa7b3cd947d83a61aeda011be9cb77de4968025e98facad61c25eb2e8"
+  }
+}

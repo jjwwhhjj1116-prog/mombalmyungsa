@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 17,
+  "revision": 18,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -78,7 +78,13 @@
     "audio_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
     "content_format": "longform",
     "aspect_ratio": "16:9",
-    "flow_generation_blocked_until_locked": false
+    "flow_generation_blocked_until_locked": false,
+    "policy_version": "2026-08-25-two-track-longform-v2",
+    "longform_target_seconds": [480.0, 600.0],
+    "legacy_intermediate_longform_exception": true,
+    "legacy_exception_reason": "This approved and completed 223-second master predates the 8-10 minute longform rule; preserve it and derive a separately QA'd Short instead of regenerating completed paid media.",
+    "derivative_short_required": true,
+    "derivative_short_variant_id": "black-death-quarantine-short-v1"
   },
   "release_contract": {
     "platform": "YouTube",
@@ -197,6 +203,21 @@
       "lock_sha256": "ec621deeb50d390147f5aeb2cf25c4d758dd5224a7a250f697bccab506989025"
     },
     {"id": "15_packaging_release", "status": "pending"}
+  ],
+  "derivative_variants": [
+    {
+      "variant_id": "black-death-quarantine-short-v1",
+      "format": "shorts",
+      "aspect_ratio": "9:16",
+      "duration_seconds": 56.366667,
+      "status": "ready_for_private_upload",
+      "render_path": "renders/black-death-v1-short.mp4",
+      "render_sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
+      "qa_lock_path": "locks/derivative-short-v1.lock.json",
+      "qa_lock_sha256": "2766bc2aa7b3cd947d83a61aeda011be9cb77de4968025e98facad61c25eb2e8",
+      "youtube_package_path": "packaging/youtube-package-short-v1.json",
+      "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v1:216f91b47553"
+    }
   ],
   "resume": {
     "first_non_completed_stage": "15_packaging_release",

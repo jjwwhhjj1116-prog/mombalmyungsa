@@ -23,10 +23,12 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 ## 반드시 읽기
 
 - 대본을 쓰거나 고칠 때 [references/health-history-chapter-engine.md](references/health-history-chapter-engine.md)를 먼저 끝까지 읽고, 이어서 [references/story-grammar.md](references/story-grammar.md)를 끝까지 읽는다. 두 문서가 충돌하면 전자가 최신 5챕터 집필 계약이다.
+- 실제 TTS가 180초를 넘거나 8~10분 롱폼·롱폼 파생 쇼츠를 설계할 때 [references/longform-health-history.md](references/longform-health-history.md)를 끝까지 읽는다.
 - 의학·건강·역사 사실을 포함할 때 [references/medical-evidence.md](references/medical-evidence.md)를 끝까지 읽는다.
 - ElevenLabs 보이스·TTS를 설계할 때 [references/voice-and-performance.md](references/voice-and-performance.md)를 끝까지 읽는다.
 - 스토리보드·영상 연출·모션을 설계할 때 [references/semantic-motion-direction.md](references/semantic-motion-direction.md)를 끝까지 읽는다.
 - Google Flow 텍스트 투 비디오·멀티샷 클립을 설계할 때 [references/text-to-video-multishot.md](references/text-to-video-multishot.md)를 끝까지 읽는다.
+- 역사·지역·복식·건축·의료 도구·실재 제품 고증과 단면·분해·원리·관통 카메라를 설계할 때 [references/historical-visual-authenticity.md](references/historical-visual-authenticity.md)를 끝까지 읽는다.
 - 공개된 신비한 건축사전형 제작 튜토리얼에서 추출한 고수준 편집 문법을 Flow 프롬프트로 컴파일할 때 [references/reference-channel-flow-grammar.md](references/reference-channel-flow-grammar.md)를 끝까지 읽는다.
 - 주제 선정부터 패키징까지 전체 자동화를 설계하거나 실행할 때 [references/stage-gated-omni-pipeline.md](references/stage-gated-omni-pipeline.md)를 끝까지 읽는다.
 - 기록 자료·정확한 공간 도해 등 예외적으로 CLEAN·INFO 키프레임이 필요할 때만 [references/flow-clean-info-production.md](references/flow-clean-info-production.md)를 끝까지 읽는다.
@@ -64,9 +66,9 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 4. `03_script_draft`: 먼저 `현재 질문 → 필요·시도·부분 성공·새 문제 → 다중 딜레마 → 질문 전환·작동 해부·검증 → 현재 답`의 건강 역사형 5챕터로 `coherence_master`를 쓴다. 초등학생 재설명 검사와 챕터 연결 검사를 통과한 뒤에만 `delivery_cut`을 별도 생성한다. 글자 수 때문에 설명 사다리·인물 역할·원인·연결어를 먼저 자르지 않는다.
 5. `04_script_review`: 사용자 수정본을 전문 그대로 보존한 뒤 수정 의도를 분석한다. 사실·의학 표현으로 1차, 문법·구어체·어미·TTS 발음과 장면 연결로 2차 검수한다. 사용자의 말맛을 AI 설명조로 되돌리거나 승인 없이 압축하지 않는다.
 6. `05_script_approval`: 두 검수 결과와 전체 clean 대본을 보여주고 사람 승인과 SHA-256을 잠근다. 이전에는 유료 TTS와 Flow 생성을 금지한다.
-7. `05_duration_route`: 승인 대본 전체를 최종 보이스로 한 번 합성해 실제 TTS 길이를 잠근다. `180.000초 이하`는 `9:16 Shorts`, `180.000초 초과`는 `16:9 longform`으로 고정하며 이 잠금 전에는 유료 Flow를 시작하지 않는다.
-8. `06_storyboard`: 문장마다 대사·장면·감정, 의미 대상, 카메라 목적, 앞뒤 연속성 앵커를 설계하고, 선택된 Shorts 또는 longform 화면비와 첫 후킹 문장에 맞는 최종 썸네일 픽셀·모바일 QA·무문자 시작 이미지의 해시를 모두 잠근다.
-9. `07_generation_plan`: 2–3문장 생성 단위, 선택 화면비, 한국어 검수·영어 생성 프롬프트, 위험 등급, 후보 수, 문장별 수확 규칙, 컷 간 연속 운동 앵커, 단위별 네이티브 오디오 계획을 확정한다. 첫 훅만 06의 무문자 시작 이미지를 I2V 입력으로 사용하고 나머지는 T2V로 만든다.
+7. `05_duration_route`: 승인 대본 전체를 최종 보이스로 한 번 합성해 실제 TTS 길이를 잠근다. `180.000초 이하`는 `9:16 Shorts`다. 이를 넘으면 롱폼 5개 관문을 검사하며, 통과한 대본은 `8~10분`, 즉 실제 TTS `480~600초`로 다시 설계·검수·승인한 뒤 `16:9 longform`으로 잠근다. 181~479초짜리 중간 길이는 새 제작 경로로 허용하지 않는다. 이 잠금 전에는 유료 Flow를 시작하지 않는다.
+8. `06_storyboard`: 문장마다 대사·장면·감정, 의미 대상, 카메라 목적, 앞뒤 연속성 앵커를 설계한다. 시대 구간별 배경·복식·건축·도구·재료·금지 시대착오와 실재 제품 고증을 `historical-authenticity-card`로 먼저 잠그고, 선택된 Shorts 또는 longform 화면비와 첫 후킹 문장에 맞는 최종 썸네일 픽셀·모바일 QA·무문자 시작 이미지의 해시를 모두 잠근다.
+9. `07_generation_plan`: 2–3문장 생성 단위, 선택 화면비, 한국어 검수·영어 생성 프롬프트, 위험 등급, 후보 수, 문장별 수확 규칙, 컷 간 연속 운동 앵커, 단위별 네이티브 오디오 계획을 확정한다. 모든 프롬프트에 해당 시대의 고정·금지 앵커 전문을 복사하고, 정지 20% 이하·관통 카메라 쿼터·L3 단면→L4 분해→L5 원리 해부를 계획한다. 첫 훅만 06의 무문자 시작 이미지를 I2V 입력으로 사용하고 나머지는 T2V로 만든다.
 10. `08_pilot_generation`: 훅과 메커니즘 또는 반전 두 단위만 생성한다. 내부 영상 QA와 파일럿 validator가 PASS면 별도 사용자 대기 없이 09로 이어가고, 실패한 단위만 수정한다.
 11. `09_batch_generation`: 승인된 파일럿의 재질·팔레트·렌즈·조명·카메라 문법으로 나머지를 만들고 실패 단위만 재시도한다.
 12. `10_clip_harvest`: 후보 원본에서 문장별 좋은 1–3초만 고르고 속도·광학 흐름 필요성과 네이티브 오디오의 `keep/mute/replace` 판정을 기록한다.
@@ -84,7 +86,8 @@ description: Design, research, critique, rewrite, and produce “몸의 발명�
 - 기존 CPR 편은 정규 큐 이전의 `pilot-000`이며 100편에 합치지 않는다.
 - 원본 제목과 설명은 검증 전 `raw_claim`이다. 조회수, 숫자, 최초, 인용, 효능, 사망 인과를 그대로 대본에 복사하지 않는다.
 - D-2에는 조사·사용자 대본 승인, D-1에는 스토리보드·Omni·TTS·편집, D0에는 최종 QA·비공개 업로드·예약·공개 확인을 수행한다.
-- 승인 대본의 실제 최종 TTS가 180초를 넘으면 Shorts를 억지로 압축하지 않고 해당 레인을 16:9 longform으로 전환한다. 같은 주제의 Shorts 요약본은 별도 topic_id와 승인 없이는 자동 생성하지 않는다.
+- 승인 대본의 실제 최종 TTS가 180초를 넘으면 즉시 3~7분 영상으로 만들지 않는다. 롱폼 5개 관문 중 네 개 이상, 그중 실패 사다리와 해결의 대가를 통과한 소재만 8~10분으로 다시 쓰고 승인받아 16:9 longform으로 만든다. 통과하지 못하면 180초 이하 독립 Shorts로 되돌리거나 질문을 분리한다.
+- 완성 롱폼의 승인 문장과 실제 TTS 구간만 그대로 발췌해 닫힌 9:16 쇼츠를 만들 수 있다. 이 경우 새 유료 TTS와 대본 재승인은 필요 없지만 `variant_id`, idempotency, 썸네일, frame-zero, 최종 QA, 공개 영수증은 별도다. 문장 재작성·새 주장·새 TTS가 들어가면 다시 검수·승인한다.
 - A·B 레인은 각자 잠금과 idempotency key를 가진다. 한 레인의 차단을 숨기거나 다음 번호로 조용히 건너뛰지 않는다.
 - 고정 운영 시각은 한국시간 오전편 비공개 업로드 10:00→11:00 공개, 오후편 비공개 업로드 18:00→19:00 공개다. 이 시각 규칙은 승인됐지만 대본·영상·최종 QA가 잠기지 않은 편은 예약하지 않는다.
 - 주제 원문에서 실제 100개 카탈로그와 50일 표를 만들 때 `scripts/build_daily_topic_queue.py`를 사용한다.

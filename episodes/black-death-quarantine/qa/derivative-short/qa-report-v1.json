@@ -1,0 +1,88 @@
+{
+  "schema_version": "body-invention.derivative-short-qa.v1",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v1",
+  "status": "PASS",
+  "errors": [],
+  "source_identity": {
+    "approved_script_path": "final-script-v1.txt",
+    "approved_script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "source_tts_path": "tts/black-death-v1-elevenlabs-full.mp3",
+    "source_tts_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+    "selected_sentence_ids": [
+      "s01",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s16",
+      "s17",
+      "s19",
+      "s26",
+      "s27",
+      "s28",
+      "s30",
+      "s31",
+      "s50"
+    ],
+    "new_claim_count": 0,
+    "new_tts_generation_count": 0,
+    "sentence_text_mutation_count": 0
+  },
+  "render": {
+    "path": "renders/black-death-v1-short.mp4",
+    "sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
+    "bytes": 72106962,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_frame_count": 1691,
+    "video_duration_seconds": 56.366667,
+    "audio_duration_seconds": 56.426667,
+    "video_codec": "h264",
+    "audio_codec": "aac"
+  },
+  "timeline_checks": {
+    "final_tts_is_only_timeline": true,
+    "one_selected_sentence_owns_one_scene": true,
+    "premature_scene_cut_count": 0,
+    "missing_selected_sentence_count": 0,
+    "caption_size_px": 100,
+    "caption_center_x": 540,
+    "caption_y": 1200,
+    "caption_crop_count": 0,
+    "black_frame_interval_count": 0,
+    "longest_detected_silence_seconds": 0.729583,
+    "silence_note": "The longest pause is an intact source-narration sentence transition. The miniature-diorama visual remains active, so no dead static interval is introduced."
+  },
+  "frame_zero": {
+    "source_path": "assets/thumbnail-v1-short.png",
+    "source_sha256": "4af38fb9f8f1568505941c51294674bb403515a106b28b358b9d9768b7918660",
+    "duration_seconds": 0.7,
+    "rendered_sample_path": "qa/derivative-short/frame-zero.jpg",
+    "rendered_sample_sha256": "d172e712944dee1b0fd676a0ae7bb352e0bf9ba27c6e0c7eb2269482b840ea4b",
+    "thumbnail_copy": "5천만 명을 죽인 / 흑사병",
+    "mobile_legibility": "PASS"
+  },
+  "visual_review": {
+    "status": "PASS",
+    "contact_sheet_path": "qa/derivative-short/contact-sheet.jpg",
+    "contact_sheet_sha256": "5d6fb3fb3384f0ca6f5547b655fc91741532511f49e8ecfc60051ea7f101982a",
+    "hook_sample_paths": [
+      "qa/derivative-short/hook-0_8.jpg",
+      "qa/derivative-short/hook-1_8.jpg"
+    ],
+    "hook_promise_matches_title": true,
+    "historical_setting_consistency": "PASS",
+    "meaning_scene_match": "PASS",
+    "manual_review_note": "The hook opens on plague rats, the mechanism section shows rat-flea transmission, the dilemma moves to port trade and exclusion, and the payoff shows Ragusa isolation and quarantine."
+  },
+  "rights_review": {
+    "status": "PASS",
+    "inherited_from": "qa/stage14/rights-review-v1.json",
+    "inherited_sha256": "0f85316e1d352db41d1ebb12c58f117e1ac2102244a5170aab831fc52d27c4c5",
+    "new_third_party_asset_count": 0,
+    "ai_reenactment_disclosure_required": true
+  },
+  "completed_at": "2026-08-25T14:24:00+09:00"
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "body-invention.youtube-package.v1",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v1",
+  "status": "READY_FOR_PRIVATE_UPLOAD",
+  "channel": {
+    "name": "몸의 발명사",
+    "channel_id": "UCYqdIlpFlB6uh_cpIYgo85g"
+  },
+  "release_candidate": {
+    "path": "renders/black-death-v1-short.mp4",
+    "sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
+    "duration_seconds": 56.366667,
+    "format": "shorts",
+    "aspect_ratio": "9:16",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "title_candidates": [
+    {
+      "title": "쥐만 잡아선 안 됐다, 흑사병을 막은 40일",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "흑사병의 범인은 정말 쥐였을까?",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "5천만 명을 죽인 흑사병, 왜 40일을 기다렸나",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "흑사병은 왜 항구에서 40일을 기다렸을까?",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    },
+    {
+      "title": "쥐보다 작은 범인이 흑사병을 퍼뜨렸다",
+      "scores": {"clarity": 5, "curiosity_gap": 5, "search_relevance": 5, "video_match": 5, "factuality": 5},
+      "total": 25
+    }
+  ],
+  "selected_title": "쥐만 잡아선 안 됐다, 흑사병을 막은 40일",
+  "selection_reason": "첫 프레임의 쥐 이미지와 즉시 연결되면서도 쥐 단독 원인이라는 오해, 벼룩·페스트균의 전파 구조, 라구사의 격리라는 해결을 한 문장에 약속한다.",
+  "thumbnail": {
+    "copy": "5천만 명을 죽인 / 흑사병",
+    "path": "assets/thumbnail-v1-short.png",
+    "sha256": "4af38fb9f8f1568505941c51294674bb403515a106b28b358b9d9768b7918660",
+    "route": "frame_zero",
+    "frame_zero_seconds": 0.7,
+    "upload_selection_required": true
+  },
+  "description": "일부 장면은 역사·의학 자료를 바탕으로 AI로 재현했습니다.\n쥐만 잡아서는 흑사병을 막을 수 없었습니다. 벼룩과 페스트균, 천삼백칠십칠년 라구사의 삼십 일 격리에서 사십 일 쿼런틴의 뿌리까지 오십육 초로 압축했습니다.\n\n흑사병을 막은 건 한 번의 기적이 아니라, 병이 다음 사람에게 건너가는 길을 하나씩 끊어낸 과정이었습니다. 이 영상은 역사·공중보건 교육 콘텐츠이며 개인의 진단이나 치료 지시가 아닙니다.\n\n자료\n세계보건기구 페스트 팩트시트: https://www.who.int/news-room/fact-sheets/detail/plague\n미국 질병통제예방센터 전파 경로: https://www.cdc.gov/plague/causes/index.html\nCDC 라구사 검역 역사: https://wwwnc.cdc.gov/eid/article/19/2/12-0312_article\nCDC 검역의 역사: https://wwwnc.cdc.gov/eid/article/11/5/04-0616_article\n\n#흑사병 #페스트 #검역 #의학역사 #공중보건 #몸의발명사 #건강상식 #역사쇼츠 #쇼츠",
+  "audience": "not_made_for_kids",
+  "language": "ko",
+  "category": "Education",
+  "ai_use": {
+    "required": true,
+    "selection": "Yes",
+    "basis": "Google Flow generated historical and medical reenactment scenes",
+    "description_disclosure_present": true
+  },
+  "commerce_route": {
+    "status": "not_eligible",
+    "reason": "전염병·공중보건 역사 교육편에 상품을 억지로 연결하지 않는다.",
+    "affiliate_link": null,
+    "youtube_paid_promotion": false,
+    "youtube_shopping_tag": "not_applicable"
+  },
+  "source_ids": [
+    "who-plague-fact-sheet",
+    "cdc-how-plague-spreads",
+    "cdc-quarantine-history-2013",
+    "cdc-quarantine-history-2005"
+  ],
+  "rights_review_required": true,
+  "rights_review_completed": true,
+  "rights_review_path": "qa/stage14/rights-review-v1.json",
+  "derivative_qa_path": "qa/derivative-short/qa-report-v1.json",
+  "derivative_qa_sha256": "2ce8abd620f304e39b88407a956c6c1d1289ac6b82d0f4d98eb833e769c8c53e",
+  "variant_lock_path": "locks/derivative-short-v1.lock.json",
+  "variant_lock_sha256": "2766bc2aa7b3cd947d83a61aeda011be9cb77de4968025e98facad61c25eb2e8",
+  "visibility": "private",
+  "release_window": {
+    "lane": "a",
+    "target_private_upload_at": "2026-08-26T10:00:00+09:00",
+    "target_public_at": "2026-08-26T11:00:00+09:00",
+    "status": "WAITING_FOR_APPROVED_WINDOW"
+  },
+  "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v1:216f91b47553",
+  "created_at": "2026-08-25T14:24:00+09:00"
+}

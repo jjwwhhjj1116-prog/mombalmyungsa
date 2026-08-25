@@ -115,8 +115,17 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
     if duration_route.get("threshold_seconds") != 180.0:
         errors.append("duration_routing_contract.threshold_seconds must be 180.0")
     route_status = duration_route.get("status")
-    if route_status not in {"pending_measurement", "locked"}:
-        errors.append("duration_routing_contract.status must be pending_measurement or locked")
+    allowed_route_statuses = {
+        "pending_measurement",
+        "requires_longform_expansion",
+        "requires_longform_revision",
+        "locked",
+    }
+    if route_status not in allowed_route_statuses:
+        errors.append(
+            "duration_routing_contract.status must be pending_measurement, "
+            "requires_longform_expansion, requires_longform_revision, or locked"
+        )
     if duration_route.get("measurement_source") != "final_approved_full_script_tts":
         errors.append("duration route must use final approved full-script TTS")
     routed_aspect = production.get("aspect_ratio")
@@ -124,15 +133,107 @@ def validate_episode(episode: Path) -> tuple[list[str], dict]:
         measured = duration_route.get("duration_seconds")
         if not isinstance(measured, (int, float)) or measured <= 0:
             errors.append("locked duration route requires a positive duration_seconds")
+        elif measured <= 180.0:
+            if duration_route.get("content_format") != "shorts":
+                errors.append("duration route content_format must be shorts at or below 180 seconds")
+            if routed_aspect != "9:16":
+                errors.append("production aspect_ratio must be 9:16 at or below 180 seconds")
+        elif measured < 480.0:
+            legacy = duration_route.get("legacy_intermediate_longform_exception") is True
+            if not legacy:
+                errors.append("181-479 second masters are blocked; expand to 480-600 seconds or return to Shorts")
+            if duration_route.get("content_format") != "longform" or routed_aspect != "16:9":
+                errors.append("a legacy intermediate exception must remain 16:9 longform")
+            if not duration_route.get("legacy_exception_reason"):
+                errors.append("legacy intermediate exception requires a reason")
+            if duration_route.get("derivative_short_required") is not True:
+                errors.append("legacy intermediate exception requires a separately QA'd derivative Short")
+            elif any(stage.get("id") == "14_final_qa" and stage.get("status") == "completed" for stage in stages):
+                expected_variant_id = duration_route.get("derivative_short_variant_id")
+                variants = pipeline.get("derivative_variants", [])
+                derivative = next(
+                    (item for item in variants if item.get("variant_id") == expected_variant_id),
+                    None,
+                )
+                if derivative is None:
+                    errors.append("completed legacy master is missing its derivative Short variant record")
+                else:
+                    if derivative.get("format") != "shorts" or derivative.get("aspect_ratio") != "9:16":
+                        errors.append("legacy derivative variant must be a 9:16 Short")
+                    if derivative.get("status") not in {"ready_for_private_upload", "published"}:
+                        errors.append("legacy derivative Short must be QA-locked before release")
+                    derivative_lock_rel = derivative.get("qa_lock_path")
+                    derivative_lock_hash = derivative.get("qa_lock_sha256")
+                    if not derivative_lock_rel or not derivative_lock_hash:
+                        errors.append("legacy derivative Short requires qa_lock_path and qa_lock_sha256")
+                    else:
+                        derivative_lock_path = episode / derivative_lock_rel
+                        if not derivative_lock_path.is_file():
+                            errors.append(f"legacy derivative Short QA lock is missing: {derivative_lock_rel}")
+                        elif sha256(derivative_lock_path) != derivative_lock_hash:
+                            errors.append("legacy derivative Short QA lock SHA-256 mismatch")
+        elif measured <= 600.0:
+            if duration_route.get("content_format") != "longform":
+                errors.append("duration route content_format must be longform at 480-600 seconds")
+            if routed_aspect != "16:9":
+                errors.append("production aspect_ratio must be 16:9 at 480-600 seconds")
         else:
-            expected_aspect = "16:9" if measured > 180.0 else "9:16"
-            expected_format = "longform" if measured > 180.0 else "shorts"
-            if duration_route.get("content_format") != expected_format:
-                errors.append(f"duration route content_format must be {expected_format}")
-            if routed_aspect != expected_aspect:
-                errors.append(f"production aspect_ratio must be {expected_aspect} for measured TTS")
+            errors.append("locked longform must be revised to an actual TTS length of 480-600 seconds")
+    elif route_status == "requires_longform_expansion":
+        measured = duration_route.get("duration_seconds")
+        if not isinstance(measured, (int, float)) or not 180.0 < measured < 480.0:
+            errors.append("requires_longform_expansion must have a measured duration between 180 and 480 seconds")
+        if duration_route.get("content_format") != "longform_expansion_required":
+            errors.append("requires_longform_expansion must use content_format=longform_expansion_required")
+    elif route_status == "requires_longform_revision":
+        measured = duration_route.get("duration_seconds")
+        if not isinstance(measured, (int, float)) or measured <= 600.0:
+            errors.append("requires_longform_revision must have a measured duration above 600 seconds")
+        if duration_route.get("content_format") != "longform_revision_required":
+            errors.append("requires_longform_revision must use content_format=longform_revision_required")
     elif routed_aspect not in {"9:16", "16:9"}:
         errors.append("provisional production aspect_ratio must be 9:16 or 16:9")
+
+    authenticity_required = production.get("historical_authenticity_required") is True
+    authenticity_path = episode / "plans" / "historical-authenticity-card.json"
+    if authenticity_required:
+        if not authenticity_path.is_file():
+            errors.append("historical_authenticity_required=true but plans/historical-authenticity-card.json is missing")
+        else:
+            authenticity = load_json(authenticity_path)
+            required_auth_fields = {
+                "schema_version",
+                "episode_id",
+                "status",
+                "era_segments",
+                "prompt_anchor_copy_required",
+                "manual_visual_review_required",
+            }
+            missing = sorted(required_auth_fields - set(authenticity))
+            if missing:
+                errors.append(f"historical authenticity card missing fields: {', '.join(missing)}")
+            if authenticity.get("episode_id") != pipeline.get("episode_id"):
+                errors.append("historical authenticity card episode_id mismatch")
+            if authenticity.get("status") != "locked":
+                errors.append("historical authenticity card status must be locked")
+            if authenticity.get("prompt_anchor_copy_required") is not True:
+                errors.append("historical authenticity card must require exact prompt anchor copies")
+            segments = authenticity.get("era_segments", [])
+            segment_fields = {
+                "era_segment_id", "date_range", "region_and_city", "people_ethnicity_and_roles",
+                "wardrobe_hair_and_protective_gear", "architecture_and_interior",
+                "lighting_sources", "tools_containers_and_medical_devices", "materials_and_manufacturing",
+                "forbidden_anachronisms", "source_ids", "visual_anchor_en", "negative_anchor_en",
+            }
+            if not segments:
+                errors.append("historical authenticity card requires at least one era segment")
+            for segment in segments:
+                missing_segment = sorted(segment_fields - set(segment))
+                if missing_segment:
+                    errors.append(
+                        f"historical authenticity segment {segment.get('era_segment_id', 'unknown')} "
+                        f"missing fields: {', '.join(missing_segment)}"
+                    )
 
     release = pipeline.get("release_contract", {})
     if release.get("channel_id") != "UCYqdIlpFlB6uh_cpIYgo85g":

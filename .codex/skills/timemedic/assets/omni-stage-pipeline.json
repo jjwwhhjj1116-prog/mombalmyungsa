@@ -66,6 +66,24 @@
     ,"native_audio_sync_tolerance_frames": 2
     ,"continuous_motion_carrier_required": true
     ,"commerce_route_required": true
+    ,"historical_authenticity_card_before_generation": true
+    ,"official_period_product_reference_required": true
+    ,"static_camera_ratio_max": 0.2
+    ,"through_camera_minimum_per_24_units": 4
+    ,"same_camera_move_consecutive_forbidden": true
+  },
+  "duration_route_contract": {
+    "measurement_source": "approved_full_script_final_tts",
+    "shorts_seconds_max": 180.0,
+    "shorts_aspect_ratio": "9:16",
+    "intermediate_seconds": [180.001, 479.999],
+    "intermediate_action": "block_paid_generation_then_expand_to_longform_or_return_to_shorts",
+    "longform_gate": "four_of_five_with_failure_ladder_and_solution_cost_required",
+    "longform_target_seconds": [480.0, 600.0],
+    "longform_aspect_ratio": "16:9",
+    "legacy_intermediate_exception_for_new_episodes": false,
+    "derivative_short_from_exact_approved_tts_allowed": true,
+    "derivative_requires_separate_variant_id_idempotency_thumbnail_and_qa": true
   },
   "signature_contract": {
     "impasse": "여러분, 이거 정말 미치고 팔짝 뛸 노릇 아니겠습니까?",
@@ -102,6 +120,11 @@
       "extended_60_80": {
         "target_seconds": [60, 80],
         "sentence_count": [24, 36]
+      },
+      "longform_8_10": {
+        "target_seconds": [480, 600],
+        "estimated_visible_characters_at_9_35_chars_per_second": [4488, 5610],
+        "structure": "14_blocks_payoff_near_55_percent_and_at_least_24_percent_after_payoff"
       }
     },
     "order": [
@@ -136,7 +159,8 @@
     "mode": "text_to_video",
     "opening_mode_override": "image_to_video_from_approved_textless_thumbnail",
     "remaining_units_mode": "text_to_video",
-    "aspect_ratio": "9:16",
+    "aspect_ratio_source": "duration_route_contract",
+    "supported_aspect_ratios": ["9:16", "16:9"],
     "seconds_per_unit": 8,
     "sentences_per_unit": [2, 3],
     "default_candidate_count": 1,
@@ -260,13 +284,13 @@
     },
     {
       "id": "06_storyboard",
-      "objective": "승인 대본의 문장마다 대사·장면·감정과 연속성 앵커를 설계하고 최종 썸네일·모바일 QA·무문자 시작 이미지를 완성한다.",
+      "objective": "승인 대본의 문장마다 대사·장면·감정과 연속성 앵커를 설계하고 시대·지역·제품 고증 카드와 최종 썸네일·모바일 QA·무문자 시작 이미지를 완성한다.",
       "depends_on": ["05_script_approval"],
       "inputs": ["05-script.lock.json"],
-      "outputs": ["06-storyboard.json", "06-storyboard.lock.json", "06-thumbnail-frame-zero.png", "06-thumbnail-mobile-qa.jpg", "06-thumbnail-textless-opening.png", "06-thumbnail-visual-identity.lock.json", "06-thumbnail.lock.json"],
+      "outputs": ["06-storyboard.json", "06-storyboard.lock.json", "historical-authenticity-card.json", "06-thumbnail-frame-zero.png", "06-thumbnail-mobile-qa.jpg", "06-thumbnail-textless-opening.png", "06-thumbnail-visual-identity.lock.json", "06-thumbnail.lock.json"],
       "gate": {
         "human_approval_required": false,
-        "pass_criteria": ["문장 수=의미 장면 수", "대사·장면·감정 완비", "continuity_in/out", "다음 문장 조기 공개 없음", "최종 썸네일 픽셀 SHA-256", "모바일 축소 QA PASS", "무문자 시작 이미지 SHA-256", "visual identity PASS", "승인 썸네일과 첫 훅의 피사체·구도·카메라·조명 약속 일치"],
+        "pass_criteria": ["문장 수=의미 장면 수", "대사·장면·감정 완비", "continuity_in/out", "다음 문장 조기 공개 없음", "모든 장면의 era_segment_id와 source_ids", "시대·지역·복식·건축·도구·재료·금지 시대착오 잠금", "실재 제품의 공식 시대별 컷·URL·해시 잠금", "최종 썸네일 픽셀 SHA-256", "모바일 축소 QA PASS", "무문자 시작 이미지 SHA-256", "visual identity PASS", "승인 썸네일과 첫 훅의 피사체·구도·카메라·조명 약속 일치"],
         "blocked_actions": ["generation_plan", "flow_generation"]
       },
       "status": "pending",
@@ -281,7 +305,7 @@
       "outputs": ["07-generation-units.json", "07-reference-grammar.lock.json", "07-generation-plan.lock.json"],
       "gate": {
         "human_approval_required": false,
-        "pass_criteria": ["한국어 검수 프롬프트", "영어 생성 프롬프트", "시작·종료 앵커", "후보 위험 등급", "문장별 수확 규칙", "샷별 motion_carrier와 transition_mechanism", "visible-event-only native_audio_plan", "첫 훅만 승인 무문자 이미지 기반 I2V", "나머지 단위는 T2V", "reference grammar lock PASS", "특정 참고 장면 복제 0"],
+        "pass_criteria": ["한국어 검수 프롬프트", "영어 생성 프롬프트", "시작·종료 앵커", "후보 위험 등급", "문장별 수확 규칙", "샷별 motion_carrier와 transition_mechanism", "visible-event-only native_audio_plan", "모든 프롬프트의 시대 고정·금지 앵커 전문", "L3 단면→L4 분해→L5 원리", "정지 20% 이하", "24단위당 관통 카메라 4회 이상", "같은 카메라 무빙 2연속 0", "첫 훅만 승인 무문자 이미지 기반 I2V", "나머지 단위는 T2V", "reference grammar lock PASS", "특정 참고 장면 복제 0"],
         "blocked_actions": ["pilot_generation", "batch_generation"]
       },
       "status": "pending",
