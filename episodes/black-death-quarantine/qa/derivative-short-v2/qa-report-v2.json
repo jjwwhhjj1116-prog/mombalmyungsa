@@ -1,0 +1,90 @@
+{
+  "schema_version": "body-invention.derivative-short-qa.v2",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v2",
+  "status": "PASS",
+  "errors": [],
+  "source_identity": {
+    "approved_script_path": "final-script-v1.txt",
+    "approved_script_sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
+    "source_tts_path": "tts/black-death-v1-elevenlabs-full.mp3",
+    "source_tts_sha256": "58f217efc7339e71241cf3bd9c7a5e2be2ef59a8a3bf1dd4b89226874db06fec",
+    "edit_manifest_path": "../../video/src/data/black-death-v2-short.json",
+    "edit_manifest_sha256": "04be66e5cbe95bfb450f41bc8b7b40247a24ae7db62f314736c8bac1d5e706df",
+    "selected_sentence_ids": [
+      "s01", "s02", "s03", "s04", "s05", "s06", "s07", "s09", "s10", "s11",
+      "s15", "s16", "s17", "s18", "s19", "s20", "s21", "s25", "s26", "s27",
+      "s28", "s29", "s30", "s31", "s32", "s34", "s35", "s36", "s37", "s38",
+      "s39", "s40", "s41", "s42", "s43", "s44", "s47", "s48", "s49", "s50"
+    ],
+    "new_claim_count": 0,
+    "new_tts_generation_count": 0,
+    "sentence_text_mutation_count": 0,
+    "continuity_note": "Only complete approved sentences and their exact windows from the single continuous master narration were used."
+  },
+  "render": {
+    "path": "renders/black-death-v2-short.mp4",
+    "sha256": "43517611db6630b006f5665d52aa8c126b82123a8ffbe523721b2e519f03121f",
+    "bytes": 209771154,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_frame_count": 4800,
+    "video_duration_seconds": 160.0,
+    "audio_duration_seconds": 160.064,
+    "video_codec": "h264",
+    "audio_codec": "aac"
+  },
+  "timeline_checks": {
+    "two_minute_shorts_lane": "PASS",
+    "duration_range_seconds": [120, 180],
+    "final_tts_is_only_timeline": true,
+    "one_selected_sentence_owns_one_scene": true,
+    "premature_scene_cut_count": 0,
+    "missing_selected_sentence_count": 0,
+    "caption_size_px": 100,
+    "caption_center_x": 540,
+    "caption_y": 1200,
+    "caption_crop_count": 0,
+    "black_frame_interval_count": 0,
+    "silence_intervals_over_0_8_seconds": 0,
+    "narrative_arc": "rat_and_flea_vector -> port_double_bind -> incubation -> quarantine -> pathogen_and_flea_proof -> modern_control -> closing_meaning",
+    "narrative_continuity": "PASS"
+  },
+  "frame_zero": {
+    "source_path": "assets/thumbnail-v2-short.png",
+    "source_sha256": "b8f0854c045dec3654dee1b31763e057f71cd0e279f6a556842f0fcad6a7770d",
+    "textless_source_path": "assets/frame-zero-bg-v2-short.png",
+    "textless_source_sha256": "3d65b6fdf0ff441dcf2d228f0510850f5a69b541d41de121d3d9f3c4fcef6af6",
+    "duration_seconds": 0.7,
+    "rendered_sample_path": "qa/derivative-short-v2/frame-zero-0_2.jpg",
+    "rendered_sample_sha256": "4634c8281ac11aa6893f9c33d09305ecfff86ec487c6edd4f7599fca16175ea3",
+    "thumbnail_copy": "5천만 명을 죽인 / 흑사병",
+    "subject_background_separation": "PASS",
+    "face_and_action_legibility": "PASS",
+    "mobile_silhouette_readability": "PASS",
+    "separation_method": "cool_cyan_rim_and_warm_face_key_against_darker_warmer_desaturated_alley",
+    "mobile_legibility": "PASS"
+  },
+  "visual_review": {
+    "status": "PASS",
+    "contact_sheet_path": "qa/derivative-short-v2/contact-sheet.jpg",
+    "contact_sheet_sha256": "95832503582559edffcd90bcb4a7c7e4075e7352442eb1f1f8c603c9af2aca50",
+    "hook_sample_paths": [
+      "qa/derivative-short-v2/hook-0_8.jpg",
+      "qa/derivative-short-v2/hook-1_8.jpg"
+    ],
+    "hook_promise_matches_title": true,
+    "historical_setting_consistency": "PASS",
+    "meaning_scene_match": "PASS",
+    "manual_review_note": "The upright sly rat separates clearly from the background at frame zero. The edit keeps the full causal chain from rat-flea transmission through the port dilemma, quarantine, pathogen proof, modern vector control and treatment."
+  },
+  "rights_review": {
+    "status": "PASS",
+    "inherited_from": "qa/stage14/rights-review-v1.json",
+    "inherited_sha256": "0f85316e1d352db41d1ebb12c58f117e1ac2102244a5170aab831fc52d27c4c5",
+    "new_third_party_asset_count": 0,
+    "ai_reenactment_disclosure_required": true
+  },
+  "completed_at": "2026-08-25T12:17:02+09:00"
+}

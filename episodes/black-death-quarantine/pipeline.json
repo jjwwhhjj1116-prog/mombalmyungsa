@@ -2,7 +2,7 @@
   "schema_version": "body-invention.episode-pipeline.v1",
   "episode_id": "black-death-quarantine",
   "working_title": "5천만 명을 죽인 흑사병은 어떻게 막았을까",
-  "revision": 18,
+  "revision": 19,
   "source_of_truth": {
     "path": "final-script-v1.txt",
     "sha256": "bda7311e1462317c713c609a38c4d2810d63c2a38374bf9b8a70211c81541816",
@@ -84,7 +84,7 @@
     "legacy_intermediate_longform_exception": true,
     "legacy_exception_reason": "This approved and completed 223-second master predates the 8-10 minute longform rule; preserve it and derive a separately QA'd Short instead of regenerating completed paid media.",
     "derivative_short_required": true,
-    "derivative_short_variant_id": "black-death-quarantine-short-v1"
+    "derivative_short_variant_id": "black-death-quarantine-short-v2"
   },
   "release_contract": {
     "platform": "YouTube",
@@ -210,13 +210,30 @@
       "format": "shorts",
       "aspect_ratio": "9:16",
       "duration_seconds": 56.366667,
-      "status": "ready_for_private_upload",
+      "status": "rejected_by_owner",
+      "rejection_reason": "The under-one-minute cut removed too much explanatory context and is not publishable.",
       "render_path": "renders/black-death-v1-short.mp4",
       "render_sha256": "216f91b47553864db30d471354b39629a9364d9b5d84bde256e9c97a95f18623",
       "qa_lock_path": "locks/derivative-short-v1.lock.json",
       "qa_lock_sha256": "2766bc2aa7b3cd947d83a61aeda011be9cb77de4968025e98facad61c25eb2e8",
       "youtube_package_path": "packaging/youtube-package-short-v1.json",
       "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v1:216f91b47553"
+    },
+    {
+      "variant_id": "black-death-quarantine-short-v2",
+      "format": "shorts",
+      "aspect_ratio": "9:16",
+      "duration_seconds": 160.0,
+      "status": "ready_for_private_upload",
+      "render_path": "renders/black-death-v2-short.mp4",
+      "render_sha256": "43517611db6630b006f5665d52aa8c126b82123a8ffbe523721b2e519f03121f",
+      "thumbnail_path": "assets/thumbnail-v2-short.png",
+      "thumbnail_sha256": "b8f0854c045dec3654dee1b31763e057f71cd0e279f6a556842f0fcad6a7770d",
+      "qa_lock_path": "locks/derivative-short-v2.lock.json",
+      "qa_lock_sha256": "28ef73d5d9bd682a51f2e1c7e79e1f97e2e0f3fa8e8b321a66ad44af46c93523",
+      "youtube_package_path": "packaging/youtube-package-short-v2.json",
+      "youtube_package_sha256": "50cc0ce664a676583beab5953efc2fa85c882e798dd61332ffaa6e11dec34097",
+      "idempotency_key": "youtube:UCYqdIlpFlB6uh_cpIYgo85g:black-death-quarantine:short-v2:43517611db66"
     }
   ],
   "resume": {

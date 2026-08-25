@@ -1,0 +1,28 @@
+{
+  "schema_version": "body-invention.derivative-thumbnail-lock.v2",
+  "episode_id": "black-death-quarantine",
+  "variant_id": "black-death-quarantine-short-v2",
+  "status": "completed",
+  "assets": {
+    "textless_background_path": "assets/frame-zero-bg-v2-short.png",
+    "textless_background_sha256": "3d65b6fdf0ff441dcf2d228f0510850f5a69b541d41de121d3d9f3c4fcef6af6",
+    "thumbnail_path": "assets/thumbnail-v2-short.png",
+    "thumbnail_sha256": "b8f0854c045dec3654dee1b31763e057f71cd0e279f6a556842f0fcad6a7770d",
+    "mobile_qa_path": "qa/thumbnail-v2-short-mobile-25pct.jpg"
+  },
+  "copy_blocks": ["5천만 명을 죽인", "흑사병"],
+  "font": "Gmarket Sans Bold",
+  "subject": "one_upright_slyly_grinning_rat_with_visible_incisors_and_raised_paws",
+  "background": "darker_warm_medieval_alley_with_softened_rat_swarm",
+  "separation_contract": {
+    "cool_cyan_subject_rim": true,
+    "warm_face_key": true,
+    "background_darker_than_subject": true,
+    "background_detail_softened": true,
+    "subject_background_separation": "PASS",
+    "face_and_action_legibility": "PASS",
+    "mobile_silhouette_readability": "PASS"
+  },
+  "frame_zero_seconds": 0.7,
+  "locked_at": "2026-08-25T12:17:02+09:00"
+}

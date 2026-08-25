@@ -12,7 +12,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import short from './data/black-death-v1-short.json';
+import short from './data/black-death-v2-short.json';
 
 type Scene = (typeof short.scenes)[number];
 type CaptionPage = (typeof short.caption_pages)[number];

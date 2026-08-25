@@ -5,7 +5,7 @@ import {GasHwalmyeongsuFinal} from './GasHwalmyeongsuFinal';
 import {GasHwalmyeongsuRoughCut} from './GasHwalmyeongsuRoughCut';
 import blackDeathTimeline from './data/black-death-v1-timeline.json';
 import {BlackDeathFinal} from './BlackDeathFinal';
-import blackDeathShort from './data/black-death-v1-short.json';
+import blackDeathShort from './data/black-death-v2-short.json';
 import {BlackDeathShort} from './BlackDeathShort';
 
 export const Root: React.FC = () => {
