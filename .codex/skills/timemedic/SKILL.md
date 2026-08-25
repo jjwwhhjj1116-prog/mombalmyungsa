@@ -375,3 +375,11 @@ clean TTS와 감독본의 실제 발화문은 글자 단위로 같아야 한다.
 10. 승인 상태
 
 대본·보이스·스토리보드 승인 전에는 유료 TTS, 이미지·영상 생성, 게시를 시작하지 않는다.
+
+## YouTube API 게시 라우팅
+
+- 몸의 발명사 업로드는 `scripts/youtube_upload_body_invention.py`의 전용 OAuth 토큰을 기본으로 한다.
+- `channels.list(mine=true)`가 정확히 `UCYqdIlpFlB6uh_cpIYgo85g` 하나를 반환하지 않으면 미디어 파일을 읽거나 업로드하지 않는다.
+- 다른 채널 토큰을 탐색하거나 fallback하지 않고, 업로드 직후 `videos.list`의 실제 `snippet.channelId`를 다시 검사한다.
+- OAuth 클라이언트·refresh token·idempotency 원장은 `.private/youtube/`에만 저장하며 Git에 기록하지 않는다.
+- API에서 제공되지 않거나 확인할 수 없는 설정만 정확한 몸의 발명사 Chrome 채널에서 보완한다.

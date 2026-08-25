@@ -4,8 +4,11 @@
 
 - 공개 채널명: `몸의 발명사`
 - YouTube channel ID: `UCYqdIlpFlB6uh_cpIYgo85g`
-- 업로드는 이 채널이 보이는 사용자의 로그인된 Chrome 세션에서만 수행한다.
-- 파일 선택 전, 최종 제출 전, 공개 확인 때마다 보이는 채널명과 channel ID를 다시 확인한다.
+- 기본 업로드 경로는 `scripts/youtube_upload_body_invention.py`의 전용 YouTube Data API v3 OAuth 라우트다.
+- 몸의 발명사 전용 OAuth 토큰만 사용하고, `channels.list(mine=true)`가 정확히 `UCYqdIlpFlB6uh_cpIYgo85g` 하나를 반환할 때만 파일을 읽고 업로드한다.
+- 다른 채널 토큰 탐색·fallback·채널명만 비교하는 검사는 금지한다. 업로드 직후 `videos.list`의 실제 `snippet.channelId`를 다시 검사한다.
+- API로 제공되지 않거나 확인할 수 없는 항목만 로그인된 Chrome의 몸의 발명사 채널에서 보완한다. 이때도 입력 전·최종 제출 전·공개 확인 때마다 보이는 채널명과 channel ID를 다시 확인한다.
+- OAuth 클라이언트·refresh token·업로드 원장은 `.private/youtube/`에만 두고 Git에 기록하지 않는다. 자세한 연결 절차는 `docs/YOUTUBE-OAUTH.md`를 따른다.
 
 ## 제목 패턴
 
