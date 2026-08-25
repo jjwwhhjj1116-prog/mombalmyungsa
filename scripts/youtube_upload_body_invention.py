@@ -17,9 +17,13 @@ from typing import NoReturn
 
 
 ROOT = Path(__file__).resolve().parents[1]
+PRIVATE_LIBS = ROOT / ".private" / "python-libs"
 LOCAL_LIBS = ROOT / ".local-tools" / "youtube-api"
-if LOCAL_LIBS.is_dir():
-    sys.path.insert(0, str(LOCAL_LIBS))
+sys.path[:0] = [
+    str(candidate)
+    for candidate in (PRIVATE_LIBS, LOCAL_LIBS)
+    if candidate.is_dir()
+]
 PRIVATE_ROOT = ROOT / ".private" / "youtube"
 CLIENT_FILE = PRIVATE_ROOT / "body-invention-oauth-client.json"
 TOKEN_FILE = PRIVATE_ROOT / "body-invention-token.json"
@@ -56,7 +60,7 @@ def require_libraries() -> None:
         )
 
 
-def youtube_service(force_consent: bool = False):
+def youtube_service(force_consent: bool = False, open_browser: bool = True):
     require_libraries()
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
@@ -80,7 +84,7 @@ def youtube_service(force_consent: bool = False):
             prompt="consent",
             access_type="offline",
             include_granted_scopes="true",
-            open_browser=True,
+            open_browser=open_browser,
         )
         TOKEN_FILE.write_text(credentials.to_json(), encoding="utf-8")
     return build("youtube", "v3", credentials=credentials, cache_discovery=False)
@@ -237,13 +241,20 @@ def upload_private(youtube, package: dict, video_path: Path, thumbnail_path: Pat
 def main() -> int:
     parser = argparse.ArgumentParser(description="몸의 발명사 전용 YouTube API 업로더")
     parser.add_argument("--auth", action="store_true", help="Create the dedicated OAuth token")
+    parser.add_argument(
+        "--manual-auth",
+        action="store_true",
+        help="Print the OAuth URL without opening the default browser profile",
+    )
     parser.add_argument("--whoami", action="store_true", help="Verify the token and channel ID")
     parser.add_argument("--package", type=Path, help="Locked YouTube package JSON")
     parser.add_argument("--run", action="store_true", help="Perform the private upload")
     args = parser.parse_args()
 
     if args.auth:
-        identity = require_body_invention_channel(youtube_service(force_consent=True))
+        identity = require_body_invention_channel(
+            youtube_service(force_consent=True, open_browser=not args.manual_auth)
+        )
         print(json.dumps({"status": "PASS", **identity}, ensure_ascii=False, indent=2))
         return 0
     if args.whoami:
